@@ -27,7 +27,7 @@ con los colores y los datos extraídos del material original:
 - **Un solo foco** — los cuatro bloques del cuerpo, donde solo uno puede encenderse a la vez:
   la restricción de la interfaz *es* la regla de estilo.
 
-Los tres funcionan con teclado (flechas, Inicio, Fin) y se apagan enteros con .
+Los tres funcionan con teclado (flechas, Inicio, Fin) y se apagan enteros con `prefers-reduced-motion`.
 
 ## El portón
 
