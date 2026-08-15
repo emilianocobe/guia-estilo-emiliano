@@ -367,6 +367,62 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
 .bl-zona{color:var(--g75)}
 .bl-txt{font-size:15px;line-height:1.5;margin-top:12px;min-height:96px;max-width:44ch}
 
+
+/* — el regulador — */
+.ctx-sel{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:clamp(22px,4vw,38px)}
+.ctx{font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  background:var(--papel);border:1px solid var(--g25);border-radius:2px;padding:12px 13px;cursor:pointer;
+  color:var(--g75);min-height:44px}
+.ctx[aria-checked="true"]{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+.pista{position:relative;padding-top:26px}
+.riel{position:absolute;top:12px;left:16.6%;right:16.6%;height:1.5px;background:var(--g25)}
+.vis .riel{transform-origin:left;animation:crecer-riel .8s ease-out forwards}
+@keyframes crecer-riel{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.aguja{position:absolute;top:5px;left:16.6%;width:15px;height:15px;margin-left:-7.5px;border-radius:50%;
+  background:var(--ultramar);transition:left .55s cubic-bezier(.6,0,.2,1)}
+.vis .aguja{animation:apoyar-aguja .45s ease-out .82s backwards}
+@keyframes apoyar-aguja{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+.paradas{display:grid;grid-template-columns:repeat(3,1fr)}
+.parada{display:grid;justify-items:center;gap:5px;background:transparent;border:none;cursor:pointer;
+  padding:12px 4px;min-height:44px;color:var(--tinta)}
+.parada .k{font-size:19px;color:var(--g25);line-height:1;transition:color .3s}
+.parada .nb{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.parada .edo{font-family:var(--display);font-weight:600;font-size:9.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--g75)}
+.parada[aria-checked="true"] .k{color:var(--ultramar)}
+.parada .punto{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--tinta);display:block}
+.parada .punto.lleno{background:var(--ultramar);border-color:var(--ultramar)}
+.parada .punto.medio{background:linear-gradient(90deg,var(--ultramar) 50%,transparent 50%)}
+.reg-lec{margin-top:clamp(16px,2.6vw,26px);font-size:15px;line-height:1.5;min-height:70px;max-width:56ch}
+.reg-lec b{font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.24em;
+  text-transform:uppercase;display:block;margin-bottom:6px;color:var(--ultramar)}
+.reg-lec.evitar b{color:var(--g75)}
+
+/* — la proporción — */
+.cinta{display:flex;height:56px;border-radius:2px;overflow:hidden;gap:1px;background:var(--g06)}
+.cel{flex:1 1 0;min-width:0;opacity:var(--op,1);transition:opacity .4s ease,transform .4s ease;transform-origin:bottom}
+.cel.apagada{--op:.16}
+.cel.viva{transform:scaleY(1)}
+.vis .cel{animation:subir-cel .45s ease-out backwards;animation-delay:calc(.2s + var(--dl))}
+@keyframes subir-cel{from{transform:scaleY(.12);opacity:0}to{transform:scaleY(1);opacity:var(--op,1)}}
+.chips-f{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.chip-f{display:flex;align-items:center;gap:8px;background:var(--papel);border:1px solid var(--g25);
+  border-radius:2px;padding:10px 12px;cursor:pointer;min-height:44px;color:var(--g75)}
+.chip-f[aria-checked="true"]{border-color:var(--tinta);color:var(--tinta);background:var(--g06)}
+.pt-f{width:13px;height:13px;border-radius:50%;border:1px solid var(--g25);flex:none}
+.nm-f{font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
+.ct-f{font-family:var(--display);font-weight:600;font-size:11px;font-variant-numeric:tabular-nums;color:var(--ultramar)}
+.prop-lec{margin-top:16px;font-size:15px;line-height:1.5;min-height:62px;max-width:58ch}
+.prop-lec b{font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.24em;
+  text-transform:uppercase;display:block;margin-bottom:6px;color:var(--ultramar)}
+.prop-lec i{font-style:normal;color:var(--g75);display:block;margin-top:5px;font-size:14px}
+
+@media (prefers-reduced-motion:reduce){
+  .vis .riel,.vis .cel,.vis .aguja{animation:none!important;transform:none}
+  .aguja{transition:none}
+  .cel{transition:none}
+}
+
 @media (prefers-reduced-motion:reduce){
   .vis .est .disco,.vis .gajo,.vis .neu,.vis .mapa .eje,.vis .rostro,.vis .fig,
   .marco-g.puesto .fr,.marco-g.puesto .tacha{animation:none!important;stroke-dashoffset:0;opacity:1;transform:none}
@@ -522,17 +578,16 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
 <div class="fam"><p class="v-datos">Violetas y magentas — 17</p><div class="sw-grid"><figure class="sw"><div class="chip" style="background:#B4BBD5"></div><figcaption>#B4BBD5</figcaption></figure><figure class="sw"><div class="chip" style="background:#8C6C9B"></div><figcaption>#8C6C9B</figcaption></figure><figure class="sw"><div class="chip" style="background:#874487"></div><figcaption>#874487</figcaption></figure><figure class="sw"><div class="chip" style="background:#7F3361"></div><figcaption>#7F3361</figcaption></figure><figure class="sw"><div class="chip" style="background:#5E0F7C"></div><figcaption>#5E0F7C</figcaption></figure><figure class="sw"><div class="chip" style="background:#440E59"></div><figcaption>#440E59</figcaption></figure><figure class="sw"><div class="chip" style="background:#2E073E"></div><figcaption>#2E073E</figcaption></figure><figure class="sw"><div class="chip" style="background:#570D5A"></div><figcaption>#570D5A</figcaption></figure><figure class="sw"><div class="chip" style="background:#B32E81"></div><figcaption>#B32E81</figcaption></figure><figure class="sw"><div class="chip" style="background:#BE4C91"></div><figcaption>#BE4C91</figcaption></figure><figure class="sw"><div class="chip" style="background:#D85F82"></div><figcaption>#D85F82</figcaption></figure><figure class="sw"><div class="chip" style="background:#D65385"></div><figcaption>#D65385</figcaption></figure><figure class="sw"><div class="chip" style="background:#BB1C56"></div><figcaption>#BB1C56</figcaption></figure><figure class="sw"><div class="chip" style="background:#312E39"></div><figcaption>#312E39</figcaption></figure><figure class="sw"><div class="chip" style="background:#221239"></div><figcaption>#221239</figcaption></figure><figure class="sw"><div class="chip" style="background:#261027"></div><figcaption>#261027</figcaption></figure><figure class="sw"><div class="chip" style="background:#33091F"></div><figcaption>#33091F</figcaption></figure></div></div>
 <div class="fam"><p class="v-datos">Amarillos y el único marrón — 4</p><div class="sw-grid"><figure class="sw"><div class="chip" style="background:#EAEB9F"></div><figcaption>#EAEB9F</figcaption></figure><figure class="sw"><div class="chip" style="background:#CCB13E"></div><figcaption>#CCB13E</figcaption></figure><figure class="sw"><div class="chip" style="background:#DAB101"></div><figcaption>#DAB101</figcaption></figure><figure class="sw"><div class="chip" style="background:#581C00"></div><figcaption>#581C00</figcaption></figure></div></div></div>
 
-  <div class="grid2" style="margin-top:46px">
-    <div class="rev">
-      <h3 style="margin-bottom:18px">De qué está hecha tu paleta</h3>
-      <div class="barra"><span class="rotulo">Violetas y magentas</span><span class="pista"><span class="lleno" style="--w:100%"></span></span><span class="val">17</span></div>
-      <div class="barra"><span class="rotulo">Neutros fríos</span><span class="pista"><span class="lleno" style="--w:59%"></span></span><span class="val">10</span></div>
-      <div class="barra"><span class="rotulo">Azules</span><span class="pista"><span class="lleno ac" style="--w:53%"></span></span><span class="val">9</span></div>
-      <div class="barra"><span class="rotulo">Verdes y petróleos</span><span class="pista"><span class="lleno" style="--w:53%"></span></span><span class="val">9</span></div>
-      <div class="barra"><span class="rotulo">Rojos y vinos</span><span class="pista"><span class="lleno" style="--w:41%"></span></span><span class="val">7</span></div>
-      <div class="barra"><span class="rotulo">Amarillos + 1 marrón</span><span class="pista"><span class="lleno" style="--w:24%"></span></span><span class="val">4</span></div>
-      <p class="mut" style="font-size:13px;margin-top:14px">Lectura: tu paleta es <strong>violeta-azul dominante</strong> — tu lado dramático ya vive en tu propio color. El azul te funciona como segundo neutro. Temperatura: 93% fríos, 7% cálidos tolerados.</p>
+  <div style="margin-top:46px;display:grid;gap:18px">
+    <div class="inst rev" id="inst-paleta">
+    <div class="inst-cab">
+      <p class="v-datos">De qué está hecha tu paleta</p>
+      <p class="inst-lec">56 tonos · 52 fríos / 4 cálidos</p>
     </div>
+    <div class="cinta" aria-hidden="true"><span class="cel" data-f="0" style="background:#FFFFFF;--dl:0.000s"></span><span class="cel" data-f="0" style="background:#EEF8F7;--dl:0.016s"></span><span class="cel" data-f="0" style="background:#BAC5CB;--dl:0.032s"></span><span class="cel" data-f="0" style="background:#B9C3C2;--dl:0.048s"></span><span class="cel" data-f="0" style="background:#7C8685;--dl:0.064s"></span><span class="cel" data-f="0" style="background:#616B6A;--dl:0.080s"></span><span class="cel" data-f="0" style="background:#39464C;--dl:0.096s"></span><span class="cel" data-f="0" style="background:#202529;--dl:0.112s"></span><span class="cel" data-f="0" style="background:#1C1D1F;--dl:0.128s"></span><span class="cel" data-f="0" style="background:#000000;--dl:0.144s"></span><span class="cel" data-f="1" style="background:#5F9DD0;--dl:0.160s"></span><span class="cel" data-f="1" style="background:#4FA2D4;--dl:0.176s"></span><span class="cel" data-f="1" style="background:#0096D1;--dl:0.192s"></span><span class="cel" data-f="1" style="background:#2165A4;--dl:0.208s"></span><span class="cel" data-f="1" style="background:#006C90;--dl:0.224s"></span><span class="cel" data-f="1" style="background:#004D91;--dl:0.240s"></span><span class="cel" data-f="1" style="background:#0045AC;--dl:0.256s"></span><span class="cel" data-f="1" style="background:#001B6C;--dl:0.272s"></span><span class="cel" data-f="1" style="background:#000060;--dl:0.288s"></span><span class="cel" data-f="2" style="background:#006380;--dl:0.304s"></span><span class="cel" data-f="2" style="background:#008486;--dl:0.320s"></span><span class="cel" data-f="2" style="background:#00575E;--dl:0.336s"></span><span class="cel" data-f="2" style="background:#053947;--dl:0.352s"></span><span class="cel" data-f="2" style="background:#00684D;--dl:0.368s"></span><span class="cel" data-f="2" style="background:#1A5036;--dl:0.384s"></span><span class="cel" data-f="2" style="background:#487B42;--dl:0.400s"></span><span class="cel" data-f="2" style="background:#2D402A;--dl:0.416s"></span><span class="cel" data-f="2" style="background:#2E4E0F;--dl:0.432s"></span><span class="cel" data-f="3" style="background:#AC1639;--dl:0.448s"></span><span class="cel" data-f="3" style="background:#BE1B3A;--dl:0.464s"></span><span class="cel" data-f="3" style="background:#951631;--dl:0.480s"></span><span class="cel" data-f="3" style="background:#840000;--dl:0.496s"></span><span class="cel" data-f="3" style="background:#6E192C;--dl:0.512s"></span><span class="cel" data-f="3" style="background:#600001;--dl:0.528s"></span><span class="cel" data-f="3" style="background:#BD2E10;--dl:0.544s"></span><span class="cel" data-f="4" style="background:#B4BBD5;--dl:0.560s"></span><span class="cel" data-f="4" style="background:#8C6C9B;--dl:0.576s"></span><span class="cel" data-f="4" style="background:#874487;--dl:0.592s"></span><span class="cel" data-f="4" style="background:#7F3361;--dl:0.608s"></span><span class="cel" data-f="4" style="background:#5E0F7C;--dl:0.624s"></span><span class="cel" data-f="4" style="background:#440E59;--dl:0.640s"></span><span class="cel" data-f="4" style="background:#2E073E;--dl:0.656s"></span><span class="cel" data-f="4" style="background:#570D5A;--dl:0.672s"></span><span class="cel" data-f="4" style="background:#B32E81;--dl:0.688s"></span><span class="cel" data-f="4" style="background:#BE4C91;--dl:0.704s"></span><span class="cel" data-f="4" style="background:#D85F82;--dl:0.720s"></span><span class="cel" data-f="4" style="background:#D65385;--dl:0.736s"></span><span class="cel" data-f="4" style="background:#BB1C56;--dl:0.752s"></span><span class="cel" data-f="4" style="background:#312E39;--dl:0.768s"></span><span class="cel" data-f="4" style="background:#221239;--dl:0.784s"></span><span class="cel" data-f="4" style="background:#261027;--dl:0.800s"></span><span class="cel" data-f="4" style="background:#33091F;--dl:0.816s"></span><span class="cel" data-f="5" style="background:#EAEB9F;--dl:0.832s"></span><span class="cel" data-f="5" style="background:#CCB13E;--dl:0.848s"></span><span class="cel" data-f="5" style="background:#DAB101;--dl:0.864s"></span><span class="cel" data-f="5" style="background:#581C00;--dl:0.880s"></span></div>
+    <div class="chips-f" role="radiogroup" aria-label="Las seis familias de tu paleta"><button type="button" class="chip-f" role="radio" aria-checked="true" tabindex="0" data-f="0" aria-label="Neutros fríos, 10 tonos"><span class="pt-f" style="background:#616B6A"></span><span class="nm-f">Neutros fríos</span><span class="ct-f">10</span></button><button type="button" class="chip-f" role="radio" aria-checked="false" tabindex="-1" data-f="1" aria-label="Azules, 9 tonos"><span class="pt-f" style="background:#006C90"></span><span class="nm-f">Azules</span><span class="ct-f">9</span></button><button type="button" class="chip-f" role="radio" aria-checked="false" tabindex="-1" data-f="2" aria-label="Verdes y petróleos, 9 tonos"><span class="pt-f" style="background:#00684D"></span><span class="nm-f">Verdes y petróleos</span><span class="ct-f">9</span></button><button type="button" class="chip-f" role="radio" aria-checked="false" tabindex="-1" data-f="3" aria-label="Rojos y vinos, 7 tonos"><span class="pt-f" style="background:#840000"></span><span class="nm-f">Rojos y vinos</span><span class="ct-f">7</span></button><button type="button" class="chip-f" role="radio" aria-checked="false" tabindex="-1" data-f="4" aria-label="Violetas y magentas, 17 tonos"><span class="pt-f" style="background:#B32E81"></span><span class="nm-f">Violetas y magentas</span><span class="ct-f">17</span></button><button type="button" class="chip-f" role="radio" aria-checked="false" tabindex="-1" data-f="5" aria-label="Amarillos y el único marrón, 4 tonos"><span class="pt-f" style="background:#DAB101"></span><span class="nm-f">Amarillos y el único marrón</span><span class="ct-f">4</span></button></div>
+    <p class="prop-lec" id="prop-lec" role="status" aria-live="polite"></p>
+  </div>
     <div class="card rev d1">
       <p class="v-datos" style="margin-bottom:10px">Tus grises</p>
       <p style="font-size:15px"><strong>Gris oscuro y frío, sí</strong> — carbón #2C3539, pizarra #39464C, grafito #202529: prendas de inversión, marco formal con actitud urbana. <strong>Gris claro melange, no</strong> — ese fue el que salió de tu placard en la depuración; si alguna vez vuelve, va lejos de la cara.</p>
@@ -719,21 +774,19 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
   </div>
 
   <div class="wrap" style="padding-block:clamp(40px,6vh,70px) clamp(72px,11vh,140px);background:var(--papel);position:relative;z-index:1">
-    <div class="matriz rev vis">
-      <h3 style="margin-bottom:16px">Tu semana, nivel por nivel</h3>
-      <table>
-        <caption class="v-datos chica" style="text-align:left;padding-bottom:10px">● recomendado · ◐ posible · ○ evitar</caption>
-        <thead><tr><th scope="col">Contexto</th><th scope="col">Base <span lang="ja" aria-hidden="true">基</span></th><th scope="col">Puente <span lang="ja" aria-hidden="true">橋</span></th><th scope="col">Expresión <span lang="ja" aria-hidden="true">表現</span></th><th scope="col">Nota</th></tr></thead>
-        <tbody>
-          <tr><td>Aula universitaria</td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td><span class="punto" role="img" aria-label="evitar"></span></td><td>autoridad primero; el quiebre entra por accesorio</td></tr>
-          <tr><td>Reunión con cliente</td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td><span class="punto" role="img" aria-label="evitar"></span></td><td>base + un solo foco de atención</td></tr>
-          <tr><td>Agencia, día interno</td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td>tu laboratorio cotidiano</td></tr>
-          <tr><td>Evento del rubro</td><td><span class="punto" role="img" aria-label="evitar"></span></td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td>que te recuerden: un gesto memorable</td></tr>
-          <tr><td>Noche · social</td><td><span class="punto" role="img" aria-label="evitar"></span></td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td>acá tu universo anime sí se lee</td></tr>
-          <tr><td>Día libre</td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td>práctica sin costo: probá acá lo nuevo</td></tr>
-        </tbody>
-      </table>
+    <div class="inst rev vis" id="inst-regulador">
+    <div class="inst-cab">
+      <p class="v-datos">Tu semana · el regulador</p>
+      <p class="inst-lec"><span id="reg-cont">01</span> / 18 combinaciones</p>
     </div>
+    <div class="ctx-sel" role="radiogroup" aria-label="Los seis contextos de tu semana"><button type="button" class="ctx" role="radio" aria-checked="true" tabindex="0" data-c="0">Aula universitaria</button><button type="button" class="ctx" role="radio" aria-checked="false" tabindex="-1" data-c="1">Reunión con cliente</button><button type="button" class="ctx" role="radio" aria-checked="false" tabindex="-1" data-c="2">Agencia, día interno</button><button type="button" class="ctx" role="radio" aria-checked="false" tabindex="-1" data-c="3">Evento del rubro</button><button type="button" class="ctx" role="radio" aria-checked="false" tabindex="-1" data-c="4">Noche · social</button><button type="button" class="ctx" role="radio" aria-checked="false" tabindex="-1" data-c="5">Día libre</button></div>
+    <div class="pista">
+      <div class="riel" aria-hidden="true"></div>
+      <div class="aguja" id="reg-aguja" aria-hidden="true"></div>
+      <div class="paradas" role="radiogroup" aria-label="Los tres niveles de intensidad"><button type="button" class="parada" role="radio" aria-checked="false" tabindex="-1" data-n="0"><span class="k" lang="ja" aria-hidden="true">基</span><span class="nb">Base</span><span class="punto" id="pt-0" aria-hidden="true"></span><span class="edo" id="ed-0"></span></button><button type="button" class="parada" role="radio" aria-checked="false" tabindex="-1" data-n="1"><span class="k" lang="ja" aria-hidden="true">橋</span><span class="nb">Puente</span><span class="punto" id="pt-1" aria-hidden="true"></span><span class="edo" id="ed-1"></span></button><button type="button" class="parada" role="radio" aria-checked="false" tabindex="-1" data-n="2"><span class="k" lang="ja" aria-hidden="true">表現</span><span class="nb">Expresión</span><span class="punto" id="pt-2" aria-hidden="true"></span><span class="edo" id="ed-2"></span></button></div>
+    </div>
+    <p class="reg-lec" id="reg-lec" role="status" aria-live="polite"></p>
+  </div>
     <blockquote class="cita rev vis" style="margin-top:52px">
       «Ya no estás improvisando cada vez: estás combinando dentro de un sistema que vos mismo construiste.»
     </blockquote>
@@ -824,7 +877,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
   <h2 class="display rev">En tu talle,<br>con stock</h2>
   <p class="rev d1" style="margin-top:26px;max-width:64ch">Veintisiete piezas elegidas con tu paleta y tu silueta como filtro, sobre tus marcas recomendadas. De cada una: <strong>precio, talles publicados y disponibilidad de tu talle</strong> (pantalón 44 · camisa y saco 44/L · calzado 42–43 · resto L), relevados el <strong>15/08/2026</strong>. El stock de estas marcas es chico y rota: el dato es una foto del día, no una promesa.</p>
 
-  <div class="filtros rev d2" role="group" aria-label="Filtrar productos por bloque corporal o nivel">
+  <div class="filtros rev d2" role="group" aria-label="Tus prendas por bloque corporal y por nivel">
         <button data-f="todos" aria-pressed="true">Todos · 27</button>
     <button data-f="B1" aria-pressed="false">B1 arriba</button>
     <button data-f="B2" aria-pressed="false">B2 torso</button>
@@ -1482,6 +1535,73 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
       var q=function(id){return document.getElementById(id);};
       if(q('bl-cod')){q('bl-cod').textContent=b[0];q('bl-tit').textContent=b[2];
         q('bl-zona').textContent=b[1];q('bl-txt').textContent=b[3];}
+    })(0,false);
+  }
+
+
+  /* — el regulador — */
+  var CTX=[["Aula universitaria", [2, 1, 0], ["Tu registro por defecto. Sastrería y neutros: la autoridad no se discute y vos no pensás en la ropa.", "Funciona si el quiebre entra por un accesorio y no por la prenda: medias, marco, un cinto.", "Compite con lo que estás diciendo. La atención va a la prenda y no al tema."]], ["Reunión con cliente", [2, 1, 0], ["Sastrería y un solo foco de atención. Que te recuerden por lo que proponés.", "Un quiebre de color o de textura te separa del resto sin encender ninguna alarma.", "Demasiada información antes de que te conozcan. Guardalo para cuando ya haya confianza."]], ["Agencia, día interno", [1, 2, 1], ["Sirve, pero desaprovechás el lugar donde más libertad tenés.", "Tu laboratorio: acá el city pop se prueba sin costo y con público conocido.", "Entra bien cuando hay motivo — una presentación, una visita, ganas."]], ["Evento del rubro", [0, 2, 1], ["Te volvés fondo. En una sala llena de gente de tu rubro, lo neutro desaparece.", "El punto justo: estructura reconocible con un gesto que se recuerda.", "Si conocés a la audiencia, sí. Es donde tu universo anime encuentra lectores."]], ["Noche · social", [0, 1, 2], ["Correcto y olvidable. La noche perdona todo menos el aburrimiento.", "Seguro y bien resuelto si venís de trabajar y no querés cambiarte entero.", "Acá va todo: color, estampa, referencia literal. Tu registro completo."]], ["Día libre", [1, 2, 2], ["Si el plan es tranquilo, no hay nada que probar.", "El mejor día para estrenar: bajo riesgo y mucha información.", "Sin audiencia que traducir, probás lo que quieras. Acá se entrena el criterio."]]], EDO=["Evitar", "Posible", "Recomendado"];
+  var ctxs=[].slice.call(document.querySelectorAll('.ctx'));
+  var paradas=[].slice.call(document.querySelectorAll('.parada'));
+  var aguja=document.getElementById('reg-aguja'), regLec=document.getElementById('reg-lec');
+  var regCont=document.getElementById('reg-cont'), vistas={}, nVistas=0;
+  var cActual=0, nActual=0, riel=document.querySelector('#inst-regulador .riel');
+  function ubicarPista(){
+    if(!aguja||!paradas.length)return;
+    var pi=aguja.parentNode.getBoundingClientRect();
+    if(!pi.width)return;
+    function ctr(k){var r=paradas[k].getBoundingClientRect();return (r.left+r.width/2-pi.left)/pi.width*100;}
+    aguja.style.left=ctr(nActual).toFixed(3)+'%';
+    if(riel){riel.style.left=ctr(0).toFixed(3)+'%';riel.style.right=(100-ctr(paradas.length-1)).toFixed(3)+'%';}
+  }
+  function pintarNiveles(c){
+    for(var i=0;i<3;i++){
+      var e=CTX[c][1][i], pt=document.getElementById('pt-'+i), ed=document.getElementById('ed-'+i);
+      if(pt)pt.className='punto'+(e===2?' lleno':e===1?' medio':'');
+      if(ed)ed.textContent=EDO[e];
+    }
+  }
+  function mostrar(c,n){
+    cActual=c; pintarNiveles(c);
+    paradas.forEach(function(p,k){
+      p.setAttribute('aria-checked',k===n?'true':'false');
+      p.setAttribute('tabindex',k===n?'0':'-1');
+    });
+    nActual=n; ubicarPista();
+    var e=CTX[c][1][n];
+    if(regLec){
+      regLec.className='reg-lec'+(e===0?' evitar':'');
+      regLec.innerHTML='<b>'+EDO[e]+' · '+CTX[c][0]+' en '+['base','puente','expresión plena'][n]+'</b>'+CTX[c][2][n];
+    }
+    var clave=c+'-'+n;
+    if(!vistas[clave]){vistas[clave]=1;nVistas++;if(regCont)regCont.textContent=(nVistas<10?'0':'')+nVistas;}
+  }
+  function recomendado(c){
+    var e=CTX[c][1], mejor=0;
+    for(var i=1;i<3;i++){if(e[i]>e[mejor])mejor=i;}
+    return mejor;
+  }
+  if(ctxs.length&&paradas.length){
+    grupoRadio(ctxs,function(i){mostrar(i,recomendado(i));});
+    grupoRadio(paradas,function(i){mostrar(cActual,i);});
+    mostrar(0,recomendado(0));
+    window.addEventListener('resize',ubicarPista);
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(ubicarPista);
+  }
+
+  /* — la proporción — */
+  var FAM=[["Neutros fríos", 10, "Tu marco. Son los colores de las prendas de inversión: sastrería, abrigos, cuero.", "Cerca de la cara, sin riesgo."], ["Azules", 9, "Tu segundo neutro: el rango entero te sirve, del celeste frío al azul noche.", "Cerca de la cara — camisas y tejidos."], ["Verdes y petróleos", 9, "Frío profundo. Petróleo y esmeralda son de los que mejor te quedan pegados al rostro.", "Cerca de la cara — donde tu paleta paga más."], ["Rojos y vinos", 7, "Máximo contraste sobre negro. Un solo foco por look y alcanza.", "Foco de atención: bufanda, media, un tejido."], ["Violetas y magentas", 17, "El bloque más grande de los seis: tu lado dramático ya vive en tu propio color.", "De la cara a los pies, según cuánto quieras mostrar."], ["Amarillos y el único marrón", 4, "Los únicos cálidos que tu invierno tolera — los tonos de otoño de tu diagnóstico.", "Acento, nunca base. Y lejos de la cara si dudás."]];
+  var chips=[].slice.call(document.querySelectorAll('.chip-f'));
+  var celdas=[].slice.call(document.querySelectorAll('.cel'));
+  var propLec=document.getElementById('prop-lec');
+  if(chips.length){
+    grupoRadio(chips,function(i){
+      celdas.forEach(function(c){
+        c.classList.toggle('apagada',c.getAttribute('data-f')!==String(i));
+      });
+      var f=FAM[i], pct=Math.round(f[1]/56*1000)/10;
+      if(propLec)propLec.innerHTML='<b>'+f[0]+' · '+f[1]+' de 56 · '+String(pct).replace('.',',')+'%</b>'+
+        f[2]+'<i>'+f[3]+'</i>';
     })(0,false);
   }
 
