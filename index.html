@@ -274,6 +274,106 @@ figure.marco figcaption{font-family:var(--display);font-weight:600;font-size:10p
 a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-offset:3px}
 ::selection{background:var(--menta);color:var(--tinta)}
 
+
+/* ═══ INSTRUMENTOS: los gráficos se operan, no se miran ═══ */
+.inst{border:1px solid var(--g25);border-radius:2px;padding:clamp(16px,2.8vw,32px);background:var(--papel)}
+.inst-cab{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;
+  margin-bottom:clamp(14px,2.4vw,24px);border-bottom:1px solid var(--g06);padding-bottom:12px}
+.inst-lec{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--g75);font-variant-numeric:tabular-nums;white-space:nowrap}
+.inst :focus-visible{outline:2px solid var(--ultramar);outline-offset:3px}
+
+/* — la rueda — */
+.rueda-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:clamp(18px,3vw,40px);align-items:start}
+.rueda-caja{display:grid;gap:14px;justify-items:center}
+.mapa,.disco-inv{width:100%;height:auto;max-width:430px;overflow:visible}
+.eje{stroke:var(--g25);stroke-width:1.5}
+.orbita{fill:none;stroke:var(--g06);stroke-width:1}
+.polo{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.18em;fill:var(--g75)}
+.cuad{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.12em;fill:var(--g75)}
+.est{cursor:pointer}
+.est .hit{fill:none;pointer-events:all}
+.est .halo{fill:none;stroke:var(--ultramar);stroke-width:1.5;opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.7);transition:opacity .3s,transform .3s}
+.est .disco{transform-box:fill-box;transform-origin:center;transition:transform .3s ease}
+.est:hover .disco,.est:focus-visible .disco{transform:scale(1.12)}
+.est[aria-checked="true"] .halo{opacity:1;transform:scale(1)}
+.est.tuya .disco{stroke:var(--tinta);stroke-width:2}
+.vis .est .disco{animation:apoyar-e .5s ease-out backwards;animation-delay:calc(.9s + var(--dl))}
+@keyframes apoyar-e{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+.vis .mapa .eje{stroke-dasharray:520;stroke-dashoffset:520;animation:dibujar .9s ease-out forwards}
+.lectura{font-size:14px;line-height:1.4;text-align:center;min-height:44px;max-width:34ch}
+.lectura b{display:block;font-family:var(--marca);text-transform:uppercase;font-weight:400;
+  font-size:clamp(17px,2.4vw,22px);letter-spacing:.03em;margin-bottom:3px}
+.lectura span{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--g75)}
+.lectura .tuya-tag{color:var(--ultramar)}
+.gajo{cursor:pointer;transition:transform .3s ease;transform-origin:250px 250px}
+.gajo:hover,.gajo:focus-visible,.gajo[aria-checked="true"]{transform:translate(var(--tx),var(--ty))}
+.vis .gajo{animation:girar .5s ease-out backwards;animation-delay:calc(.9s + var(--dl))}
+@keyframes girar{from{opacity:0;transform:rotate(-14deg) scale(.9)}to{opacity:1;transform:none}}
+.hexlec{font-family:var(--display);font-weight:400;font-size:29px;fill:var(--tinta);font-variant-numeric:tabular-nums}
+.hexnom{font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.2em;fill:var(--g75);text-transform:uppercase}
+.neutros{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.neu{border:1px solid var(--g25);border-radius:2px;background:var(--papel);cursor:pointer;padding:5px;
+  width:46px;height:46px;display:grid;place-items:center}
+.neu[aria-pressed="true"]{border-color:var(--ultramar);border-width:2px}
+.chip-n{display:block;width:100%;height:100%;border-radius:1px}
+.vis .neu{animation:apoyar-e .5s ease-out backwards;animation-delay:calc(.9s + var(--dl))}
+
+/* — el probador — */
+.probador{display:grid;grid-template-columns:minmax(200px,1fr) minmax(240px,1.15fr);gap:clamp(18px,3vw,44px);align-items:center}
+@media(max-width:700px){.probador{grid-template-columns:1fr}}
+.cara-caja{justify-self:center;width:100%;max-width:280px}
+.cara-svg{width:100%;height:auto}
+.rostro{fill:none;stroke:var(--lapiz);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.vis .rostro{stroke-dasharray:900;stroke-dashoffset:900;animation:dibujar 1.6s ease-out forwards}
+.marco-g{opacity:0;pointer-events:none}
+.marco-g.puesto{opacity:1}
+.fr{fill:none;stroke:var(--ultramar);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.marco-g[data-ok="0"] .fr{stroke:var(--g50)}
+.tacha{fill:none;stroke:var(--lapiz);stroke-width:1.6;stroke-linecap:round;opacity:.62}
+.marco-g.puesto .fr{stroke-dasharray:620;stroke-dashoffset:620;animation:dibujar .6s ease-out forwards}
+.marco-g.puesto .tacha{stroke-dasharray:280;stroke-dashoffset:280;animation:dibujar .5s ease-out .45s forwards}
+.marcos-lista{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
+.btn-marco{display:grid;gap:5px;justify-items:center;background:var(--papel);border:1px solid var(--g25);
+  border-radius:2px;padding:9px 6px;cursor:pointer;min-height:64px;color:var(--tinta)}
+.btn-marco svg{width:100%;max-width:74px;height:26px}
+.fr-ico{fill:none;stroke:var(--g75);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+.btn-marco span{font-family:var(--display);font-weight:600;font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--g75);text-align:center}
+.btn-marco[aria-pressed="true"]{border-color:var(--tinta);background:var(--g06)}
+.btn-marco[aria-pressed="true"] .fr-ico{stroke:var(--tinta)}
+.btn-marco[aria-pressed="true"] span{color:var(--tinta)}
+.veredicto{margin-top:16px;font-size:14.5px;line-height:1.45;min-height:66px;max-width:42ch}
+.veredicto b{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.24em;
+  text-transform:uppercase;display:block;margin-bottom:5px}
+.veredicto.si b{color:var(--ultramar)}
+.veredicto.no b{color:var(--g75)}
+
+/* — un solo foco — */
+.bloques-grid{display:grid;grid-template-columns:minmax(160px,.8fr) minmax(230px,1.2fr);gap:clamp(18px,3vw,40px);align-items:center}
+@media(max-width:640px){.bloques-grid{grid-template-columns:1fr}}
+.cuerpo{width:100%;height:auto;max-width:250px;justify-self:center}
+.fig{fill:none;stroke:var(--lapiz);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.vis .fig{stroke-dasharray:1200;stroke-dashoffset:1200;animation:dibujar 1.8s ease-out forwards}
+.corte{stroke:var(--g25);stroke-width:1;stroke-dasharray:4 5}
+.banda{fill:var(--ultramar);opacity:0;transition:opacity .45s ease}
+.banda.foco{opacity:.13}
+.obs:not(.vis) .banda.foco{opacity:0}
+.vis .banda{animation:apoyar-b .5s ease-out 1.8s backwards}
+@keyframes apoyar-b{from{opacity:0}}
+.rot-b{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.16em;fill:var(--g75);transition:fill .3s}
+.rot-b.foco{fill:var(--ultramar)}
+.zona{cursor:pointer}
+.bl-tit{font-weight:600;font-size:clamp(19px,2.4vw,25px);line-height:1.2;margin:6px 0 4px}
+.bl-zona{color:var(--g75)}
+.bl-txt{font-size:15px;line-height:1.5;margin-top:12px;min-height:96px;max-width:44ch}
+
+@media (prefers-reduced-motion:reduce){
+  .vis .est .disco,.vis .gajo,.vis .neu,.vis .mapa .eje,.vis .rostro,.vis .fig,
+  .marco-g.puesto .fr,.marco-g.puesto .tacha{animation:none!important;stroke-dashoffset:0;opacity:1;transform:none}
+  .vis .banda{animation:none!important}
+  .est .halo,.est .disco,.gajo,.banda,.rot-b{transition:none}
+}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   body::after{animation:none}
@@ -363,11 +463,29 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
   <h2 class="display rev">Frío, hondo,<br><span class="subrayado">contrastado</span></h2>
   <p class="lead rev d1" style="margin-top:28px;max-width:56ch">Tu estación es el <strong>invierno profundo</strong>: paleta fría, de profundidad y contraste, con permiso para algunos cálidos del otoño. Tu referencia de colorimetría: Adam Driver.</p>
 
-  <div class="grid3 rev d2" style="margin-top:40px">
-    <figure class="marco r34 revela"><img src="assets/color-adam-driver.jpg" alt="Adam Driver, referencia de colorimetría invierno profundo" loading="lazy"><figcaption>Tu referencia · Adam Driver</figcaption></figure>
-    <figure class="marco r34"><img src="assets/color-estaciones.jpg" alt="Rueda de las doce estaciones de color, con el invierno profundo señalado" loading="lazy" style="object-fit:contain;background:var(--papel);border:1px solid var(--g06)"><figcaption>Las 12 estaciones · la tuya, invierno profundo</figcaption></figure>
-    <figure class="marco r34"><img src="assets/color-rueda-invierno.png" alt="Rueda de color del invierno con sus neutros" loading="lazy" style="object-fit:contain;background:var(--papel);border:1px solid var(--g06)"><figcaption>La rueda del invierno + neutros</figcaption></figure>
+  <figure class="marco r34 revela rev d1" style="margin-top:40px;max-width:286px"><img src="assets/color-adam-driver.jpg" alt="Adam Driver, referencia de colorimetría invierno profundo" loading="lazy"><figcaption>Tu referencia · Adam Driver</figcaption></figure>
+
+  <div class="inst rev d2" id="inst-color">
+  <div class="inst-cab">
+    <p class="v-datos">Las 12 estaciones · la tuya, invierno profundo</p>
+    <p class="inst-lec"><span id="cont-color">00</span> / 30 tonos</p>
   </div>
+  <div class="rueda-grid"><div class="rueda-caja">
+  <svg class="mapa" viewBox="0 0 560 560" role="radiogroup" aria-label="Las doce estaciones de color">
+    <line class="eje" x1="52" y1="280" x2="508" y2="280"/><line class="eje" x1="280" y1="52" x2="280" y2="508"/><text class="polo" x="280" y="30" text-anchor="middle">BRILLANTE · VÍVIDO</text><text class="polo" x="280" y="548" text-anchor="middle">SUAVE</text><text class="polo" x="46" y="268" text-anchor="start">OSCURO</text><text class="polo" x="514" y="268" text-anchor="end">LUMINOSO</text><text class="cuad" x="264" y="264" text-anchor="end">INVIERNO</text><text class="cuad" x="296" y="264" text-anchor="start">PRIMAVERA</text><text class="cuad" x="264" y="310" text-anchor="end">OTOÑO</text><text class="cuad" x="296" y="310" text-anchor="start">VERANO</text>
+    <circle class="orbita" cx="280" cy="280" r="182"/>
+    <g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Primavera brillante, Bright Spring, temperatura cálida" data-i="0" style="--dl:0.000s"><circle class="hit" cx="327.1" cy="104.2" r="43"/><circle class="halo" cx="327.1" cy="104.2" r="31"/><circle class="disco" cx="327.1" cy="104.2" r="20" fill="#DE3B4E"/></g><g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Primavera cálida, True Spring, temperatura cálida" data-i="1" style="--dl:0.055s"><circle class="hit" cx="408.7" cy="151.3" r="43"/><circle class="halo" cx="408.7" cy="151.3" r="31"/><circle class="disco" cx="408.7" cy="151.3" r="20" fill="#FFB61B"/></g><g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Primavera luminosa, Light Spring, temperatura cálida" data-i="2" style="--dl:0.110s"><circle class="hit" cx="455.8" cy="232.9" r="43"/><circle class="halo" cx="455.8" cy="232.9" r="31"/><circle class="disco" cx="455.8" cy="232.9" r="20" fill="#F4DC7A"/></g><g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Verano luminoso, Light Summer, temperatura fría" data-i="3" style="--dl:0.165s"><circle class="hit" cx="455.8" cy="327.1" r="43"/><circle class="halo" cx="455.8" cy="327.1" r="31"/><circle class="disco" cx="455.8" cy="327.1" r="20" fill="#8AC7DA"/></g><g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Verano frío, True Summer, temperatura fría" data-i="4" style="--dl:0.220s"><circle class="hit" cx="408.7" cy="408.7" r="43"/><circle class="halo" cx="408.7" cy="408.7" r="31"/><circle class="disco" cx="408.7" cy="408.7" r="20" fill="#2C85A5"/></g><g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Verano suave, Soft Summer, temperatura fría" data-i="5" style="--dl:0.275s"><circle class="hit" cx="327.1" cy="455.8" r="43"/><circle class="halo" cx="327.1" cy="455.8" r="31"/><circle class="disco" cx="327.1" cy="455.8" r="20" fill="#E1ABC3"/></g><g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Otoño suave, Soft Autumn, temperatura cálida" data-i="6" style="--dl:0.330s"><circle class="hit" cx="232.9" cy="455.8" r="43"/><circle class="halo" cx="232.9" cy="455.8" r="31"/><circle class="disco" cx="232.9" cy="455.8" r="20" fill="#D9AE12"/></g><g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Otoño cálido, True Autumn, temperatura cálida" data-i="7" style="--dl:0.385s"><circle class="hit" cx="151.3" cy="408.7" r="43"/><circle class="halo" cx="151.3" cy="408.7" r="31"/><circle class="disco" cx="151.3" cy="408.7" r="20" fill="#9B3C0C"/></g><g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Otoño profundo, Dark Autumn, temperatura cálida" data-i="8" style="--dl:0.440s"><circle class="hit" cx="104.2" cy="327.1" r="43"/><circle class="halo" cx="104.2" cy="327.1" r="31"/><circle class="disco" cx="104.2" cy="327.1" r="20" fill="#3E4911"/></g><g class="est tuya" role="radio" tabindex="0" aria-checked="true" aria-label="Invierno profundo, Dark Winter, temperatura fría, la tuya" data-i="9" style="--dl:0.495s"><circle class="hit" cx="104.2" cy="232.9" r="43"/><circle class="halo" cx="104.2" cy="232.9" r="36"/><circle class="disco" cx="104.2" cy="232.9" r="25" fill="#3B2D7C"/></g><g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Invierno frío, True Winter, temperatura fría" data-i="10" style="--dl:0.550s"><circle class="hit" cx="151.3" cy="151.3" r="43"/><circle class="halo" cx="151.3" cy="151.3" r="31"/><circle class="disco" cx="151.3" cy="151.3" r="20" fill="#0A6276"/></g><g class="est" role="radio" tabindex="-1" aria-checked="false" aria-label="Invierno brillante, Bright Winter, temperatura fría" data-i="11" style="--dl:0.605s"><circle class="hit" cx="232.9" cy="104.2" r="43"/><circle class="halo" cx="232.9" cy="104.2" r="31"/><circle class="disco" cx="232.9" cy="104.2" r="20" fill="#CB107B"/></g>
+  </svg>
+  <p class="lectura" id="lec-est" role="status" aria-live="polite"></p>
+</div><div class="rueda-caja">
+  <svg class="disco-inv" viewBox="0 0 500 500" role="radiogroup" aria-label="Los veinticuatro tonos de la rueda del invierno">
+    <path class="gajo" role="radio" tabindex="0" aria-checked="false" aria-label="Tono 1 de 24, #EA98B9" data-h="#EA98B9" data-n="Tono 01 / 24" style="--tx:1.28px;--ty:-9.71px;--dl:0.000s" d="M252.0 26.0A224 224 0 0 1 306.1 33.1L283.1 122.2A132 132 0 0 0 251.2 118.0Z" fill="#EA98B9"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 2 de 24, #DC6290" data-h="#DC6290" data-n="Tono 02 / 24" style="--tx:3.75px;--ty:-9.04px;--dl:0.035s" d="M309.9 34.1A224 224 0 0 1 360.3 55.0L315.0 135.1A132 132 0 0 0 285.3 122.8Z" fill="#DC6290"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 3 de 24, #E1487E" data-h="#E1487E" data-n="Tono 03 / 24" style="--tx:5.96px;--ty:-7.77px;--dl:0.070s" d="M363.7 57.0A224 224 0 0 1 407.0 90.2L342.5 155.9A132 132 0 0 0 317.0 136.3Z" fill="#E1487E"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 4 de 24, #DE197E" data-h="#DE197E" data-n="Tono 04 / 24" style="--tx:7.77px;--ty:-5.96px;--dl:0.105s" d="M409.8 93.0A224 224 0 0 1 443.0 136.3L363.7 183.0A132 132 0 0 0 344.1 157.5Z" fill="#DE197E"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 5 de 24, #92194D" data-h="#92194D" data-n="Tono 05 / 24" style="--tx:9.04px;--ty:-3.75px;--dl:0.140s" d="M445.0 139.7A224 224 0 0 1 465.9 190.1L377.2 214.7A132 132 0 0 0 364.9 185.0Z" fill="#92194D"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 6 de 24, #921328" data-h="#921328" data-n="Tono 06 / 24" style="--tx:9.71px;--ty:-1.28px;--dl:0.175s" d="M466.9 193.9A224 224 0 0 1 474.0 248.0L382.0 248.8A132 132 0 0 0 377.8 216.9Z" fill="#921328"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 7 de 24, #C21523" data-h="#C21523" data-n="Tono 07 / 24" style="--tx:9.71px;--ty:1.28px;--dl:0.210s" d="M474.0 252.0A224 224 0 0 1 466.9 306.1L377.8 283.1A132 132 0 0 0 382.0 251.2Z" fill="#C21523"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 8 de 24, #F2E752" data-h="#F2E752" data-n="Tono 08 / 24" style="--tx:9.04px;--ty:3.75px;--dl:0.245s" d="M465.9 309.9A224 224 0 0 1 445.0 360.3L364.9 315.0A132 132 0 0 0 377.2 285.3Z" fill="#F2E752"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 9 de 24, #31A262" data-h="#31A262" data-n="Tono 09 / 24" style="--tx:7.77px;--ty:5.96px;--dl:0.280s" d="M443.0 363.7A224 224 0 0 1 409.8 407.0L344.1 342.5A132 132 0 0 0 363.7 317.0Z" fill="#31A262"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 10 de 24, #1E9047" data-h="#1E9047" data-n="Tono 10 / 24" style="--tx:5.96px;--ty:7.77px;--dl:0.315s" d="M407.0 409.8A224 224 0 0 1 363.7 443.0L317.0 363.7A132 132 0 0 0 342.5 344.1Z" fill="#1E9047"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 11 de 24, #0E693D" data-h="#0E693D" data-n="Tono 11 / 24" style="--tx:3.75px;--ty:9.04px;--dl:0.350s" d="M360.3 445.0A224 224 0 0 1 309.9 465.9L285.3 377.2A132 132 0 0 0 315.0 364.9Z" fill="#0E693D"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 12 de 24, #244030" data-h="#244030" data-n="Tono 12 / 24" style="--tx:1.28px;--ty:9.71px;--dl:0.385s" d="M306.1 466.9A224 224 0 0 1 252.0 474.0L251.2 382.0A132 132 0 0 0 283.1 377.8Z" fill="#244030"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 13 de 24, #1E9BD2" data-h="#1E9BD2" data-n="Tono 13 / 24" style="--tx:-1.28px;--ty:9.71px;--dl:0.420s" d="M248.0 474.0A224 224 0 0 1 193.9 466.9L216.9 377.8A132 132 0 0 0 248.8 382.0Z" fill="#1E9BD2"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 14 de 24, #1B77A8" data-h="#1B77A8" data-n="Tono 14 / 24" style="--tx:-3.75px;--ty:9.04px;--dl:0.455s" d="M190.1 465.9A224 224 0 0 1 139.7 445.0L185.0 364.9A132 132 0 0 0 214.7 377.2Z" fill="#1B77A8"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 15 de 24, #054B91" data-h="#054B91" data-n="Tono 15 / 24" style="--tx:-5.96px;--ty:7.77px;--dl:0.490s" d="M136.3 443.0A224 224 0 0 1 93.0 409.8L157.5 344.1A132 132 0 0 0 183.0 363.7Z" fill="#054B91"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 16 de 24, #23367B" data-h="#23367B" data-n="Tono 16 / 24" style="--tx:-7.77px;--ty:5.96px;--dl:0.525s" d="M90.2 407.0A224 224 0 0 1 57.0 363.7L136.3 317.0A132 132 0 0 0 155.9 342.5Z" fill="#23367B"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 17 de 24, #221F48" data-h="#221F48" data-n="Tono 17 / 24" style="--tx:-9.04px;--ty:3.75px;--dl:0.560s" d="M55.0 360.3A224 224 0 0 1 34.1 309.9L122.8 285.3A132 132 0 0 0 135.1 315.0Z" fill="#221F48"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 18 de 24, #181934" data-h="#181934" data-n="Tono 18 / 24" style="--tx:-9.71px;--ty:1.28px;--dl:0.595s" d="M33.1 306.1A224 224 0 0 1 26.0 252.0L118.0 251.2A132 132 0 0 0 122.2 283.1Z" fill="#181934"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 19 de 24, #5C398B" data-h="#5C398B" data-n="Tono 19 / 24" style="--tx:-9.71px;--ty:-1.28px;--dl:0.630s" d="M26.0 248.0A224 224 0 0 1 33.1 193.9L122.2 216.9A132 132 0 0 0 118.0 248.8Z" fill="#5C398B"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 20 de 24, #C3B0D2" data-h="#C3B0D2" data-n="Tono 20 / 24" style="--tx:-9.04px;--ty:-3.75px;--dl:0.665s" d="M34.1 190.1A224 224 0 0 1 55.0 139.7L135.1 185.0A132 132 0 0 0 122.8 214.7Z" fill="#C3B0D2"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 21 de 24, #C6E0EC" data-h="#C6E0EC" data-n="Tono 21 / 24" style="--tx:-7.77px;--ty:-5.96px;--dl:0.700s" d="M57.0 136.3A224 224 0 0 1 90.2 93.0L155.9 157.5A132 132 0 0 0 136.3 183.0Z" fill="#C6E0EC"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 22 de 24, #ACD6D1" data-h="#ACD6D1" data-n="Tono 22 / 24" style="--tx:-5.96px;--ty:-7.77px;--dl:0.735s" d="M93.0 90.2A224 224 0 0 1 136.3 57.0L183.0 136.3A132 132 0 0 0 157.5 155.9Z" fill="#ACD6D1"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 23 de 24, #E7EBD0" data-h="#E7EBD0" data-n="Tono 23 / 24" style="--tx:-3.75px;--ty:-9.04px;--dl:0.770s" d="M139.7 55.0A224 224 0 0 1 190.1 34.1L214.7 122.8A132 132 0 0 0 185.0 135.1Z" fill="#E7EBD0"/><path class="gajo" role="radio" tabindex="-1" aria-checked="false" aria-label="Tono 24 de 24, #DFD4E2" data-h="#DFD4E2" data-n="Tono 24 / 24" style="--tx:-1.28px;--ty:-9.71px;--dl:0.805s" d="M193.9 33.1A224 224 0 0 1 248.0 26.0L248.8 118.0A132 132 0 0 0 216.9 122.2Z" fill="#DFD4E2"/>
+    <text class="hexlec" id="hex-lec" x="250" y="243" text-anchor="middle">#3B2D7C</text>
+    <text class="hexnom" id="hex-nom" x="250" y="272" text-anchor="middle">TU ESTACIÓN</text>
+  </svg>
+  <div class="neutros" role="group" aria-label="Los seis neutros del invierno"><button type="button" class="neu" data-h="#F0F0EF" data-n="Blanco" aria-label="Neutro Blanco, #F0F0EF" style="--dl:0.840s"><span class="chip-n" style="background:#F0F0EF"></span></button><button type="button" class="neu" data-h="#C3C3C1" data-n="Perla" aria-label="Neutro Perla, #C3C3C1" style="--dl:0.875s"><span class="chip-n" style="background:#C3C3C1"></span></button><button type="button" class="neu" data-h="#858585" data-n="Gris medio" aria-label="Neutro Gris medio, #858585" style="--dl:0.910s"><span class="chip-n" style="background:#858585"></span></button><button type="button" class="neu" data-h="#28352C" data-n="Verde noche" aria-label="Neutro Verde noche, #28352C" style="--dl:0.945s"><span class="chip-n" style="background:#28352C"></span></button><button type="button" class="neu" data-h="#000000" data-n="Negro absoluto" aria-label="Neutro Negro absoluto, #000000" style="--dl:0.980s"><span class="chip-n" style="background:#000000"></span></button><button type="button" class="neu" data-h="#25221A" data-n="Tinta parda" aria-label="Neutro Tinta parda, #25221A" style="--dl:1.015s"><span class="chip-n" style="background:#25221A"></span></button></div>
+</div></div>
+</div>
 
   <h3 class="rev" style="margin-top:64px">La atmósfera de tu paleta</h3>
   <p class="mut rev d1" style="font-size:14px;margin-top:6px">Así se ve tu invierno cuando no es tela: bosque nevado, frutos oscuros, piedra verde. Lo naranja también es tuyo — pero lejos de la cara.</p>
@@ -444,10 +562,26 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
       <p style="font-size:15px"><strong>Sí:</strong> rectangular, cuadrado, wayfarer clásico, browline, geométrico — sin superar el ancho de tu rostro. <strong>No:</strong> aviador y wrap deportivo. Un marco de acetato con presencia es tu primer <em>foco de atención</em> — y el más barato.</p></div>
   </div>
 
-  <figure class="marco rev" style="margin-top:26px;max-width:560px">
-    <img src="assets/rostro-gafas-guia.png" alt="Guía de anteojos para rostro ovalado: rectangular, cuadrado, wayfarer clásico, browline y geométrico favorables; aviador y wrap descartados" loading="lazy" style="background:var(--papel);border:1px solid var(--g06)">
-    <figcaption>Tu guía de marcos · las tachas son aviador y wrap</figcaption>
-  </figure>
+  <div class="inst rev" id="inst-marcos">
+  <div class="inst-cab">
+    <p class="v-datos">El probador · siete marcos sobre tu óvalo</p>
+    <p class="inst-lec"><span id="cont-marcos">0</span> / 7 probados</p>
+  </div>
+  <div class="probador">
+    <div class="cara-caja">
+      <svg class="cara-svg" viewBox="0 0 300 300" aria-hidden="true">
+        <path class="rostro" d="M150 34c-44 0-70 30-70 74 0 16 2 30 6 44 6 22 14 40 26 52 12 12 24 18 38 18s26-6 38-18c12-12 20-30 26-52 4-14 6-28 6-44 0-44-26-74-70-74Z"/>
+        <path class="rostro" d="M88 150q-12-1-12 11t12 13"/><path class="rostro" d="M212 150q12-1 12 11t-12 13"/>
+        <path class="rostro" d="M150 176v30q0 6-7 8"/><path class="rostro" d="M132 232q18 10 36 0"/>
+        <g class="marco-g" id="m-rect" data-ok="1"><path class="fr" d="M94 156h44v26H94zM162 156h44v26h-44zM138 168h24M94 160 84 156M206 160l10-4"/></g><g class="marco-g" id="m-cuad" data-ok="1"><path class="fr" d="M94 152h44v34H94zM162 152h44v34h-44zM138 168h24M94 158 84 154M206 158l10-4"/></g><g class="marco-g" id="m-way" data-ok="1"><path class="fr" d="M92 154h48l-6 30h-36zM160 154h48l-6 30h-36zM140 160h20M92 158 82 154M208 158l10-4"/></g><g class="marco-g" id="m-brow" data-ok="1"><path class="fr" d="M92 154h48l-4 10H96zM160 154h48l-4 10h-40zM96 166q10 20 22 20t22-20M164 166q10 20 22 20t22-20M140 158h20M92 156 82 152M208 156l10-4"/></g><g class="marco-g" id="m-geo" data-ok="1"><path class="fr" d="M104 152h26l14 16-14 16h-26l-14-16zM170 152h26l14 16-14 16h-26l-14-16zM144 168h12M90 164 80 160M210 164l10-4"/></g><g class="marco-g" id="m-avia" data-ok="0"><path class="fr" d="M94 154h44q1 24-20 32t-24-18zM162 154h44q-1 24-22 32t-22-18zM138 160h24M94 158 84 154M206 158l10-4"/><path class="tacha" d="M84 138 216 198M216 138 84 198"/></g><g class="marco-g" id="m-wrap" data-ok="0"><path class="fr" d="M90 156q60-12 120 0 3 20-10 27-50 9-100 0-13-7-10-27ZM90 159 80 156M210 159l10-3"/><path class="tacha" d="M84 138 216 198M216 138 84 198"/></g>
+      </svg>
+    </div>
+    <div class="probador-lado">
+      <div class="marcos-lista" role="group" aria-label="Los siete marcos sobre tu óvalo"><button type="button" class="btn-marco" data-m="rect" aria-pressed="false" aria-label="Marco Rectangular"><svg viewBox="76 144 148 50" aria-hidden="true"><path class="fr-ico" d="M94 156h44v26H94zM162 156h44v26h-44zM138 168h24M94 160 84 156M206 160l10-4"/></svg><span>Rectangular</span></button><button type="button" class="btn-marco" data-m="cuad" aria-pressed="false" aria-label="Marco Cuadrado"><svg viewBox="76 144 148 50" aria-hidden="true"><path class="fr-ico" d="M94 152h44v34H94zM162 152h44v34h-44zM138 168h24M94 158 84 154M206 158l10-4"/></svg><span>Cuadrado</span></button><button type="button" class="btn-marco" data-m="way" aria-pressed="false" aria-label="Marco Wayfarer clásico"><svg viewBox="76 144 148 50" aria-hidden="true"><path class="fr-ico" d="M92 154h48l-6 30h-36zM160 154h48l-6 30h-36zM140 160h20M92 158 82 154M208 158l10-4"/></svg><span>Wayfarer clásico</span></button><button type="button" class="btn-marco" data-m="brow" aria-pressed="false" aria-label="Marco Browline"><svg viewBox="76 144 148 50" aria-hidden="true"><path class="fr-ico" d="M92 154h48l-4 10H96zM160 154h48l-4 10h-40zM96 166q10 20 22 20t22-20M164 166q10 20 22 20t22-20M140 158h20M92 156 82 152M208 156l10-4"/></svg><span>Browline</span></button><button type="button" class="btn-marco" data-m="geo" aria-pressed="false" aria-label="Marco Geométrico"><svg viewBox="76 144 148 50" aria-hidden="true"><path class="fr-ico" d="M104 152h26l14 16-14 16h-26l-14-16zM170 152h26l14 16-14 16h-26l-14-16zM144 168h12M90 164 80 160M210 164l10-4"/></svg><span>Geométrico</span></button><button type="button" class="btn-marco" data-m="avia" aria-pressed="false" aria-label="Marco Aviador"><svg viewBox="76 144 148 50" aria-hidden="true"><path class="fr-ico" d="M94 154h44q1 24-20 32t-24-18zM162 154h44q-1 24-22 32t-22-18zM138 160h24M94 158 84 154M206 158l10-4"/></svg><span>Aviador</span></button><button type="button" class="btn-marco" data-m="wrap" aria-pressed="false" aria-label="Marco Wrap deportivo"><svg viewBox="76 144 148 50" aria-hidden="true"><path class="fr-ico" d="M90 156q60-12 120 0 3 20-10 27-50 9-100 0-13-7-10-27ZM90 159 80 156M210 159l10-3"/></svg><span>Wrap deportivo</span></button></div>
+      <p class="veredicto" id="ver-marcos" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
 </section>
 
 <!-- ══════════════════ 04 TU SILUETA ══════════════════ -->
@@ -456,11 +590,34 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
   <div class="acto"><span class="num">04 / 08</span><span class="v-datos" data-scramble>Tu silueta · bloques corporales</span></div>
   <h2 class="display rev">Cuatro bloques,<br>una regla <span class="subrayado">fija</span></h2>
 
-  <div class="grid3" style="margin-top:40px;align-items:start">
+  <div class="grid2" style="margin-top:40px;align-items:start">
     <figure class="marco r34 rev"><img src="assets/b2c8e05f71.jpg" alt="Emiliano de frente con ropa negra: hombros suaves, cadera levemente más ancha, contextura esbelta" loading="lazy"><figcaption>Tu arquitectura · frente</figcaption></figure>
     <figure class="marco r34 rev d1"><img src="assets/a4e19d63b8.jpg" alt="Emiliano de espaldas con ropa negra" loading="lazy"><figcaption>Tu arquitectura · espalda</figcaption></figure>
-    <figure class="marco r34 rev d2"><img src="assets/silueta-bloques.jpg" alt="Figura en acuarela dividida en los cuatro bloques corporales: busto hacia arriba, busto a cadera, pelvis a rodillas y rodillas a pies" loading="lazy" style="object-fit:contain;background:var(--papel);border:1px solid var(--g06)"><figcaption>Tus 4 bloques · B1 a B4</figcaption></figure>
   </div>
+
+  <div class="inst rev d2" id="inst-bloques">
+  <div class="inst-cab">
+    <p class="v-datos">Tus cuatro bloques</p>
+    <p class="inst-lec">Un foco a la vez</p>
+  </div>
+  <div class="bloques-grid">
+    <svg class="cuerpo" viewBox="0 0 214 384" role="radiogroup" aria-label="Los cuatro bloques de tu cuerpo">
+      <rect class="banda" id="bn-0" x="14" y="0" width="172" height="96" rx="3"/><rect class="banda" id="bn-1" x="14" y="96" width="172" height="72" rx="3"/><rect class="banda" id="bn-2" x="14" y="168" width="172" height="88" rx="3"/><rect class="banda" id="bn-3" x="14" y="256" width="172" height="116" rx="3"/>
+      <path class="fig" d="M100 22c-11 0-18 8-18 19s7 20 18 20 18-9 18-20-7-19-18-19Z"/>
+      <path class="fig" d="M100 61v14M82 78c-14 4-24 11-27 24l-10 66c-1 8 10 10 12 2l11-52"/>
+      <path class="fig" d="M118 78c14 4 24 11 27 24l10 66c1 8-10 10-12 2l-11-52"/>
+      <path class="fig" d="M84 76c-5 22-8 45-7 68 1 26 5 41 4 66-1 28-6 55-4 82 1 21 3 41 6 61M116 76c5 22 8 45 7 68-1 26-5 41-4 66 1 28 6 55 4 82-1 21-3 41-6 61"/>
+      <path class="fig" d="M83 353h-16M117 353h16"/>
+      <line class="corte" x1="14" y1="96" x2="186" y2="96"/><line class="corte" x1="14" y1="168" x2="186" y2="168"/><line class="corte" x1="14" y1="256" x2="186" y2="256"/><text class="rot-b" id="rb-0" x="192" y="52.0">B1</text><text class="rot-b" id="rb-1" x="192" y="136.0">B2</text><text class="rot-b" id="rb-2" x="192" y="216.0">B3</text><text class="rot-b" id="rb-3" x="192" y="318.0">B4</text><rect class="zona" role="radio" tabindex="0" aria-checked="true" aria-label="Bloque B1, del busto hacia arriba" data-b="0" x="14" y="0" width="172" height="96" fill="transparent"/><rect class="zona" role="radio" tabindex="-1" aria-checked="false" aria-label="Bloque B2, del busto a la cadera" data-b="1" x="14" y="96" width="172" height="72" fill="transparent"/><rect class="zona" role="radio" tabindex="-1" aria-checked="false" aria-label="Bloque B3, de la pelvis a las rodillas" data-b="2" x="14" y="168" width="172" height="88" fill="transparent"/><rect class="zona" role="radio" tabindex="-1" aria-checked="false" aria-label="Bloque B4, de las rodillas a los pies" data-b="3" x="14" y="256" width="172" height="116" fill="transparent"/>
+    </svg>
+    <div class="bloques-lado">
+      <p class="v-datos" id="bl-cod">B1</p>
+      <h4 class="bl-tit" id="bl-tit">Hombro definido</h4>
+      <p class="bl-zona v-datos chica" id="bl-zona">Del busto hacia arriba</p>
+      <p class="bl-txt" id="bl-txt" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
 
   <div class="grid2" style="margin-top:40px;align-items:start">
     <div class="rev">
@@ -1232,6 +1389,102 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
         });
       });
     });
+
+  /* ═══ INSTRUMENTOS ═══ */
+  var EST=[["Bright Spring", "Primavera brillante", "cálida"], ["True Spring", "Primavera cálida", "cálida"], ["Light Spring", "Primavera luminosa", "cálida"], ["Light Summer", "Verano luminoso", "fría"], ["True Summer", "Verano frío", "fría"], ["Soft Summer", "Verano suave", "fría"], ["Soft Autumn", "Otoño suave", "cálida"], ["True Autumn", "Otoño cálido", "cálida"], ["Dark Autumn", "Otoño profundo", "cálida"], ["Dark Winter", "Invierno profundo", "fría"], ["True Winter", "Invierno frío", "fría"], ["Bright Winter", "Invierno brillante", "fría"]];
+  var tocados={},nTocados=0;
+
+  function grupoRadio(items,alSeleccionar){
+    function sel(i,foco){
+      items.forEach(function(el,k){
+        var on=k===i;
+        el.setAttribute('aria-checked',on?'true':'false');
+        el.setAttribute('tabindex',on?'0':'-1');
+      });
+      alSeleccionar(i);
+      if(foco&&items[i].focus)items[i].focus();
+    }
+    items.forEach(function(el,i){
+      el.addEventListener('click',function(){sel(i,false);});
+      el.addEventListener('mouseenter',function(){sel(i,false);});
+      el.addEventListener('keydown',function(ev){
+        var k=ev.key,n=null;
+        if(k==='ArrowRight'||k==='ArrowDown')n=(i+1)%items.length;
+        else if(k==='ArrowLeft'||k==='ArrowUp')n=(i-1+items.length)%items.length;
+        else if(k==='Home')n=0; else if(k==='End')n=items.length-1;
+        else if(k===' '||k==='Enter'){ev.preventDefault();sel(i,true);return;}
+        if(n!==null){ev.preventDefault();sel(n,true);}
+      });
+    });
+    return sel;
+  }
+
+  /* — 1. la rueda — */
+  var lecEst=document.getElementById('lec-est');
+  var ests=[].slice.call(document.querySelectorAll('.est'));
+  if(ests.length&&lecEst){
+    grupoRadio(ests,function(i){
+      var e=EST[i];
+      lecEst.innerHTML='<b>'+e[1]+'</b><span>'+e[0]+' · temp. '+e[2]+
+        (i===9?' · <span class="tuya-tag">la tuya</span>':'')+'</span>';
+    })(9,false);
+  }
+  var hexLec=document.getElementById('hex-lec'),hexNom=document.getElementById('hex-nom');
+  var cont=document.getElementById('cont-color');
+  function marcar(h){
+    if(!tocados[h]){tocados[h]=1;nTocados++;if(cont)cont.textContent=(nTocados<10?'0':'')+nTocados;}
+  }
+  function pintar(h,n){ if(hexLec){hexLec.textContent=h;hexNom.textContent=n;} marcar(h); }
+  var gajos=[].slice.call(document.querySelectorAll('.gajo'));
+  if(gajos.length){
+    var selG=grupoRadio(gajos,function(i){
+      pintar(gajos[i].getAttribute('data-h'),gajos[i].getAttribute('data-n'));
+    });
+  }
+  [].slice.call(document.querySelectorAll('.neu')).forEach(function(b){
+    function activar(){
+      document.querySelectorAll('.neu').forEach(function(o){o.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      pintar(b.getAttribute('data-h'),b.getAttribute('data-n'));
+    }
+    b.addEventListener('click',activar); b.addEventListener('mouseenter',activar);
+  });
+
+  /* — 2. el probador — */
+  var MAR={"rect": ["Rectangular", true, "Corta el largo del óvalo sin achicarte el rostro."], "cuad": ["Cuadrado", true, "El ángulo contra la curva: define pómulo y mandíbula."], "way": ["Wayfarer clásico", true, "El de siempre, y te funciona: barra superior con peso."], "brow": ["Browline", true, "Levanta la ceja y dirige la mirada arriba. Tu foco más barato."], "geo": ["Geométrico", true, "El city pop en la cara: forma reconocible, sin estampa."], "avia": ["Aviador", false, "Repite la caída del óvalo y te alarga el rostro."], "wrap": ["Wrap deportivo", false, "Envuelve y borra la línea de la sien: te achata la cara."]};
+  var ver=document.getElementById('ver-marcos'),contM=document.getElementById('cont-marcos');
+  var probados={},nProb=0;
+  [].slice.call(document.querySelectorAll('.btn-marco')).forEach(function(b){
+    b.addEventListener('click',function(){
+      var id=b.getAttribute('data-m'),d=MAR[id];
+      document.querySelectorAll('.btn-marco').forEach(function(o){o.setAttribute('aria-pressed','false');});
+      document.querySelectorAll('.marco-g').forEach(function(g){g.classList.remove('puesto');});
+      b.setAttribute('aria-pressed','true');
+      var g=document.getElementById('m-'+id);
+      if(g){void g.offsetWidth;g.classList.add('puesto');}
+      if(ver){ver.className='veredicto '+(d[1]?'si':'no');
+        ver.innerHTML='<b>'+(d[1]?'Sí · ':'No · ')+d[0]+'</b>'+d[2];}
+      if(!probados[id]){probados[id]=1;nProb++;if(contM)contM.textContent=nProb;}
+    });
+  });
+
+  /* — 3. un solo foco — */
+  var BLO=[["B1", "Del busto hacia arriba", "Hombro definido", "Hombreras, costura al hueso, tejido con cuerpo. Acá se corrige el hombro suave — y es el bloque que más se ve sentado, en una reunión o dando clase."], ["B2", "Del busto a la cadera", "Corte en cadera alta", "Remeras y camisas terminan en la cadera alta, nunca pasando la mitad de la nalga. Sacos con leve forma en cintura y doble abertura trasera."], ["B3", "De la pelvis a las rodillas", "Tiro medio o alto, siempre", "Tu bloque más ancho: el tiro sube la línea de cintura y alarga la pierna. El volumen escala por nivel, el tiro no se negocia."], ["B4", "De las rodillas a los pies", "Calzado con presencia", "La base que equilibra el volumen de arriba. Suela con cuerpo, y las medias como foco cuando el resto está tranquilo."]];
+  var zonas=[].slice.call(document.querySelectorAll('.zona'));
+  if(zonas.length){
+    grupoRadio(zonas,function(i){
+      for(var k=0;k<4;k++){
+        var bn=document.getElementById('bn-'+k),rb=document.getElementById('rb-'+k);
+        if(bn)bn.classList.toggle('foco',k===i);
+        if(rb)rb.classList.toggle('foco',k===i);
+      }
+      var b=BLO[i];
+      var q=function(id){return document.getElementById(id);};
+      if(q('bl-cod')){q('bl-cod').textContent=b[0];q('bl-tit').textContent=b[2];
+        q('bl-zona').textContent=b[1];q('bl-txt').textContent=b[3];}
+    })(0,false);
+  }
+
   }
 })();
 </script>

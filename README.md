@@ -12,9 +12,22 @@ silueta, niveles de intensidad y un guardarropas con prendas reales verificadas 
 | Archivo | Qué es |
 |---|---|
 | `index.html` | La guía completa. Autocontenida: CSS y JS en línea, sin dependencias salvo las tipografías. |
-| `assets/` | 48 imágenes de referencia del proceso de asesoría. |
+| `assets/` | 44 imágenes de referencia del proceso de asesoría. |
 | `SISTEMA-MARCA-MAJO-CIANCAGLINI.md` | El sistema de identidad de la casa, extraído del vector real del isologotipo. |
 | `robots.txt` · `<meta robots>` | Fuera de buscadores. |
+
+## Los instrumentos
+
+Tres gráficos del proceso dejaron de ser ilustraciones y se volvieron instrumentos que se operan,
+con los colores y los datos extraídos del material original:
+
+- **La rueda** — las 12 estaciones sobre sus dos ejes, y los 24 tonos del invierno con sus 6 neutros.
+  El hueco de la rueda es el visor: devuelve el código de cada tono.
+- **El probador** — siete marcos de anteojos que se dibujan sobre el óvalo del rostro, con su veredicto.
+- **Un solo foco** — los cuatro bloques del cuerpo, donde solo uno puede encenderse a la vez:
+  la restricción de la interfaz *es* la regla de estilo.
+
+Los tres funcionan con teclado (flechas, Inicio, Fin) y se apagan enteros con .
 
 ## El portón
 
