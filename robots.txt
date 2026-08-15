@@ -1,0 +1,3 @@
+# Esta guía es privada. No se indexa.
+User-agent: *
+Disallow: /

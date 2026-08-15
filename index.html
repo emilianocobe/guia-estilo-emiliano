@@ -1,0 +1,1239 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía de Estilo · Emiliano</title>
+<meta name="description" content="Guía de estilo de Emiliano 2.0 — tu color, tu rostro, tu silueta, tus niveles y tu guardarropas con prendas reales en tu talle. Majo Ciancaglini, Imagen Personal.">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="96.8 166.9 305.2 474.9"><path fill="%2329C4A6" d="M357.5 242.6C338.8 248.9 301.7 232 261.3 231.2 220.8 230.4 177 245.8 161.2 237.9 145.5 230 157.6 198.9 198.3 184.9 238.9 170.9 308.1 174.1 342.4 190.4 376.7 206.8 376.3 236.3 357.5 242.6"/><path fill="%231A02AF" d="M130.9 406.3C128.6 426.4 131.5 460.8 145.8 487.3 160 513.8 185.5 532.4 202.7 547.4 220 562.4 229.1 573.9 236 560.7 242.9 547.5 247.6 509.6 249.2 477.3 250.7 445 249.2 418.3 231.9 402.2 214.6 386.1 181.6 380.6 161.3 380.7 141 380.7 133.3 386.3 130.9 406.3"/><path fill="none" stroke="%23231F20" stroke-width="8" d="M375.8 265.9C373.4 252.1 371.1 238.4 352.2 228.8 333.4 219.2 298.1 213.9 264.6 215 231.1 216.2 199.4 224 180.3 236.3 161.2 248.5 154.6 265.3 162.7 278.1 170.7 291 193.4 300 221.3 301.8 249.1 303.6 281.9 298.2 292.7 287.1 303.5 276 292.1 259.3 276.3 254.8 260.4 250.3 240.1 258.1 235.9 268.6 231.7 279 243.7 292.2 266.4 297.3 289.1 302.4 322.6 299.4 349.8 293.1 377 286.8 398 277.2 375.8 265.9 353.7 254.5 288.5 241.4 230.2 240.5 171.9 239.6 120.5 250.9 110.6 295.8 100.8 340.6 132.5 419 166.8 481.2 201.2 543.3 238.3 589.4 265.2 613 292.1 636.6 308.9 637.8 319 627.4 329.2 616.9 332.8 594.8 333.1 581.6 333.4 568.5 330.4 564.3 318.4 564.3 306.5 564.3 285.5 568.5 288.5 572 291.5 575.6 318.4 578.6 341.2 575.3 363.9 572 382.4 562.5 386.6 555 390.8 547.5 380.6 542.1 365.4 543.3 350.1 544.5 329.8 552.3 311.6 555.6 293.3 558.9 277.2 557.7 275.4 552.6 273.6 547.5 286.1 538.6 296 530.2 305.9 521.8 313 514 319 514.3 325 514.6 329.8 523 335.8 520.9 341.7 518.8 348.9 506.3 360.6 510.5 372.2 514.6 388.4 535.6 385.7 539.2 383 542.7 361.5 529 351 511.9 340.6 494.9 341.2 474.6 348 462.9 354.9 451.3 368.1 448.3 374 453 380 457.8 378.8 470.3 371.6 474.2 364.5 478 351.3 473.3 335.8 469.2 320.2 465 302.3 461.4 293.9 463.8 285.5 466.1 286.7 474.5 293 478.6 299.3 482.8 310.7 482.8 314.5 459.2 318.4 435.6 314.8 388.4 312.1 363.3 309.5 338.2 307.7 335.2 305.9 332.3"/></svg>'>
+<style>
+/* ════════════════════════════════════════════════════════════
+   GUÍA DE ESTILO DE EMILIANO · 2.0
+   Sistema de marca: SISTEMA-MARCA-MAJO-CIANCAGLINI.md
+   El documento se abre como un guardarropas: portón, percheros,
+   color que se revela al tacto. La línea recorre; la mancha apoya.
+   ════════════════════════════════════════════════════════════ */
+:root{
+  --papel:#FFFFFF;
+  --tinta:#202020;
+  --lapiz:#231F20;
+  --menta:#29C4A6;
+  --ultramar:#1A02AF;
+  --g75:#4A4A4A; --g50:#8C8C8C; --g25:#C6C6C6; --g06:#F0F0EF;
+  --display:'Poppins',ui-sans-serif,system-ui,sans-serif;
+  --marca:'Antonio','Arial Narrow',ui-sans-serif,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--papel);color:var(--tinta);
+  font-family:var(--display);font-size:17px;line-height:1.55;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,6.5vw,88px)}
+
+/* ---- grano fílmico perenne (textura de tela/papel) ---- */
+body::after{
+  content:"";position:fixed;inset:-50%;width:200%;height:200%;z-index:2000;pointer-events:none;
+  opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grano 1s steps(6) infinite;
+}
+@keyframes grano{0%{transform:translate(0,0)}20%{transform:translate(-3%,-4%)}40%{transform:translate(-6%,2%)}60%{transform:translate(3%,-5%)}80%{transform:translate(-2%,4%)}100%{transform:translate(2%,-2%)}}
+
+/* ---- portón: las puertas del guardarropas ---- */
+body.trabado{overflow:hidden;height:100svh}
+#porton{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;background:var(--papel)}
+#porton .hoja{position:absolute;top:0;bottom:0;width:50.5%;background:var(--g06);border-right:1px solid var(--g25)}
+#porton .hoja.izq{left:0}
+#porton .hoja.der{right:0;border-right:none;border-left:1px solid var(--g25)}
+#porton .centro{position:relative;z-index:2;display:grid;justify-items:center;gap:22px;width:min(340px,82vw);text-align:center}
+#porton svg{width:min(132px,26vw);height:auto}
+#porton .trazo-p{stroke-dasharray:2300;stroke-dashoffset:2300;animation:dibujar 1.9s ease-out .25s forwards}
+#porton .mancha-p{opacity:0;animation:apoyar-p .45s ease-out forwards}
+#porton .mancha-p.a{animation-delay:1.7s}
+#porton .mancha-p.b{animation-delay:1.95s}
+#porton .clave{display:grid;gap:12px;justify-items:center;width:100%;opacity:0;animation:apoyar-p .5s ease 2.1s forwards}
+#porton .titulo{font-family:var(--marca);text-transform:uppercase;letter-spacing:.06em;font-size:clamp(15px,4vw,19px);color:var(--tinta)}
+#porton input{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.26em;text-transform:uppercase;text-align:center;
+  background:transparent;border:none;border-bottom:1px solid var(--g25);padding:12px 6px;color:var(--tinta);width:min(250px,68vw);min-height:44px;border-radius:0}
+#porton input:focus{outline:none;border-bottom-color:var(--ultramar)}
+#porton .entrar{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  background:transparent;border:none;color:var(--tinta);cursor:pointer;padding:12px 10px;min-height:44px;position:relative}
+#porton .entrar::after{content:"";position:absolute;left:10px;right:10px;bottom:8px;height:2px;background:var(--ultramar);
+  transform:scaleX(.3);transform-origin:left;transition:transform .35s ease}
+#porton .entrar:hover::after,#porton .entrar:focus-visible::after{transform:scaleX(1)}
+#porton .err{min-height:15px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ultramar)}
+#porton.mal .centro{animation:sacudir .38s}
+@keyframes sacudir{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+#porton.abre{pointer-events:none}
+#porton.abre .centro{animation:porton-svg .4s ease forwards}
+#porton.abre .hoja.izq{animation:hoja-izq .9s cubic-bezier(.7,0,.2,1) .15s forwards}
+#porton.abre .hoja.der{animation:hoja-der .9s cubic-bezier(.7,0,.2,1) .15s forwards}
+@keyframes hoja-izq{to{transform:translateX(-101%)}}
+@keyframes hoja-der{to{transform:translateX(101%)}}
+@keyframes porton-svg{to{opacity:0}}
+@keyframes porton-fin{to{visibility:hidden}}
+@keyframes apoyar-p{to{opacity:1}}
+@keyframes dibujar{to{stroke-dashoffset:0}}
+
+/* ---- voces ---- */
+.v-marca{font-family:var(--marca);text-transform:uppercase;letter-spacing:.02em}
+.v-datos{font-family:var(--display);font-weight:600;text-transform:uppercase;
+  letter-spacing:.32em;font-size:11px;color:var(--g75)}
+.v-datos.chica{font-size:10px}
+.display{font-weight:400;line-height:.92;letter-spacing:-.01em}
+.display.xl{font-size:clamp(52px,9.5vw,128px);line-height:.88}
+h2.display{font-size:clamp(38px,6vw,84px)}
+h3{font-weight:600;font-size:clamp(19px,2.2vw,24px);line-height:1.25}
+p{max-width:62ch}
+strong{font-weight:700}
+.lead{font-size:clamp(18px,2vw,22px);line-height:1.5}
+.mut{color:var(--g75)}
+.ac{color:var(--ultramar)}
+section{padding-block:clamp(72px,11vh,140px);position:relative}
+
+/* ---- número de acto vertical (cartelería) ---- */
+.acto-v{position:absolute;top:clamp(76px,11vh,144px);right:clamp(8px,2.2vw,26px);
+  writing-mode:vertical-rl;font-family:var(--display);font-weight:600;font-size:11px;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--g50)}
+@media(max-width:700px){.acto-v{display:none}}
+
+/* ---- esquinas habladas ---- */
+.hero{min-height:100svh;display:grid;align-content:center;position:relative;padding-block:140px}
+.corner{position:absolute;z-index:3}
+.corner.tl{top:34px;left:clamp(20px,6.5vw,88px)}
+.corner.tr{top:38px;right:clamp(20px,6.5vw,88px)}
+.corner.bl{bottom:34px;left:clamp(20px,6.5vw,88px)}
+.corner.br{bottom:34px;right:clamp(20px,6.5vw,88px)}
+.corner .v-marca{font-size:clamp(18px,2vw,26px);letter-spacing:.04em;color:var(--tinta)}
+.hero-grid{display:grid;grid-template-columns:minmax(180px,300px) 1fr;gap:clamp(24px,5vw,80px);align-items:center}
+.hero-face svg{width:100%;height:auto}
+@media(max-width:700px){.hero-grid{grid-template-columns:1fr}.hero-face{max-width:210px}}
+
+/* la línea del hero se dibuja (2299,9 pt medidos del vector) */
+.trazo{stroke-dasharray:2300;stroke-dashoffset:2300}
+.dibujada .trazo{animation:dibujar 2.2s ease-out forwards}
+.mancha{opacity:0;transform:scale(.92);transform-origin:center}
+.dibujada .mancha{animation:apoyar .7s ease-out forwards}
+.dibujada .mancha.m1{animation-delay:2.3s}
+.dibujada .mancha.m2{animation-delay:2.7s}
+@keyframes apoyar{to{opacity:1;transform:scale(1)}}
+
+/* ---- marquesinas ---- */
+.mq{overflow:hidden;white-space:nowrap;border-top:1px solid var(--g06);border-bottom:1px solid var(--g06);padding:13px 0}
+.mq span{display:inline-block;font-family:var(--display);font-weight:600;font-size:11px;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--g75);animation:mqa 38s linear infinite}
+.mq:hover span{animation-play-state:paused}
+.nocturna .mq{border-color:var(--g75)}
+.nocturna .mq span{color:var(--g25)}
+@keyframes mqa{to{transform:translateX(-50%)}}
+
+/* ---- rotulado de acto ---- */
+.acto{display:flex;align-items:baseline;gap:18px;margin-bottom:clamp(28px,5vh,56px)}
+.acto .num{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.28em;color:var(--ultramar)}
+.subrayado{position:relative;display:inline-block}
+.subrayado::after{content:"";position:absolute;left:0;bottom:-6px;height:3px;width:100%;
+  background:var(--ultramar);transform:scaleX(0);transform-origin:left;transition:transform .9s ease .2s}
+.vis .subrayado::after{transform:scaleX(1)}
+
+/* ---- revelado suave ---- */
+.rev{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.vis .rev,.rev.vis{opacity:1;transform:none}
+.rev.d1{transition-delay:.06s}.rev.d2{transition-delay:.12s}.rev.d3{transition-delay:.18s}
+.rev.d4{transition-delay:.24s}.rev.d5{transition-delay:.3s}
+
+/* ---- tarjetas / grillas ---- */
+.card{background:var(--g06);border-radius:2px;padding:clamp(18px,2.6vw,30px)}
+.card.borde{background:var(--papel);border:1px solid var(--g25)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+
+/* ---- figuras del vestidor ---- */
+figure.marco{margin:0;display:flex;flex-direction:column;gap:9px}
+figure.marco img{width:100%;object-fit:cover;border-radius:2px;background:var(--g06)}
+figure.marco figcaption{font-family:var(--display);font-weight:600;font-size:10px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--g75)}
+.r34 img{aspect-ratio:3/4}
+.r169 img{aspect-ratio:16/9}
+/* el color como recompensa: gris hasta el tacto (solo puntero fino) */
+@media (hover:hover) and (pointer:fine){
+  .revela img{filter:grayscale(1) contrast(1.05);transition:filter .5s ease}
+  .revela:hover img,.revela:focus-within img{filter:grayscale(0) contrast(1)}
+}
+
+/* ---- métricas ---- */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:14px}
+.tile{background:var(--g06);border-radius:2px;padding:22px 18px;display:flex;flex-direction:column;gap:8px}
+.tile .cifra{font-size:clamp(34px,4.2vw,54px);font-weight:400;line-height:1;font-variant-numeric:tabular-nums}
+.tile .unidad{font-size:15px;color:var(--g75)}
+.tile.oscuro{background:var(--tinta);color:var(--papel)}
+.tile.oscuro .unidad{color:var(--g25)}
+.tile.oscuro .v-datos{color:var(--menta)}
+
+/* ---- barras ---- */
+.barra{display:grid;grid-template-columns:minmax(120px,220px) 1fr 64px;gap:14px;align-items:center;padding-block:9px;border-bottom:1px solid var(--g06)}
+.barra .pista{height:3px;background:var(--g06);position:relative;border-radius:2px}
+.barra .lleno{position:absolute;inset:0 auto 0 0;width:var(--w,0%);background:var(--tinta);border-radius:2px;
+  transform:scaleX(0);transform-origin:left;transition:transform 1s ease .15s}
+.barra .lleno.ac{background:var(--ultramar)}
+.vis .barra .lleno{transform:scaleX(1)}
+.barra .val{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.08em;text-align:right;color:var(--g75);font-variant-numeric:tabular-nums}
+.barra .rotulo{font-size:14px;line-height:1.25}
+
+/* ---- paleta ---- */
+.fam{margin-bottom:26px}
+.sw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:10px;margin-top:12px}
+.sw{border-radius:2px;overflow:hidden;border:1px solid var(--g06)}
+.sw .chip{height:58px}
+.sw figcaption{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.1em;padding:6px 8px;color:var(--g75);text-transform:uppercase}
+
+/* ---- niveles: percheros apilados ---- */
+.percha{position:sticky;top:0;min-height:100svh;display:grid;align-content:center;
+  background:var(--papel);border-top:1px solid var(--g25);padding-block:clamp(48px,7vh,90px)}
+.percha .inner{display:grid;grid-template-columns:minmax(260px,1fr) minmax(280px,1.2fr);gap:clamp(22px,4vw,60px);align-items:center}
+@media(max-width:840px){.percha{position:static;min-height:0}.percha .inner{grid-template-columns:1fr}}
+.percha .kanji{font-size:clamp(40px,6vw,64px);line-height:1;color:var(--g25)}
+.percha .fotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.intensidad{display:flex;gap:5px;margin-top:14px}
+.intensidad i{width:26px;height:4px;background:var(--g25);border-radius:2px}
+.intensidad i.on{background:var(--ultramar)}
+
+/* ---- matriz ---- */
+.matriz{overflow-x:auto}
+.matriz table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+.matriz th{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--g75);text-align:left;padding:10px 12px;border-bottom:2px solid var(--tinta)}
+.matriz td{padding:11px 12px;border-bottom:1px solid var(--g06);vertical-align:top}
+.punto{display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--tinta);vertical-align:middle}
+.punto.lleno{background:var(--ultramar);border-color:var(--ultramar)}
+.punto.medio{background:linear-gradient(90deg,var(--ultramar) 50%,transparent 50%)}
+
+/* ---- productos ---- */
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.prod{border:1px solid var(--g25);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;background:var(--papel)}
+.prod .ph{aspect-ratio:3/4;background:var(--g06);overflow:hidden}
+.prod .ph img{width:100%;height:100%;object-fit:cover}
+@media (hover:hover) and (pointer:fine){
+  .prod .ph img{filter:grayscale(1) contrast(1.06);transition:filter .5s ease}
+  .prod:hover .ph img,.prod:focus-within .ph img{filter:grayscale(0) contrast(1)}
+}
+.prod .cuerpo{padding:14px 16px 16px;display:flex;flex-direction:column;gap:7px;flex:1}
+.prod .marca-p{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--g75)}
+.prod .nombre{font-weight:600;font-size:15px;line-height:1.3}
+.prod .precio{font-size:15px;font-variant-numeric:tabular-nums}
+.prod .meta{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--g75)}
+.prod .meta .ok{color:var(--ultramar)}
+.prod .nombre,.prod .meta,.prod .marca-p{overflow-wrap:anywhere}
+.prod a.link{margin-top:auto;font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--tinta);padding-top:10px;position:relative;width:max-content}
+.prod a.link::after{content:"";position:absolute;left:0;bottom:-3px;width:100%;height:2px;background:var(--ultramar);transform:scaleX(.35);transform-origin:left;transition:transform .35s ease}
+.prod a.link:hover::after,.prod a.link:focus-visible::after{transform:scaleX(1)}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-block:18px 26px}
+.filtros button{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  background:var(--papel);border:1px solid var(--g25);border-radius:2px;padding:12px 16px;cursor:pointer;color:var(--tinta);min-height:44px}
+.filtros button[aria-pressed="true"]{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+.filtros button:focus-visible{outline:2px solid var(--ultramar);outline-offset:2px}
+
+/* ---- pregunta de transición ---- */
+.pregunta{padding-block:clamp(80px,14vh,150px)}
+.pregunta .display{max-width:16ch}
+
+/* ---- nocturna: el interior del guardarropas ---- */
+.nocturna{background:var(--tinta);color:var(--papel)}
+.nocturna .mut{color:var(--g25)}
+.nocturna .v-datos{color:var(--g25)}
+.nocturna .ac{color:var(--menta)}
+.nocturna .subrayado::after{background:var(--menta)}
+.nocturna .card{background:var(--lapiz);border:1px solid var(--g75)}
+.nocturna a{color:var(--papel)}
+.nocturna .acto .num{color:var(--menta)}
+.nocturna figure.marco figcaption{color:var(--g25)}
+.nocturna figure.marco img{background:var(--lapiz)}
+
+/* ---- glosario ---- */
+.glos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--g25);border:1px solid var(--g25);border-radius:2px;overflow:hidden}
+.glos div{background:var(--papel);padding:18px 20px}
+.glos dt{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:7px;border-bottom:3px solid var(--ultramar);width:max-content;padding-bottom:3px}
+.glos dd{font-size:14px;color:var(--g75)}
+
+/* ---- cita ---- */
+.cita{border-left:3px solid var(--ultramar);padding-left:clamp(18px,3vw,34px);font-size:clamp(20px,2.6vw,28px);line-height:1.35;max-width:30ch}
+
+/* ---- cursor de doble masa ---- */
+#cur,#cur-ring{position:fixed;top:0;left:0;z-index:4000;pointer-events:none;mix-blend-mode:difference;display:none}
+@media (hover:hover) and (pointer:fine){#cur,#cur-ring{display:block}}
+#cur{width:6px;height:6px;background:#fff;border-radius:50%;margin:-3px 0 0 -3px}
+#cur-ring{width:34px;height:34px;border:1px solid #fff;border-radius:50%;margin:-17px 0 0 -17px;transition:width .3s,height .3s,margin .3s}
+#cur-ring.activo{width:70px;height:70px;margin:-35px 0 0 -35px}
+
+a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-offset:3px}
+::selection{background:var(--menta);color:var(--tinta)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  body::after{animation:none}
+  #porton .clave{opacity:1;animation:none}
+  #porton.abre .centro,#porton.abre .hoja.izq,#porton.abre .hoja.der,#porton.mal .centro{animation:none}
+  #cur,#cur-ring{display:none!important}
+  .mq span{animation:none;transform:none}
+  .trazo,#porton .trazo-p{stroke-dashoffset:0;animation:none!important}
+  .mancha,#porton .mancha-p{opacity:1;transform:none;animation:none!important}
+  .rev{opacity:1;transform:none;transition:none}
+  .subrayado::after{transform:scaleX(1);transition:none}
+  .barra .lleno{transform:scaleX(1);transition:none}
+  .prod a.link::after{transition:none}
+  .revela img,.prod .ph img{filter:none!important;transition:none}
+  .percha{position:static;min-height:0}
+}
+</style>
+</head>
+<body class="trabado">
+
+<!-- ══════ EL PORTÓN: las puertas del guardarropas se abren ══════ -->
+<div id="porton" role="dialog" aria-modal="true" aria-labelledby="porton-t">
+  <div class="hoja izq"></div>
+  <div class="hoja der"></div>
+  <div class="centro">
+    <svg viewBox="96.8 166.9 305.2 474.9" aria-hidden="true">
+      <path class="mancha-p a" fill="#29C4A6" fill-rule="evenodd" d="M 357.51 242.63 C 338.75 248.93, 301.68 231.99, 261.25 231.20 C 220.82 230.42, 177.03 245.79, 161.24 237.91 C 145.45 230.04, 157.64 198.91, 198.29 184.92 C 238.94 170.93, 308.05 174.07, 342.38 190.42 C 376.71 206.77, 376.27 236.32, 357.51 242.63"/>
+      <path class="mancha-p b" fill="#1A02AF" fill-rule="evenodd" d="M 130.92 406.32 C 128.56 426.35, 131.54 460.79, 145.76 487.30 C 159.99 513.80, 185.46 532.37, 202.74 547.39 C 220.01 562.41, 229.09 573.89, 235.98 560.69 C 242.88 547.48, 247.59 509.58, 249.16 477.28 C 250.73 444.98, 249.16 418.29, 231.88 402.19 C 214.61 386.09, 181.63 380.59, 161.29 380.65 C 140.96 380.70, 133.27 386.30, 130.92 406.32"/>
+      <path class="trazo-p" fill="none" stroke="#231F20" stroke-width="1.84" stroke-linecap="round" stroke-linejoin="round" d="M 375.83 265.88 C 373.44 252.12, 371.05 238.37, 352.21 228.80 C 333.37 219.23, 298.09 213.85, 264.60 215.04 C 231.12 216.24, 199.42 224.01, 180.29 236.27 C 161.15 248.53, 154.57 265.28, 162.65 278.13 C 170.72 290.99, 193.44 299.96, 221.25 301.75 C 249.06 303.55, 281.94 298.16, 292.71 287.10 C 303.47 276.04, 292.11 259.30, 276.26 254.81 C 260.42 250.33, 240.09 258.10, 235.90 268.56 C 231.71 279.03, 243.67 292.18, 266.40 297.27 C 289.12 302.35, 322.61 299.36, 349.82 293.08 C 377.02 286.80, 397.95 277.24, 375.83 265.88 C 353.70 254.51, 288.52 241.36, 230.22 240.46 C 171.92 239.56, 120.49 250.92, 110.62 295.77 C 100.76 340.62, 132.45 418.96, 166.83 481.15 C 201.22 543.34, 238.29 589.38, 265.20 613.00 C 292.11 636.62, 308.85 637.82, 319.02 627.35 C 329.19 616.89, 332.77 594.76, 333.07 581.61 C 333.37 568.45, 330.38 564.27, 318.42 564.27 C 306.46 564.27, 285.53 568.45, 288.52 572.04 C 291.51 575.63, 318.42 578.62, 341.15 575.33 C 363.87 572.04, 382.41 562.47, 386.59 555.00 C 390.78 547.52, 380.61 542.14, 365.36 543.34 C 350.11 544.53, 329.78 552.31, 311.55 555.60 C 293.31 558.88, 277.16 557.69, 275.37 552.61 C 273.57 547.52, 286.13 538.55, 296.00 530.18 C 305.86 521.81, 313.04 514.04, 319.02 514.34 C 325.00 514.63, 329.78 523.01, 335.76 520.91 C 341.74 518.82, 348.92 506.26, 360.58 510.45 C 372.24 514.63, 388.39 535.56, 385.69 539.15 C 383.00 542.74, 361.48 528.99, 351.01 511.94 C 340.55 494.90, 341.15 474.57, 348.02 462.91 C 354.90 451.25, 368.05 448.26, 374.03 453.01 C 380.01 457.77, 378.82 470.27, 371.64 474.16 C 364.47 478.04, 351.31 473.32, 335.76 469.16 C 320.22 465.00, 302.28 461.41, 293.90 463.78 C 285.53 466.14, 286.73 474.45, 293.01 478.61 C 299.29 482.77, 310.65 482.77, 314.54 459.18 C 318.42 435.58, 314.83 388.40, 312.14 363.32 C 309.45 338.23, 307.66 335.24, 305.86 332.25"/>
+    </svg>
+    <form class="clave" id="fclave" autocomplete="off" novalidate>
+      <p class="titulo" id="porton-t">Guía de estilo de Emiliano</p>
+      <label class="v-datos chica" for="pw">Clave</label>
+      <input id="pw" name="pw" type="password" spellcheck="false" autocapitalize="off" autocomplete="off">
+      <button type="submit" class="entrar">Entrar</button>
+      <p class="err" id="pw-e" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<div id="cur" aria-hidden="true"></div>
+<div id="cur-ring" aria-hidden="true"></div>
+
+<!-- ══════════════════ PORTADA ══════════════════ -->
+<header class="hero wrap" id="portada">
+  <p class="corner tl v-marca">Majo Ciancaglini</p>
+  <p class="corner tr v-datos">Asesoría de imagen</p>
+  <p class="corner bl v-datos">Agosto 2026</p>
+  <p class="corner br v-datos">majo.cianca@gmail.com</p>
+
+  <div class="hero-grid">
+    <div class="hero-face" id="cara">
+      <svg viewBox="96.8 166.9 305.2 474.9" role="img" aria-label="Isologo de Majo Ciancaglini: rostro dibujado con una sola línea continua, con una mancha menta en la corona y una ultramar en la mejilla">
+        <path class="mancha m1" fill="#29C4A6" fill-rule="evenodd" d="M 357.51 242.63 C 338.75 248.93, 301.68 231.99, 261.25 231.20 C 220.82 230.42, 177.03 245.79, 161.24 237.91 C 145.45 230.04, 157.64 198.91, 198.29 184.92 C 238.94 170.93, 308.05 174.07, 342.38 190.42 C 376.71 206.77, 376.27 236.32, 357.51 242.63"/>
+        <path class="mancha m2" fill="#1A02AF" fill-rule="evenodd" d="M 130.92 406.32 C 128.56 426.35, 131.54 460.79, 145.76 487.30 C 159.99 513.80, 185.46 532.37, 202.74 547.39 C 220.01 562.41, 229.09 573.89, 235.98 560.69 C 242.88 547.48, 247.59 509.58, 249.16 477.28 C 250.73 444.98, 249.16 418.29, 231.88 402.19 C 214.61 386.09, 181.63 380.59, 161.29 380.65 C 140.96 380.70, 133.27 386.30, 130.92 406.32"/>
+        <path class="trazo" fill="none" stroke="#231F20" stroke-width="1.84" stroke-linecap="round" stroke-linejoin="round" d="M 375.83 265.88 C 373.44 252.12, 371.05 238.37, 352.21 228.80 C 333.37 219.23, 298.09 213.85, 264.60 215.04 C 231.12 216.24, 199.42 224.01, 180.29 236.27 C 161.15 248.53, 154.57 265.28, 162.65 278.13 C 170.72 290.99, 193.44 299.96, 221.25 301.75 C 249.06 303.55, 281.94 298.16, 292.71 287.10 C 303.47 276.04, 292.11 259.30, 276.26 254.81 C 260.42 250.33, 240.09 258.10, 235.90 268.56 C 231.71 279.03, 243.67 292.18, 266.40 297.27 C 289.12 302.35, 322.61 299.36, 349.82 293.08 C 377.02 286.80, 397.95 277.24, 375.83 265.88 C 353.70 254.51, 288.52 241.36, 230.22 240.46 C 171.92 239.56, 120.49 250.92, 110.62 295.77 C 100.76 340.62, 132.45 418.96, 166.83 481.15 C 201.22 543.34, 238.29 589.38, 265.20 613.00 C 292.11 636.62, 308.85 637.82, 319.02 627.35 C 329.19 616.89, 332.77 594.76, 333.07 581.61 C 333.37 568.45, 330.38 564.27, 318.42 564.27 C 306.46 564.27, 285.53 568.45, 288.52 572.04 C 291.51 575.63, 318.42 578.62, 341.15 575.33 C 363.87 572.04, 382.41 562.47, 386.59 555.00 C 390.78 547.52, 380.61 542.14, 365.36 543.34 C 350.11 544.53, 329.78 552.31, 311.55 555.60 C 293.31 558.88, 277.16 557.69, 275.37 552.61 C 273.57 547.52, 286.13 538.55, 296.00 530.18 C 305.86 521.81, 313.04 514.04, 319.02 514.34 C 325.00 514.63, 329.78 523.01, 335.76 520.91 C 341.74 518.82, 348.92 506.26, 360.58 510.45 C 372.24 514.63, 388.39 535.56, 385.69 539.15 C 383.00 542.74, 361.48 528.99, 351.01 511.94 C 340.55 494.90, 341.15 474.57, 348.02 462.91 C 354.90 451.25, 368.05 448.26, 374.03 453.01 C 380.01 457.77, 378.82 470.27, 371.64 474.16 C 364.47 478.04, 351.31 473.32, 335.76 469.16 C 320.22 465.00, 302.28 461.41, 293.90 463.78 C 285.53 466.14, 286.73 474.45, 293.01 478.61 C 299.29 482.77, 310.65 482.77, 314.54 459.18 C 318.42 435.58, 314.83 388.40, 312.14 363.32 C 309.45 338.23, 307.66 335.24, 305.86 332.25"/>
+      </svg>
+    </div>
+    <div>
+      <h1 class="display xl">Guía de<br>estilo de<br>Emiliano <span class="ac">2.0</span></h1>
+      <p class="lead" style="margin-top:26px;max-width:46ch">Tu color, tu rostro, tu silueta y tu universo, organizados en <strong>un sistema que podés operar</strong> — y un guardarropas con prendas reales, en tu talle, listas para entrar.</p>
+      <p class="v-datos" style="margin-top:22px" data-scramble>56 tonos · 3 niveles · 4 bloques · 27 piezas</p>
+    </div>
+  </div>
+</header>
+
+<div class="mq" aria-hidden="true"><span>
+  INVIERNO PROFUNDO · NEGRO ABSOLUTO · GRIS CARBÓN · ULTRAMAR · PETRÓLEO · ESMERALDA · BORDÓ · VIOLETA · MAGENTA · MOSTAZA &nbsp;·&nbsp;
+  INVIERNO PROFUNDO · NEGRO ABSOLUTO · GRIS CARBÓN · ULTRAMAR · PETRÓLEO · ESMERALDA · BORDÓ · VIOLETA · MAGENTA · MOSTAZA &nbsp;·&nbsp;
+</span></div>
+
+<!-- ══════════════════ 01 VOS ══════════════════ -->
+<section class="wrap obs" id="vos">
+  <p class="acto-v" aria-hidden="true">01 · Vos</p>
+  <div class="acto"><span class="num">01 / 08</span><span class="v-datos" data-scramble>Vos</span></div>
+  <h2 class="display rev">Dos mundos,<br>un solo <span class="subrayado">placard</span></h2>
+  <div class="grid2" style="margin-top:36px;align-items:start">
+    <p class="lead rev d1">Sos <strong>comunicador y docente</strong>. Dirigís tu agencia y das clases a nivel universitario — dos espacios que piden presencia, criterio y una imagen que sostenga autoridad sin perder cercanía.</p>
+    <p class="rev d2">Y sos también alguien con un universo visual propio y muy definido: música, estética japonesa, un imaginario que va del city pop al anime. Esta guía junta esas dos mitades en un solo sistema: <strong>no elegís entre el profesor y el melómano — decidís cuánto de cada uno se ve, según el contexto</strong>. No es un manual de reglas: es tu búsqueda traducida a un lenguaje que operás con criterio propio, sin depender de la improvisación de cada mañana.</p>
+  </div>
+</section>
+
+<!-- ══════════════════ 02 TU COLOR ══════════════════ -->
+<section class="wrap obs" id="color">
+  <p class="acto-v" aria-hidden="true">02 · Tu color</p>
+  <div class="acto"><span class="num">02 / 08</span><span class="v-datos" data-scramble>Tu color · invierno profundo</span></div>
+  <h2 class="display rev">Frío, hondo,<br><span class="subrayado">contrastado</span></h2>
+  <p class="lead rev d1" style="margin-top:28px;max-width:56ch">Tu estación es el <strong>invierno profundo</strong>: paleta fría, de profundidad y contraste, con permiso para algunos cálidos del otoño. Tu referencia de colorimetría: Adam Driver.</p>
+
+  <div class="grid3 rev d2" style="margin-top:40px">
+    <figure class="marco r34 revela"><img src="assets/color-adam-driver.jpg" alt="Adam Driver, referencia de colorimetría invierno profundo" loading="lazy"><figcaption>Tu referencia · Adam Driver</figcaption></figure>
+    <figure class="marco r34"><img src="assets/color-estaciones.jpg" alt="Rueda de las doce estaciones de color, con el invierno profundo señalado" loading="lazy" style="object-fit:contain;background:var(--papel);border:1px solid var(--g06)"><figcaption>Las 12 estaciones · la tuya, invierno profundo</figcaption></figure>
+    <figure class="marco r34"><img src="assets/color-rueda-invierno.png" alt="Rueda de color del invierno con sus neutros" loading="lazy" style="object-fit:contain;background:var(--papel);border:1px solid var(--g06)"><figcaption>La rueda del invierno + neutros</figcaption></figure>
+  </div>
+
+  <h3 class="rev" style="margin-top:64px">La atmósfera de tu paleta</h3>
+  <p class="mut rev d1" style="font-size:14px;margin-top:6px">Así se ve tu invierno cuando no es tela: bosque nevado, frutos oscuros, piedra verde. Lo naranja también es tuyo — pero lejos de la cara.</p>
+  <div class="grid3 rev d2" style="margin-top:22px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
+    <figure class="marco r34 revela"><img src="assets/mood-frio-bosque.jpg" alt="Bosque nevado al atardecer, atmósfera de invierno profundo" loading="lazy"><figcaption>Frío que te sienta</figcaption></figure>
+    <figure class="marco r34 revela"><img src="assets/mood-frio-luna.jpg" alt="Luna sobre montaña violeta" loading="lazy"><figcaption>Violeta profundo</figcaption></figure>
+    <figure class="marco r34 revela"><img src="assets/mood-frio-cerezas.jpg" alt="Cerezas oscuras" loading="lazy"><figcaption>Rojos fríos</figcaption></figure>
+    <figure class="marco r34 revela"><img src="assets/mood-frio-arandanos.jpg" alt="Arándanos casi negros" loading="lazy"><figcaption>Azul noche</figcaption></figure>
+    <figure class="marco r34 revela"><img src="assets/mood-frio-esmeralda.jpg" alt="Piedras verde esmeralda" loading="lazy"><figcaption>Esmeralda</figcaption></figure>
+    <figure class="marco r34 revela"><img src="assets/mood-calido-zapallos.jpg" alt="Calabazas naranjas: los cálidos tolerados" loading="lazy"><figcaption>Cálidos tolerados · lejos de la cara</figcaption></figure>
+  </div>
+
+  <div class="grid2" style="margin-top:64px;align-items:center">
+    <figure class="marco r169 rev"><img src="assets/color-telas-ejercicio.jpg" alt="Las telas del ejercicio de color: azul, negro, azul marino, violeta, vino, oliva, mostaza, bordó y blanco sobre un sillón" loading="lazy"><figcaption>Tu ejercicio de color · las telas que probamos</figcaption></figure>
+    <div class="rev d1">
+      <h3>Las dos reglas de oro</h3>
+      <ul style="font-size:15px;margin-top:12px;padding-left:20px;display:grid;gap:10px">
+        <li><strong>Cerca del rostro</strong> van los colores que más te favorecen: cuellos, camisas, bufandas, marcos de anteojos.</li>
+        <li><strong>Lejos de la cara</strong> van los que te gustan pero no te favorecen tanto: pantalones, calzado, medias. Ahí no hay costo.</li>
+      </ul>
+      <div class="card" style="margin-top:18px;background:var(--tinta);color:var(--papel)">
+        <p class="v-datos" style="color:var(--menta);margin-bottom:8px">Tus dos oficiales</p>
+        <p style="font-size:15px">Gris Carbón <strong>#2C3539</strong> — tu alternativa al negro para el día. Negro Absoluto <strong>#0A0A0A</strong> — el rey de tu paleta: máxima autoridad y el lienzo perfecto para tu silueta.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="rev" style="margin-top:64px">Tus 56 tonos, con código</h3>
+  <p class="mut rev d1" style="font-size:14px;margin-top:6px;max-width:60ch">Cada casilla de tu paleta, con su valor exacto: para comprar online, comparar contra una prenda con una foto, o pasarle el color justo a quien confecciona.</p>
+  <div id="paleta" class="rev d2" style="margin-top:24px"><div class="fam"><p class="v-datos">Neutros fríos — 10</p><div class="sw-grid"><figure class="sw"><div class="chip" style="background:#FFFFFF"></div><figcaption>#FFFFFF</figcaption></figure><figure class="sw"><div class="chip" style="background:#EEF8F7"></div><figcaption>#EEF8F7</figcaption></figure><figure class="sw"><div class="chip" style="background:#BAC5CB"></div><figcaption>#BAC5CB</figcaption></figure><figure class="sw"><div class="chip" style="background:#B9C3C2"></div><figcaption>#B9C3C2</figcaption></figure><figure class="sw"><div class="chip" style="background:#7C8685"></div><figcaption>#7C8685</figcaption></figure><figure class="sw"><div class="chip" style="background:#616B6A"></div><figcaption>#616B6A</figcaption></figure><figure class="sw"><div class="chip" style="background:#39464C"></div><figcaption>#39464C</figcaption></figure><figure class="sw"><div class="chip" style="background:#202529"></div><figcaption>#202529</figcaption></figure><figure class="sw"><div class="chip" style="background:#1C1D1F"></div><figcaption>#1C1D1F</figcaption></figure><figure class="sw"><div class="chip" style="background:#000000"></div><figcaption>#000000</figcaption></figure></div></div>
+<div class="fam"><p class="v-datos">Azules — 9</p><div class="sw-grid"><figure class="sw"><div class="chip" style="background:#5F9DD0"></div><figcaption>#5F9DD0</figcaption></figure><figure class="sw"><div class="chip" style="background:#4FA2D4"></div><figcaption>#4FA2D4</figcaption></figure><figure class="sw"><div class="chip" style="background:#0096D1"></div><figcaption>#0096D1</figcaption></figure><figure class="sw"><div class="chip" style="background:#2165A4"></div><figcaption>#2165A4</figcaption></figure><figure class="sw"><div class="chip" style="background:#006C90"></div><figcaption>#006C90</figcaption></figure><figure class="sw"><div class="chip" style="background:#004D91"></div><figcaption>#004D91</figcaption></figure><figure class="sw"><div class="chip" style="background:#0045AC"></div><figcaption>#0045AC</figcaption></figure><figure class="sw"><div class="chip" style="background:#001B6C"></div><figcaption>#001B6C</figcaption></figure><figure class="sw"><div class="chip" style="background:#000060"></div><figcaption>#000060</figcaption></figure></div></div>
+<div class="fam"><p class="v-datos">Verdes y petróleos — 9</p><div class="sw-grid"><figure class="sw"><div class="chip" style="background:#006380"></div><figcaption>#006380</figcaption></figure><figure class="sw"><div class="chip" style="background:#008486"></div><figcaption>#008486</figcaption></figure><figure class="sw"><div class="chip" style="background:#00575E"></div><figcaption>#00575E</figcaption></figure><figure class="sw"><div class="chip" style="background:#053947"></div><figcaption>#053947</figcaption></figure><figure class="sw"><div class="chip" style="background:#00684D"></div><figcaption>#00684D</figcaption></figure><figure class="sw"><div class="chip" style="background:#1A5036"></div><figcaption>#1A5036</figcaption></figure><figure class="sw"><div class="chip" style="background:#487B42"></div><figcaption>#487B42</figcaption></figure><figure class="sw"><div class="chip" style="background:#2D402A"></div><figcaption>#2D402A</figcaption></figure><figure class="sw"><div class="chip" style="background:#2E4E0F"></div><figcaption>#2E4E0F</figcaption></figure></div></div>
+<div class="fam"><p class="v-datos">Rojos y vinos — 7</p><div class="sw-grid"><figure class="sw"><div class="chip" style="background:#AC1639"></div><figcaption>#AC1639</figcaption></figure><figure class="sw"><div class="chip" style="background:#BE1B3A"></div><figcaption>#BE1B3A</figcaption></figure><figure class="sw"><div class="chip" style="background:#951631"></div><figcaption>#951631</figcaption></figure><figure class="sw"><div class="chip" style="background:#840000"></div><figcaption>#840000</figcaption></figure><figure class="sw"><div class="chip" style="background:#6E192C"></div><figcaption>#6E192C</figcaption></figure><figure class="sw"><div class="chip" style="background:#600001"></div><figcaption>#600001</figcaption></figure><figure class="sw"><div class="chip" style="background:#BD2E10"></div><figcaption>#BD2E10</figcaption></figure></div></div>
+<div class="fam"><p class="v-datos">Violetas y magentas — 17</p><div class="sw-grid"><figure class="sw"><div class="chip" style="background:#B4BBD5"></div><figcaption>#B4BBD5</figcaption></figure><figure class="sw"><div class="chip" style="background:#8C6C9B"></div><figcaption>#8C6C9B</figcaption></figure><figure class="sw"><div class="chip" style="background:#874487"></div><figcaption>#874487</figcaption></figure><figure class="sw"><div class="chip" style="background:#7F3361"></div><figcaption>#7F3361</figcaption></figure><figure class="sw"><div class="chip" style="background:#5E0F7C"></div><figcaption>#5E0F7C</figcaption></figure><figure class="sw"><div class="chip" style="background:#440E59"></div><figcaption>#440E59</figcaption></figure><figure class="sw"><div class="chip" style="background:#2E073E"></div><figcaption>#2E073E</figcaption></figure><figure class="sw"><div class="chip" style="background:#570D5A"></div><figcaption>#570D5A</figcaption></figure><figure class="sw"><div class="chip" style="background:#B32E81"></div><figcaption>#B32E81</figcaption></figure><figure class="sw"><div class="chip" style="background:#BE4C91"></div><figcaption>#BE4C91</figcaption></figure><figure class="sw"><div class="chip" style="background:#D85F82"></div><figcaption>#D85F82</figcaption></figure><figure class="sw"><div class="chip" style="background:#D65385"></div><figcaption>#D65385</figcaption></figure><figure class="sw"><div class="chip" style="background:#BB1C56"></div><figcaption>#BB1C56</figcaption></figure><figure class="sw"><div class="chip" style="background:#312E39"></div><figcaption>#312E39</figcaption></figure><figure class="sw"><div class="chip" style="background:#221239"></div><figcaption>#221239</figcaption></figure><figure class="sw"><div class="chip" style="background:#261027"></div><figcaption>#261027</figcaption></figure><figure class="sw"><div class="chip" style="background:#33091F"></div><figcaption>#33091F</figcaption></figure></div></div>
+<div class="fam"><p class="v-datos">Amarillos y el único marrón — 4</p><div class="sw-grid"><figure class="sw"><div class="chip" style="background:#EAEB9F"></div><figcaption>#EAEB9F</figcaption></figure><figure class="sw"><div class="chip" style="background:#CCB13E"></div><figcaption>#CCB13E</figcaption></figure><figure class="sw"><div class="chip" style="background:#DAB101"></div><figcaption>#DAB101</figcaption></figure><figure class="sw"><div class="chip" style="background:#581C00"></div><figcaption>#581C00</figcaption></figure></div></div></div>
+
+  <div class="grid2" style="margin-top:46px">
+    <div class="rev">
+      <h3 style="margin-bottom:18px">De qué está hecha tu paleta</h3>
+      <div class="barra"><span class="rotulo">Violetas y magentas</span><span class="pista"><span class="lleno" style="--w:100%"></span></span><span class="val">17</span></div>
+      <div class="barra"><span class="rotulo">Neutros fríos</span><span class="pista"><span class="lleno" style="--w:59%"></span></span><span class="val">10</span></div>
+      <div class="barra"><span class="rotulo">Azules</span><span class="pista"><span class="lleno ac" style="--w:53%"></span></span><span class="val">9</span></div>
+      <div class="barra"><span class="rotulo">Verdes y petróleos</span><span class="pista"><span class="lleno" style="--w:53%"></span></span><span class="val">9</span></div>
+      <div class="barra"><span class="rotulo">Rojos y vinos</span><span class="pista"><span class="lleno" style="--w:41%"></span></span><span class="val">7</span></div>
+      <div class="barra"><span class="rotulo">Amarillos + 1 marrón</span><span class="pista"><span class="lleno" style="--w:24%"></span></span><span class="val">4</span></div>
+      <p class="mut" style="font-size:13px;margin-top:14px">Lectura: tu paleta es <strong>violeta-azul dominante</strong> — tu lado dramático ya vive en tu propio color. El azul te funciona como segundo neutro. Temperatura: 93% fríos, 7% cálidos tolerados.</p>
+    </div>
+    <div class="card rev d1">
+      <p class="v-datos" style="margin-bottom:10px">Tus grises</p>
+      <p style="font-size:15px"><strong>Gris oscuro y frío, sí</strong> — carbón #2C3539, pizarra #39464C, grafito #202529: prendas de inversión, marco formal con actitud urbana. <strong>Gris claro melange, no</strong> — ese fue el que salió de tu placard en la depuración; si alguna vez vuelve, va lejos de la cara.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 03 TU ROSTRO ══════════════════ -->
+<section class="wrap obs" id="rostro">
+  <p class="acto-v" aria-hidden="true">03 · Tu rostro</p>
+  <div class="acto"><span class="num">03 / 08</span><span class="v-datos" data-scramble>Tu rostro · visagismo</span></div>
+  <h2 class="display rev">Óvalo: libertad,<br>con tres precisiones</h2>
+  <p class="rev d1" style="margin-top:26px;max-width:60ch">Tu rostro es <strong>ovalado</strong>: apenas más largo que ancho, frente y mandíbula casi iguales. Es la geometría con más libertad — y estas tres precisiones la aprovechan.</p>
+
+  <div class="grid3" style="margin-top:40px;align-items:start">
+    <figure class="marco r34 rev"><img src="assets/d7f3a91c4e.jpg" alt="Emiliano con el pelo retirado de la frente, mostrando la forma ovalada del rostro" loading="lazy"><figcaption>Tu diagnóstico · rostro ovalado</figcaption></figure>
+    <figure class="marco r34 revela rev d1"><img src="assets/rostro-cuellos-driver.jpg" alt="Adam Driver con remera de cuello redondo bajo saco, referencia de escotes" loading="lazy"><figcaption>Cuellos · tu referencia</figcaption></figure>
+    <figure class="marco r34 revela rev d2"><img src="assets/rostro-barba-isaac.jpg" alt="Oscar Isaac con barba corta y prolija de contorno definido" loading="lazy"><figcaption>Barba · tu referencia, Oscar Isaac</figcaption></figure>
+  </div>
+
+  <div class="grid3" style="margin-top:26px">
+    <div class="card rev"><p class="v-datos" style="margin-bottom:10px">Cuellos y escotes</p>
+      <p style="font-size:15px">Libertad real: cuellos rectos o con algo de apertura, los dos te funcionan. <strong>Lo único a evitar: cuellos muy altos y cerrados</strong>, que alargan un rostro ya más largo que ancho. La polera, solo cuando el volumen inferior compense.</p></div>
+    <div class="card rev d1"><p class="v-datos" style="margin-bottom:10px">Barba</p>
+      <p style="font-size:15px"><strong>Corta y prolija</strong>, acompañando tu mentón proyectado sin taparlo. La clave es el contorno: <strong>perfilado en cuello y pómulos</strong>, para que la barba sume estructura a la mandíbula — no volumen. Es rutina semanal, como el planchado.</p></div>
+    <div class="card rev d2"><p class="v-datos" style="margin-bottom:10px">Anteojos</p>
+      <p style="font-size:15px"><strong>Sí:</strong> rectangular, cuadrado, wayfarer clásico, browline, geométrico — sin superar el ancho de tu rostro. <strong>No:</strong> aviador y wrap deportivo. Un marco de acetato con presencia es tu primer <em>foco de atención</em> — y el más barato.</p></div>
+  </div>
+
+  <figure class="marco rev" style="margin-top:26px;max-width:560px">
+    <img src="assets/rostro-gafas-guia.png" alt="Guía de anteojos para rostro ovalado: rectangular, cuadrado, wayfarer clásico, browline y geométrico favorables; aviador y wrap descartados" loading="lazy" style="background:var(--papel);border:1px solid var(--g06)">
+    <figcaption>Tu guía de marcos · las tachas son aviador y wrap</figcaption>
+  </figure>
+</section>
+
+<!-- ══════════════════ 04 TU SILUETA ══════════════════ -->
+<section class="wrap obs" id="silueta">
+  <p class="acto-v" aria-hidden="true">04 · Tu silueta</p>
+  <div class="acto"><span class="num">04 / 08</span><span class="v-datos" data-scramble>Tu silueta · bloques corporales</span></div>
+  <h2 class="display rev">Cuatro bloques,<br>una regla <span class="subrayado">fija</span></h2>
+
+  <div class="grid3" style="margin-top:40px;align-items:start">
+    <figure class="marco r34 rev"><img src="assets/b2c8e05f71.jpg" alt="Emiliano de frente con ropa negra: hombros suaves, cadera levemente más ancha, contextura esbelta" loading="lazy"><figcaption>Tu arquitectura · frente</figcaption></figure>
+    <figure class="marco r34 rev d1"><img src="assets/a4e19d63b8.jpg" alt="Emiliano de espaldas con ropa negra" loading="lazy"><figcaption>Tu arquitectura · espalda</figcaption></figure>
+    <figure class="marco r34 rev d2"><img src="assets/silueta-bloques.jpg" alt="Figura en acuarela dividida en los cuatro bloques corporales: busto hacia arriba, busto a cadera, pelvis a rodillas y rodillas a pies" loading="lazy" style="object-fit:contain;background:var(--papel);border:1px solid var(--g06)"><figcaption>Tus 4 bloques · B1 a B4</figcaption></figure>
+  </div>
+
+  <div class="grid2" style="margin-top:40px;align-items:start">
+    <div class="rev">
+      <h3>Lo que dice tu cuerpo</h3>
+      <p style="font-size:15px;margin-top:8px">Hombros suaves, cadera <strong>levemente más ancha que los hombros</strong>, contextura esbelta y un torso más largo que el promedio para tu altura. Nada de eso es un problema: es la información con la que se diseña todo lo que sigue.</p>
+      <ul style="font-size:15px;margin-top:16px;padding-left:20px;display:grid;gap:8px">
+        <li><strong>B1 · busto hacia arriba:</strong> hombro definido — hombreras, costura al hueso, tejido con cuerpo.</li>
+        <li><strong>B2 · busto a cadera:</strong> remeras y camisas terminan en <strong>cadera alta</strong>; sacos con leve forma en cintura y doble abertura trasera.</li>
+        <li><strong>B3 · pelvis a rodillas:</strong> tiro <strong>medio o alto, siempre</strong>; ni skinny ni desmedido.</li>
+        <li><strong>B4 · rodillas a pies:</strong> calzado con presencia — la base que equilibra el volumen de arriba.</li>
+      </ul>
+    </div>
+    <div style="display:grid;gap:14px">
+      <figure class="marco r169 revela rev d1"><img src="assets/silueta-saco.jpg" alt="Espalda de un saco azul de sastrería con hombros estructurados" loading="lazy"><figcaption>B1–B2 · hombro definido, doble abertura trasera</figcaption></figure>
+      <div class="grid2" style="gap:14px">
+        <figure class="marco r34 revela rev d2"><img src="assets/silueta-remera.jpg" alt="Remera blanca que termina a la altura de la cadera alta" loading="lazy"><figcaption>B2 · largo a cadera alta</figcaption></figure>
+        <figure class="marco r34 revela rev d3"><img src="assets/silueta-pantalon.jpg" alt="Pantalón negro amplio de tiro medio con calce limpio en cadera" loading="lazy"><figcaption>B3 · tiro medio-alto, punto justo</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="card borde rev" style="margin-top:52px">
+    <p class="v-datos" style="margin-bottom:10px;color:var(--ultramar)">La regla que ordena todo tu pantalón</p>
+    <h3>El tiro no negocia. El volumen, sí.</h3>
+    <p style="font-size:15px;margin-top:10px">El <strong>tiro medio o alto es fijo en los tres niveles</strong>, porque protege tu proporción torso-pierna. Lo que escala con el nivel es el <strong>volumen de la pierna</strong>: recto o regular en base → wide con cintura marcada en puente → babucha o monpe en expresión plena. Y cuando la pierna suma volumen, la cintura queda visible: remera en cadera alta, metida, o con cinturón. <strong>El volumen entra por la pierna, nunca por la cadera caída.</strong></p>
+  </div>
+
+  <div class="grid3" style="margin-top:26px">
+    <figure class="marco r34 revela rev"><img src="assets/forma-regular.jpg" alt="Pantalón regular fit gris oscuro con mocasines" loading="lazy"><figcaption>Regular · base</figcaption></figure>
+    <figure class="marco r34 revela rev d1"><img src="assets/forma-wideleg.jpg" alt="Pantalón wide leg amplio con zapatillas" loading="lazy"><figcaption>Wide leg · puente</figcaption></figure>
+    <figure class="marco r34 revela rev d2"><img src="assets/forma-monpe.jpg" alt="Pantalón monpe negro con borcegos" loading="lazy"><figcaption>Monpe · expresión, con cintura visible</figcaption></figure>
+  </div>
+</section>
+
+<!-- ══════════════════ pregunta ══════════════════ -->
+<section class="pregunta wrap obs" aria-label="Transición">
+  <p class="v-datos rev" data-scramble>Antes de abrir el placard</p>
+  <p class="display rev d1" style="font-size:clamp(34px,5.5vw,72px);margin-top:18px">¿Cuánto de vos querés<br>que se vea <span class="ac">hoy</span>?</p>
+</section>
+
+<!-- ══════════════════ 05 TUS NIVELES (percheros apilados) ══════════════════ -->
+<section class="obs" id="niveles" style="padding-block:0">
+  <div class="wrap" style="padding-block:clamp(72px,11vh,140px) clamp(30px,4vh,50px)">
+    <p class="acto-v" aria-hidden="true">05 · Tus niveles</p>
+    <div class="acto"><span class="num">05 / 08</span><span class="v-datos" data-scramble>Tus niveles · el sistema</span></div>
+    <h2 class="display rev">Tres percheros,<br>un solo criterio</h2>
+    <p class="lead rev d1" style="margin-top:28px;max-width:58ch">Tu estilo se mueve entre <strong>tradicional</strong> y <strong>dramático</strong>. No elegís uno: decidís cuánto mostrar de cada uno según el contexto. Por eso tu guardarropas se piensa en tres niveles de intensidad.</p>
+  </div>
+
+  <div class="percha">
+    <div class="wrap inner">
+      <div>
+        <p class="kanji" lang="ja" aria-hidden="true">基</p>
+        <p class="v-datos" style="margin-top:10px">Nivel 1 · Base</p>
+        <h3 style="margin-top:8px">Sastrería, neutros, cortes clásicos</h3>
+        <p style="font-size:15px;margin-top:10px;max-width:44ch">Tu estructura para contextos formales: clases, reuniones, presentaciones. Comunica solidez y criterio — y ya la tenés incorporada casi automáticamente. Es el marco, no la jaula.</p>
+        <div class="intensidad" aria-label="Intensidad dramática 1 de 3"><i class="on"></i><i></i><i></i></div>
+      </div>
+      <div class="fotos">
+        <figure class="marco r34 revela"><img src="assets/nivel-tradicional.jpg" alt="Look tradicional: sweater claro y pantalón marrón de corte clásico" loading="lazy"><figcaption>El registro</figcaption></figure>
+        <figure class="marco r34 revela"><img src="assets/nivel-trad-look3.jpg" alt="Abrigo largo gris sobre tejido marrón, sastrería relajada" loading="lazy"><figcaption>Abrigo + tejido</figcaption></figure>
+        <figure class="marco r34 revela"><img src="assets/nivel-trad-look4.jpg" alt="Campera de cuero marrón con pantalón sastrero amplio" loading="lazy"><figcaption>Cuero + sastrero</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="percha">
+    <div class="wrap inner">
+      <div>
+        <p class="kanji" lang="ja" aria-hidden="true">橋</p>
+        <p class="v-datos" style="margin-top:10px">Nivel 2 · Puente</p>
+        <h3 style="margin-top:8px">Estructura reconocible, con un quiebre</h3>
+        <p style="font-size:15px;margin-top:10px;max-width:44ch">La base de siempre más <strong>un</strong> gesto: un color de tu paleta, una textura, una forma. Acá tu universo city pop tiene más lugar para jugar — sin que nadie necesite la referencia para leerlo. Tu registro de agencia.</p>
+        <div class="intensidad" aria-label="Intensidad dramática 2 de 3"><i class="on"></i><i class="on"></i><i></i></div>
+      </div>
+      <div class="fotos">
+        <figure class="marco r34 revela"><img src="assets/nivel-puente-1.jpg" alt="Look clásico con drama: sweater azul trenzado, gorro amarillo y medias rojas" loading="lazy"><figcaption>Un foco: las medias</figcaption></figure>
+        <figure class="marco r34 revela"><img src="assets/nivel-puente-2.jpg" alt="Abrigo negro con buzo verde, bufanda marrón y gorro azul" loading="lazy"><figcaption>Color por capas</figcaption></figure>
+        <figure class="marco r34 revela"><img src="assets/nivel-puente-3.jpg" alt="Campera de gamuza marrón con jean negro y anteojos oscuros" loading="lazy"><figcaption>Textura como gesto</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="percha">
+    <div class="wrap inner">
+      <div>
+        <p class="kanji" lang="ja" aria-hidden="true">表現</p>
+        <p class="v-datos" style="margin-top:10px">Nivel 3 · Expresión plena</p>
+        <h3 style="margin-top:8px">El registro dramático toma la posta</h3>
+        <p style="font-size:15px;margin-top:10px;max-width:44ch">Color, estampado, siluetas amplias, referencias literales — tu universo anime, elegido con contexto: funciona cuando sabés que tu espectador lo va a leer como vos lo pensaste. Eventos, noche, día libre.</p>
+        <div class="intensidad" aria-label="Intensidad dramática 3 de 3"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+      </div>
+      <div class="fotos">
+        <figure class="marco r34 revela"><img src="assets/nivel-dramatico-1.jpg" alt="Look dramático de pasarela: campera de cuero verde oliva con pantalón amplio marrón" loading="lazy"><figcaption>Volumen + cuero</figcaption></figure>
+        <figure class="marco r34 revela"><img src="assets/nivel-dramatico-2.jpg" alt="Abrigo con capucha en degradé turquesa, naranja y violeta" loading="lazy"><figcaption>Color pleno</figcaption></figure>
+        <figure class="marco r34 revela"><img src="assets/nivel-dramatico-3.jpg" alt="Camisa estampada oscura con pantalón amplio de calle" loading="lazy"><figcaption>Estampa + volumen</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-block:clamp(40px,6vh,70px) clamp(72px,11vh,140px);background:var(--papel);position:relative;z-index:1">
+    <div class="matriz rev vis">
+      <h3 style="margin-bottom:16px">Tu semana, nivel por nivel</h3>
+      <table>
+        <caption class="v-datos chica" style="text-align:left;padding-bottom:10px">● recomendado · ◐ posible · ○ evitar</caption>
+        <thead><tr><th scope="col">Contexto</th><th scope="col">Base <span lang="ja" aria-hidden="true">基</span></th><th scope="col">Puente <span lang="ja" aria-hidden="true">橋</span></th><th scope="col">Expresión <span lang="ja" aria-hidden="true">表現</span></th><th scope="col">Nota</th></tr></thead>
+        <tbody>
+          <tr><td>Aula universitaria</td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td><span class="punto" role="img" aria-label="evitar"></span></td><td>autoridad primero; el quiebre entra por accesorio</td></tr>
+          <tr><td>Reunión con cliente</td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td><span class="punto" role="img" aria-label="evitar"></span></td><td>base + un solo foco de atención</td></tr>
+          <tr><td>Agencia, día interno</td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td>tu laboratorio cotidiano</td></tr>
+          <tr><td>Evento del rubro</td><td><span class="punto" role="img" aria-label="evitar"></span></td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td>que te recuerden: un gesto memorable</td></tr>
+          <tr><td>Noche · social</td><td><span class="punto" role="img" aria-label="evitar"></span></td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td>acá tu universo anime sí se lee</td></tr>
+          <tr><td>Día libre</td><td><span class="punto medio" role="img" aria-label="posible"></span></td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td><span class="punto lleno" role="img" aria-label="recomendado"></span></td><td>práctica sin costo: probá acá lo nuevo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <blockquote class="cita rev vis" style="margin-top:52px">
+      «Ya no estás improvisando cada vez: estás combinando dentro de un sistema que vos mismo construiste.»
+    </blockquote>
+  </div>
+</section>
+
+<!-- ══════════════════ 06 TU UNIVERSO (interior nocturno) ══════════════════ -->
+<section class="nocturna obs" id="universo" style="padding-block:0">
+  <div class="mq" aria-hidden="true"><span lang="ja">
+    シティポップ · CITY POP · 深い冬 · INVIERNO PROFUNDO · アニメ · CÓDIGO DE PERTENENCIA · 一本の線 · UNA LÍNEA &nbsp;·&nbsp;
+    シティポップ · CITY POP · 深い冬 · INVIERNO PROFUNDO · アニメ · CÓDIGO DE PERTENENCIA · 一本の線 · UNA LÍNEA &nbsp;·&nbsp;
+  </span></div>
+  <div class="wrap" style="padding-block:clamp(72px,11vh,140px)">
+    <p class="acto-v" aria-hidden="true" style="color:var(--g50)">06 · Tu universo</p>
+    <div class="acto"><span class="num">06 / 08</span><span class="v-datos" data-scramble>Tu universo · city pop y anime</span></div>
+    <h2 class="display rev">El interior del<br><span class="subrayado">guardarropas</span></h2>
+    <p class="lead rev d1" style="margin-top:28px;max-width:58ch">Tus referencias no son decoración: son herramientas. Y conviene distinguirlas, porque cada una te ofrece cosas distintas.</p>
+
+    <div class="grid2" style="margin-top:48px">
+      <div class="rev">
+        <h3><span class="ac">City pop</span> — la atmósfera</h3>
+        <p style="font-size:15px;margin-top:8px;max-width:50ch">No depende de que nadie reconozca la cita: es color, textura y silueta. Se percibe aunque no se identifique — por eso <strong>va a todos lados</strong>: a tus clases, a tus eventos de agencia, a tu día a día.</p>
+        <ul style="font-size:14px;margin-top:12px;padding-left:20px;display:grid;gap:6px;color:var(--g25)">
+          <li>Colores y estampas llamativos</li><li>Accesorios extravagantes</li><li>Siluetas elegantes</li><li>Anteojos, camisas, chaquetas, sastrería</li><li>Oversize y talle correcto conviviendo</li>
+        </ul>
+      </div>
+      <div class="rev d1">
+        <h3><span class="ac">Anime</span> — el código</h3>
+        <p style="font-size:15px;margin-top:8px;max-width:50ch">Referencia directa, gráfica, que comunica con fuerza <strong>a quien comparte el lenguaje</strong>. Es valioso — y funciona mejor cuando elegís el contexto: cuando sabés que tu espectador va a leerlo como vos lo pensaste.</p>
+        <p style="font-size:14px;margin-top:12px;color:var(--g25)">La estrategia no es acumular prendas que citen: es elegir piezas que <strong>dialoguen entre sí</strong>. Cuanta más coherencia interna, menos esfuerzo cada mañana.</p>
+      </div>
+    </div>
+
+    <div class="grid3 rev d2" style="margin-top:44px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
+      <figure class="marco r34 revela"><img src="assets/citypop-patrones.jpg" alt="Referencia city pop: traje claro sobre fondo verde neón, años 80" loading="lazy"><figcaption>City pop · patrones</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/citypop-elementos.jpg" alt="Camisa de cuadros multicolor con anteojos oscuros, estética japonesa ochentosa" loading="lazy"><figcaption>City pop · elementos</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/citypop-denim.jpg" alt="Campera de denim azul con cuello levantado y anteojos oscuros" loading="lazy"><figcaption>Denim + actitud</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/citypop-rojo.jpg" alt="Buzo rojo con remera blanca, retrato ochentoso" loading="lazy"><figcaption>Rojo frío pleno</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/citypop-violeta.jpg" alt="Sweater violeta con franja roja, retrato con guitarra de fondo" loading="lazy"><figcaption>Violeta + rojo</figcaption></figure>
+      <figure class="marco r169 revela" style="grid-column:1/-1"><img src="assets/citypop-banda.jpg" alt="Banda japonesa de los 80 con sweaters pastel, camisas y pantalones claros" loading="lazy"><figcaption>La banda entera: color, sastrería relajada y juventud</figcaption></figure>
+    </div>
+
+    <h3 class="rev" style="margin-top:64px">El anime, bien llevado</h3>
+    <p class="rev d1" style="font-size:15px;margin-top:8px;max-width:56ch">Piezas simbólicas antes que literales: el guiño que quien sabe, lee — y quien no, ve solo una buena prenda.</p>
+    <div class="grid3 rev d2" style="margin-top:22px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
+      <figure class="marco r34 revela"><img src="assets/anime-loewe-sinrostro.jpg" alt="Camisa blanca con el Sin Rostro de El viaje de Chihiro bordado en punto cruz" loading="lazy"><figcaption>Símbolo, no estampa</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/anime-loewe-camisa-totoro.jpg" alt="Camisa blanca larga con Totoro bordado en un pino" loading="lazy"><figcaption>El bordado discreto</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/anime-loewe-cardigan.jpg" alt="Cárdigan crema con hollines de Ghibli en relieve" loading="lazy"><figcaption>La textura que cita</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/acc-pin-ghibli.jpg" alt="Pin esmaltado del Sin Rostro entre flores" loading="lazy"><figcaption>El pin: código en 3 cm</figcaption></figure>
+    </div>
+
+    <h3 class="rev" style="margin-top:64px">Focos de atención</h3>
+    <p class="rev d1" style="font-size:15px;margin-top:8px;max-width:56ch">Un solo punto del look pide la mirada — y todos los demás lo sostienen. En base: un foco máximo. En puente: uno claro. En expresión: el conjunto es el foco.</p>
+    <div class="grid3 rev d2" style="margin-top:22px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
+      <figure class="marco r34 revela"><img src="assets/acc-gorro-rojo.jpg" alt="Retrato con gorro rojo, anteojos gruesos y pañuelo estampado sobre abrigo oscuro" loading="lazy"><figcaption>Foco: el gorro</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/focos-medias-verdes.jpg" alt="Look de calle con medias verdes y creepers de leopardo como foco" loading="lazy"><figcaption>Foco: las medias</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/focos-mocasin-cordones.jpg" alt="Mocasines bordó con cordones de colores y medias azul francia" loading="lazy"><figcaption>Foco: cordones + medias</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/acc-borcegos.jpg" alt="Borcegos negros con cordones amarillos" loading="lazy"><figcaption>Foco: el cordón amarillo</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/acc-look-gamuza.jpg" alt="Campera de gamuza marrón con pantalón sastrero negro amplio en la calle" loading="lazy"><figcaption>Todo sostiene a la gamuza</figcaption></figure>
+      <figure class="marco r34 revela"><img src="assets/universo-juego-visual.jpg" alt="Look oversize con campera técnica azul, corbata negra y bolso estampado" loading="lazy"><figcaption>Juego visual: capas y contrastes</figcaption></figure>
+    </div>
+
+    <div class="grid2" style="margin-top:56px">
+      <a class="card rev" style="text-decoration:none;display:block" href="https://ar.pinterest.com/emilianocobe/adn/" target="_blank" rel="noopener">
+        <p class="v-datos" style="margin-bottom:8px">Tu tablero</p>
+        <h3>ADN Emi ↗</h3>
+        <p class="mut" style="font-size:14px;margin-top:6px">Tu identidad visual de referencia, viva y en expansión.</p>
+      </a>
+      <a class="card rev d1" style="text-decoration:none;display:block" href="https://ar.pinterest.com/emilianocobe/moodboard-vestimenta/" target="_blank" rel="noopener">
+        <p class="v-datos" style="margin-bottom:8px">Tu tablero</p>
+        <h3>Moodboard Emi ↗</h3>
+        <p class="mut" style="font-size:14px;margin-top:6px">Vestimenta: los looks que ya elegiste como norte.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ pregunta ══════════════════ -->
+<section class="pregunta wrap obs" aria-label="Transición">
+  <p class="v-datos rev" data-scramble>El placard, abierto</p>
+  <p class="display rev d1" style="font-size:clamp(34px,5.5vw,72px);margin-top:18px">¿Qué te comprarías<br><span class="ac">mañana</span>?</p>
+</section>
+
+<!-- ══════════════════ 07 TU GUARDARROPA ══════════════════ -->
+<section class="wrap obs" id="guardarropa">
+  <p class="acto-v" aria-hidden="true">07 · Tu guardarropas</p>
+  <div class="acto"><span class="num">07 / 08</span><span class="v-datos" data-scramble>Tu guardarropas · prendas reales</span></div>
+  <h2 class="display rev">En tu talle,<br>con stock</h2>
+  <p class="rev d1" style="margin-top:26px;max-width:64ch">Veintisiete piezas elegidas con tu paleta y tu silueta como filtro, sobre tus marcas recomendadas. De cada una: <strong>precio, talles publicados y disponibilidad de tu talle</strong> (pantalón 44 · camisa y saco 44/L · calzado 42–43 · resto L), relevados el <strong>15/08/2026</strong>. El stock de estas marcas es chico y rota: el dato es una foto del día, no una promesa.</p>
+
+  <div class="filtros rev d2" role="group" aria-label="Filtrar productos por bloque corporal o nivel">
+        <button data-f="todos" aria-pressed="true">Todos · 27</button>
+    <button data-f="B1" aria-pressed="false">B1 arriba</button>
+    <button data-f="B2" aria-pressed="false">B2 torso</button>
+    <button data-f="B3" aria-pressed="false">B3 pierna</button>
+    <button data-f="B4" aria-pressed="false">B4 pies</button>
+    <button data-f="base" aria-pressed="false"><span lang="ja" aria-hidden="true">基</span> base</button>
+    <button data-f="puente" aria-pressed="false"><span lang="ja" aria-hidden="true">橋</span> puente</button>
+    <button data-f="expresion" aria-pressed="false"><span lang="ja" aria-hidden="true">表現</span> expresión</button>
+  </div>
+  <div class="prod-grid rev d3" id="prod-grid">
+        <article class="prod" data-b="B3" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/164/758/products/limay_abril_26_1547-fb4dd489a2a40ff1b417810234352408-640-0.webp" alt="Foto de producto: Jean Recto Negro Gastado, de Limay Denim" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Limay Denim</p>
+        <p class="nombre">Jean Recto Negro Gastado</p>
+        <p class="precio">$ 125.000</p>
+        <p class="meta"><span class="ok">T. 44 · 6 u.</span></p>
+        <p class="meta">B3 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Negro (neutro Invierno Profundo), tiro medio ajustado en cintura y pierna recta: base de fondo de placard</p>
+        <a class="link" href="https://www.limaydenim.com/productos/recto-negro-gastado/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B3" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/164/758/products/limay_feb_26_2181-8e79d1a6c6799ad3e417847478503178-640-0.webp" alt="Foto de producto: Jean Wide Azul, de Limay Denim" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Limay Denim</p>
+        <p class="nombre">Jean Wide Azul</p>
+        <p class="precio">$ 135.000</p>
+        <p class="meta"><span class="ok">T. 44 · 5 u. · tiro alto</span></p>
+        <p class="meta">B3 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Tiro alto ajustado en cintura con pierna ancha: la fórmula wide-leg que la silueta pide, en azul frío</p>
+        <a class="link" href="https://www.limaydenim.com/productos/wide-azul/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B3" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/_v8a0820-17b8ab2b9177408dae17660944142944-640-0.webp" alt="Foto de producto: Pantalon Tateyama, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Panni Margot</p>
+        <p class="nombre">Pantalon Tateyama</p>
+        <p class="precio">$ 249.900</p>
+        <p class="meta"><span class="ok">T. 3 (≈44/L) · 2 u.</span></p>
+        <p class="meta">B3 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Wide leg negro de gabardina con tiro medio, cinturón con hebilla metálica y botones en botamanga: el pantalón ancho recto que la silueta pide</p>
+        <a class="link" href="https://pannimargot.com/productos/pantalon-tateyama-1bnse/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B3" data-n="puente">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/pantalon-torihazushi-4-7c3ef7105dbf7e143d17187382934779-640-0.webp" alt="Foto de producto: Pantalon Torihazushi, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Panni Margot</p>
+        <p class="nombre">Pantalon Torihazushi</p>
+        <p class="precio">$ 179.900</p>
+        <p class="meta"><span class="ok">T. 3 (≈44/L) · 5 u.</span></p>
+        <p class="meta">B3 · Puente <span lang="ja" aria-hidden="true">橋</span></p>
+        <p style="font-size:13px;color:var(--g75)">Cargo amplio desmontable por botones, tiro medio-alto y pierna recta ancha: utilitario japonés que banca la cadera ancha sin marcarla</p>
+        <a class="link" href="https://pannimargot.com/productos/pantalon-torihazushi/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B3" data-n="puente">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/091/524/products/pantalon_jerey_12-331d785ec3b8e415db17672082008964-1024-1024.jpg" alt="Foto de producto: Pantalon Jerey (wide leg, alpaca), de Garçon García" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Garçon García</p>
+        <p class="nombre">Pantalon Jerey (wide leg, alpaca)</p>
+        <p class="precio">$ 196.790</p>
+        <p class="meta"><span class="ok">T. 44 marino · 2 u.</span></p>
+        <p class="meta">B3 · Puente <span lang="ja" aria-hidden="true">橋</span> · misma tela que el saco Jerey</p>
+        <p style="font-size:13px;color:var(--g75)">Pantalón de alpaca con corte ancho de pierna: el wide leg sastrero que pide la silueta, en marino/gris frío, talle 44 comprable</p>
+        <a class="link" href="https://www.garzongarcia.com.ar/productos/pantalon-jerey/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B3" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/188/770/products/dsc06843-8f07c6e6039add104817798202958878-640-0.webp" alt="Foto de producto: Pantalon Club [Carbon], de Luxo" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Luxo</p>
+        <p class="nombre">Pantalon Club [Carbon]</p>
+        <p class="precio">$ 53.700</p>
+        <p class="meta"><span class="ok">T. L · 11 u.</span></p>
+        <p class="meta">B3 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Calce regular liso en gris carbón (color nuclear de la paleta), microfibra opaca sin logos: neutro base accesible</p>
+        <a class="link" href="https://luxo.com.ar/productos/pantalon-club-carbon-1fllu/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="puente">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/091/524/products/ambo4-1d065b848582b86dd317749711118444-1024-1024.jpg" alt="Foto de producto: Saco Cadiz (cruzado, rayado), de Garçon García" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Garçon García</p>
+        <p class="nombre">Saco Cadiz (cruzado, rayado)</p>
+        <p class="precio">$ 318.890</p>
+        <p class="meta"><span class="ok">T. L gris/negro · 1+1 u.</span></p>
+        <p class="meta">B2 · Puente <span lang="ja" aria-hidden="true">橋</span> · arma ambo con el pantalón Cádiz 44</p>
+        <p style="font-size:13px;color:var(--g75)">Saco cruzado a rayas en gris/negro frío: sastrería con quiebre gráfico (raya), hombro estructurado y forma en cintura — puente perfecto para Invierno Profundo</p>
+        <a class="link" href="https://www.garzongarcia.com.ar/productos/SACO-CADIZ/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/091/524/products/saco_gregory_76_3-6a3915d9e040312bdc17673789802417-1024-1024.jpg" alt="Foto de producto: Saco Gregory, de Garçon García" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Garçon García</p>
+        <p class="nombre">Saco Gregory</p>
+        <p class="precio">$ 358.490</p>
+        <p class="meta"><span class="ok">T. L azul marino · 2 u.</span></p>
+        <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Saco clásico navy con hombro definido: pieza base de sastrería en el azul profundo nuclear de la paleta Invierno Profundo</p>
+        <a class="link" href="https://www.garzongarcia.com.ar/productos/saco-gregory/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="puente">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/blazer-nuime-6-999cc7a0e4b96dc33b17193407113418-640-0.webp" alt="Foto de producto: Blazer Nuime, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Panni Margot</p>
+        <p class="nombre">Blazer Nuime</p>
+        <p class="precio">$ 360.000</p>
+        <p class="meta"><span class="ok">T. único oversize · 33 u.</span></p>
+        <p class="meta">B2 · Puente <span lang="ja" aria-hidden="true">橋</span> · hombro 47 cm: te entra L holgado</p>
+        <p style="font-size:13px;color:var(--g75)">Sastrería negra con quiebre de textura (crepe bondeado + vinilo en hombro): el saco puente perfecto, hombro definido y largo 80 cm que no pasa la cadera</p>
+        <a class="link" href="https://pannimargot.com/productos/blazer-nuime/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="base">
+      <div class="ph"><img src="https://cdn.shopify.com/s/files/1/0555/2537/6301/files/5744193_282_29.jpg?v=1780257385" alt="Foto de producto: CLUB ROOM Saco Gris Talle 44, de Juan Perez" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Juan Perez</p>
+        <p class="nombre">CLUB ROOM Saco Gris Talle 44</p>
+        <p class="precio">$ 150.000</p>
+        <p class="meta"><span class="ok">T. 44 exacto · pieza única</span></p>
+        <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Saco gris en talle 44 exacto: gris carbón es neutro pilar de la paleta y el corte sastre estructura el hombro suave.</p>
+        <a class="link" href="https://juanperez.com.ar/products/club-room-saco-gris-talle-44-29be" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/camisa-ken-black-1101f4cca291e3dd9a17193401718302-640-0.webp" alt="Foto de producto: Camisa Ken Black, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Panni Margot</p>
+        <p class="nombre">Camisa Ken Black</p>
+        <p class="precio">$ 158.900</p>
+        <p class="meta"><span class="ok">T. 3 (≈L) · 2 u.</span></p>
+        <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Camisa negra de poplín con bolsillo superpuesto: base impecable en la paleta, frente que termina en cadera alta como pide la silueta</p>
+        <a class="link" href="https://pannimargot.com/productos/camisa-ken-black/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="puente">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/_v8a0406-92fb4a7cea78b15a4d17697192231616-640-0.webp" alt="Foto de producto: Camisa Fuji, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Panni Margot</p>
+        <p class="nombre">Camisa Fuji</p>
+        <p class="precio">$ 220.900</p>
+        <p class="meta"><span class="ok">T. 3 (≈L) · 2 u.</span></p>
+        <p class="meta">B2 · Puente <span lang="ja" aria-hidden="true">橋</span></p>
+        <p style="font-size:13px;color:var(--g75)">Camisa negra con bolsillo desmontable por botones y brillo sutil del poplín: clásica de lejos, quiebre de detalle de cerca — puente exacta</p>
+        <a class="link" href="https://pannimargot.com/productos/camisa-fuji-mt9um/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="expresion">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/002/222/533/products/cfb2aa40-339a-43f7-8a1b-4a97c2f212701-89f412fd83ac385f7816920481065348-640-0.webp" alt="Foto de producto: Camisa Blue Wood (paisley), de Guilty Berlin" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Guilty Berlin</p>
+        <p class="nombre">Camisa Blue Wood (paisley)</p>
+        <p class="precio">$ 70.000</p>
+        <p class="meta"><span class="ok">T. L · última unidad</span></p>
+        <p class="meta">B2 · Expresión <span lang="ja" aria-hidden="true">表現</span></p>
+        <p style="font-size:13px;color:var(--g75)">Estampa paisley sobre base azul petróleo con acentos bordó: pieza statement 100% dentro de la paleta Invierno Profundo, relaxed fit en poplín con seda.</p>
+        <a class="link" href="https://guiltyberlin.ar/productos/camisa-blue-wood/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/002/295/658/products/b08c252f-336e-4904-9714-466ae90b4ad1-49b61818e3aef1e4e317678527122644-640-0.webp" alt="Foto de producto: Camisa Cipre Gris, de Fiera" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Fiera</p>
+        <p class="nombre">Camisa Cipre Gris</p>
+        <p class="precio">$ 48.000</p>
+        <p class="meta"><span class="ok">T. L · 5 u.</span></p>
+        <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Camisa de poplín gris con largo apenas debajo de cintura (no extra-larga): gris frío, básico limpio</p>
+        <a class="link" href="https://fiera.ar/productos/camisa-cipre-gris/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/005/292/364/products/img_3214-ace48b7da5f233b80517858899141202-640-0.webp" alt="Foto de producto: Sobretodo Master B. (lana, cruzado, navy), de Style Vintage" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Style Vintage</p>
+        <p class="nombre">Sobretodo Master B. (lana, cruzado, navy)</p>
+        <p class="precio">$ 142.970</p>
+        <p class="meta"><span class="ok">T. L · pieza única</span></p>
+        <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span> · lana cruzada, navy — vintage real</p>
+        <p style="font-size:13px;color:var(--g75)">Sobretodo cruzado de lana 100% en navy: sastrería de archivo, moldería recta y cruzada que estructura el hombro — base perfecta de Invierno Profundo.</p>
+        <a class="link" href="https://www.stylevintage.com.ar/productos/sobretodo-master-b-1h8u1/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="expresion">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/trench-firewall-black-satin-8-dd17ac45b7653231cd17183866984987-640-0.webp" alt="Foto de producto: Trench Firewall Black Satin, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Panni Margot</p>
+        <p class="nombre">Trench Firewall Black Satin</p>
+        <p class="precio">$ 590.000</p>
+        <p class="meta"><span class="ok">T. 3 · 7 u.</span></p>
+        <p class="meta">B2 · Expresión <span lang="ja" aria-hidden="true">表現</span></p>
+        <p style="font-size:13px;color:var(--g75)">Trench statement en satinado impermeable terminado en picos, cruzado con 10 botones: pieza de expresión total dentro del negro de la paleta</p>
+        <a class="link" href="https://pannimargot.com/productos/trench-firewall-black/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/001/343/707/products/tauro-4-1000731-ce86b2727d4918d6ec16413107060793-640-0.webp" alt="Foto de producto: Fabrizio Black &amp; Pretto (campera de cuero), de Tauro Cuer" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Tauro Cuer</p>
+        <p class="nombre">Fabrizio Black &amp; Pretto (campera de cuero)</p>
+        <p class="precio">$ 390.000</p>
+        <p class="meta"><span class="ok">T. L · 3 u.</span></p>
+        <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span> · tu prenda de cuero de inversión</p>
+        <p style="font-size:13px;color:var(--g75)">Campera de cuero negra minimal con curva completa de talles: opción segura en talle L, negro pleno de paleta fría.</p>
+        <a class="link" href="https://www.taurocuer.com/productos/fabrizio-black-pretto/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="puente">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/113/599/products/1000315227-49a3c9f468d5f6cb6a17737997916607-640-0.webp" alt="Foto de producto: Bomber Faith (varsity negra), de Tienda Fuego" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Tienda Fuego</p>
+        <p class="nombre">Bomber Faith (varsity negra)</p>
+        <p class="precio">$ 119.900</p>
+        <p class="meta"><span class="ok">T. 3 · 1 u.</span></p>
+        <p class="meta">B2 · Puente <span lang="ja" aria-hidden="true">橋</span></p>
+        <p style="font-size:13px;color:var(--g75)">Bomber varsity negra con puños en rayas blancas: la silueta bomber que pide tu ruta, largo a cadera, quiebre street sobre base neutra.</p>
+        <a class="link" href="https://www.tiendafuego.com.ar/productos/bomber-faith/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/164/758/products/limay_feb_26_0717-56754182ccfd2d339417734253861619-640-0.webp" alt="Foto de producto: Campera Worker Negra, de Limay Denim" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Limay Denim</p>
+        <p class="nombre">Campera Worker Negra</p>
+        <p class="precio">$ 141.750</p>
+        <p class="meta"><span class="ok">T. 1–4 c/stock</span></p>
+        <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span> · talle numérico: confirmá equivalencia L</p>
+        <p style="font-size:13px;color:var(--g75)">Campera worker de canvas negro con cuello camisero: estructura en hombros y largo controlado, clásico total</p>
+        <a class="link" href="https://www.limaydenim.com/productos/campera-worker-negra/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="expresion">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/219/431/products/f9679c85-acaa-4265-85b5-1118c790fbea-c210ec1a0396232e2b17789026725242-640-0.webp" alt="Foto de producto: Campera Royalty Blue (varsity), de King of the Kongo" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">King of the Kongo</p>
+        <p class="nombre">Campera Royalty Blue (varsity)</p>
+        <p class="precio">$ 69.990</p>
+        <p class="meta"><span class="ok">T. L · última unidad · −57%</span></p>
+        <p class="meta">B2 · Expresión <span lang="ja" aria-hidden="true">表現</span></p>
+        <p style="font-size:13px;color:var(--g75)">Bomber varsity navy con escudo bordado: pieza statement fría que además suma estructura de hombro</p>
+        <a class="link" href="https://kingofthekongo.com.ar/productos/campera-royalty-blue-1n6oa/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B2" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/002/222/533/products/facetune_27-06-2025-15-09-44-b1f935caf4dc71999617510538520187-640-0.webp" alt="Foto de producto: Crewneck tejido Blank - Ash, de Guilty Berlin" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Guilty Berlin</p>
+        <p class="nombre">Crewneck tejido Blank - Ash</p>
+        <p class="precio">$ 110.000</p>
+        <p class="meta"><span class="ok">T. 2 (=L/XL, tabla en ficha) · 2 u.</span></p>
+        <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Básico tejido gris, corte semiboxy con hombros levemente caídos sin exagerar: neutro frío perfecto de fondo de placard.</p>
+        <a class="link" href="https://guiltyberlin.ar/productos/crewneck-tejido-blank-ash/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B1" data-n="puente">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/003/024/577/products/vsbbf-2677-script-petroleo-strip-18ff325c8cac80df0917809413636781-640-0.webp" alt="Foto de producto: Buzo Boxy Script Petróleo Stripe, de Vieja Scul" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Vieja Scul</p>
+        <p class="nombre">Buzo Boxy Script Petróleo Stripe</p>
+        <p class="precio">$ 109.000</p>
+        <p class="meta"><span class="ok">T. 3 (≈L) · 11 u.</span></p>
+        <p class="meta">B1 · Puente <span lang="ja" aria-hidden="true">橋</span></p>
+        <p style="font-size:13px;color:var(--g75)">Petróleo es color estrella de Invierno Profundo; corte boxy termina en cadera alta y la raya ancha es el quiebre puente</p>
+        <a class="link" href="https://www.viejascul.com.ar/productos/buzo-boxy-script-petroleo-stripe-hq86f/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B4" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/001/574/296/products/eminent-at-negro-01-53c80dd0d20db5d03417689208878548-640-0.webp" alt="Foto de producto: Zapatos Eminent - Negro, de MMartinez" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">MMartinez</p>
+        <p class="nombre">Zapatos Eminent - Negro</p>
+        <p class="precio">$ 224.100</p>
+        <p class="meta"><span class="ok">42: 10 u. · 43: 6 u.</span></p>
+        <p class="meta">B4 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Zapato acordonado negro clásico de cuero: la base sastrera perfecta para saco y pantalón de tiro alto en paleta fría.</p>
+        <a class="link" href="https://mmartinez.com.ar/productos/zapatos-eminent-negro-9m2bk/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B4" data-n="puente">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/001/574/296/products/timeless-co-bordo-01-b0a7981870339338f817689207487355-640-0.webp" alt="Foto de producto: Mocasines Timeless Claro Oscuro - Bordeaux, de MMartinez" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">MMartinez</p>
+        <p class="nombre">Mocasines Timeless Claro Oscuro - Bordeaux</p>
+        <p class="precio">$ 233.100</p>
+        <p class="meta"><span class="ok">42: 31 u. · 43: 14 u.</span></p>
+        <p class="meta">B4 · Puente <span lang="ja" aria-hidden="true">橋</span></p>
+        <p style="font-size:13px;color:var(--g75)">Mismo mocasín clásico pero en cuero bitono gastado bordeaux: el quiebre de color/textura típico del nivel puente, dentro del bordó de la paleta.</p>
+        <a class="link" href="https://mmartinez.com.ar/productos/mocasines-timeless-claro-oscuro-bordeaux-upzwr/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B4" data-n="expresion">
+      <div class="ph"><img src="https://terribleenfant.com/wp-content/uploads/2021/09/GAMBINO-NUEVO-2.jpg" alt="Foto de producto: Gambino Negro, de Terrible Enfant" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Terrible Enfant</p>
+        <p class="nombre">Gambino Negro</p>
+        <p class="precio">$ 355.850</p>
+        <p class="meta"><span class="ok">42 y 43 en stock</span></p>
+        <p class="meta">B4 · Expresión <span lang="ja" aria-hidden="true">表現</span></p>
+        <p style="font-size:13px;color:var(--g75)">Zapato de cuero negro hecho a mano con la suela alta característica de la marca: pieza statement en el neutro más seguro de la paleta Invierno Profundo.</p>
+        <a class="link" href="https://terribleenfant.com/producto/gambino-negro/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B4" data-n="puente">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/219/431/products/ad702b6b-9a98-4ff4-923a-a062b919c9ce-9201d390ef02c203e817736975672849-640-0.webp" alt="Foto de producto: Zapatillas Umpire KOTK Blue (x Topper), de King of the Kongo" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">King of the Kongo</p>
+        <p class="nombre">Zapatillas Umpire KOTK Blue (x Topper)</p>
+        <p class="precio">$ 114.990</p>
+        <p class="meta"><span class="ok">42: 1 u. · 43: 2 u.</span></p>
+        <p class="meta">B4 · Puente <span lang="ja" aria-hidden="true">橋</span> · colaboración con Topper</p>
+        <p style="font-size:13px;color:var(--g75)">Cuerpo navy frío; la suela gum cálida queda lejos de la cara (bloque B4) y ancla el look urbano</p>
+        <a class="link" href="https://kingofthekongo.com.ar/productos/zapatillas-umpire-kotk-blue-7gy9n/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+    <article class="prod" data-b="B4" data-n="base">
+      <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/003/024/577/products/circle34bmesa-de-trabajo-1-copia-2-e12ab2d0f876ffab0c17488674611281-640-0.webp" alt="Foto de producto: Media Circle VS (Black), de Vieja Scul" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
+      <div class="cuerpo">
+        <p class="marca-p">Vieja Scul</p>
+        <p class="nombre">Media Circle VS (Black)</p>
+        <p class="precio">$ 25.200</p>
+        <p class="meta"><span class="ok">T. único · 113 u.</span></p>
+        <p class="meta">B4 · Base <span lang="ja" aria-hidden="true">基</span></p>
+        <p style="font-size:13px;color:var(--g75)">Media 3/4 negra con logo: accesorio frío que cierra el bloque de calzado sin romper paleta</p>
+        <a class="link" href="https://www.viejascul.com.ar/productos/media-circleblack/" target="_blank" rel="noopener">Ficha ↗</a>
+      </div>
+    </article>
+  </div>
+  <div id="prod-resumen" style="margin-top:44px">
+        <div class="grid3">
+      <div class="tile"><span class="v-datos">Si entrara todo al placard</span><span class="cifra" style="font-size:clamp(26px,3vw,40px)">$ 5.252.320</span><span class="unidad">27 piezas · 14 tiendas · precios del 15/08</span></div>
+      <div class="tile"><span class="v-datos">Por nivel</span><span class="unidad" style="font-size:15px;line-height:1.8"><span lang="ja" aria-hidden="true">基</span> base · 14 piezas: $ 2.313.010<br><span lang="ja" aria-hidden="true">橋</span> puente · 9 piezas: $ 1.853.470<br><span lang="ja" aria-hidden="true">表現</span> expresión · 4 piezas: $ 1.085.840</span></div>
+      <div class="tile oscuro"><span class="v-datos">Tu arranque mínimo</span><span class="cifra" style="font-size:clamp(26px,3vw,40px)">$ 707.590</span><span class="unidad">jean recto 44 + saco Gregory L + Eminent 42/43 — los pasos 01 a 03 de tu ruta</span></div>
+    </div>
+    <p class="mut" style="font-size:13px;margin-top:18px">Cobertura de tus bloques: B1 1 · B2 15 · B3 6 · B4 5 piezas. Donde una marca usa talle numérico (1–4), la equivalencia sale de la tabla publicada en su ficha; donde no publica tabla, te lo aclaro en la tarjeta.</p>
+  </div>
+</section>
+
+<!-- ══════════════════ 08 TU RUTA ══════════════════ -->
+<section class="wrap obs" id="ruta">
+  <p class="acto-v" aria-hidden="true">08 · Tu ruta</p>
+  <div class="acto"><span class="num">08 / 08</span><span class="v-datos" data-scramble>Tu ruta · orden de compra</span></div>
+  <h2 class="display rev">Primero la base,<br>después el gesto</h2>
+  <p class="rev d1" style="margin-top:26px;max-width:62ch">La depuración de tu placard dejó huecos estructurales antes que expresivos. Este orden maximiza looks por peso invertido:</p>
+
+  <ol class="rev d2" style="margin-top:36px;display:grid;gap:0;list-style:none">
+    <li class="barra" style="grid-template-columns:44px 1fr;align-items:start"><span class="num" style="font-family:var(--display);font-weight:600;color:var(--ultramar)">01</span><div><strong>Pantalón recto o wide, tiro medio/alto, talle 44</strong> — el hueco que dejó la salida de los slim. Dos: uno negro/carbón, uno azul o verde oscuro.</div></li>
+    <li class="barra" style="grid-template-columns:44px 1fr;align-items:start"><span class="num" style="font-family:var(--display);font-weight:600;color:var(--ultramar)">02</span><div><strong>Blazer con hombro definido, 44/L</strong> — tu prenda de autoridad para el aula y la agencia; con leve forma en cintura.</div></li>
+    <li class="barra" style="grid-template-columns:44px 1fr;align-items:start"><span class="num" style="font-family:var(--display);font-weight:600;color:var(--ultramar)">03</span><div><strong>Calzado clásico negro 42–43</strong> — derby o mocasín de calidad: sostiene base y puente.</div></li>
+    <li class="barra" style="grid-template-columns:44px 1fr;align-items:start"><span class="num" style="font-family:var(--display);font-weight:600;color:var(--ultramar)">04</span><div><strong>Camisas cerca-de-cara</strong> — azul frío, blanco frío, verde petróleo: donde tu paleta paga más.</div></li>
+    <li class="barra" style="grid-template-columns:44px 1fr;align-items:start"><span class="num" style="font-family:var(--display);font-weight:600;color:var(--ultramar)">05</span><div><strong>Bomber versátil</strong> — el puente entre sastrería y calle que pide tu registro de agencia.</div></li>
+    <li class="barra" style="grid-template-columns:44px 1fr;align-items:start"><span class="num" style="font-family:var(--display);font-weight:600;color:var(--ultramar)">06</span><div><strong>Tapado de inversión</strong> — compra de temporada que se paga en años; negro o azul noche.</div></li>
+    <li class="barra" style="grid-template-columns:44px 1fr;align-items:start;border-bottom:none"><span class="num" style="font-family:var(--display);font-weight:600;color:var(--ultramar)">07</span><div><strong>Focos de atención</strong> — anteojos con presencia, medias saturadas, pines, cordones: tu city pop por goteo. Máximo uno por look en base.</div></li>
+  </ol>
+
+  <div class="grid2" style="margin-top:52px">
+    <div class="card rev"><p class="v-datos" style="margin-bottom:10px">Tu registro de outfits</p>
+      <p style="font-size:15px">El ejercicio que sigue abierto. Un look por línea, en una nota del teléfono: <strong>fecha · contexto · nivel (base/puente/expresión) · prendas · foco de atención · comodidad 1–5 · ¿repetiría?</strong> Con veinte registros ya aparece tu patrón: dónde te sentís más vos mostrando más.</p></div>
+    <div class="card rev d1"><p class="v-datos" style="margin-bottom:10px">Looks que ya tenés acá</p>
+      <p style="font-size:15px">Solo con la base de este guardarropas: <strong>3 partes de arriba × 4 pantalones × 1 calzado = 12 looks</strong>; sumando las 3 capas de base, <strong>48 combinaciones</strong> — antes de contar accesorios. La coherencia interna hace el resto: todo combina con casi todo, porque salió de la misma paleta.</p></div>
+  </div>
+</section>
+
+<!-- ══════════════════ GLOSARIO ══════════════════ -->
+<section class="wrap obs" id="glosario">
+  <div class="acto"><span class="num">Anexo</span><span class="v-datos" data-scramble>Glosario</span></div>
+  <dl class="glos rev">
+    <div><dt>Invierno profundo</dt><dd>Tu estación cromática: fría, oscura, contrastada. Tu paleta madre de 56 tonos.</dd></div>
+    <div><dt>Visagismo</dt><dd>Lectura de la geometría del rostro para elegir cuellos, marcos, barba. El tuyo: ovalado.</dd></div>
+    <div><dt>Bloques corporales</dt><dd>B1–B4: cuatro zonas para dirigir el foco visual al vestir.</dd></div>
+    <div><dt>Tiro</dt><dd>Distancia entrepierna-cintura del pantalón. El tuyo: medio o alto, siempre.</dd></div>
+    <div><dt>Monpe</dt><dd>Pantalón de trabajo japonés, amplio y con puño. Tuyo en expresión, con cintura visible.</dd></div>
+    <div><dt>Foco de atención</dt><dd>El único punto del look que pide la mirada: un color, un accesorio, un contraste.</dd></div>
+    <div><dt>City pop</dt><dd>Atmósfera japonesa de los 80: color, textura y silueta elegantes. Funciona sin cita.</dd></div>
+    <div><dt>Prenda de inversión</dt><dd>Pieza de precio alto y década de uso: sastrería, abrigo, cuero. Siempre en neutros.</dd></div>
+  </dl>
+</section>
+
+<!-- ══════════════════ CIERRE ══════════════════ -->
+<footer class="nocturna obs">
+  <div class="wrap" style="padding-block:clamp(80px,12vh,150px)">
+    <p class="v-datos rev" style="color:var(--menta)" data-scramble>Cierre</p>
+    <p class="display rev d1" style="font-size:clamp(38px,6vw,84px);margin-top:20px;max-width:15ch">Esto recién <span class="ac">empieza</span>.</p>
+    <p class="rev d2" style="margin-top:26px;max-width:56ch">Ya tenés el mapa y el guardarropas. Lo que sigue es práctica: probar, registrar, ajustar. La línea no se levanta del papel — sigue.</p>
+    <div class="rev d3" style="margin-top:70px;display:flex;flex-wrap:wrap;gap:34px;justify-content:space-between;align-items:end">
+      <div>
+        <p class="v-marca" style="font-size:22px">Majo Ciancaglini</p>
+        <p class="v-datos" style="margin-top:8px">Imagen personal · cel. 11 4995 5858 · @majocian</p>
+      </div>
+      <p class="v-datos" style="text-align:right">Guía 2.0 · agosto 2026<br>precios y talles relevados el 15/08/2026</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ── El portón pide la palabra ─────────────────────────────────────────
+     Cortina, no cerradura: sirve para que el enlace no quede a la vista de
+     cualquiera ni de los buscadores. El contenido viaja en esta misma página.
+     ──────────────────────────────────────────────────────────────────── */
+  var CLAVE='8e55a31481ca6566564c13b7906e38d3ff1f7c79cd5042d29dfeb86baad79184';
+  var MEMORIA='mc-guia-emiliano';
+
+  /* SHA-256 propio: idéntico por http, https y file:// */
+  function sha256(ascii){
+    function rr(v,a){return (v>>>a)|(v<<(32-a));}
+    var mp=Math.pow, mw=mp(2,32), i,j, res='';
+    var words=[], bits=ascii.length*8;
+    var hash=sha256.h=sha256.h||[], k=sha256.k=sha256.k||[], pc=k.length, comp={};
+    for(var c=2; pc<64; c++){
+      if(!comp[c]){
+        for(i=0;i<313;i+=c){comp[i]=c;}
+        hash[pc]=(mp(c,.5)*mw)|0; k[pc++]=(mp(c,1/3)*mw)|0;
+      }
+    }
+    ascii+='\x80';
+    while(ascii.length%64-56) ascii+='\x00';
+    for(i=0;i<ascii.length;i++){
+      j=ascii.charCodeAt(i);
+      if(j>>8) return '';
+      words[i>>2]|=j<<((3-i)%4)*8;
+    }
+    words[words.length]=((bits/mw)|0); words[words.length]=(bits);
+    for(j=0;j<words.length;){
+      var w=words.slice(j,j+=16), old=hash;
+      hash=hash.slice(0,8);
+      for(i=0;i<64;i++){
+        var w15=w[i-15], w2=w[i-2], a=hash[0], e=hash[4];
+        var t1=hash[7]+(rr(e,6)^rr(e,11)^rr(e,25))+((e&hash[5])^((~e)&hash[6]))+k[i]
+          +(w[i]=(i<16)?w[i]:(w[i-16]+(rr(w15,7)^rr(w15,18)^(w15>>>3))+w[i-7]+(rr(w2,17)^rr(w2,19)^(w2>>>10)))|0);
+        var t2=(rr(a,2)^rr(a,13)^rr(a,22))+((a&hash[1])^(a&hash[2])^(hash[1]&hash[2]));
+        hash=[(t1+t2)|0].concat(hash); hash[4]=(hash[4]+t1)|0;
+      }
+      for(i=0;i<8;i++){hash[i]=(hash[i]+old[i])|0;}
+    }
+    for(i=0;i<8;i++){for(j=3;j+1;j--){var b=(hash[i]>>(j*8))&255;res+=((b<16)?0:'')+b.toString(16);}}
+    return res;
+  }
+
+  var RMg=false;
+  try{RMg=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
+  var porton=document.getElementById('porton');
+  var form=document.getElementById('fclave');
+  var input=document.getElementById('pw');
+  var err=document.getElementById('pw-e');
+  var abierto=false;
+
+  function abrir(directo){
+    if(abierto)return; abierto=true;
+    document.body.classList.remove('trabado');
+    if(porton){
+      if(directo||RMg){porton.remove();}
+      else{porton.classList.add('abre');setTimeout(function(){if(porton)porton.remove();},1150);}
+    }
+    iniciar();
+  }
+
+  var recordado=false;
+  try{recordado=localStorage.getItem(MEMORIA)==='1';}catch(e){}
+  if(recordado){abrir(true);}
+  else if(form){
+    form.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var v=(input.value||'').trim().toLowerCase();
+      if(sha256(v)===CLAVE){
+        try{localStorage.setItem(MEMORIA,'1');}catch(e){}
+        err.textContent='';
+        abrir(false);
+      } else {
+        err.textContent='No es esa';
+        porton.classList.remove('mal');
+        void porton.offsetWidth;
+        porton.classList.add('mal');
+        input.value=''; input.focus();
+      }
+    });
+    setTimeout(function(){try{input.focus();}catch(e){}}, RMg?0:2400);
+  } else { abrir(true); }
+
+  /* ── La guía ──────────────────────────────────────────────────────── */
+  function iniciar(){
+    var RM=false;
+    try{RM=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
+    var tieneIO='IntersectionObserver' in window;
+
+    /* la línea del hero se dibuja */
+    var cara=document.getElementById('cara');
+    if(cara){ if(RM){cara.classList.add('dibujada');} else {requestAnimationFrame(function(){cara.classList.add('dibujada');});} }
+
+    /* revelados por sección */
+    function todoVisible(){document.querySelectorAll('.obs').forEach(function(s){s.classList.add('vis');});}
+    if(RM||!tieneIO){todoVisible();}
+    else{
+      var obs=new IntersectionObserver(function(es){
+        es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});
+      },{rootMargin:'0px 0px -120px 0px',threshold:0});
+      document.querySelectorAll('.obs').forEach(function(s){obs.observe(s);});
+    }
+
+    /* scramble: el rótulo se revela barajando el charset de la casa */
+    if(!RM&&tieneIO){
+      var CH='>#/:·.-01';
+      var io2=new IntersectionObserver(function(es){es.forEach(function(e){
+        if(!e.isIntersecting||e.target.dataset.hecho)return;
+        e.target.dataset.hecho='1';io2.unobserve(e.target);
+        var el=e.target,fin=el.textContent,f=0,total=14;
+        var t=setInterval(function(){
+          f++;
+          el.textContent=fin.split('').map(function(c,i){
+            if(c===' ')return ' ';
+            return i<f*(fin.length/total)?c:CH[Math.floor(Math.random()*CH.length)];
+          }).join('');
+          if(f>=total){el.textContent=fin;clearInterval(t);}
+        },34);
+      });},{threshold:.6});
+      document.querySelectorAll('[data-scramble]').forEach(function(el){io2.observe(el);});
+    }
+
+    /* cursor de doble masa: el punto es la tinta, el anillo es el gesto */
+    var fino=false;
+    try{fino=matchMedia('(hover: hover) and (pointer: fine)').matches}catch(e){}
+    if(fino&&!RM){
+      var cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+      var mx=innerWidth/2,my=innerHeight/2,px=mx,py=my,rx=mx,ry=my;
+      addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;},{passive:true});
+      document.querySelectorAll('a,button').forEach(function(el){
+        el.addEventListener('pointerenter',function(){ring.classList.add('activo');});
+        el.addEventListener('pointerleave',function(){ring.classList.remove('activo');});
+      });
+      (function loop(){
+        if(!document.hidden){
+          px+=(mx-px)*.55;py+=(my-py)*.55;
+          rx+=(mx-rx)*.13;ry+=(my-ry)*.13;
+          cur.style.transform='translate('+px+'px,'+py+'px)';
+          ring.style.transform='translate('+rx+'px,'+ry+'px)';
+        }
+        requestAnimationFrame(loop);
+      })();
+    } else {
+      var c1=document.getElementById('cur'),c2=document.getElementById('cur-ring');
+      if(c1)c1.remove(); if(c2)c2.remove();
+    }
+
+    /* filtros de productos */
+    var botones=document.querySelectorAll('.filtros button');
+    var prods=document.querySelectorAll('.prod');
+    botones.forEach(function(b){
+      b.addEventListener('click',function(){
+        botones.forEach(function(x){x.setAttribute('aria-pressed','false');});
+        b.setAttribute('aria-pressed','true');
+        var f=b.getAttribute('data-f');
+        prods.forEach(function(p){
+          var mostrar=f==='todos'||p.getAttribute('data-b')===f||p.getAttribute('data-n')===f;
+          p.style.display=mostrar?'':'none';
+        });
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>

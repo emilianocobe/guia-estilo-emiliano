@@ -1,0 +1,8 @@
+# Material original del proceso: privado y pesado
+Informe Emiliano.pdf
+*.bak
+.claude/
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
