@@ -10,7 +10,8 @@ actualiza index.html: corrige precios, actualiza el stock, marca lo agotado y lo
 
 Es idempotente: correrlo dos veces seguidas sin cambios en las tiendas no toca nada.
 
-    python tools/verificar-guardarropa.py             # informe, no toca nada
+    python tools/verificar-guardarropa.py --elegidas   # solo la primera selección (27)
+    python tools/verificar-guardarropa.py --desde 0 --cuantas 60   # por tandas, para no golpear las tiendas
     python tools/verificar-guardarropa.py --aplicar   # además actualiza index.html
     python tools/verificar-guardarropa.py --lento     # 1 pedido por vez (si una tienda te bloquea)
 
@@ -47,13 +48,10 @@ def bajar(url, timeout=30, intentos=3):
 
 
 # ──────────────────────── lectura de la guía ────────────────────────
-FICHA = re.compile(
-    r'<article class="prod"([^>]*)>.*?'
-    r'<p class="marca-p">(?P<marca>[^<]*)</p>\s*'
-    r'<p class="nombre">(?P<nombre>[^<]*)</p>\s*'
-    r'<p class="precio">(?P<precio>[^<]*)</p>\s*'
-    r'<p class="meta"><span class="ok">(?P<talle>[^<]*)</span></p>.*?'
-    r'href="(?P<url>https://[^"]+)"', re.S)
+# Las prendas viven en el bloque de datos `var PC={...};` que la guía usa para armar
+# los percheros. Cada una es una fila: [0]nombre [1]url [2]imagen [3]precio [4]categoría
+# [5]bloque [6]nivel [7]texto de talle [8]por qué [9]elegida [10]agotada [11]marca [12]talle objetivo
+DATOS = re.compile(r'var PC=(\{.*?\});\n', re.S)
 
 
 def a_entero(v):
@@ -87,21 +85,21 @@ def pesos(n):
     return "$ " + f"{n:,}".replace(",", ".")
 
 
-def leer_guia(doc):
+def leer_guia(doc, solo_elegidas=False):
+    m = DATOS.search(doc)
+    if not m:
+        return [], None, None
+    pc = json.loads(m.group(1))
     fichas = []
-    for m in FICHA.finditer(doc):
-        attrs = m.group(1)
-        t = re.search(r'data-talle="([^"]*)"', attrs)
+    for i, f in enumerate(pc["items"]):
+        if solo_elegidas and not f[9]:
+            continue
         fichas.append({
-            "marca": H.unescape(m.group("marca")).strip(),
-            "nombre": H.unescape(m.group("nombre")).strip(),
-            "precio_pub": a_entero(m.group("precio")),
-            "talle_txt": H.unescape(m.group("talle")).strip(),
-            "objetivo": [s.strip().upper() for s in (t.group(1) if t else "").split(",") if s.strip()],
-            "url": m.group("url"),
-            "span": m.span(),
+            "i": i, "marca": f[11], "nombre": f[0], "precio_pub": f[3] or None,
+            "talle_txt": f[7], "url": f[1],
+            "objetivo": [s.strip().upper() for s in (f[12] if len(f) > 12 else "").split(",") if s.strip()],
         })
-    return fichas
+    return fichas, pc, m.span()
 
 
 # ───────────────────── lectura de la tienda ─────────────────────
@@ -298,13 +296,18 @@ def main():
     ap = argparse.ArgumentParser(description="Verifica precios y stock del guardarropa.")
     ap.add_argument("--aplicar", action="store_true", help="actualiza index.html con lo verificado")
     ap.add_argument("--lento", action="store_true", help="un pedido por vez")
+    ap.add_argument("--elegidas", action="store_true", help="solo las de la primera selección")
+    ap.add_argument("--desde", type=int, default=0, help="empezar en la prenda N (para ir por tandas)")
+    ap.add_argument("--cuantas", type=int, default=0, help="verificar sólo N prendas desde ahí")
     args = ap.parse_args()
 
     doc = open(DOC, encoding="utf-8").read()
-    fichas = leer_guia(doc)
+    fichas, pc, span = leer_guia(doc, args.elegidas)
     if not fichas:
-        print("No encontré fichas de producto en index.html.")
+        print("No encontré el bloque de datos de prendas en index.html.")
         return 1
+    if args.desde or args.cuantas:
+        fichas = fichas[args.desde: (args.desde + args.cuantas) if args.cuantas else None]
     print(f"Verificando {len(fichas)} prendas · {datetime.now().strftime('%d/%m/%Y %H:%M')}\n")
 
     def trabajo(f):
@@ -370,7 +373,7 @@ def main():
     sello = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     snap = os.path.join(REGISTRO, f"verificacion-{sello}.json")
     with open(snap, "w", encoding="utf-8") as fh:
-        json.dump([{k: v for k, v in r.items() if k != "span"} for r in res], fh, ensure_ascii=False, indent=1)
+        json.dump(res, fh, ensure_ascii=False, indent=1)
     print(f"Registro: {os.path.relpath(snap, RAIZ)}")
 
     if not args.aplicar:
@@ -378,35 +381,28 @@ def main():
             print("Informe nada más. Para actualizar la guía: --aplicar")
         return 0
 
-    # ── aplicar sobre index.html, de atrás para adelante para no correr los índices ──
-    nuevo, tocadas = doc, 0
-    for r in sorted(res, key=lambda x: -x["span"][0]):
-        # sin lectura confiable no se toca la ficha: mejor el dato viejo que uno inventado
+    # ── aplicar sobre el bloque de datos ──
+    tocadas = 0
+    for r in res:
+        # sin lectura confiable no se toca la prenda: mejor el dato viejo que uno inventado
         if r["estado"].startswith(("ilegible", "ocupada", "error")):
             continue
-        ini, fin = r["span"]
-        card = nuevo[ini:fin]
-        original = card
+        f = pc["items"][r["i"]]
+        antes = list(f)
         if r["precio_hoy"]:
-            card = re.sub(r'(<p class="precio">)[^<]*(</p>)',
-                          lambda m: m.group(1) + pesos(r["precio_hoy"]) + m.group(2), card, count=1)
-        # si hoy no se puede verificar el talle, se conserva lo que sí se verificó al relevar:
-        # un dato viejo pero comprobado vale más que uno vago de hoy
+            f[3] = r["precio_hoy"]
+        # si hoy no se puede verificar el talle, se conserva lo que sí se verificó al relevar
         if not r["sin_dato"]:
-            card = re.sub(r'(<p class="meta"><span class="ok">)[^<]*(</span></p>)',
-                          lambda m: m.group(1) + H.escape(
-                              etiqueta(r["disponibles"], r["faltantes"], r["estado"])) + m.group(2),
-                          card, count=1)
-        marca = "" if ((r["disponibles"] or r["sin_dato"]) and r["estado"] == "ok") else (
-            " caido" if r["estado"] != "ok" else " agotado")
-        card = re.sub(r'<article class="prod[^"]*"', f'<article class="prod{marca}"', card, count=1)
-        if card != original:
-            nuevo = nuevo[:ini] + card + nuevo[fin:]
+            f[7] = etiqueta(r["disponibles"], r["faltantes"], r["estado"])
+        f[10] = 0 if ((r["disponibles"] or r["sin_dato"]) and r["estado"] == "ok") else 1
+        if f != antes:
             tocadas += 1
 
+    bloque = "var PC=" + json.dumps(pc, ensure_ascii=False, separators=(",", ":")) + ";\n"
+    nuevo = doc[:span[0]] + bloque + doc[span[1]:]
     if nuevo != doc:
         open(DOC, "w", encoding="utf-8").write(nuevo)
-        print(f"index.html actualizado · {tocadas} fichas tocadas")
+        print(f"index.html actualizado · {tocadas} prendas tocadas")
     else:
         print("index.html ya estaba al día · nada que escribir")
     return 0
