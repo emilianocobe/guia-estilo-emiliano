@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
-<title>Tu shop a medida · Emiliano</title>
-<meta name="description" content="El guardarropa de Emiliano: prendas de sus marcas que pasan su paleta, su silueta y su talle. Majo Ciancaglini, Imagen Personal.">
+<title>Tus looks · Emiliano</title>
+<meta name="description" content="Seis looks armados con prendas del shop de Emiliano, uno por contexto de su semana. Majo Ciancaglini, Imagen Personal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -493,20 +493,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
 .menu a[aria-current="page"]::after{transform:scaleX(1)}
 .menu .hueco{margin-left:auto}
 .nocturna .menu{background:rgba(32,32,32,.93)}
-/* — poner el shop al día — */
-.aldia{border:1px solid var(--g25);border-radius:2px;padding:clamp(18px,3vw,32px);
-  display:grid;grid-template-columns:minmax(240px,1.25fr) minmax(210px,.8fr);gap:clamp(18px,3vw,38px);align-items:center;
-  margin-top:clamp(30px,5vw,52px)}
-@media(max-width:760px){.aldia{grid-template-columns:1fr}}
-.aldia h3{font-weight:600;font-size:clamp(20px,2.6vw,26px);line-height:1.2;margin:6px 0 9px}
-.aldia p{font-size:14.5px;line-height:1.5;color:var(--g75);max-width:52ch}
-.aldia .ojo{color:var(--tinta)}
-.boton-ext{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:11px;
-  letter-spacing:.2em;text-transform:uppercase;text-decoration:none;background:var(--tinta);color:var(--papel);
-  border-radius:2px;padding:17px 22px;min-height:44px}
-.boton-ext:hover,.boton-ext:focus-visible{background:var(--ultramar)}
-.cmd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;background:var(--g06);
-  border-radius:2px;padding:12px 13px;margin-top:14px;overflow-x:auto;white-space:nowrap;color:var(--tinta)}
 @media (prefers-reduced-motion:reduce){.menu{transition:none}}
 @media (prefers-reduced-motion:reduce){
   .vis .riel,.vis .cel,.vis .aguja{animation:none!important;transform:none}
@@ -537,6 +523,24 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
   .revela img,.prod .ph img{filter:none!important;transition:none}
   .percha{position:static;min-height:0}
 }
+
+/* — los looks — */
+.look{border-top:1px solid var(--g25);padding-block:clamp(30px,5vw,58px)}
+.look:last-of-type{border-bottom:1px solid var(--g25)}
+.look-cab{display:grid;grid-template-columns:minmax(240px,.85fr) minmax(260px,1.15fr);gap:clamp(16px,3vw,44px);
+  align-items:start;margin-bottom:clamp(18px,3vw,30px)}
+@media(max-width:820px){.look-cab{grid-template-columns:1fr;gap:12px}}
+.look-num{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.28em;color:var(--ultramar)}
+.look h2{font-weight:400;font-size:clamp(30px,4.6vw,54px);line-height:.98;letter-spacing:-.01em;margin:8px 0 10px}
+.look .marco-ctx{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.look .marco-ctx span{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;border:1px solid var(--g25);border-radius:2px;padding:9px 11px;color:var(--g75)}
+.look .marco-ctx .niv{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+.look .tesis{font-size:clamp(16px,1.9vw,19px);line-height:1.45}
+.look .nota{font-size:14.5px;line-height:1.5;color:var(--g75);margin-top:12px;max-width:52ch}
+.look .cierre{display:flex;flex-wrap:wrap;gap:18px;align-items:baseline;margin-top:16px;
+  font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--g75)}
+.look .cierre b{font-weight:600;font-size:15px;letter-spacing:0;text-transform:none;color:var(--tinta);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body class="trabado">
@@ -564,13 +568,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
 <div id="cur" aria-hidden="true"></div>
 <div id="cur-ring" aria-hidden="true"></div>
 
-<nav class="menu" aria-label="Las tres partes de tu asesoría"><svg class="mono" viewBox="96.8 166.9 305.2 474.9" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" d="M375.8 265.9C373.4 252.1 371.1 238.4 352.2 228.8 333.4 219.2 298.1 213.9 264.6 215 231.1 216.2 199.4 224 180.3 236.3 161.2 248.5 154.6 265.3 162.7 278.1 170.7 291 193.4 300 221.3 301.8 249.1 303.6 281.9 298.2 292.7 287.1 303.5 276 292.1 259.3 276.3 254.8 260.4 250.3 240.1 258.1 235.9 268.6 231.7 279 243.7 292.2 266.4 297.3 289.1 302.4 322.6 299.4 349.8 293.1 377 286.8 398 277.2 375.8 265.9 353.7 254.5 288.5 241.4 230.2 240.5 171.9 239.6 120.5 250.9 110.6 295.8 100.8 340.6 132.5 419 166.8 481.2 201.2 543.3 238.3 589.4 265.2 613 292.1 636.6 308.9 637.8 319 627.4 329.2 616.9 332.8 594.8 333.1 581.6"/></svg><a href="index.html">Tu guía</a><a href="shop.html" aria-current="page">Tu shop</a><a href="looks.html">Tus looks</a><span class="hueco"></span><a href="https://instagram.com/majocian" target="_blank" rel="noopener">@majocian</a></nav>
+<nav class="menu" aria-label="Las tres partes de tu asesoría"><svg class="mono" viewBox="96.8 166.9 305.2 474.9" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" d="M375.8 265.9C373.4 252.1 371.1 238.4 352.2 228.8 333.4 219.2 298.1 213.9 264.6 215 231.1 216.2 199.4 224 180.3 236.3 161.2 248.5 154.6 265.3 162.7 278.1 170.7 291 193.4 300 221.3 301.8 249.1 303.6 281.9 298.2 292.7 287.1 303.5 276 292.1 259.3 276.3 254.8 260.4 250.3 240.1 258.1 235.9 268.6 231.7 279 243.7 292.2 266.4 297.3 289.1 302.4 322.6 299.4 349.8 293.1 377 286.8 398 277.2 375.8 265.9 353.7 254.5 288.5 241.4 230.2 240.5 171.9 239.6 120.5 250.9 110.6 295.8 100.8 340.6 132.5 419 166.8 481.2 201.2 543.3 238.3 589.4 265.2 613 292.1 636.6 308.9 637.8 319 627.4 329.2 616.9 332.8 594.8 333.1 581.6"/></svg><a href="index.html">Tu guía</a><a href="shop.html">Tu shop</a><a href="looks.html" aria-current="page">Tus looks</a><span class="hueco"></span><a href="https://instagram.com/majocian" target="_blank" rel="noopener">@majocian</a></nav>
 
 <header class="hero wrap" id="portada">
   <p class="corner tl v-marca">Majo Ciancaglini</p>
   <p class="corner tr v-datos">Asesoría de imagen</p>
   <p class="corner bl v-datos">Agosto 2026</p>
-  <p class="corner br v-datos"><a href="index.html" style="text-decoration:none">← Tu guía de estilo</a></p>
+  <p class="corner br v-datos"><a href="shop.html" style="text-decoration:none">← Tu shop</a></p>
 
   <div class="hero-grid">
     <div class="hero-face" id="cara">
@@ -581,66 +585,41 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
       </svg>
     </div>
     <div>
-      <h1 class="display xl">Tu shop<br>a <span class="ac">medida</span></h1>
-      <p class="lead" style="margin-top:26px;max-width:46ch">Todo lo que tus marcas tienen hoy y <strong>pasa tu análisis</strong>: tu paleta de invierno profundo, la silueta que te corresponde y tu talle comprable.</p>
-      <p class="v-datos" style="margin-top:22px" data-scramble>9 percheros · tu talle · stock del día</p>
+      <h1 class="display xl">Tus<br>seis <span class="ac">looks</span></h1>
+      <p class="lead" style="margin-top:26px;max-width:46ch">Uno por cada contexto de tu semana, <strong>armado con prendas de tu shop</strong>. No son ideas: son piezas concretas, en tu talle, que podés comprar hoy.</p>
+      <p class="v-datos" style="margin-top:22px" data-scramble>6 looks · 28 piezas · tu talle</p>
     </div>
   </div>
 </header>
 
 <div class="mq" aria-hidden="true"><span>
-  PANTALÓN 44 · CAMISA Y SACO 44/L · CALZADO 42–43 · RESTO L · INVIERNO PROFUNDO · TIRO MEDIO O ALTO · CADERA ALTA &nbsp;·&nbsp;
-  PANTALÓN 44 · CAMISA Y SACO 44/L · CALZADO 42–43 · RESTO L · INVIERNO PROFUNDO · TIRO MEDIO O ALTO · CADERA ALTA &nbsp;·&nbsp;
+  基 BASE · 橋 PUENTE · 表現 EXPRESIÓN PLENA · UN FOCO A LA VEZ · EL TIRO NO NEGOCIA · CADERA ALTA · CERCA DE LA CARA &nbsp;·&nbsp;
+  基 BASE · 橋 PUENTE · 表現 EXPRESIÓN PLENA · UN FOCO A LA VEZ · EL TIRO NO NEGOCIA · CADERA ALTA · CERCA DE LA CARA &nbsp;·&nbsp;
 </span></div>
 
-<section class="wrap obs" id="guardarropa">
-  <div class="acto"><span class="num">Tu shop</span><span class="v-datos" data-scramble>Nueve percheros</span></div>
-  <h2 class="display rev">En tu talle,<br>con <span class="subrayado">stock</span></h2>
-  <p class="rev d1" style="margin-top:26px;max-width:64ch">Cada prenda pasó el filtro completo antes de entrar acá. Las que llevan el sello <em>elegida</em> son por las que empezaría. Precios y stock relevados el <strong>15/08/2026</strong>: el stock de estas marcas es chico y rota, así que es una foto del día, no una promesa.</p>
+<main class="wrap">
+  <p class="v-datos rev">Cómo leerlos</p>
+  <p class="lead rev d1" style="margin-top:14px;max-width:64ch">Cada look cierra en cuatro cosas a la vez: <strong>concepto</strong> —qué está diciendo—, <strong>color</strong> —todo sale de tu invierno profundo—, <strong>forma</strong> —el tiro y el largo que te corresponden— e <strong>intención</strong> —cuánto de vos se ve, según quién mira.</p>
 
-  <div class="perch" role="radiogroup" aria-label="Los nueve percheros de tu guardarropa"><button type="button" role="radio" aria-checked="true" tabindex="0" data-c="0">Pantalones<span class="n">153</span></button><button type="button" role="radio" aria-checked="false" tabindex="-1" data-c="1">Tejidos<span class="n">90</span></button><button type="button" role="radio" aria-checked="false" tabindex="-1" data-c="2">Remeras<span class="n">72</span></button><button type="button" role="radio" aria-checked="false" tabindex="-1" data-c="3">Camisas<span class="n">47</span></button><button type="button" role="radio" aria-checked="false" tabindex="-1" data-c="4">Calzado<span class="n">50</span></button><button type="button" role="radio" aria-checked="false" tabindex="-1" data-c="5">Camperas<span class="n">42</span></button><button type="button" role="radio" aria-checked="false" tabindex="-1" data-c="6">Accesorios<span class="n">47</span></button><button type="button" role="radio" aria-checked="false" tabindex="-1" data-c="7">Abrigos<span class="n">34</span></button><button type="button" role="radio" aria-checked="false" tabindex="-1" data-c="8">Sacos<span class="n">18</span></button></div>
-  <div class="tamiz">
-    <div class="juego" role="group" aria-label="Bloque del cuerpo"><span class="rot">Bloque</span><button type="button" data-b="" aria-pressed="true">Todos</button><button type="button" data-b="0" aria-pressed="false">B1</button><button type="button" data-b="1" aria-pressed="false">B2</button><button type="button" data-b="2" aria-pressed="false">B3</button><button type="button" data-b="3" aria-pressed="false">B4</button></div>
-    <div class="juego" role="group" aria-label="Nivel de intensidad"><span class="rot">Nivel</span><button type="button" data-n="" aria-pressed="true">Todos</button><button type="button" data-n="0" aria-pressed="false">Base</button><button type="button" data-n="1" aria-pressed="false">Puente</button><button type="button" data-n="2" aria-pressed="false">Expresión</button></div>
-    <div class="juego" role="group" aria-label="Orden de la lista"><span class="rot">Orden</span><button type="button" data-o="c" aria-pressed="true">Elegidas primero</button><button type="button" data-o="asc" aria-pressed="false">Precio ↑</button><button type="button" data-o="desc" aria-pressed="false">Precio ↓</button></div>
-  </div>
-  <p class="cuenta" id="pc-cuenta" role="status" aria-live="polite"></p>
-  <div class="prod-grid" id="pc-grid"></div>
-  <button type="button" class="mas" id="pc-mas" hidden>Ver 24 más</button>
-  <div id="prod-resumen" style="margin-top:44px">
-    <div class="grid3">
-      <div class="tile"><span class="v-datos">Tu arranque mínimo</span><span class="cifra" style="font-size:clamp(26px,3vw,40px)">$ 707.590</span><span class="unidad">jean recto 44 + saco Gregory L + Eminent 42/43 — los pasos 01 a 03 de tu ruta</span></div>
-      <div class="tile"><span class="v-datos">Todo lo que pasa el filtro</span><span class="cifra" style="font-size:clamp(26px,3vw,40px)">553</span><span class="unidad">prendas en 9 percheros · de $ 10.000 a $ 2.250.000</span></div>
-      <div class="tile oscuro"><span class="v-datos">Por nivel</span><span class="unidad" style="font-size:15px;line-height:1.8"><span lang="ja" aria-hidden="true">基</span> base · 273<br><span lang="ja" aria-hidden="true">橋</span> puente · 192<br><span lang="ja" aria-hidden="true">表現</span> expresión · 88</span></div>
-    </div>
-  </div>
-  <div class="aldia rev">
-    <div>
-      <p class="v-datos">Ponerlo al día</p>
-      <h3>Volver a leer cada tienda</h3>
-      <p>Recorre la ficha real de cada una de las 553 prendas y corrige el precio, el stock de tu talle y lo que se haya agotado. Tarda unos minutos y deja el shop actualizado solo.</p>
-      <p style="margin-top:10px"><span class="ojo">Trabaja sobre esta selección, no la amplía:</span> revisa las prendas que ya están acá, no sale a buscar prendas nuevas. Para eso hace falta un barrido nuevo de los catálogos.</p>
-      <div class="cmd">python tools/verificar-guardarropa.py --aplicar</div>
-    </div>
-    <div>
-      <a class="boton-ext" href="https://github.com/emilianocobe/guia-estilo-emiliano/actions/workflows/actualizar-shop.yml" target="_blank" rel="noopener">Actualizar el shop ↗</a>
-      <p style="font-size:12.5px;color:var(--g75);margin-top:12px;line-height:1.45">Abre GitHub, donde se dispara con el botón <em>Run workflow</em>. También corre en tu máquina con la línea de arriba.</p>
-    </div>
-  </div>
-</section>
+<section class="look obs" id="look-aula"><div class="look-cab"><div><p class="look-num">Look 01 / 06</p><h2 class="rev">El aula</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">基</span><span>base</span><span>Aula universitaria</span></div></div><div><p class="tesis rev d1">Azul marino, blanco y negro. Nada compite: la autoridad la sostiene el corte y vos no pensás en la ropa en toda la clase.</p><p class="nota rev d2">El hombro estructurado del Gregory corrige tu hombro suave, y el blanco frío pegado a la cara es el que más te favorece. Cero focos de atención — acá el foco sos vos hablando.</p><p class="cierre rev d2"><span>5 piezas</span><span>El look completo · <b>$ 965.270</b></span></p></div></div><div class="prod-grid rev d3" data-look="aula"></div></section>
+<section class="look obs" id="look-cliente"><div class="look-cab"><div><p class="look-num">Look 02 / 06</p><h2 class="rev">La reunión</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">基</span><span>base</span><span>Reunión con cliente</span></div></div><div><p class="tesis rev d1">Gris, carbón y negro, y un solo punto de color abajo. Te separás del resto sin encender ninguna alarma.</p><p class="nota rev d2">Un solo foco por look y está lejos de la cara, exactamente donde tu paleta permite jugar: el bordó del mocasín. Todo lo demás es marco.</p><p class="cierre rev d2"><span>5 piezas</span><span>El look completo · <b>$ 791.980</b></span></p></div></div><div class="prod-grid rev d3" data-look="cliente"></div></section>
+<section class="look obs" id="look-agencia"><div class="look-cab"><div><p class="look-num">Look 03 / 06</p><h2 class="rev">El laboratorio</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">橋</span><span>puente</span><span>Agencia, día interno</span></div></div><div><p class="tesis rev d1">Petróleo sobre azul, con el tejido a rayas como único quiebre. Tu city pop en el lugar donde más libertad tenés.</p><p class="nota rev d2">El wide leg entra recién acá, y funciona porque el buzo termina en la cadera alta y deja la cintura a la vista: el volumen va por la pierna, nunca por la cadera caída.</p><p class="cierre rev d2"><span>5 piezas</span><span>El look completo · <b>$ 637.790</b></span></p></div></div><div class="prod-grid rev d3" data-look="agencia"></div></section>
+<section class="look obs" id="look-evento"><div class="look-cab"><div><p class="look-num">Look 04 / 06</p><h2 class="rev">El evento</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">橋</span><span>puente</span><span>Evento del rubro</span></div></div><div><p class="tesis rev d1">Negro sobre negro, con volumen japonés. En una sala llena de gente de tu rubro, lo que se recuerda es la silueta.</p><p class="nota rev d2">Tres piezas de Panni Margot que dialogan entre sí: el blazer oversize, la remera y el pantalón. No hay color que resolver — el gesto es la forma.</p><p class="cierre rev d2"><span>5 piezas</span><span>El look completo · <b>$ 802.600</b></span></p></div></div><div class="prod-grid rev d3" data-look="evento"></div></section>
+<section class="look obs" id="look-noche"><div class="look-cab"><div><p class="look-num">Look 05 / 06</p><h2 class="rev">La noche</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">表現</span><span>expresión</span><span>Noche · social</span></div></div><div><p class="tesis rev d1">Cuero cruzado, estampa paisley y negro pleno. Tu registro completo, sin traducción para nadie.</p><p class="nota rev d2">Acá la estampa va cerca de la cara porque el azul del paisley es de los tuyos. El perfecto cruzado suma el hombro que el resto del look no trae.</p><p class="cierre rev d2"><span>4 piezas</span><span>El look completo · <b>$ 849.550</b></span></p></div></div><div class="prod-grid rev d3" data-look="noche"></div></section>
+<section class="look obs" id="look-libre"><div class="look-cab"><div><p class="look-num">Look 06 / 06</p><h2 class="rev">El día libre</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">橋</span><span>puente</span><span>Día libre</span></div></div><div><p class="tesis rev d1">Verde bosque y denim negro. Bajo riesgo, mucha información: el mejor día para estrenar.</p><p class="nota rev d2">El bordado del tejido hace de foco y el gorro gris lo acompaña sin competirle. Denim recto, no wide: acá el volumen no hace falta.</p><p class="cierre rev d2"><span>4 piezas</span><span>El look completo · <b>$ 500.100</b></span></p></div></div><div class="prod-grid rev d3" data-look="libre"></div></section>
+</main>
 
 <footer class="nocturna obs">
   <div class="wrap" style="padding-block:clamp(70px,10vh,130px)">
-    <p class="v-datos rev" style="color:var(--menta)" data-scramble>El sistema</p>
-    <p class="display rev d1" style="font-size:clamp(32px,5vw,66px);margin-top:20px;max-width:17ch">Comprar es la parte <span class="ac">fácil</span>.</p>
-    <p class="rev d2" style="margin-top:26px;max-width:56ch">Lo difícil ya está resuelto: saber qué buscar. Si dudás de una prenda, volvé a tu guía — ahí está el criterio que la deja entrar o la deja afuera.</p>
-    <p class="rev d2" style="margin-top:22px"><a href="index.html" class="v-datos" style="color:var(--menta);text-decoration:none;border-bottom:2px solid var(--menta);padding-bottom:4px">← Volver a tu guía de estilo</a></p>
+    <p class="v-datos rev" style="color:var(--menta)" data-scramble>Y de acá en más</p>
+    <p class="display rev d1" style="font-size:clamp(32px,5vw,66px);margin-top:20px;max-width:18ch">Seis son el <span class="ac">arranque</span>.</p>
+    <p class="rev d2" style="margin-top:26px;max-width:58ch">Cuando los tengas andando, mezclalos: el saco del aula con el jean del día libre, el tejido petróleo bajo el cuero de la noche. Ya tenés el criterio para saber cuál combinación se sostiene.</p>
     <div class="rev d3" style="margin-top:64px;display:flex;flex-wrap:wrap;gap:34px;justify-content:space-between;align-items:end">
       <div>
         <p class="v-marca" style="font-size:22px">Majo Ciancaglini</p>
         <p class="v-datos" style="margin-top:8px">Imagen personal · cel. 11 4995 5858 · @majocian</p>
       </div>
-      <p class="v-datos" style="text-align:right">Tu shop · agosto 2026</p>
+      <p class="v-datos" style="text-align:right">Tus looks · agosto 2026</p>
     </div>
   </div>
 </footer>
@@ -1039,6 +1018,30 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
   })();
 
   }
+})();
+
+  /* — las fichas de cada look, iguales a las del shop — */
+  (function(){
+    var LK={"pref":["https://acdn-us.mitiendanube.com/stores/219/431/products/","https://acdn-us.mitiendanube.com/stores/007/091/524/products/","https://acdn-us.mitiendanube.com/stores/004/814/798/products/","https://acdn-us.mitiendanube.com/stores/003/024/577/products/","https://acdn-us.mitiendanube.com/stores/188/770/products/","https://acdn-us.mitiendanube.com/stores/002/222/533/products/","https://acdn-us.mitiendanube.com/stores/113/599/products/","https://acdn-us.mitiendanube.com/stores/005/292/364/products/","https://acdn-us.mitiendanube.com/stores/007/164/758/products/","https://cdn.shopify.com/s/files/1/0555/2537/6301/files/","https://acdn-us.mitiendanube.com/stores/001/574/296/products/","https://acdn-us.mitiendanube.com/stores/002/295/658/products/","https://acdn-us.mitiendanube.com/stores/001/343/707/products/","https://terribleenfant.com/wp-content/uploads/2021/09/","https://terribleenfant.com/wp-content/uploads/2025/02/","https://terribleenfant.com/wp-content/uploads/2024/05/","https://terribleenfant.com/wp-content/uploads/2024/06/"],"looks":[{"id":"aula","n":"El aula","ctx":"Aula universitaria","niv":"base","k":"基","tesis":"Azul marino, blanco y negro. Nada compite: la autoridad la sostiene el corte y vos no pensás en la ropa en toda la clase.","nota":"El hombro estructurado del Gregory corrige tu hombro suave, y el blanco frío pegado a la cara es el que más te favorece. Cero focos de atención — acá el foco sos vos hablando.","total":965270,"piezas":[["SACO GREGORY - AZUL MARINO","https://www.garzongarcia.com.ar/productos/saco-gregory",[1,"saco_gregory_76_3-6a3915d9e040312bdc17673789802417-1024-1024.jpg"],358490,"L: 2 u.","Garçon García",0],["CAMISA BARI - BLANCO","https://www.garzongarcia.com.ar/productos/camisa-bariGARCON",[1,"camisa-bari-5a8afaa4cde55a58e117671222555413-1024-1024.jpg"],175890,"L: 3 u.","Garçon García",0],["PANTALON JEREY - AZUL MARINO","https://www.garzongarcia.com.ar/productos/pantalon-jerey",[1,"pantalon_jerey_12-331d785ec3b8e415db17672082008964-1024-1024.jpg"],196790,"44: 2 u. Ficha: 'corte ancho en piernas'.","Garçon García",0],["Zapatos Eminent - Negro","https://mmartinez.com.ar/productos/zapatos-eminent-negro-9m2bk",[10,"eminent-at-negro-01-53c80dd0d20db5d03417689208878548-640-0.webp"],224100,"42: 10 u. · 43: 6 u.","MMartinez",0],["Medias basicas negro","https://www.limaydenim.com/productos/medias-negras",[8,"limay_feb_25_1647-31b52256861bbea04917733426912374-1024-1024.webp"],10000,"T. único: 116 u.","Limay Denim",0]]},{"id":"cliente","n":"La reunión","ctx":"Reunión con cliente","niv":"base","k":"基","tesis":"Gris, carbón y negro, y un solo punto de color abajo. Te separás del resto sin encender ninguna alarma.","nota":"Un solo foco por look y está lejos de la cara, exactamente donde tu paleta permite jugar: el bordó del mocasín. Todo lo demás es marco.","total":791980,"piezas":[["SACO CADIZ - GRIS","https://www.garzongarcia.com.ar/productos/SACO-CADIZ",[1,"ambo4-1d065b848582b86dd317749711118444-1024-1024.jpg"],318890,"L: 1 u.","Garçon García",0],["CAMISA CHLOE NEGRO - NEGRO","https://www.garzongarcia.com.ar/productos/camisa-chloe-negro-l6kcv",[1,"camisa-chloe-negra-ce19bdbae0bc7cccd917847436012101-1024-1024.jpg"],163790,"L: 1 u.","Garçon García",0],["Pantalon Club [ Carbon ]","https://luxo.com.ar/productos/pantalon-club-carbon-1fllu",[4,"dsc06843-8f07c6e6039add104817798202958878-1024-1024.webp"],53700,"T. L: 11 u.","Luxo",0],["Mocasines Timeless - Claro Oscuro Bordeaux","https://mmartinez.com.ar/productos/mocasines-timeless-claro-oscuro-bordeaux-upzwr",[10,"timeless-co-bordo-01-b0a7981870339338f817689207487355-640-0.webp"],233100,"42: 31 u. · 43: 14 u.","MMartinez",0],["TERRIBLE MEDIA – NEGRO","https://terribleenfant.com/producto/terrible-media-negro",[14,"MEDIA-NEGRA.jpg"],22500,"talle único apto 38 al 46 — cubre 42 y 43","Terrible Enfant",0]]},{"id":"agencia","n":"El laboratorio","ctx":"Agencia, día interno","niv":"puente","k":"橋","tesis":"Petróleo sobre azul, con el tejido a rayas como único quiebre. Tu city pop en el lugar donde más libertad tenés.","nota":"El wide leg entra recién acá, y funciona porque el buzo termina en la cadera alta y deja la cintura a la vista: el volumen va por la pierna, nunca por la cadera caída.","total":637790,"piezas":[["Buzo Boxy Script Petróleo Stripe","https://www.viejascul.com.ar/productos/buzo-boxy-script-petroleo-stripe-hq86f",[3,"vsbbf-2677-script-petroleo-strip-18ff325c8cac80df0917809413636781-640-0.webp"],109000,"3: 10 u.","Vieja Scul",0],["CAMISA CHLOE CELESTE - CELESTE","https://www.garzongarcia.com.ar/productos/camisa-chloe-celeste-11a3t",[1,"camisa-chloe-celeste-51a6a2433da89589af17847438159383-1024-1024.jpg"],163790,"L: 3 u.","Garçon García",0],["Jean wide azul","https://www.limaydenim.com/productos/wide-azul",[8,"limay_feb_26_2181-8e79d1a6c6799ad3e417847478503178-1024-1024.webp"],135000,"44: 5 u.","Limay Denim",0],["Beatle Negro","https://pannimargot.com/productos/beatle-negro",[2,"photoroom_20250202_173848-98ddd860639821e3ef17404291923368-640-0.webp"],220000,"42 · 43","Panni Margot",0],["Medias desagujado negras","https://www.limaydenim.com/productos/medias-desagujado-negras",[8,"limay_26-b5ede490bfb312740a17803404478362-1024-1024.webp"],10000,"35: 35 u.","Limay Denim",0]]},{"id":"evento","n":"El evento","ctx":"Evento del rubro","niv":"puente","k":"橋","tesis":"Negro sobre negro, con volumen japonés. En una sala llena de gente de tu rubro, lo que se recuerda es la silueta.","nota":"Tres piezas de Panni Margot que dialogan entre sí: el blazer oversize, la remera y el pantalón. No hay color que resolver — el gesto es la forma.","total":802600,"piezas":[["BLAZER OVERSIZE BERUBBETO","https://pannimargot.com/productos/blazer-oversize-berubbeto",[2,"blazer-oversize-berubbeto-6a673cccf49866038817193406816535-640-0.webp"],283900,"1: 11 u.","Panni Margot",0],["MANUK.TSHIRT/BLACK004","https://pannimargot.com/productos/manuk-tshirt-004",[2,"manuk-tshirt_black004-34378ee9beef7df28517187447239789-640-0.webp"],72900,"T. único: 4 u.","Panni Margot",0],["PANTALÓN TORIHAZUSHI","https://pannimargot.com/productos/pantalon-torihazushi",[2,"pantalon-torihazushi-4-7c3ef7105dbf7e143d17187382934779-640-0.webp"],179900,"3: 5 u.","Panni Margot",0],["Borcego Negro","https://pannimargot.com/productos/borcego-negro",[2,"photoroom_20250202_174323-5137ef93039e53fbf717404293195490-640-0.webp"],220000,"42 · 43","Panni Margot",0],["ROGO BELT","https://pannimargot.com/productos/rogo-belt",[2,"rogo-belt-2-94bb45468ec745baf017183854650863-640-0.webp"],45900,"2: 2 u.","Panni Margot",0]]},{"id":"noche","n":"La noche","ctx":"Noche · social","niv":"expresion","k":"表現","tesis":"Cuero cruzado, estampa paisley y negro pleno. Tu registro completo, sin traducción para nadie.","nota":"Acá la estampa va cerca de la cara porque el azul del paisley es de los tuyos. El perfecto cruzado suma el hombro que el resto del look no trae.","total":849550,"piezas":[["Cruzada Black & Niquel","https://www.taurocuer.com/productos/cruzada-black-niquel",[12,"0001-89-37a08e3236d300478b17162355878828-640-0.webp"],370000,"T. L: 1 u.","Tauro Cuer",0],["Camisa Blue Wood","https://guiltyberlin.ar/productos/camisa-blue-wood",[5,"cfb2aa40-339a-43f7-8a1b-4a97c2f212701-89f412fd83ac385f7816920481065348-640-0.webp"],70000,"T. L: 1 u.","Guilty Berlin",0],["Pantalon Club [ Negro ]","https://luxo.com.ar/productos/pantalon-club-negro-ckn50",[4,"dsc06461-f7e6a8fdb85b89cad917782714116846-1024-1024.webp"],53700,"T. L: 10 u.","Luxo",0],["Gambino Negro","https://terribleenfant.com/producto/gambino-negro","https://terribleenfant.com/wp-content/uploads/2021/09/GAMBINO-NUEVO-2.jpg",355850,"42 · 43","Terrible Enfant",0]]},{"id":"libre","n":"El día libre","ctx":"Día libre","niv":"puente","k":"橋","tesis":"Verde bosque y denim negro. Bajo riesgo, mucha información: el mejor día para estrenar.","nota":"El bordado del tejido hace de foco y el gorro gris lo acompaña sin competirle. Denim recto, no wide: acá el volumen no hace falta.","total":500100,"piezas":[["Sweater tejido bordado Guilty - Forest","https://guiltyberlin.ar/productos/sweater-tejido-bordado-guilty-forest-120e3",[5,"facetune_02-08-2026-15-28-31-4ac8efd5194584acaa17857010610967-640-0.webp"],99000,"1: 8 u.","Guilty Berlin",0],["Jean recto negro gastado","https://www.limaydenim.com/productos/recto-negro-gastado",[8,"limay_abril_26_1547-fb4dd489a2a40ff1b417810234352408-1024-1024.webp"],125000,"44: 6 u.","Limay Denim",0],["Borcegos Chukka - Rodeo Negro","https://mmartinez.com.ar/productos/borcegos-chukka-rodeo-negro-1n4gp",[10,"chukka-rodeo-negro-01-1-355c1fab1995ef036717730668580936-640-0.webp"],251100,"42: 9 u. · 43: 5 u.","MMartinez",0],["Gorro Espia Gris","https://fiera.ar/productos/gorro-espia-gris",[11,"ee0079e5-a90e-4079-9552-4381c18939cb-118ae049669240cef817595065311791-1024-1024.webp"],25000,"17: 17 u.","Fiera",0]]}]};
+    var img=function(v){return (typeof v==='string')?v:(LK.pref[v[0]]+v[1]);};
+    var pesos=function(n){return '$ '+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');};
+    LK.looks.forEach(function(L){
+      var g=document.querySelector('[data-look="'+L.id+'"]');
+      if(!g) return;
+      L.piezas.forEach(function(p){
+        var a=document.createElement('article');
+        a.className='prod'+(p[6]?' agotado':'');
+        a.innerHTML=
+          (p[2]?'<div class="ph"><img src="'+img(p[2])+'" alt="Foto de producto: '+p[0].replace(/"/g,'&quot;')+
+            '" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>':'')+
+          '<div class="cuerpo"><p class="marca-p">'+p[5]+'</p><p class="nombre">'+p[0]+'</p>'+
+          '<p class="precio">'+pesos(p[3])+'</p>'+
+          '<p class="meta"><span class="ok">'+p[4]+'</span></p>'+
+          '<a class="link" href="'+p[1]+'" target="_blank" rel="noopener">Ficha ↗</a></div>';
+        g.appendChild(a);
+      });
+    });
+  })();
 
   /* — el menú aparece cuando la portada se va — */
   (function(){
@@ -1053,8 +1056,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
     addEventListener('scroll', mirar, {passive:true});
     addEventListener('resize', function(){medir();mirar();}, {passive:true});
   })();
-
-})();
 </script>
 </body>
 </html>

@@ -1,0 +1,68 @@
+name: Actualizar el shop
+
+# Se dispara a mano. Relee la ficha real de cada prenda ya publicada y corrige
+# precio, stock por talle y lo agotado. NO sale a buscar prendas nuevas: trabaja
+# sobre la selección entregada, no la amplía.
+on:
+  workflow_dispatch:
+    inputs:
+      alcance:
+        description: Qué verificar
+        type: choice
+        default: Todo el shop
+        options:
+          - Todo el shop
+          - Solo las elegidas
+
+permissions:
+  contents: write
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Releer las fichas de cada tienda
+        id: verificar
+        run: |
+          if [ "${{ inputs.alcance }}" = "Solo las elegidas" ]; then
+            python tools/verificar-guardarropa.py --elegidas --aplicar | tee informe.txt
+          else
+            python tools/verificar-guardarropa.py --aplicar | tee informe.txt
+          fi
+
+      - name: Publicar lo que haya cambiado
+        run: |
+          git config user.name "Verificador del shop"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain shop.html data)" ]; then
+            git add shop.html data
+            git commit -m "Shop al día: precios y stock releídos de cada tienda"
+            git push
+            echo "PUBLICADO=si" >> "$GITHUB_ENV"
+          else
+            echo "Nada cambió: el shop ya estaba al día."
+            echo "PUBLICADO=no" >> "$GITHUB_ENV"
+          fi
+
+      - name: Dejar el informe a la vista
+        if: always()
+        run: |
+          {
+            echo "## Informe de la actualización"
+            echo ""
+            echo '```'
+            cat informe.txt
+            echo '```'
+            echo ""
+            if [ "$PUBLICADO" = "si" ]; then
+              echo "El shop quedó actualizado. En un par de minutos se ve en la web."
+            else
+              echo "No hizo falta tocar nada."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
