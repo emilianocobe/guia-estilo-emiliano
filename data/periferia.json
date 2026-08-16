@@ -1,0 +1,1433 @@
+[
+ {
+  "nombre": "Honoré Japón",
+  "url": "https://www.honorejapon.com.ar/",
+  "eje": "Sastrería de espíritu japonés / minimalismo de autor",
+  "nucleo_afin": "Panni Margot",
+  "por_que": "Es el vecino más literal del ancla: se declara \"indumentaria de autor, atelier de vestimenta sin género\", y su catálogo tiene una categoría entera de HANTEN (chaqueta japonesa corta) con técnicas tradicionales y bordado sashiko, más bermuda japonesa, sacos, camisas y pantalones en lino, gabardina, canvas y denim. Es el mismo cruce que Panni Margot: tipología japonesa + sastrería blanda + paleta apagada.",
+  "categorias": [
+   "hanten",
+   "sacos y camperas",
+   "camisas",
+   "pantalones",
+   "chalecos",
+   "buzos",
+   "tejidos",
+   "enteritos",
+   "denim",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.honorejapon.com.ar/colecciones/hanten1/"
+ },
+ {
+  "nombre": "RAMÍREZ (Pablo Ramírez)",
+  "url": "https://pabloramirez.com.ar/",
+  "eje": "Sastrería de espíritu japonés / minimalismo de autor",
+  "nucleo_afin": "Panni Margot",
+  "por_que": "Minimalismo de autor argentino en estado puro: austeridad, rigor de forma, referencia a uniformes y hábitos religiosos, y un negro monocromático sostenido hace veinticinco años. No es japonés de referencia, pero comparte con el ancla la misma gramática — sastrería reducida a estructura, sin ornamento, paleta cerrada. Tiene sección VARÓN propia con sacos, camisas y pantalones.",
+  "categorias": [
+   "sacos y chaquetas varón",
+   "camisas",
+   "pantalones y jeans",
+   "polos y remeras",
+   "abrigos",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://pabloramirez.com.ar/varon/"
+ },
+ {
+  "nombre": "Il Ballo Atelier",
+  "url": "https://ilballoatelier.com.ar/",
+  "eje": "Sastrería de espíritu japonés / minimalismo de autor",
+  "nucleo_afin": "Panni Margot",
+  "por_que": "Atelier que confecciona tipologías japonesas de verdad, no estampa: el pantalón BUSHIDO es una hakama de pliegues en algodón rústico, unisex, en negro y gris. Comparte con el ancla la prenda-referencia y la lógica de taller (hace a medida sin recargo si no está tu talle). El riesgo es de contexto: convive con líneas de traje histórico y cosplay, así que hay que entrar a elegir la pieza, no la marca entera.",
+  "categorias": [
+   "pantalón hakama / japonés",
+   "túnicas de lino",
+   "camisas",
+   "abrigos",
+   "trajes históricos",
+   "a medida"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://ilballoatelier.com.ar/productos/bushido-pantalon-japones/"
+ },
+ {
+  "nombre": "Luz Ballestero",
+  "url": "https://www.luzballestero.com/",
+  "eje": "Minimalismo de autor atemporal (vecino lateral del eje)",
+  "nucleo_afin": "Panni Margot",
+  "por_que": "Comparte con el ancla la idea de prenda sin género ni edad, de silueta amplia y línea limpia, y publica explícitamente siluetas unisex y talle U. Lo que no comparte es la referencia japonesa: acá el registro es urbano-atemporal porteño. Sirve como puente, no como expresión: hay negro, bordó, gris y azul, pero también una mitad de paleta clara que hay que saltear.",
+  "categorias": [
+   "abrigos y tapados",
+   "camperas",
+   "camisas",
+   "pantalones",
+   "jeans unisex",
+   "sweaters y tejidos",
+   "buzos",
+   "remeras"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.luzballestero.com/new-season/abrigos/"
+ },
+ {
+  "nombre": "Negro Oscuro",
+  "url": "https://www.negrooscuro.com/",
+  "eje": "Sin género de paleta oscura (vecino lateral, no del eje japonés)",
+  "nucleo_afin": "LUXO",
+  "por_que": "Ropa sin género declarada, paleta dominada por negro y grises, pantalones baggy de volumen y curva de talles amplia (S a XXL / 38 a 46). Comparte con el ancla la ausencia de género y la oscuridad, pero su eje real es el streetwear técnico, no la sastrería de autor: es periferia útil para B3-B4, no para B1-B2.",
+  "categorias": [
+   "camperas y parkas",
+   "pantalones baggy",
+   "buzos",
+   "sweaters",
+   "remeras",
+   "chalecos",
+   "accesorios"
+  ],
+  "ciudad": null,
+  "evidencia_url": "https://www.negrooscuro.com/pantalones/"
+ },
+ {
+  "nombre": "Giesso",
+  "url": "https://giesso.com.ar/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Casa de sastrería argentina con más de 140 años que hoy vende online la misma gramática que Garçon García: saco de hombro definido, ambo, abrigo de paño. Es el extremo 'casa clásica' del eje: mismo objeto, menos gesto de autor, hecho en Argentina.",
+  "categorias": [
+   "sacos",
+   "trajes/ambos",
+   "abrigos",
+   "camisas de vestir",
+   "pantalones de vestir",
+   "corbatas"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://giesso.com.ar/hombre/coleccionhombre/sacos/"
+ },
+ {
+  "nombre": "Perramus",
+  "url": "https://www.perramus.com.ar/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Es LA marca argentina del piloto: una de las señas explícitas del eje. Comparte con el ancla el abrigo largo estructurado y el saco de vestir, con hombro que sostiene y línea recta; producción nacional de larga data.",
+  "categorias": [
+   "pilotos",
+   "sacos",
+   "abrigos",
+   "camisas",
+   "pantalones"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.perramus.com.ar/hombre/"
+ },
+ {
+  "nombre": "Britches",
+  "url": "https://www.britches.com.ar/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Tiene una sección 'Sastrería' completa —sacos, ambos, chalecos, pilotos— que replica exactamente el set de piezas del ancla. Es sastrería de calce clásico con lectura contemporánea y talles numéricos publicados desde 44.",
+  "categorias": [
+   "sacos",
+   "ambos",
+   "pilotos",
+   "chalecos",
+   "pantalones de vestir",
+   "abrigos"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.britches.com.ar/sastreria/sacos1/"
+ },
+ {
+  "nombre": "Devré",
+  "url": "https://www.devre.la/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Sastrería contemporánea argentina que trabaja el mismo trípode saco/traje/sobresaco y además empuja el quiebre técnico (línea Performance en rip-stop): es el vecino del ancla que tensiona lo clásico sin abandonarlo. Filtro de talle de saco de 44 a 56.",
+  "categorias": [
+   "sacos",
+   "trajes",
+   "sobresacos",
+   "chaquetas",
+   "camisacos",
+   "camisas de vestir",
+   "pantalones"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.devre.la/coleccion/trajes-sacos/sacos.html"
+ },
+ {
+  "nombre": "Varonil Sastrería",
+  "url": "https://varonilhombres.com.ar/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Sastrería tradicional desde 1966 con mirada actual y tienda online propia: sacos con estructura, trajes y una categoría entera de trench. Mismo oficio que sostiene al ancla, con nombres de saco por ciudad (Berlín, Madrid, Budva) y talles 46-60 publicados.",
+  "categorias": [
+   "sacos",
+   "trajes",
+   "trench",
+   "abrigos",
+   "camisas",
+   "pantalones de vestir"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://varonilhombres.com.ar/productos/saco-berlin/"
+ },
+ {
+  "nombre": "Castizo",
+  "url": "https://www.castizo.com.ar/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Catálogo de saco cruzado, raya diplomática y smoking: la parte más dura y clásica del eje, con hombro construido y doble abertura. Publica tabla de talles de saco (XS/44 a L/50), pantalón y chaleco por separado.",
+  "categorias": [
+   "sacos",
+   "sacos cruzados",
+   "smoking",
+   "chalecos",
+   "pantalones de vestir",
+   "abrigos"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.castizo.com.ar/89-sastreria"
+ },
+ {
+  "nombre": "James Smart",
+  "url": "https://www.jamessmart.com/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Categorías espejo del ancla: ambos, blazers, sacos y abrigos, con guía de talles publicada. Sastrería de vestir argentina de calce clásico; los ambos base son azul y topo, terreno neutro para el invierno profundo.",
+  "categorias": [
+   "ambos",
+   "blazers",
+   "sacos",
+   "abrigos",
+   "camisas",
+   "pantalones"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.jamessmart.com/categoria-producto/ambos/"
+ },
+ {
+  "nombre": "Rochas (Rochas Shop AR)",
+  "url": "https://rochasshop.com.ar/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Sastrería de hombre con diseño contemporáneo y calce preciso: saco con pechera desmontable, saco gamuzado. Trabaja el mismo cruce que el ancla entre traje formal y saco con un quiebre de material. Talles S a XXL publicados.",
+  "categorias": [
+   "sacos de sastrería",
+   "sacos sport",
+   "trajes",
+   "abrigos",
+   "camisas"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://rochasshop.com.ar/categoria/sastreria/"
+ },
+ {
+  "nombre": "DM Por Demás",
+  "url": "https://www.dmpordemas.com/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Abrigos de diseño hechos por encargo, con línea de hombre propia: piloto trench, tapado y sacón de paño. Es la esquina 'de autor' del eje —la que más se parece al sacón y al piloto del ancla— y su paleta de temporada (marino, negro, bordó, gris oscuro) es literalmente invierno profundo.",
+  "categorias": [
+   "abrigos de hombre",
+   "pilotos / trench",
+   "tapados",
+   "sacos y chaquetas",
+   "sweaters"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.dmpordemas.com/todos-los-abrigos/abrigos-de-hombre/"
+ },
+ {
+  "nombre": "Sastrería Windsor",
+  "url": "https://www.sastreriawindsor.com.ar/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Sastre de microcentro desde 1980 con tienda online real (no sólo a medida): las cuatro categorías del eje —sacos, ambos, pilotos, sobretodos— están publicadas con selector de talle. Saco sport en lana Loro Piana como pieza tipo.",
+  "categorias": [
+   "sacos",
+   "ambos",
+   "pilotos",
+   "sobretodos",
+   "trajes a medida"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.sastreriawindsor.com.ar/sacos/"
+ },
+ {
+  "nombre": "Giorgio Redaelli",
+  "url": "https://www.giorgioredaelli.com.ar/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Árbol de categorías puro sastrería: ambos, sacos, pantalones y sobretodos. El sobretodo es la pieza que más conversa con el sacón del ancla; escala chica y tono de casa con firma.",
+  "categorias": [
+   "ambos",
+   "sacos",
+   "sobretodos",
+   "pantalones de vestir",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.giorgioredaelli.com.ar/categoria-producto/sastreria/sobretodos/"
+ },
+ {
+  "nombre": "Toche",
+  "url": "https://toche.com.ar/",
+  "eje": "Sastrería clásica de autor",
+  "nucleo_afin": "Garçon García",
+  "por_que": "Sastrería masculina argentina con e-commerce completo y el set del eje entero (ambo cruzado incluido). Es el extremo más industrial del eje —menos autoría que el ancla— pero comparte el objeto, el hombro y el calce clásico.",
+  "categorias": [
+   "ambos",
+   "sacos",
+   "blazers",
+   "abrigos",
+   "camisas de vestir",
+   "pantalones formales",
+   "chalecos"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://toche.com.ar/producto/ambo-cruzado-skylar/"
+ },
+ {
+  "nombre": "Rock Jeans",
+  "url": "https://www.rockandjeans.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Limay Denim",
+  "por_que": "Es el vecino más directo de Limay: jeanería con categoría propia NO GENDER, el mismo repertorio de calces (recto, wide leg, hiper wide, baggy) y tiro declarado alto o medio en ficha, nunca bajo.",
+  "categorias": [
+   "jeans",
+   "camperas de denim",
+   "camisas",
+   "buzos",
+   "pantalones"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.rockandjeans.com.ar/no-gender/"
+ },
+ {
+  "nombre": "Sinless by MCH",
+  "url": "https://sinlessbymch.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Limay Denim",
+  "por_que": "Sección de hombre entera de jeanería con baggy, wide leg, recto y carpintero, tiro medio declarado en ficha y una escalera de talles que sigue hasta el 52, muy por encima del 44 que hace falta.",
+  "categorias": [
+   "jeans de hombre",
+   "carpinteros",
+   "camperas de jean"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://sinlessbymch.com.ar/hombres/jeans/"
+ },
+ {
+  "nombre": "JIN'S DENIM",
+  "url": "https://www.jinsdenim.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Limay Denim",
+  "por_que": "Fabricantes de Flores que arman el catálogo por calce y no por género: Super Baggy, Recto/Loose, Carpintero y un Barrel raw negro con tiro medio; el mismo gesto de Limay de vender la molderia antes que la etiqueta.",
+  "categorias": [
+   "jeans",
+   "carpinteros",
+   "camperas de jean",
+   "camisas"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.jinsdenim.com.ar/productos/jean-barrel-raw-negro-bilbao-1i5vu/"
+ },
+ {
+  "nombre": "Fly55",
+  "url": "https://fly55.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Fiera",
+  "por_que": "Marca de hombre con el denim como producto central y la familia completa de volúmenes anchos: baggy, baggy flare, loose y recto, en negro, gris y azul, con talles que llegan al 50.",
+  "categorias": [
+   "jeans",
+   "camperas",
+   "buzos",
+   "camisas"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://fly55.com.ar/jeans/jeans1/"
+ },
+ {
+  "nombre": "Narrow Jeans",
+  "url": "https://narrowjeans.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Fiera",
+  "por_que": "Jeanería de hombre con dad y baggy además del straight Matera, y una paleta de casa que es negro, marino y gris: el invierno profundo le queda natural. Talles 38 al 48.",
+  "categorias": [
+   "jeans",
+   "sweaters",
+   "camperas",
+   "remeras"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://narrowjeans.com.ar/jeans/"
+ },
+ {
+  "nombre": "Harvey Willys",
+  "url": "https://www.harveywillys.com/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Limay Denim",
+  "por_que": "Se declara diseño de autor hecho en Argentina y trabaja straight, barrel, baggy, oversize y relaxed en azul, negro y gris. Ojo: hay modelos de tiro medio-bajo, así que la selección es por ficha y no por marca.",
+  "categorias": [
+   "jeans de hombre",
+   "camperas de jean",
+   "remeras"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.harveywillys.com/hombre1/jeans3/"
+ },
+ {
+  "nombre": "Cara Cruz Jeans",
+  "url": "https://caracruzjeans.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Fiera",
+  "por_que": "Jeanería de Avellaneda con regular, balloon y baggy en negro y azul marino, escalera 38 al 48. Comparte con Fiera la idea de denim de todos los días trabajado por calce.",
+  "categorias": [
+   "jeans",
+   "denim jogger",
+   "cargos"
+  ],
+  "ciudad": "Avellaneda",
+  "evidencia_url": "https://caracruzjeans.com.ar/productos1/jeans/"
+ },
+ {
+  "nombre": "FL Indumentaria",
+  "url": "https://flindumentaria.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Limay Denim",
+  "por_que": "Streetwear argentino que declara calce ancho real y vende el mismo jean para hombre y mujer, en negro, gris y azul medianoche hasta talle 46. No declaran tiro en ficha: hay que preguntarlo antes de comprar.",
+  "categorias": [
+   "jeans baggy",
+   "bermudas",
+   "remeras oversize"
+  ],
+  "ciudad": "Buenos Aires (Villa del Parque)",
+  "evidencia_url": "https://flindumentaria.ar/pantalones-jeans/"
+ },
+ {
+  "nombre": "Outfix",
+  "url": "https://outfix.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Limay Denim",
+  "por_que": "Tiene sección de hombre y el abanico entero de volúmenes que le sirven a Emiliano: baggy, wide leg, recto, carpintero, babucha y parachute, hasta talle 48. Hay camel y crudo en la paleta, así que conviene filtrar por negro, azul y gris.",
+  "categorias": [
+   "jeans",
+   "carpinteros",
+   "cargos",
+   "babuchas"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://outfix.com.ar/pantalones/baggy/"
+ },
+ {
+  "nombre": "Cavaliery",
+  "url": "https://www.cavaliery.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Fiera",
+  "por_que": "Indumentaria masculina con una línea DENIM chica pero afinada: el Turbaco es baggy con lavado láser y el Philip es denim pesado. Paleta de casa negro, bordó y verde, muy compatible. Llega a talle 48.",
+  "categorias": [
+   "denim",
+   "pantalones",
+   "buzos",
+   "camperas"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.cavaliery.com.ar/jeans/"
+ },
+ {
+  "nombre": "Mojo Jeans",
+  "url": "https://www.mojojeans.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Limay Denim",
+  "por_que": "Denim con línea de hombre y una familia baggy declarada unisex hasta talle 46, en negro, azul y bordó. Advertencia: pide un mínimo de compra de $100.000, funciona más como mayorista que como tienda de una prenda.",
+  "categorias": [
+   "jeans de hombre",
+   "baggy unisex",
+   "camperas de jean"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.mojojeans.com.ar/hombre/"
+ },
+ {
+  "nombre": "Cultura Jean",
+  "url": "https://www.culturajean.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Fiera",
+  "por_que": "Jeanería de hombre que publica talles hasta 44/45 y tiene wide y dad en catálogo, en negro y azul. El eje lo comparte a medias: buena parte de la góndola sigue siendo skinny y chupín, así que sirve por prenda puntual.",
+  "categorias": [
+   "jeans de hombre",
+   "bermudas",
+   "camisas"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.culturajean.com.ar/hombre/jeans/"
+ },
+ {
+  "nombre": "Huapi",
+  "url": "https://huapi.com.ar/",
+  "eje": "Denim con carácter",
+  "nucleo_afin": "Fiera",
+  "por_que": "Marca argentina de indumentaria masculina con paleta azul, negro y gris y una escalera de talles enorme, del 38 al 70. Comparte el eje sólo de costado: su pantalón corte jean es regular fit en gabardina, no denim con carácter.",
+  "categorias": [
+   "pantalones corte jean",
+   "camisas de jean",
+   "sacos"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://huapi.com.ar/productos/pantalon-0002910255004/"
+ },
+ {
+  "nombre": "Siciliano Cueros",
+  "url": "https://sicilianocueros.com/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Es el vecino literal del ancla: Murillo 676, Villa Crespo, a metros del showroom de Tauro Cuer, y con la misma lógica de fábrica familiar de cuatro décadas que vende su propia producción. Biker, Bomber y Funnel cruzada en cuero de becerro argentino, negro como columna vertebral y bordó como desvío: la campera como pieza que se compra una vez.",
+  "categorias": [
+   "camperas de cuero hombre",
+   "biker",
+   "bomber",
+   "chalecos",
+   "billeteras",
+   "mochilas"
+  ],
+  "ciudad": "Buenos Aires (Villa Crespo)",
+  "evidencia_url": "https://sicilianocueros.com/camperas-de-hombre/"
+ },
+ {
+  "nombre": "PURS",
+  "url": "https://purscuero.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Murillo 630: comparte cuadra y clientela con el showroom porteño del ancla. Camperas de cuero de oveja y vacuno con categoría de hombre propia, rango XS a XXL y una paleta que arranca en negro y pasa por gris tiza. Misma promesa que Tauro Cuer: cuero legítimo argentino hecho en el local que lo vende.",
+  "categorias": [
+   "camperas de cuero hombre",
+   "rockera",
+   "carteras",
+   "mochilas",
+   "pantalones de cuero"
+  ],
+  "ciudad": "Buenos Aires (Villa Crespo)",
+  "evidencia_url": "https://purscuero.com.ar/camperas-hombre/"
+ },
+ {
+  "nombre": "Catriel Buenos Aires",
+  "url": "https://catrielbuenosaires.com/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Fabricante que separa el catálogo por materia prima igual que el ancla — cuero vacuno de un lado, oveja napalan del otro — y lo publica con talles de XS a 5XL. Los modelos ANTON BLACK y ROCK MEN BLACK son perfectos rectos; el azul engrasado, el gris y el verde le dan a Emiliano salidas dentro del invierno profundo sin caer en el marrón.",
+  "categorias": [
+   "camperas de cuero vacuno",
+   "camperas de oveja",
+   "bomber",
+   "chalecos",
+   "camisas",
+   "calzado"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://catrielbuenosaires.com/us/hombre/camperas-cuero-vacuno/"
+ },
+ {
+  "nombre": "Francuir (Frau Cuir)",
+  "url": "https://francuir.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "La versión de autor del mismo eje: biker, rocker y flight jackets con nombre propio (Johnson, Harrier, Chakal, Racer Scrambler) y una grilla de talles que va de S a XXXXL y en paralelo de 38 a 54, así que el 44 no se negocia. Suma bordó, azul y verde al negro — es de las pocas del rubro con paleta declaradamente fría.",
+  "categorias": [
+   "biker",
+   "rocker",
+   "bomber",
+   "camisas de cuero",
+   "chalecos",
+   "pantalones de cuero"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://francuir.com.ar/us/man/"
+ },
+ {
+  "nombre": "Chris Ever",
+  "url": "https://www.chrisever.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Catálogo construido sobre los arquetipos del eje — Biker EB6, Bomber Path Racer, Aviator AV — todos declarados cuero legítimo, con talles XS a XXL y filtro de color donde el negro pesa diecisiete productos contra ocho marrones. Es el mismo vocabulario de Tauro Cuer ordenado como tienda online, no como mostrador.",
+  "categorias": [
+   "biker",
+   "bomber",
+   "aviador",
+   "camperas cuero legítimo hombre"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.chrisever.com.ar/hombre/camperas-cuero-legitimo"
+ },
+ {
+  "nombre": "CED Handmade",
+  "url": "https://www.ced-handmade.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "El nombre declara el método que comparte con el ancla: pieza hecha a mano, cuero vacuno y de oveja, modelo con nombre en vez de código (Burton, Roman, Keith, Rich Moto). Publica veintidós productos en talle L y veintidós en XL, y el filtro de color da cinco negros contra un camel — la proporción correcta para Emiliano.",
+  "categorias": [
+   "camperas de cuero hombre",
+   "moto",
+   "clásicas"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.ced-handmade.com.ar/hombre/camperas-de-cuero-hombre/"
+ },
+ {
+  "nombre": "Cueros Mi Campo",
+  "url": "https://www.cuerosmicampo.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Fabricante desde 1974 que cubre el mismo triángulo que Tauro Cuer — campera, billetera, calzado — con cuero vacuno y ovino. Sección de hombre con tabla publicada que llega a 5XL, y modelos como ANGIE en negro, azul y bordó: tres tintas del invierno profundo en una sola ficha.",
+  "categorias": [
+   "camperas de cuero hombre",
+   "calzado",
+   "carteras",
+   "billeteras",
+   "cintos"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.cuerosmicampo.com.ar/camperas/hombre2/"
+ },
+ {
+  "nombre": "Guns Leather",
+  "url": "https://www.gunsleather.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Confección artesanal con cuero argentino seleccionado y una sección de hombre completa: prendas, bolsos y accesorios bajo el mismo techo, como el ancla. Talles de S a XXXL publicados por producto, y negro y azul entre las opciones estables — la Campera Clásica es el perfecto de entrada del eje.",
+  "categorias": [
+   "camperas de cuero hombre",
+   "bolsos",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.gunsleather.com.ar/hombre/"
+ },
+ {
+  "nombre": "Qiú Urbano",
+  "url": "https://qiuurbano.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Comparte con Tauro Cuer el rasgo más específico del eje: personalización a medida sobre cuero legítimo, porque el cuero no cede y cada cuerpo es distinto. Cuero de vaca, de oveja y gamuza, talles de S a XXL, y el negro como base — incluida la combinación negro con lana negra, que es puro contraste frío.",
+  "categorias": [
+   "camperas de cuero hombre",
+   "cuero con lana",
+   "gamuza"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://qiuurbano.com.ar/hombre/"
+ },
+ {
+  "nombre": "Sir Fausto",
+  "url": "https://www.sirfausto.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Cuero ovino argentino teñido a mano con derivados vegetales y cortezas: el mismo relato de oficio del ancla, contado desde el lado del diseño. La Campera Fausto es un biker de espíritu setentista con talles S a XXL y negro disponible — pieza de una sola compra, que era el punto.",
+  "categorias": [
+   "campera biker",
+   "bolsos de cuero",
+   "billeteras"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.sirfausto.ar/productos/campera-fausto-hombre/"
+ },
+ {
+  "nombre": "Benjamin BsAs",
+  "url": "https://www.benjaminbsas.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Se define por prendas atemporales hechas a mano en cuero vacuno y ovino — la definición literal de cuero de inversión. Tiene el modelo Perfecto en catálogo y una línea de hombre propia (Kurt, Clay, Jack) con talles XS a XL y el negro como color dominante.",
+  "categorias": [
+   "perfecto",
+   "bomber",
+   "camperas de cuero hombre"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.benjaminbsas.com.ar/hombre/"
+ },
+ {
+  "nombre": "El Arriero Cueros",
+  "url": "https://elarrierocueros.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Fabricante de productos legítimos de cuero que, como el ancla, cubre prenda, calzado y marroquinería. Lo que lo separa del resto del rubro es la carta de color: bordó, azul y verde figuran junto al negro, y algunos modelos ofrecen doce colores. Talles S a XXL en prendas y 36 a 56 en pantalón.",
+  "categorias": [
+   "camperas de cuero",
+   "calzado",
+   "carteras",
+   "mochilas",
+   "bandoleras"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://elarrierocueros.com.ar/us/indumentaria/"
+ },
+ {
+  "nombre": "MYM Cueros",
+  "url": "https://www.mymcueros.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Fabricación propia con cuero vacuno y terminaciones premium, declarada como moda atemporal: el mismo argumento del ancla. La línea de hombre tiene BIKER JACK, BERLIN y DUBLIN en talles S a XXL, y la paleta por modelo incluye azul, gris y negro — inusualmente fría para el rubro.",
+  "categorias": [
+   "biker",
+   "bomber",
+   "parka de cuero",
+   "botas",
+   "carteras"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.mymcueros.com.ar/us/hombre/"
+ },
+ {
+  "nombre": "Zafiro Tienda",
+  "url": "https://zafirotienda.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Cuero vacuno 100% de primera clasificación con el espesor declarado en la ficha (0,6 mm) y cierres YKK — el nivel de detalle técnico que distingue la compra de inversión de la compra de temporada. La grilla de talles va de XS a XXXXL y el catálogo suma biker, rockera cruzada, blazer de cuero y tapado.",
+  "categorias": [
+   "campera de cuero hombre",
+   "biker cruzada",
+   "rockera",
+   "blazer de cuero",
+   "tapados"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://zafirotienda.com.ar/productos/campera-de-cuero-de-hombre/"
+ },
+ {
+  "nombre": "Alma Cueros",
+  "url": "https://almacueros.com.ar/",
+  "eje": "Cuero de inversión",
+  "nucleo_afin": "Tauro Cuer",
+  "por_que": "Treinta años trabajando cuero vacuno de primera calidad, con el mismo aviso honesto que da el ancla sobre la fibra natural: la tonalidad y las vetas varían según la partida. La línea de hombre es corta pero real — el modelo OCTAVIO en negro, talles S a XXL — y el filtro da tres negros contra dos marrones.",
+  "categorias": [
+   "camperas de cuero hombre",
+   "carteras",
+   "mochilas",
+   "materas",
+   "billeteras",
+   "cintos"
+  ],
+  "ciudad": "Quilmes, Buenos Aires",
+  "evidencia_url": "https://almacueros.com.ar/camperas/hombre/"
+ },
+ {
+  "nombre": "Terán",
+  "url": "https://www.teran.com.ar/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "Terrible Enfant",
+  "por_que": "Es la vecina literal de Terrible Enfant: la misma nota de prensa las agrupa como firmas de zapatos de autor para hombre. Derby prusiano y abotinado cosidos a mano, suela de cuero y taco de goma, con nombres de modelo geográficos — el mismo gesto de clásico llevado un paso más allá, sin caer en disfraz.",
+  "categorias": [
+   "acordonados / derby",
+   "abotinados",
+   "billeteras",
+   "guantes de cuero"
+  ],
+  "ciudad": "Buenos Aires (Palermo, Thames 1855)",
+  "evidencia_url": "https://www.teran.com.ar/productos/abotinado-zavalla-negro-pga9y/"
+ },
+ {
+  "nombre": "Cletas",
+  "url": "https://www.cletas.ar/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "MMartinez",
+  "por_que": "Todo el catálogo está declarado unisex y construido sobre borcegos de caña media y alta con base TR de 3-4 cm: exactamente la suela con cuerpo que el eje pide. Negro dominante, ocho ojales, cuero vacuno — el mismo registro urbano-robusto de MMartinez pero con grilla de talles más generosa.",
+  "categorias": [
+   "borcegos",
+   "botas",
+   "mocasines",
+   "zapatos",
+   "camperas de cuero"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.cletas.ar/productos/borcego-damon-unisex/"
+ },
+ {
+  "nombre": "Mixtos",
+  "url": "https://hellomixtos.com/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "MMartinez",
+  "por_que": "Marca porteña de 2013 con el género borrado de fábrica: una sola grilla del 21 al 45 para todo el mundo. El borcego minimal de cuero liso negro con base de 2,5 cm y suela TR cosida 360° desde el 39 es una pieza de autor con presencia real, no un zapato liviano disfrazado de borcego.",
+  "categorias": [
+   "borcegos",
+   "botas",
+   "zapatos",
+   "zapatillas",
+   "zuecos",
+   "marroquinería"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://hellomixtos.com/producto/borcego-yacht/"
+ },
+ {
+  "nombre": "Astton Buenos Aires",
+  "url": "https://shop.asttonbuenosaires.com/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "Terrible Enfant",
+  "por_que": "Zapatería de maestros zapateros con vocabulario formal completo: derby, prusiano, mocasín con costura talabartero a mano, borcego de doble cierre. Es el lado 'base' del eje — la pieza que sostiene un pantalón de tiro alto sin gritar — con el mismo culto al aparado que Terrible Enfant.",
+  "categorias": [
+   "derby / prusianos",
+   "mocasines",
+   "borcegos",
+   "botas",
+   "cintos y billeteras"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://shop.asttonbuenosaires.com/productos/mocasin-cuero-con-vincha-costura-talabartero-pietro-negro/"
+ },
+ {
+  "nombre": "Rheo",
+  "url": "https://www.rheook.com.ar/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "MMartinez",
+  "por_que": "Se define como fábrica argentina de calzado en cuero legítimo hecho a mano en series limitadas: es la definición de diseño de autor con volumen industrial mínimo. Borcegos de caña media con cuerpo, en negro, gris y azul, y grilla hasta 46 — el rango donde el 43 nunca es el último talle disponible.",
+  "categorias": [
+   "borcegos",
+   "botas",
+   "zapatos",
+   "zapas de lona",
+   "línea moto"
+  ],
+  "ciudad": "Argentina",
+  "evidencia_url": "https://www.rheook.com.ar/productos/borcego-dave-cuero-negro/"
+ },
+ {
+  "nombre": "Cerro Club Original",
+  "url": "https://www.cerrocluboriginal.com.ar/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "MMartinez",
+  "por_que": "Catálogo íntegramente masculino organizado por registro (vestir, sport elegante, mocasines, botas y borcegos), con suela de goma ultra soft y acabados antique. Aporta lo que el eje llama presencia sin dureza: el borcego negro y el mocasín conviven en la misma casa, y la paleta suma borgoña y azul además del negro.",
+  "categorias": [
+   "borcegos",
+   "botas",
+   "mocasines",
+   "zapatos de vestir",
+   "zapatillas de cuero"
+  ],
+  "ciudad": "Argentina",
+  "evidencia_url": "https://www.cerrocluboriginal.com.ar/productos/borcego-cuero-antique-negro/"
+ },
+ {
+  "nombre": "Bourbon Store",
+  "url": "https://bourbonstore.com.ar/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "MMartinez",
+  "por_que": "Diseño argentino hecho a mano en cuero vacuno con suela de goma antideslizante y una cápsula declarada 'Lo Artesanal'. Los borcegos Scott y Giovanni tienen la caña y el peso que el eje pide, y la variante 'Full Black' resuelve la paleta de invierno profundo de punta a punta.",
+  "categorias": [
+   "borcegos",
+   "botas",
+   "zapatos",
+   "zapatillas de cuero",
+   "cintos y carteras"
+  ],
+  "ciudad": "Buenos Aires (Belgrano)",
+  "evidencia_url": "https://www.bourbonstore.com.ar/productos/borcegos-scott-cuero/"
+ },
+ {
+  "nombre": "Colantuono",
+  "url": "https://colantuono.com.ar/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "Terrible Enfant",
+  "por_que": "Tres generaciones de calzado artesanal desde 1958, con el catálogo partido por ocasión ('Movimiento Diario', 'Noche y Evento'). Borcego, chelsea y mocasín en cuero 100%, con horma de peso y grilla hasta 46: es el eje leído desde el oficio antes que desde la moda.",
+  "categorias": [
+   "borcegos",
+   "botas y chelsea",
+   "mocasines",
+   "zapatos",
+   "zapatillas de cuero"
+  ],
+  "ciudad": "Argentina",
+  "evidencia_url": "https://colantuono.com.ar/productos/borcego-seminara/"
+ },
+ {
+  "nombre": "Mc Shoes",
+  "url": "https://mcshoes.com.ar/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "Terrible Enfant",
+  "por_que": "Sesenta años haciendo zapato a mano en Florida al 700, con derby, borcego, chelsea y mocasín como columna del catálogo y línea de hombre separada. Es el ancla más clásica del eje: la pieza que le da base a un saco con hombro definido sin competirle.",
+  "categorias": [
+   "derby",
+   "borcegos",
+   "mocasines",
+   "botas chelsea",
+   "cintos y maletines"
+  ],
+  "ciudad": "Buenos Aires (Microcentro)",
+  "evidencia_url": "https://mcshoes.com.ar/productos/borcego-clasico-negro-3012131/"
+ },
+ {
+  "nombre": "Renno Calzados",
+  "url": "https://www.rennocalzados.com.ar/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "MMartinez",
+  "por_que": "Marca exclusivamente masculina, de fabricación artesanal, con borcegos y mocasines de cuero y gamuza. Es la que resuelve mejor el problema de talle del perfil: la grilla llega hasta 48, así que el 43 queda cómodamente en el medio y no en el borde del stock.",
+  "categorias": [
+   "borcegos",
+   "zapatos de cuero",
+   "mocasines",
+   "línea gamuza",
+   "cintos y billeteras"
+  ],
+  "ciudad": "Argentina",
+  "evidencia_url": "https://www.rennocalzados.com.ar/productos/nebraska/"
+ },
+ {
+  "nombre": "Guido",
+  "url": "https://zapateriaguido.com/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "Terrible Enfant",
+  "por_que": "La casa que fijó el mocasín urbano argentino: hecho a mano desde 1952, con línea de hombre propia que suma acordonados y monks a los mocasines y botas. Comparte con la ancla el mismo eje de zapato-objeto, y la paleta incluye bordó, malbec y azul además del negro — acentos exactos para el invierno profundo.",
+  "categorias": [
+   "mocasines",
+   "acordonados",
+   "monks",
+   "botas",
+   "drivers y náuticos",
+   "marroquinería"
+  ],
+  "ciudad": "Buenos Aires (Recoleta)",
+  "evidencia_url": "https://zapateriaguido.com/collections/all"
+ },
+ {
+  "nombre": "Dorian",
+  "url": "https://dorianargentina.com/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "MMartinez",
+  "por_que": "Se presenta como 'handcrafted shoes' de cuero argentino y cubre zapato, mocasín, bota y borcego con la misma horma de peso. El modelo Cannes en guinda muestra que la casa piensa en bordó y no sólo en marrón: acento de invierno profundo dentro de una marca de calle.",
+  "categorias": [
+   "zapatos",
+   "borcegos",
+   "botas",
+   "mocasines",
+   "camperas de cuero",
+   "equipaje"
+  ],
+  "ciudad": "Buenos Aires (Galerías Pacífico, Palermo, Caballito)",
+  "evidencia_url": "https://dorianargentina.com/zapatos-cannes-guinda/"
+ },
+ {
+  "nombre": "OGGI Hombre",
+  "url": "https://oggi.com.ar/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "MMartinez",
+  "por_que": "Línea masculina separada de una zapatería artesanal de 1951, con borceguíes, mocasines y acordonados en cuero vacuno y suela de caucho con entresuela. La grilla 39-46 y el negro sólido lo hacen usable; hay que esquivar el bloque chocolate/suela que domina buena parte del catálogo.",
+  "categorias": [
+   "mocasines",
+   "borceguíes",
+   "botas",
+   "zapatos de vestir",
+   "náuticos"
+  ],
+  "ciudad": "Buenos Aires (Villa Urquiza, Belgrano, Recoleta)",
+  "evidencia_url": "https://oggi.com.ar/zapatos/mocasines/"
+ },
+ {
+  "nombre": "Pasotti",
+  "url": "https://pasotti.com.ar/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "MMartinez",
+  "por_que": "'Fatto in Argentina' con confección artesanal y una lectura declaradamente contemporánea del zapato de hombre: es el vecino más cercano al costado city-pop del eje. Comparte con MMartinez la idea de zapato de cuero con actitud de zapatilla. Ojo: parte de la paleta va a crema y naranja, así que sirve por modelo y no por catálogo.",
+  "categorias": [
+   "zapatos",
+   "zapatillas de cuero",
+   "botas",
+   "sandalias",
+   "accesorios"
+  ],
+  "ciudad": "Argentina",
+  "evidencia_url": "https://pasotti.com.ar/productos/icon-negro/"
+ },
+ {
+  "nombre": "Murucuya Calzados",
+  "url": "https://www.murucuyacalzados.com/",
+  "eje": "Calzado con presencia",
+  "nucleo_afin": "MMartinez",
+  "por_que": "Marca chica que declara todo su calzado unisex y publica la grilla completa hasta 45 con tabla en centímetros — raro y valioso. El Borcego Drago con plataforma y cinturones desmontables es pieza de presencia pura; el resto del catálogo tira a bota alta femenina, así que sirve por modelo puntual.",
+  "categorias": [
+   "borcegos",
+   "botas",
+   "botinetas",
+   "mocasines",
+   "zuecos"
+  ],
+  "ciudad": "Argentina",
+  "evidencia_url": "https://www.murucuyacalzados.com/productos/borcego-drago-plataforma-35-44"
+ },
+ {
+  "nombre": "The Vintage Hole",
+  "url": "https://www.thevintagehole.com/",
+  "eje": "Vintage y archivo",
+  "nucleo_afin": "Style Vintage",
+  "por_que": "Es el hallazgo más fuerte del eje: archivo real de diseño europeo de autor (Maison Margiela, Dries Van Noten, Ann Demeulemeester) vendido como pieza única, no como 'ropa usada'. Comparte con Style Vintage la lógica de segunda selección curada con criterio de moda, pero sube el nivel conceptual hacia el archivo de diseñador. Su paleta declarada es literalmente invierno profundo: negro es el color más numeroso del catálogo, seguido de azul y gris.",
+  "categorias": [
+   "abrigos",
+   "camisas",
+   "pantalones",
+   "sweaters y buzos",
+   "remeras",
+   "calzado",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires (Uriarte 1857, Palermo)",
+  "evidencia_url": "https://www.thevintagehole.com/hombre/?Talle=44"
+ },
+ {
+  "nombre": "Jaleo Buenos Aires",
+  "url": "https://www.jaleobuenosaires.com.ar/",
+  "eje": "Vintage y archivo",
+  "nucleo_afin": "Juan Perez",
+  "por_que": "Se define como 'un proyecto basado en la resignificación de las prendas' — exactamente el gesto de Juan Pérez: rescatar y recontextualizar, no solo revender. Sección de hombre completa y estructurada (abrigos, camisas, pantalones, sweaters, zapatos) con filtros de talle publicados que llegan a L, XL y calzado 42. Ingresos diarios, lo que mantiene vivo el hallazgo.",
+  "categorias": [
+   "abrigos",
+   "remeras y camisas",
+   "pantalones",
+   "sweaters y buzos",
+   "zapatos"
+  ],
+  "ciudad": "Buenos Aires (Cabello 3650, Palermo)",
+  "evidencia_url": "https://www.jaleobuenosaires.com.ar/hombres/?Talle=L"
+ },
+ {
+  "nombre": "Dudou Vintage",
+  "url": "https://www.dudouvintage.com.ar/",
+  "eje": "Vintage y archivo",
+  "nucleo_afin": "Style Vintage",
+  "por_que": "Curaduría vintage por décadas declarada (años 40 a 2000) con foco en autenticidad y estado de la prenda, y marcas de archivo (Gucci, Celine, Gant). La sección de hombre incluye justo los bloques que le sirven a Emiliano: blazers, pilotos y pantalones — es decir, abrigo y sastrería de época, no solo remeras. Filtros de talle L y XL devuelven producto.",
+  "categorias": [
+   "blazers",
+   "pilotos y abrigos",
+   "camisas",
+   "pantalones",
+   "corbatas"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.dudouvintage.com.ar/hombre/?Talle=L"
+ },
+ {
+  "nombre": "Galpón de Ropa",
+  "url": "https://galponderopa.com/",
+  "eje": "Vintage y archivo",
+  "nucleo_afin": "Juan Perez",
+  "por_que": "Vecino directo del ancla: aparece junto a Juan Pérez y The Vintage Hole en todos los relevamientos de moda circular porteña. Opera desde 2012 con consignación y más de 400 prendas nuevas por día, con sección de hombre completa por bloque (abrigos, camisas, jean/pantalones, buzos, calzado) y talles publicados XS–XL más calzado 39 a 48.5, lo que cubre 44 y 42/43 con holgura. Su recambio es tan alto que funciona más como caudal que como colección: exige visitas repetidas.",
+  "categorias": [
+   "abrigos",
+   "camisas",
+   "jean y pantalones",
+   "buzos y sweaters",
+   "remeras",
+   "calzado",
+   "sportswear"
+  ],
+  "ciudad": "Buenos Aires (Belgrano, Cañitas, Almagro)",
+  "evidencia_url": "https://galponderopa.com/hombre"
+ },
+ {
+  "nombre": "La Kilo Vintage",
+  "url": "https://www.lakilovintage.com.ar/",
+  "eje": "Vintage y archivo",
+  "nucleo_afin": "Style Vintage",
+  "por_que": "Vintage y segunda mano vendido por kilo, pero con catálogo individualizado y — dato clave — filtros de género que incluyen 'Hombre', 'Fluído' y 'Sin género', que es exactamente la lectura unisex del eje. Talles publicados de XXS a XXL más OVERSIZE. Conviven blazers y conjuntos sastreros con Y2K, así que hay que filtrar, pero el acceso al archivo es real y barato.",
+  "categorias": [
+   "blazers y conjuntos",
+   "camperas",
+   "pantalones",
+   "buzos",
+   "remeras",
+   "calzado"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.lakilovintage.com.ar/tienda/"
+ },
+ {
+  "nombre": "Mikasa Vintage",
+  "url": "https://mikasavintage.com.ar/",
+  "eje": "Vintage y archivo",
+  "nucleo_afin": "Style Vintage",
+  "por_que": "Vintage deportivo real y curado — 'seleccionamos cuidadosamente piezas vintage y deportivas casuales', cuatro años de actividad — sin división de género, es decir unisex de hecho. Publica talles S a XXL en la ficha de cada prenda y su paleta base es navy, negro y gris universitario. Sirve para el nivel 'expresión' de Emiliano (crewnecks y camperas con referencia literal), no para la base.",
+  "categorias": [
+   "camperas",
+   "hoodies y crewnecks",
+   "pantalones",
+   "remeras",
+   "conjuntos deportivos"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://mikasavintage.com.ar/"
+ },
+ {
+  "nombre": "Fresh Store",
+  "url": "https://www.freshstore.ar/",
+  "eje": "Vintage y archivo",
+  "nucleo_afin": "Style Vintage",
+  "por_que": "Desde 2019 hacen búsqueda exhaustiva de vintage y americana de colección, con showroom en Galería Colón: es la versión deportiva y de workwear del mismo gesto de archivo (Polo Ralph Lauren, Carhartt, Dickies, Nike de los 90). El rango de talle es el más generoso que encontré del eje — XS a XXL y numéricos 40 a 54 — así que 44 y L están cubiertos sin esfuerzo. Requiere filtrar el color: mucho catálogo es cálido o saturado.",
+  "categorias": [
+   "camperas rompeviento",
+   "abrigos",
+   "buzos",
+   "remeras",
+   "chombas",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires (Galería Colón, local 188)",
+  "evidencia_url": "https://www.freshstore.ar/productos1/"
+ },
+ {
+  "nombre": "Vintage Vault",
+  "url": "https://vintagevault.com.ar/",
+  "eje": "Vintage y archivo",
+  "nucleo_afin": "Style Vintage",
+  "por_que": "Segunda mano de primer nivel con verificación de origen y estado calificado del 9/10 al 10/10 y sello 'made in USA' — ese rigor de procedencia es lo que lo pone en el eje de archivo y no en el de feria. Fuerte en workwear (Carhartt, Dickies, Lee). Navegación por bloque y no por género, con talles hasta XL y numéricos hasta 48. Descartar el camuflado y el camel; el azul, negro y gris del catálogo sí funcionan.",
+  "categorias": [
+   "partes de arriba",
+   "partes de abajo",
+   "accesorios"
+  ],
+  "ciudad": "Argentina",
+  "evidencia_url": "https://vintagevault.com.ar/"
+ },
+ {
+  "nombre": "Frères",
+  "url": "https://freres.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "King of the Kongo",
+  "por_que": "Marca de hombre nacida en el mismo circuito de streaming/redes que KOTK, con hoodies y buzos como columna vertebral, moldería propia declarada (corte regular, hombro cuidado) y una línea de sastrería y jeans wide que le da el mismo salto de identidad de marca fuerte a guardarropas completo.",
+  "categorias": [
+   "buzos y hoodies",
+   "abrigos",
+   "camisas",
+   "remeras",
+   "pantalones y jeans",
+   "calzado"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://freres.ar/collections/hoodies-y-buzos"
+ },
+ {
+  "nombre": "Brüder",
+  "url": "https://www.bruderstreetwear.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "King of the Kongo",
+  "por_que": "Sello de autor fundado por un diseñador joven, con colecciones bautizadas (Cold Shift, Midpoint, Endless Heat) y campañas propias: el mismo gesto de KOTK de construir marca por relato y no por producto. Camperas y buzos protagonistas, pantalones balloon y wide de tiro alto.",
+  "categorias": [
+   "buzos y camperas",
+   "camperas de cuero",
+   "jeans y pantalones balloon/wide",
+   "sweaters",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.bruderstreetwear.com.ar/productos/creative-layers-black-zip/"
+ },
+ {
+  "nombre": "Barrio Chino",
+  "url": "https://www.eldebarriochino.com/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Vieja Scul",
+  "por_que": "Es lo más cerca del ADN Vieja Scul que encontré: buzos con estampa serigrafiada a mano y bordados, catálogo entero construido sobre gráficas propias con nombres-mundo (Siberia, Kawaii, Huemules, Sakura), hecho en Buenos Aires y con una línea de sastrería que rompe el molde del streetwear plano.",
+  "categorias": [
+   "buzos",
+   "camperas",
+   "remeras",
+   "pantalones",
+   "sastrería",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.eldebarriochino.com/producto/buzo-siberia-negro"
+ },
+ {
+  "nombre": "Bullbenny",
+  "url": "https://www.bullbenny.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "King of the Kongo",
+  "por_que": "Marca de autor masculina con dos locales en Palermo (Malabia y Humboldt) y una identidad tipográfica muy marcada — los productos se nombran entre corchetes, [tiza], [.zip], [4455] — igual que KOTK trabaja el código de marca. Buzos y abrigos con moldería propia y talles numéricos con tabla publicada.",
+  "categorias": [
+   "buzos",
+   "abrigos",
+   "camisas",
+   "pantalones y jeans",
+   "remeras",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.bullbenny.com.ar/buzos/"
+ },
+ {
+  "nombre": "Kabrakuervo",
+  "url": "https://kabrakuervo.com/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Vieja Scul",
+  "por_que": "Relato de marca explícito y muy argentino — camisetas de fútbol olvidadas, tribunas rotas, personajes que no pidieron permiso — traducido en buzos, camperas y una línea PRÊT_À_KOUTURE. Es exactamente el eje de Vieja Scul: gráfica propia con memoria de barrio, no logo genérico. 181 productos en negro sobre un catálogo dominado por oscuros.",
+  "categorias": [
+   "buzos y camperas",
+   "remeras",
+   "pantalones y jeans",
+   "camisas",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://kabrakuervo.com/productos"
+ },
+ {
+  "nombre": "Somos Oseo",
+  "url": "https://somososeo.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Tienda Fuego",
+  "por_que": "Diseñada en Buenos Aires, unisex, con camperas y buzos de diseño propio y accesorios de cuero hechos por la marca. Comparte con Tienda Fuego la lógica de guardarropas urbano completo con una voz propia, y el negro como color estructural del catálogo.",
+  "categorias": [
+   "camperas",
+   "buzos",
+   "sweaters",
+   "camisas",
+   "bermudas",
+   "accesorios de cuero",
+   "underwear"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://somososeo.com.ar/productos/campera-oseo/"
+ },
+ {
+  "nombre": "TEOD (The Essence of Design)",
+  "url": "https://www.teod.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Vieja Scul",
+  "por_que": "Se define como marca nacional de streetwear arraigada al arte, el diseño y la creatividad, y vende tablas de skate junto a la ropa — el mismo cruce cultura skate + gráfica de autor que sostiene a Vieja Scul. Convive con ella en góndola: las dos se venden en Cloven y en Wills Vieja Escuela.",
+  "categorias": [
+   "remeras",
+   "abrigos",
+   "camisas",
+   "pantalones",
+   "tablas de skate",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.teod.com.ar/tienda/remeras/"
+ },
+ {
+  "nombre": "Bomba Project",
+  "url": "https://www.bombaproject.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "King of the Kongo",
+  "por_que": "Marca urbana genderless creada en 2021, con el mismo posicionamiento sin género que adoptó KOTK al pasar de hombre a unisex. Buzos con lavados, roturas y relieve en algodón premium: la identidad está en el tratamiento de la prenda más que en el estampado.",
+  "categorias": [
+   "buzos",
+   "remeras",
+   "jeans",
+   "camperas",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.bombaproject.com.ar/all-products/hoodies/"
+ },
+ {
+  "nombre": "Midway",
+  "url": "https://www.midway.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Tienda Fuego",
+  "por_que": "Marca argentina con línea de hombre propia y foco en denim baggy y buzos de moldería ancha. Comparte con Tienda Fuego la propuesta de vestir el volumen urbano completo con una identidad reconocible, y publica talles de hombre hasta XXL y 38/48 en pantalón.",
+  "categorias": [
+   "jeans baggy",
+   "buzos",
+   "sweaters",
+   "camperas",
+   "camisas",
+   "remeras"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.midway.com.ar/productos/jean-baggy-dreezy-black-114pj/"
+ },
+ {
+  "nombre": "Undefined BA",
+  "url": "https://undefinedba.com/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Tienda Fuego",
+  "por_que": "Se declara 'the new street workwear' y construye toda la marca sobre esa tesis: buzos gamuzados, camperas puffer y de cuero sintético, denim con lógica de ropa de trabajo. Identidad conceptual fuerte y paleta casi enteramente negro y blanco, que es exactamente donde vive el invierno profundo.",
+  "categorias": [
+   "buzos",
+   "camperas",
+   "remeras",
+   "denim",
+   "bermudas",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://undefinedba.com/buzos/"
+ },
+ {
+  "nombre": "Rituals Brand",
+  "url": "https://www.ritualsbrand.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Vieja Scul",
+  "por_que": "Es la marca que Wills Vieja Escuela vende hombro a hombro con Vieja Scul, y se nota: hoodies de moldería boxy fit en friza pesada con estampas en frente, espalda y manga. Mismo territorio de gráfica propia sobre silueta ancha, con talles hasta XXL.",
+  "categorias": [
+   "hoodies boxy",
+   "buzos",
+   "remeras oversize",
+   "pantalones",
+   "abrigos",
+   "camisas"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.ritualsbrand.com.ar/productos/hoodie-boxy-vibe-li2hy"
+ },
+ {
+  "nombre": "Cross Clothing",
+  "url": "https://crossclothing.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "King of the Kongo",
+  "por_que": "Se autodefine 'hardcore couture' y sostiene ese concepto con una línea de buzos y camperas de nombres propios (Zip Carcosa) y colecciones Denim y Camo. Es identidad de marca fuerte declarada, con más de 100 mil seguidores construidos igual que KOTK, desde el contenido.",
+  "categorias": [
+   "buzos",
+   "abrigos",
+   "remeras",
+   "pantalones",
+   "camisas",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://crossclothing.com.ar/categoria/buzos/"
+ },
+ {
+  "nombre": "NXBO",
+  "url": "https://nxbo.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Tienda Fuego",
+  "por_que": "Techwear/darkwear argentino con un universo narrativo cerrado — Cyberbot, Punisher, Afterwar — y descripciones que hablan de crudeza y distopía. Es el mismo mecanismo de Tienda Fuego (pensás diferente, te vestís diferente) llevado al extremo: la prenda es la declaración. Casi todo el catálogo es negro.",
+  "categorias": [
+   "hoodies",
+   "camperas",
+   "pantalones cargo",
+   "remeras",
+   "mochilas y accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://nxbo.com.ar/productos/pantalon-cargo-core-nx/"
+ },
+ {
+  "nombre": "Resuelto",
+  "url": "https://resuelto.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "King of the Kongo",
+  "por_que": "Marca de streetwear que se plantea como universo ('creando un universo, inspirando creatividad y tendencia'), unisex y con corte oversize, y que ya llega a sastrería y camisacos. Misma trayectoria de KOTK: del buzo gráfico al guardarropas entero sin perder la voz.",
+  "categorias": [
+   "buzos",
+   "camperas",
+   "jeans",
+   "remeras",
+   "joggers",
+   "sastrería",
+   "camisacos",
+   "calzado"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://resuelto.com.ar/shop/buzos/"
+ },
+ {
+  "nombre": "LUMAT Clothes",
+  "url": "https://www.lumatclothes.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Vieja Scul",
+  "por_que": "Diseños propios sobre corte boxy oversize declarado como decisión de marca, con estética goth urbana y showroom propio en Puerto Madero. Es gráfica de autor sobre silueta ancha en negro y blanco — el mismo par de coordenadas de Vieja Scul, con un registro más oscuro.",
+  "categorias": [
+   "remeras",
+   "buzos y hoodies",
+   "camperas",
+   "pantalones",
+   "conjuntos",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.lumatclothes.com.ar/remeras/"
+ },
+ {
+  "nombre": "Bodacious Clothing",
+  "url": "https://www.bodaciousclothing.com/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Tienda Fuego",
+  "por_que": "Streetwear argentino con línea propia y una decisión de marca poco común acá: colección Extended Size y rango XXS a XXL. Comparte con Tienda Fuego la idea de que el streetwear tiene que entrarle a cuerpos distintos, no sólo a una silueta.",
+  "categorias": [
+   "jeans",
+   "buzos",
+   "remeras",
+   "camisas",
+   "abrigos",
+   "joggers",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.bodaciousclothing.com/productos/jean-snoop/"
+ },
+ {
+  "nombre": "Ay Not Dead",
+  "url": "https://aynotdead.com/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Vieja Scul",
+  "por_que": "Es la generación anterior del mismo eje: identidad de marca fortísima construida sobre referencias musicales literales (remeras Joy Division, Les Nuits, Ecstasy) y estética nocturna urbana. Línea de hombre completa, y una paleta de catálogo que es casi enteramente negro, azul y gris — la más limpia para invierno profundo de toda la lista.",
+  "categorias": [
+   "remeras gráficas",
+   "buzos",
+   "camperas",
+   "cuero",
+   "jeans flare/wide/loose",
+   "camisas",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://aynotdead.com/collections/hombre"
+ },
+ {
+  "nombre": "Wayfarer",
+  "url": "https://www.wayfarerarg.com/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Tienda Fuego",
+  "por_que": "Unisex declarado, con buzos oversize de nombre propio (Guard), camperas y camisacos de diseño exclusivo y tejidos pesados. Es la pata más abrigo del eje, y la que mejor sirve al B2 en invierno: talles hasta XXL y hasta 48 en pantalón, con azul marino y verde militar como base.",
+  "categorias": [
+   "buzos oversize",
+   "camperas",
+   "camisacos",
+   "remeras",
+   "camisas",
+   "pantalones"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.wayfarerarg.com/productos/buzo-oversize-guard-azul1/"
+ },
+ {
+  "nombre": "The Dark King",
+  "url": "https://www.thedarkking.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Vieja Scul",
+  "por_que": "Marca de cultura alternativa con línea propia old school: buzos y pantalones baggy de moldería grande declarada, estampas gráficas fuertes y una paleta de negro, gris, navy y camuflado. Es el vecino directo de Vieja Scul en el registro hip hop del eje.",
+  "categorias": [
+   "buzos",
+   "camperas",
+   "pantalones baggy",
+   "remeras",
+   "bucaneras",
+   "gorras",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://www.thedarkking.com.ar/ropa/"
+ },
+ {
+  "nombre": "Shaka Cmmnty",
+  "url": "https://sh-aka.com.ar/",
+  "eje": "Urbano con identidad / streetwear de autor",
+  "nucleo_afin": "Vieja Scul",
+  "por_que": "Marca-comunidad con remeras oversize de serigrafía propia y drops numerados, muy en la línea Vieja Scul. Aviso: el sitio responde y publica talles S a XL, pero al momento de verificar buena parte del catálogo figuraba sin stock, así que conviene mirarla cuando anuncien drop.",
+  "categorias": [
+   "remeras oversize",
+   "polos",
+   "camisas",
+   "pantalones",
+   "boxers",
+   "accesorios"
+  ],
+  "ciudad": "Buenos Aires",
+  "evidencia_url": "https://sh-aka.com.ar/productos/flame-tee-wuy3l/"
+ }
+]
