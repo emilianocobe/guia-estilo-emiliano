@@ -25,8 +25,17 @@ import argparse, concurrent.futures as fut, html as H, json, os, re, sys, time, 
 from datetime import datetime, timezone
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOC = os.path.join(RAIZ, "index.html")
 REGISTRO = os.path.join(RAIZ, "data")
+
+def _donde_viven_las_prendas():
+    """El bloque de datos vive en la página del shop; antes vivía en la guía."""
+    for nombre in ("shop.html", "index.html"):
+        ruta = os.path.join(RAIZ, nombre)
+        if os.path.exists(ruta) and "var PC=" in open(ruta, encoding="utf-8").read():
+            return ruta
+    return os.path.join(RAIZ, "shop.html")
+
+DOC = _donde_viven_las_prendas()
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) verificador-guardarropa/1.0"
 
 
@@ -294,7 +303,7 @@ def etiqueta(disponibles, faltantes, estado, sin_dato=False):
 # ──────────────────────────── informe ────────────────────────────
 def main():
     ap = argparse.ArgumentParser(description="Verifica precios y stock del guardarropa.")
-    ap.add_argument("--aplicar", action="store_true", help="actualiza index.html con lo verificado")
+    ap.add_argument("--aplicar", action="store_true", help="actualiza la página del shop con lo verificado")
     ap.add_argument("--lento", action="store_true", help="un pedido por vez")
     ap.add_argument("--elegidas", action="store_true", help="solo las de la primera selección")
     ap.add_argument("--desde", type=int, default=0, help="empezar en la prenda N (para ir por tandas)")
@@ -323,9 +332,9 @@ def main():
         with fut.ThreadPoolExecutor(max_workers=4) as ex:
             res = list(ex.map(trabajo, fichas))
 
-    cambios, bajas, dudas, ok = [], [], [], 0
+    cambios, bajas, dudas, parciales, ok = [], [], [], [], 0
     for r in res:
-        motivos = []
+        motivos, cambio_precio = [], False
         if r["estado"] != "ok":
             motivos.append(r["estado"])
         else:
@@ -333,6 +342,7 @@ def main():
                 d = r["precio_hoy"] - r["precio_pub"]
                 pct = round(d / r["precio_pub"] * 100)
                 motivos.append(f"precio {pesos(r['precio_pub'])} → {pesos(r['precio_hoy'])} ({pct:+d}%)")
+                cambio_precio = True
             if r["sin_dato"]:
                 motivos.append("la tienda no publica stock por talle")
             elif not r["disponibles"]:
@@ -347,8 +357,10 @@ def main():
             dudas.append(r)
         elif r["estado"].startswith("caida") or (not r["disponibles"] and not indeciso):
             bajas.append(r)
-        else:
+        elif cambio_precio:
             cambios.append(r)
+        else:
+            parciales.append(r)   # tiene tu talle, pero no todos los que buscabas
 
     an = len(str(max((len(x["nombre"]) for x in res), default=10)))
     def linea(r, marca_col=22):
@@ -356,8 +368,12 @@ def main():
 
     print(f"SIN CAMBIOS ................ {ok}")
     if cambios:
-        print(f"\nCON CAMBIOS ................ {len(cambios)}")
+        print(f"\nCAMBIÓ EL PRECIO ........... {len(cambios)}")
         for r in cambios:
+            print(linea(r))
+    if parciales:
+        print(f"\nTU TALLE, A MEDIAS ......... {len(parciales)}")
+        for r in parciales:
             print(linea(r))
     if dudas:
         print(f"\nNO VERIFICABLE ............. {len(dudas)}")
@@ -402,9 +418,9 @@ def main():
     nuevo = doc[:span[0]] + bloque + doc[span[1]:]
     if nuevo != doc:
         open(DOC, "w", encoding="utf-8").write(nuevo)
-        print(f"index.html actualizado · {tocadas} prendas tocadas")
+        print(f"{os.path.basename(DOC)} actualizado · {tocadas} prendas tocadas")
     else:
-        print("index.html ya estaba al día · nada que escribir")
+        print(f"{os.path.basename(DOC)} ya estaba al día · nada que escribir")
     return 0
 
 

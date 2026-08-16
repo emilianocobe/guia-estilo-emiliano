@@ -3,7 +3,7 @@
 Asesoría de imagen de **Majo Ciancaglini** — versión web de la guía: color, rostro,
 silueta, niveles de intensidad y un guardarropas con prendas reales verificadas en talle.
 
-**→ [Ver la guía](https://emilianocobe.github.io/guia-estilo-emiliano/)** · se abre con clave.
+**→ [Ver la guía](https://emilianocobe.github.io/guia-estilo-emiliano/)** · **[Tu shop a medida](https://emilianocobe.github.io/guia-estilo-emiliano/shop.html)** · se abren con clave.
 
 ---
 
@@ -11,7 +11,9 @@ silueta, niveles de intensidad y un guardarropas con prendas reales verificadas 
 
 | Archivo | Qué es |
 |---|---|
-| `index.html` | La guía completa. Autocontenida: CSS y JS en línea, sin dependencias salvo las tipografías. |
+| `index.html` | La guía: color, rostro, silueta, niveles, universo, el mapa de marcas y la ruta de compra. |
+| `shop.html` | El shop a medida: 553 prendas en nueve percheros, con filtros de bloque y nivel. |
+| `tools/verificar-guardarropa.py` | Relee cada ficha real y actualiza precios y stock. Idempotente. |
 | `assets/` | 44 imágenes de referencia del proceso de asesoría. |
 | `SISTEMA-MARCA-MAJO-CIANCAGLINI.md` | El sistema de identidad de la casa, extraído del vector real del isologotipo. |
 | `robots.txt` · `<meta robots>` | Fuera de buscadores. |
@@ -30,6 +32,8 @@ con los colores y los datos extraídos del material original:
   desliza al nivel recomendado, y moverla a otro cuenta qué pasa si mostrás de más o de menos.
 - **La proporción** — los 56 tonos como una sola cinta; cada familia se aísla y dice qué hace
   y dónde va.
+- **Los rieles** — un riel por eje con tus marcas del núcleo, las afines donde comprás hoy y la
+  periferia con el motivo por el que todavía no cierra.
 
 Los cinco funcionan con teclado (flechas, Inicio, Fin) y se apagan enteros con `prefers-reduced-motion`.
 
@@ -62,6 +66,20 @@ Las reglas completas, en `SISTEMA-MARCA-MAJO-CIANCAGLINI.md`.
 | Tinta | `#202020` · línea `#231F20` |
 | Menta | `#29C4A6` |
 | Ultramar | `#1A02AF` |
+
+## Mantener el shop al día
+
+```bash
+python tools/verificar-guardarropa.py --aplicar
+```
+
+Relee la ficha real de cada prenda, corrige precios, actualiza el stock por talle y marca lo
+agotado. Es idempotente: dos corridas seguidas sin cambios en las tiendas no escriben nada.
+Con `--elegidas` verifica solo las 27 destacadas y con `--desde N --cuantas M` va por tandas.
+
+Distingue tres cosas que no son lo mismo: **agotado** (la tienda lo dice), **no verificable**
+(la tienda no publica stock por talle, así que no se afirma nada y se conserva el dato del
+relevamiento) y **429** (la tienda pide que aflojes: reintenta y, si insiste, no toca la ficha).
 
 ## Notas
 
