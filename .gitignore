@@ -6,3 +6,5 @@ Informe Emiliano.pdf
 Thumbs.db
 desktop.ini
 .DS_Store
+# registros de verificación: se regeneran al correr el verificador
+data/verificacion-*.json

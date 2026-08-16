@@ -230,6 +230,10 @@ figure.marco figcaption{font-family:var(--display);font-weight:600;font-size:10p
 .prod .meta{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--g75)}
 .prod .meta .ok{color:var(--ultramar)}
 .prod .nombre,.prod .meta,.prod .marca-p{overflow-wrap:anywhere}
+.prod.agotado,.prod.caido{border-style:dashed}
+.prod.agotado .ph,.prod.caido .ph{opacity:.42}
+.prod.agotado .meta .ok,.prod.caido .meta .ok{color:var(--g75)}
+.prod.agotado .precio,.prod.caido .precio{color:var(--g75)}
 .prod a.link{margin-top:auto;font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--tinta);padding-top:10px;position:relative;width:max-content}
 .prod a.link::after{content:"";position:absolute;left:0;bottom:-3px;width:100%;height:2px;background:var(--ultramar);transform:scaleX(.35);transform-origin:left;transition:transform .35s ease}
 .prod a.link:hover::after,.prod a.link:focus-visible::after{transform:scaleX(1)}
@@ -888,55 +892,55 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
     <button data-f="expresion" aria-pressed="false"><span lang="ja" aria-hidden="true">表現</span> expresión</button>
   </div>
   <div class="prod-grid rev d3" id="prod-grid">
-        <article class="prod" data-b="B3" data-n="base">
+        <article class="prod" data-talle="44" data-b="B3" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/164/758/products/limay_abril_26_1547-fb4dd489a2a40ff1b417810234352408-640-0.webp" alt="Foto de producto: Jean Recto Negro Gastado, de Limay Denim" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Limay Denim</p>
         <p class="nombre">Jean Recto Negro Gastado</p>
         <p class="precio">$ 125.000</p>
-        <p class="meta"><span class="ok">T. 44 · 6 u.</span></p>
+        <p class="meta"><span class="ok">44: 6 u.</span></p>
         <p class="meta">B3 · Base <span lang="ja" aria-hidden="true">基</span></p>
         <p style="font-size:13px;color:var(--g75)">Negro (neutro Invierno Profundo), tiro medio ajustado en cintura y pierna recta: base de fondo de placard</p>
         <a class="link" href="https://www.limaydenim.com/productos/recto-negro-gastado/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B3" data-n="base">
+    <article class="prod" data-talle="44" data-b="B3" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/164/758/products/limay_feb_26_2181-8e79d1a6c6799ad3e417847478503178-640-0.webp" alt="Foto de producto: Jean Wide Azul, de Limay Denim" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Limay Denim</p>
         <p class="nombre">Jean Wide Azul</p>
         <p class="precio">$ 135.000</p>
-        <p class="meta"><span class="ok">T. 44 · 5 u. · tiro alto</span></p>
+        <p class="meta"><span class="ok">44: 5 u.</span></p>
         <p class="meta">B3 · Base <span lang="ja" aria-hidden="true">基</span></p>
         <p style="font-size:13px;color:var(--g75)">Tiro alto ajustado en cintura con pierna ancha: la fórmula wide-leg que la silueta pide, en azul frío</p>
         <a class="link" href="https://www.limaydenim.com/productos/wide-azul/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B3" data-n="base">
+    <article class="prod" data-talle="3" data-b="B3" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/_v8a0820-17b8ab2b9177408dae17660944142944-640-0.webp" alt="Foto de producto: Pantalon Tateyama, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Panni Margot</p>
         <p class="nombre">Pantalon Tateyama</p>
         <p class="precio">$ 249.900</p>
-        <p class="meta"><span class="ok">T. 3 (≈44/L) · 2 u.</span></p>
+        <p class="meta"><span class="ok">3: 2 u.</span></p>
         <p class="meta">B3 · Base <span lang="ja" aria-hidden="true">基</span></p>
         <p style="font-size:13px;color:var(--g75)">Wide leg negro de gabardina con tiro medio, cinturón con hebilla metálica y botones en botamanga: el pantalón ancho recto que la silueta pide</p>
         <a class="link" href="https://pannimargot.com/productos/pantalon-tateyama-1bnse/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B3" data-n="puente">
+    <article class="prod" data-talle="3" data-b="B3" data-n="puente">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/pantalon-torihazushi-4-7c3ef7105dbf7e143d17187382934779-640-0.webp" alt="Foto de producto: Pantalon Torihazushi, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Panni Margot</p>
         <p class="nombre">Pantalon Torihazushi</p>
         <p class="precio">$ 179.900</p>
-        <p class="meta"><span class="ok">T. 3 (≈44/L) · 5 u.</span></p>
+        <p class="meta"><span class="ok">3: 5 u.</span></p>
         <p class="meta">B3 · Puente <span lang="ja" aria-hidden="true">橋</span></p>
         <p style="font-size:13px;color:var(--g75)">Cargo amplio desmontable por botones, tiro medio-alto y pierna recta ancha: utilitario japonés que banca la cadera ancha sin marcarla</p>
         <a class="link" href="https://pannimargot.com/productos/pantalon-torihazushi/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B3" data-n="puente">
+    <article class="prod" data-talle="44" data-b="B3" data-n="puente">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/091/524/products/pantalon_jerey_12-331d785ec3b8e415db17672082008964-1024-1024.jpg" alt="Foto de producto: Pantalon Jerey (wide leg, alpaca), de Garçon García" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Garçon García</p>
@@ -948,19 +952,19 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
         <a class="link" href="https://www.garzongarcia.com.ar/productos/pantalon-jerey/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B3" data-n="base">
+    <article class="prod" data-talle="L" data-b="B3" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/188/770/products/dsc06843-8f07c6e6039add104817798202958878-640-0.webp" alt="Foto de producto: Pantalon Club [Carbon], de Luxo" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Luxo</p>
         <p class="nombre">Pantalon Club [Carbon]</p>
         <p class="precio">$ 53.700</p>
-        <p class="meta"><span class="ok">T. L · 11 u.</span></p>
+        <p class="meta"><span class="ok">T. L: 11 u.</span></p>
         <p class="meta">B3 · Base <span lang="ja" aria-hidden="true">基</span></p>
         <p style="font-size:13px;color:var(--g75)">Calce regular liso en gris carbón (color nuclear de la paleta), microfibra opaca sin logos: neutro base accesible</p>
         <a class="link" href="https://luxo.com.ar/productos/pantalon-club-carbon-1fllu/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="puente">
+    <article class="prod" data-talle="L" data-b="B2" data-n="puente">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/091/524/products/ambo4-1d065b848582b86dd317749711118444-1024-1024.jpg" alt="Foto de producto: Saco Cadiz (cruzado, rayado), de Garçon García" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Garçon García</p>
@@ -972,7 +976,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
         <a class="link" href="https://www.garzongarcia.com.ar/productos/SACO-CADIZ/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="base">
+    <article class="prod" data-talle="L" data-b="B2" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/091/524/products/saco_gregory_76_3-6a3915d9e040312bdc17673789802417-1024-1024.jpg" alt="Foto de producto: Saco Gregory, de Garçon García" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Garçon García</p>
@@ -984,19 +988,19 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
         <a class="link" href="https://www.garzongarcia.com.ar/productos/saco-gregory/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="puente">
+    <article class="prod" data-talle="U" data-b="B2" data-n="puente">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/blazer-nuime-6-999cc7a0e4b96dc33b17193407113418-640-0.webp" alt="Foto de producto: Blazer Nuime, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Panni Margot</p>
         <p class="nombre">Blazer Nuime</p>
         <p class="precio">$ 360.000</p>
-        <p class="meta"><span class="ok">T. único oversize · 33 u.</span></p>
+        <p class="meta"><span class="ok">T. único: 33 u.</span></p>
         <p class="meta">B2 · Puente <span lang="ja" aria-hidden="true">橋</span> · hombro 47 cm: te entra L holgado</p>
         <p style="font-size:13px;color:var(--g75)">Sastrería negra con quiebre de textura (crepe bondeado + vinilo en hombro): el saco puente perfecto, hombro definido y largo 80 cm que no pasa la cadera</p>
         <a class="link" href="https://pannimargot.com/productos/blazer-nuime/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="base">
+    <article class="prod" data-talle="44" data-b="B2" data-n="base">
       <div class="ph"><img src="https://cdn.shopify.com/s/files/1/0555/2537/6301/files/5744193_282_29.jpg?v=1780257385" alt="Foto de producto: CLUB ROOM Saco Gris Talle 44, de Juan Perez" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Juan Perez</p>
@@ -1008,151 +1012,151 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
         <a class="link" href="https://juanperez.com.ar/products/club-room-saco-gris-talle-44-29be" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="base">
+    <article class="prod" data-talle="3" data-b="B2" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/camisa-ken-black-1101f4cca291e3dd9a17193401718302-640-0.webp" alt="Foto de producto: Camisa Ken Black, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Panni Margot</p>
         <p class="nombre">Camisa Ken Black</p>
         <p class="precio">$ 158.900</p>
-        <p class="meta"><span class="ok">T. 3 (≈L) · 2 u.</span></p>
+        <p class="meta"><span class="ok">3: 2 u.</span></p>
         <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span></p>
         <p style="font-size:13px;color:var(--g75)">Camisa negra de poplín con bolsillo superpuesto: base impecable en la paleta, frente que termina en cadera alta como pide la silueta</p>
         <a class="link" href="https://pannimargot.com/productos/camisa-ken-black/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="puente">
+    <article class="prod" data-talle="3" data-b="B2" data-n="puente">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/_v8a0406-92fb4a7cea78b15a4d17697192231616-640-0.webp" alt="Foto de producto: Camisa Fuji, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Panni Margot</p>
         <p class="nombre">Camisa Fuji</p>
         <p class="precio">$ 220.900</p>
-        <p class="meta"><span class="ok">T. 3 (≈L) · 2 u.</span></p>
+        <p class="meta"><span class="ok">3: 2 u.</span></p>
         <p class="meta">B2 · Puente <span lang="ja" aria-hidden="true">橋</span></p>
         <p style="font-size:13px;color:var(--g75)">Camisa negra con bolsillo desmontable por botones y brillo sutil del poplín: clásica de lejos, quiebre de detalle de cerca — puente exacta</p>
         <a class="link" href="https://pannimargot.com/productos/camisa-fuji-mt9um/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="expresion">
+    <article class="prod" data-talle="L" data-b="B2" data-n="expresion">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/002/222/533/products/cfb2aa40-339a-43f7-8a1b-4a97c2f212701-89f412fd83ac385f7816920481065348-640-0.webp" alt="Foto de producto: Camisa Blue Wood (paisley), de Guilty Berlin" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Guilty Berlin</p>
         <p class="nombre">Camisa Blue Wood (paisley)</p>
         <p class="precio">$ 70.000</p>
-        <p class="meta"><span class="ok">T. L · última unidad</span></p>
+        <p class="meta"><span class="ok">T. L: 1 u.</span></p>
         <p class="meta">B2 · Expresión <span lang="ja" aria-hidden="true">表現</span></p>
         <p style="font-size:13px;color:var(--g75)">Estampa paisley sobre base azul petróleo con acentos bordó: pieza statement 100% dentro de la paleta Invierno Profundo, relaxed fit en poplín con seda.</p>
         <a class="link" href="https://guiltyberlin.ar/productos/camisa-blue-wood/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="base">
+    <article class="prod" data-talle="L" data-b="B2" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/002/295/658/products/b08c252f-336e-4904-9714-466ae90b4ad1-49b61818e3aef1e4e317678527122644-640-0.webp" alt="Foto de producto: Camisa Cipre Gris, de Fiera" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Fiera</p>
         <p class="nombre">Camisa Cipre Gris</p>
         <p class="precio">$ 48.000</p>
-        <p class="meta"><span class="ok">T. L · 5 u.</span></p>
+        <p class="meta"><span class="ok">T. L: 5 u.</span></p>
         <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span></p>
         <p style="font-size:13px;color:var(--g75)">Camisa de poplín gris con largo apenas debajo de cintura (no extra-larga): gris frío, básico limpio</p>
         <a class="link" href="https://fiera.ar/productos/camisa-cipre-gris/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="base">
+    <article class="prod agotado" data-talle="U" data-b="B2" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/005/292/364/products/img_3214-ace48b7da5f233b80517858899141202-640-0.webp" alt="Foto de producto: Sobretodo Master B. (lana, cruzado, navy), de Style Vintage" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Style Vintage</p>
         <p class="nombre">Sobretodo Master B. (lana, cruzado, navy)</p>
         <p class="precio">$ 142.970</p>
-        <p class="meta"><span class="ok">T. L · pieza única</span></p>
+        <p class="meta"><span class="ok">Sin tu talle hoy</span></p>
         <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span> · lana cruzada, navy — vintage real</p>
         <p style="font-size:13px;color:var(--g75)">Sobretodo cruzado de lana 100% en navy: sastrería de archivo, moldería recta y cruzada que estructura el hombro — base perfecta de Invierno Profundo.</p>
         <a class="link" href="https://www.stylevintage.com.ar/productos/sobretodo-master-b-1h8u1/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="expresion">
+    <article class="prod" data-talle="3" data-b="B2" data-n="expresion">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/004/814/798/products/trench-firewall-black-satin-8-dd17ac45b7653231cd17183866984987-640-0.webp" alt="Foto de producto: Trench Firewall Black Satin, de Panni Margot" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Panni Margot</p>
         <p class="nombre">Trench Firewall Black Satin</p>
         <p class="precio">$ 590.000</p>
-        <p class="meta"><span class="ok">T. 3 · 7 u.</span></p>
+        <p class="meta"><span class="ok">3: 7 u.</span></p>
         <p class="meta">B2 · Expresión <span lang="ja" aria-hidden="true">表現</span></p>
         <p style="font-size:13px;color:var(--g75)">Trench statement en satinado impermeable terminado en picos, cruzado con 10 botones: pieza de expresión total dentro del negro de la paleta</p>
         <a class="link" href="https://pannimargot.com/productos/trench-firewall-black/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="base">
+    <article class="prod" data-talle="L" data-b="B2" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/001/343/707/products/tauro-4-1000731-ce86b2727d4918d6ec16413107060793-640-0.webp" alt="Foto de producto: Fabrizio Black &amp; Pretto (campera de cuero), de Tauro Cuer" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Tauro Cuer</p>
         <p class="nombre">Fabrizio Black &amp; Pretto (campera de cuero)</p>
         <p class="precio">$ 390.000</p>
-        <p class="meta"><span class="ok">T. L · 3 u.</span></p>
+        <p class="meta"><span class="ok">T. L: 3 u.</span></p>
         <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span> · tu prenda de cuero de inversión</p>
         <p style="font-size:13px;color:var(--g75)">Campera de cuero negra minimal con curva completa de talles: opción segura en talle L, negro pleno de paleta fría.</p>
         <a class="link" href="https://www.taurocuer.com/productos/fabrizio-black-pretto/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="puente">
+    <article class="prod" data-talle="3" data-b="B2" data-n="puente">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/113/599/products/1000315227-49a3c9f468d5f6cb6a17737997916607-640-0.webp" alt="Foto de producto: Bomber Faith (varsity negra), de Tienda Fuego" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Tienda Fuego</p>
         <p class="nombre">Bomber Faith (varsity negra)</p>
         <p class="precio">$ 119.900</p>
-        <p class="meta"><span class="ok">T. 3 · 1 u.</span></p>
+        <p class="meta"><span class="ok">3: 1 u.</span></p>
         <p class="meta">B2 · Puente <span lang="ja" aria-hidden="true">橋</span></p>
         <p style="font-size:13px;color:var(--g75)">Bomber varsity negra con puños en rayas blancas: la silueta bomber que pide tu ruta, largo a cadera, quiebre street sobre base neutra.</p>
         <a class="link" href="https://www.tiendafuego.com.ar/productos/bomber-faith/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="base">
+    <article class="prod" data-talle="1,2,3,4" data-b="B2" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/007/164/758/products/limay_feb_26_0717-56754182ccfd2d339417734253861619-640-0.webp" alt="Foto de producto: Campera Worker Negra, de Limay Denim" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Limay Denim</p>
         <p class="nombre">Campera Worker Negra</p>
         <p class="precio">$ 141.750</p>
-        <p class="meta"><span class="ok">T. 1–4 c/stock</span></p>
+        <p class="meta"><span class="ok">1: 17 u. · 2: 14 u. · 3: 4 u. · 4: 14 u.</span></p>
         <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span> · talle numérico: confirmá equivalencia L</p>
         <p style="font-size:13px;color:var(--g75)">Campera worker de canvas negro con cuello camisero: estructura en hombros y largo controlado, clásico total</p>
         <a class="link" href="https://www.limaydenim.com/productos/campera-worker-negra/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="expresion">
+    <article class="prod" data-talle="L" data-b="B2" data-n="expresion">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/219/431/products/f9679c85-acaa-4265-85b5-1118c790fbea-c210ec1a0396232e2b17789026725242-640-0.webp" alt="Foto de producto: Campera Royalty Blue (varsity), de King of the Kongo" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">King of the Kongo</p>
         <p class="nombre">Campera Royalty Blue (varsity)</p>
         <p class="precio">$ 69.990</p>
-        <p class="meta"><span class="ok">T. L · última unidad · −57%</span></p>
+        <p class="meta"><span class="ok">T. L: 1 u.</span></p>
         <p class="meta">B2 · Expresión <span lang="ja" aria-hidden="true">表現</span></p>
         <p style="font-size:13px;color:var(--g75)">Bomber varsity navy con escudo bordado: pieza statement fría que además suma estructura de hombro</p>
         <a class="link" href="https://kingofthekongo.com.ar/productos/campera-royalty-blue-1n6oa/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B2" data-n="base">
+    <article class="prod" data-talle="2" data-b="B2" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/002/222/533/products/facetune_27-06-2025-15-09-44-b1f935caf4dc71999617510538520187-640-0.webp" alt="Foto de producto: Crewneck tejido Blank - Ash, de Guilty Berlin" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Guilty Berlin</p>
         <p class="nombre">Crewneck tejido Blank - Ash</p>
         <p class="precio">$ 110.000</p>
-        <p class="meta"><span class="ok">T. 2 (=L/XL, tabla en ficha) · 2 u.</span></p>
+        <p class="meta"><span class="ok">2: 4 u.</span></p>
         <p class="meta">B2 · Base <span lang="ja" aria-hidden="true">基</span></p>
         <p style="font-size:13px;color:var(--g75)">Básico tejido gris, corte semiboxy con hombros levemente caídos sin exagerar: neutro frío perfecto de fondo de placard.</p>
         <a class="link" href="https://guiltyberlin.ar/productos/crewneck-tejido-blank-ash/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B1" data-n="puente">
+    <article class="prod" data-talle="3" data-b="B1" data-n="puente">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/003/024/577/products/vsbbf-2677-script-petroleo-strip-18ff325c8cac80df0917809413636781-640-0.webp" alt="Foto de producto: Buzo Boxy Script Petróleo Stripe, de Vieja Scul" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Vieja Scul</p>
         <p class="nombre">Buzo Boxy Script Petróleo Stripe</p>
         <p class="precio">$ 109.000</p>
-        <p class="meta"><span class="ok">T. 3 (≈L) · 11 u.</span></p>
+        <p class="meta"><span class="ok">3: 10 u.</span></p>
         <p class="meta">B1 · Puente <span lang="ja" aria-hidden="true">橋</span></p>
         <p style="font-size:13px;color:var(--g75)">Petróleo es color estrella de Invierno Profundo; corte boxy termina en cadera alta y la raya ancha es el quiebre puente</p>
         <a class="link" href="https://www.viejascul.com.ar/productos/buzo-boxy-script-petroleo-stripe-hq86f/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B4" data-n="base">
+    <article class="prod" data-talle="42,43" data-b="B4" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/001/574/296/products/eminent-at-negro-01-53c80dd0d20db5d03417689208878548-640-0.webp" alt="Foto de producto: Zapatos Eminent - Negro, de MMartinez" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">MMartinez</p>
@@ -1164,7 +1168,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
         <a class="link" href="https://mmartinez.com.ar/productos/zapatos-eminent-negro-9m2bk/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B4" data-n="puente">
+    <article class="prod" data-talle="42,43" data-b="B4" data-n="puente">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/001/574/296/products/timeless-co-bordo-01-b0a7981870339338f817689207487355-640-0.webp" alt="Foto de producto: Mocasines Timeless Claro Oscuro - Bordeaux, de MMartinez" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">MMartinez</p>
@@ -1176,19 +1180,19 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
         <a class="link" href="https://mmartinez.com.ar/productos/mocasines-timeless-claro-oscuro-bordeaux-upzwr/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B4" data-n="expresion">
+    <article class="prod" data-talle="42,43" data-b="B4" data-n="expresion">
       <div class="ph"><img src="https://terribleenfant.com/wp-content/uploads/2021/09/GAMBINO-NUEVO-2.jpg" alt="Foto de producto: Gambino Negro, de Terrible Enfant" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Terrible Enfant</p>
         <p class="nombre">Gambino Negro</p>
         <p class="precio">$ 355.850</p>
-        <p class="meta"><span class="ok">42 y 43 en stock</span></p>
+        <p class="meta"><span class="ok">42 · 43</span></p>
         <p class="meta">B4 · Expresión <span lang="ja" aria-hidden="true">表現</span></p>
         <p style="font-size:13px;color:var(--g75)">Zapato de cuero negro hecho a mano con la suela alta característica de la marca: pieza statement en el neutro más seguro de la paleta Invierno Profundo.</p>
         <a class="link" href="https://terribleenfant.com/producto/gambino-negro/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B4" data-n="puente">
+    <article class="prod" data-talle="42,43" data-b="B4" data-n="puente">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/219/431/products/ad702b6b-9a98-4ff4-923a-a062b919c9ce-9201d390ef02c203e817736975672849-640-0.webp" alt="Foto de producto: Zapatillas Umpire KOTK Blue (x Topper), de King of the Kongo" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">King of the Kongo</p>
@@ -1200,13 +1204,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
         <a class="link" href="https://kingofthekongo.com.ar/productos/zapatillas-umpire-kotk-blue-7gy9n/" target="_blank" rel="noopener">Ficha ↗</a>
       </div>
     </article>
-    <article class="prod" data-b="B4" data-n="base">
+    <article class="prod" data-talle="U" data-b="B4" data-n="base">
       <div class="ph"><img src="https://acdn-us.mitiendanube.com/stores/003/024/577/products/circle34bmesa-de-trabajo-1-copia-2-e12ab2d0f876ffab0c17488674611281-640-0.webp" alt="Foto de producto: Media Circle VS (Black), de Vieja Scul" loading="lazy" width="640" height="853" referrerpolicy="no-referrer"></div>
       <div class="cuerpo">
         <p class="marca-p">Vieja Scul</p>
         <p class="nombre">Media Circle VS (Black)</p>
         <p class="precio">$ 25.200</p>
-        <p class="meta"><span class="ok">T. único · 113 u.</span></p>
+        <p class="meta"><span class="ok">T. único: 113 u.</span></p>
         <p class="meta">B4 · Base <span lang="ja" aria-hidden="true">基</span></p>
         <p style="font-size:13px;color:var(--g75)">Media 3/4 negra con logo: accesorio frío que cierra el bloque de calzado sin romper paleta</p>
         <a class="link" href="https://www.viejascul.com.ar/productos/media-circleblack/" target="_blank" rel="noopener">Ficha ↗</a>
