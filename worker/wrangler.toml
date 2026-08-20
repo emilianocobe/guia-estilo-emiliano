@@ -17,4 +17,4 @@ TOPE_DIARIO = "7"
 #   npx wrangler kv namespace create CUPOS
 [[kv_namespaces]]
 binding = "CUPOS"
-id = "PEGAR_ACA_EL_ID_QUE_TE_DEVUELVA_WRANGLER"
+id = "13b424dca32448078ff19dacab5a26f7"
