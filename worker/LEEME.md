@@ -104,18 +104,33 @@ la lista.
 ## El encargo
 
 El texto del prompt está en `vestidor.js` y es el que escribiste vos, palabra por
-palabra. Lo único que se arma en el momento son tres partes, porque dependen de
-qué casilleros llenaste en la percha:
+palabra. Lo único que se arma en el momento son las partes que dependen de qué
+casilleros llenaste:
 
+- **la lista de `GARMENT SELECTION`** — una línea por prenda;
 - **cuántas imágenes van** — "Five reference images" o las que sean;
-- **la lista de trabajos** — qué es cada imagen;
-- **el orden de capas** — la frase de `THE TASK`.
+- **los rangos que las nombran** — `Images 2-5`, `IMAGES 2, 3, 4 and 5`.
 
-Tu versión original describía cuatro prendas y no incluía pantalón. Como el
-armador tiene un casillero de pantalón, esa frase ahora sale de la percha: si
-armás capa + arriba + pantalón + calzado, dice cinco imágenes y ubica cada prenda
-donde corresponde. El candado de inventario cuenta las prendas reales, así que
-sigue prohibiendo cualquier quinta prenda inventada.
+El nombre de cada prenda sale de su **categoría real en el shop**, no del
+casillero: una campera dice `the outer jacket`, un saco dice `the blazer` y un
+abrigo dice `the coat`. Un buzo dice `the knitted top`, una remera `the t-shirt`.
+Así el modelo sabe qué buscar en una foto donde hay un outfit entero puesto.
+
+| categoría | cómo se nombra |
+|---|---|
+| `campera` | the outer jacket |
+| `saco` | the blazer |
+| `abrigo` | the coat |
+| `camisa` | the shirt |
+| `remera` | the t-shirt |
+| `buzo` | the knitted top |
+| `pantalon` | the trousers |
+| `calzado` | the shoes |
+| `accesorio` | the accessory |
+
+Si armás un look sin pantalón, la `COVERAGE RULE` hace que la persona conserve el
+que ya tiene puesto en su foto, en vez de quedar sin nada o de que el modelo
+invente uno.
 
 ---
 

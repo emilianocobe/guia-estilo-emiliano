@@ -6,64 +6,93 @@ const BASE = 'https://generativelanguage.googleapis.com/v1beta';
 
 /* ── el encargo ──────────────────────────────────────────────────────────
    El texto es el de Emiliano, palabra por palabra. Lo único que se arma en
-   el momento son las tres partes que dependen de qué casilleros llenó:
-   cuántas imágenes van, qué trabajo tiene cada una, y en qué orden se apilan.
-   Su versión original describía cuatro prendas sin pantalón; acá el orden
-   sale de la percha, así que sirve para cualquier combinación.            */
+   el momento son las partes que dependen de qué casilleros llenó: la lista
+   de selección, cuántas imágenes van y los rangos que las nombran.        */
 
-const OFICIO = {
-  arriba:   'one garment',
-  capa:     'one garment',
-  pantalon: 'one garment',
-  calzado:  'the footwear',
-  foco:     'one accessory',
+/* cómo se llama en el encargo cada categoría del shop */
+const NOMBRE = {
+  pantalon: 'the trousers',
+  buzo: 'the knitted top',
+  remera: 'the t-shirt',
+  camisa: 'the shirt',
+  calzado: 'the shoes',
+  campera: 'the jacket',
+  accesorio: 'the accessory',
+  abrigo: 'the coat',
+  saco: 'the blazer',
 };
+
+/* de reserva, si la ficha viniera sin categoría */
+const POR_CASILLERO = {
+  capa: 'the outer garment',
+  arriba: 'the top',
+  pantalon: 'the trousers',
+  calzado: 'the shoes',
+  foco: 'the accessory',
+};
+
+function comoSeLlama(p) {
+  const base = NOMBRE[p.cat] || POR_CASILLERO[p.rot] || 'the garment';
+  /* la capa se nombra "outer" para que no compita con la prenda de torso */
+  return p.rot === 'capa' && !/^the (coat|blazer)$/.test(base)
+    ? base.replace('the ', 'the outer ')
+    : base;
+}
 
 /* el orden en que se apilan, del cuerpo hacia afuera */
 const ORDEN = ['arriba', 'capa', 'pantalon', 'calzado', 'foco'];
 
-function comoSeUsa(rot, n) {
-  return {
-    arriba: `the garment from Image ${n} sits closest to the body as the base layer`,
-    capa: `the garment from Image ${n} is worn over it and left open`,
-    pantalon: `the garment from Image ${n} goes on the legs`,
-    calzado: `the footwear from Image ${n} goes on the feet`,
-    foco: `the accessory from Image ${n} is worn exactly as it appears in its own reference`,
-  }[rot];
+/* "2, 3, 4 and 5" · "2 and 3" · "2" */
+function enumerar(desde, hasta) {
+  const ns = [];
+  for (let i = desde; i <= hasta; i++) ns.push(String(i));
+  if (ns.length === 1) return ns[0];
+  return ns.slice(0, -1).join(', ') + ' and ' + ns[ns.length - 1];
 }
 
 const numero = (n) => ['zero','one','two','three','four','five','six','seven'][n] || String(n);
+const mayus = (s) => s.replace(/^\w/, (c) => c.toUpperCase());
 
 function encargo(prendas) {
-  /* las prendas se numeran en el orden de apilado, no en el que llegaron */
-  const ord = ORDEN.map((r) => prendas.find((p) => p.rot === r)).filter(Boolean);
-  const otras = prendas.filter((p) => !ORDEN.includes(p.rot));
-  const lista = [...ord, ...otras];
+  const lista = ordenar(prendas);
   const n = lista.length;
-  const numDe = (rot) => lista.findIndex((p) => p.rot === rot) + 2;
+  const ultima = n + 1;
+  const seleccion = lista
+    .map((p, i) => `  · From Image ${i + 2}, take ONLY: [${comoSeLlama(p)}]`)
+    .join('\n');
+  const listadas = enumerar(2, ultima);
+  const rango = n === 1 ? `Image 2` : `Images 2-${ultima}`;
 
-  const trabajos = lista.map((p, i) => `  · Image ${i + 2} = ${OFICIO[p.rot] || 'one garment'}`).join('\n');
-  const capas = lista.map((p) => comoSeUsa(p.rot, numDe(p.rot)) || `the item from Image ${numDe(p.rot)} is worn as shown`).join('; ');
-  const cuantas = `${numero(n)} item${n === 1 ? '' : 's'}`;
+  return `GARMENT SELECTION — from each reference, take ONLY the one item named here, and nothing else:
+${seleccion}
 
-  return `${numero(n + 1).replace(/^\w/, (c) => c.toUpperCase())} reference images, each with ONE strict job. Take nothing from an image except the job assigned to it.
+${mayus(numero(ultima))} reference images, each with ONE strict job. Take nothing from an image except the job assigned to it.
 
-IMAGE 1 = THE PERSON. Keep this person EXACTLY: same face, same bone and facial structure, same skin tone and real skin texture, same eyes, nose, lips, eyebrows, same hairstyle, hair colour and hairline, same body type, build, height and proportions, same natural expression. Preserve their distinctive features exactly — do NOT "correct" them toward a generic default, do NOT lighten the skin, smooth the hair, de-age or slim the body. IGNORE the clothing, pose, framing and background of Image 1 — only the person comes from here.
+IMAGE 1 = THE PERSON. Keep this person EXACTLY: same face, same bone and facial structure, same skin tone and real skin texture, same eyes, nose, lips, eyebrows, same hairstyle, hair colour and hairline, same body type, build, height and proportions, same natural expression. Preserve their distinctive features exactly — do NOT "correct" them toward a generic default, do NOT lighten the skin, smooth the hair, de-age or slim the body. Ignore the pose, framing and background of Image 1. Its clothing is replaced wherever another reference covers that part of the body, and kept only where no other reference does (see the coverage rule below).
 
-IMAGES 2 TO ${n + 1} EACH CONTAIN ONE GARMENT OR PAIR OF FOOTWEAR. Do not assume what type of garment each one is — LOOK at each image and reproduce whatever garment is actually shown there, exactly as it appears: its real category and type, its exact cut, silhouette, length, collar or neckline, closure, sleeves, exact colour, exact fabric, texture and weave, pockets, seams, stitching and every visible detail. If a garment is a jacket, keep it that exact kind of jacket; do not upgrade, formalise, casualise or substitute it for a different type of garment. Do NOT redesign, restyle, recolour, simplify or "improve" any of them. From each of these images IGNORE the wearer, their body, pose, background and everything else.
+IMAGE${n === 1 ? '' : 'S'} ${listadas} ${n === 1 ? 'IS A GARMENT REFERENCE' : 'ARE GARMENT REFERENCES'}. Each one may show a person wearing a complete outfit, several layers, or extra items. That does not matter: from each image you take ONLY the single item named in the GARMENT SELECTION list above.
 
-${trabajos}
+For the named item, LOOK at it and reproduce it exactly as it appears: its real category and type, its exact cut, silhouette, length, collar or neckline, closure, sleeves, exact colour, exact fabric, texture and weave, pockets, seams, stitching and every visible detail. If it is a casual jacket, it stays that exact kind of casual jacket — never upgrade, formalise, casualise or substitute it for a different type of garment. Do NOT redesign, restyle, recolour, simplify or "improve" it. If part of it is hidden in the reference, reconstruct that part plausibly, consistent with what IS visible.
 
-THE TASK: dress the person from Image 1 in these ${cuantas} and ONLY these ${cuantas}, worn exactly like this — ${capas}.
+EVERYTHING ELSE IN THOSE IMAGES IS SET DRESSING, NOT CLOTHING: the wearer, their face and body, the background, and — critically — every other garment, layer and accessory they have on. Those other garments are NOT to be worn by the person in Image 1, not even partially. They must also not influence the chosen item: no colour, fabric, pattern, cut or detail from a neighbouring garment may bleed into the one you are reproducing.
 
-GARMENT INVENTORY LOCK — this is critical: the person wears EXACTLY ${cuantas}, one taken from each of Images 2 to ${n + 1}. No further garment of any kind exists in this image. Do NOT add, invent or layer in any extra clothing — no additional jacket, blazer, suit jacket, coat, cardigan, vest, sweater, tie, scarf, belt, hat or accessory — unless it is visibly part of one of the ${numero(n)} reference images. If a reference garment is casual, it stays casual: never add a formal layer over or under it to "complete" the outfit.
+ONE ZONE, ONE SOURCE — no duplication: each part of the body is dressed by exactly one source. Once a body zone has been assigned its garment, no other reference may add a second garment to that same zone. If two references happen to contain a similar item, only the one explicitly named for that zone is used and the other is ignored. Never end up with two shirts, two jackets in the same position, or two lower-body garments.
 
-The layers must read as a real, deliberate stack, with each one ending at a different, believable height and the layer underneath visible at the collar, cuffs and hem. The clothes fit the real body and proportions from Image 1 — draping, folding and creasing with true fabric weight and behaviour, with correct contact and fold shadows, all under one single consistent light source.
+LAYERING: if more than one of the selected items is an upper-body garment, wear them all at once, stacked from lightest and most fitted closest to the skin, outward to the heaviest and most structured on the outside, with the outermost one left open. Each layer ends at a different, believable height, and the layer underneath stays visible at the collar, cuffs and hem.
+
+COVERAGE RULE — the person is fully and normally dressed, head to feet. Every body zone gets its clothing from one of two sources, and from nowhere else:
+  1. If one of the selected items dresses that zone, use it, reproduced exactly.
+  2. If NO selected item dresses that zone, keep exactly what the person is already wearing there in Image 1 — same garment, same cut, same colour, same fabric, reproduced faithfully and unchanged.
+So if none of the selected items is a lower-body garment, the person keeps the trousers or skirt they already wear in Image 1, unchanged — do not invent a new one, and never leave the legs undressed.
+
+INVENTORY LOCK: every single garment visible in the final image must come either from the GARMENT SELECTION list or from what the person already wears in Image 1. Nothing is invented and nothing is added. Do NOT add a blazer, suit jacket, coat, cardigan, vest, sweater, shirt, tie, scarf, belt, hat or any accessory that is not in one of those two sources, and never add a formal layer to "complete" or dress up a casual outfit.
+
+The clothes fit the real body and proportions from Image 1 — draping, folding and creasing with true fabric weight and behaviour, with correct contact and fold shadows, all under one single consistent light source.
 
 CRITICAL BLENDING RULES:
 - Face, neck and hands share exactly the same skin tone — one single real person, NO visible seam or colour change at the neck or wrists.
 - Do NOT average or blend any of the references into a new person: the identity is 100% Image 1.
-- Do NOT take a face or body from Images 2 to ${n + 1}, and do NOT keep any clothing from Image 1.
+- Do NOT take a face or body from ${rango}.
 - Each garment stays exactly as it is in its own reference — no colour, fabric, cut or detail bleeds from one garment into another.
 - The result is ONE seamless photograph of a real person genuinely wearing these clothes: no pasted, cut-out, composite or collage look, no double edges, no mismatched lighting between head and body.
 
@@ -71,7 +100,7 @@ FRAMING: full-length photograph, standing frontal, relaxed natural pose, arms at
 
 REALISM: hyper-detailed realistic skin with visible pores, fine vellus peach-fuzz, subtle imperfections and natural texture variation, subsurface scattering, realistic catchlights in the eyes, individual hair strands. Real fabric texture — weave, nap, stitching and sheen — reacting correctly to the light. Remove any smooth, waxy, airbrushed, plastic, CGI or AI look.
 
-Avoid: adding any garment that is not in Images 2 to ${n + 1}; adding a blazer, suit jacket, coat, vest, cardigan, tie or scarf that no reference contains; substituting a garment for a different type than the one shown; formalising or dressing up a casual garment; wearing two outer layers when only one is referenced; changing the face, bone structure, hairstyle, skin tone or body proportions of Image 1; averaging the references into a new identity; taking a face or body from Images 2 to ${n + 1}; keeping any clothing from Image 1; redesigning, recolouring, simplifying or inventing details on any garment; swapping or merging the garments; wrong layering order; hiding the footwear or cropping the feet; mismatched skin tone at the neck or wrists; visible seam, double edge or colour break; a pasted, cut-out or collage look; inconsistent lighting between head and body; plastic, waxy or airbrushed skin; high camera angle, foreshortened or shortened legs; busy background; invented text or logos on the garments.`;
+Avoid: copying any garment from a reference other than the one named for it; wearing the other clothes visible in ${rango}; two garments on the same body zone; two shirts, two jackets or two lower-body garments; adding any garment that comes from neither the selection list nor Image 1; substituting a garment for a different type than the one shown; formalising or dressing up a casual garment; leaving any part of the body undressed; missing or invented trousers; placing a garment on the wrong part of the body; a neighbouring garment's colour or fabric contaminating the chosen one; changing the face, bone structure, hairstyle, skin tone or body proportions of Image 1; averaging the references into a new identity; taking a face or body from ${rango}; redesigning, recolouring or simplifying any garment; hiding the footwear or cropping the feet; mismatched skin tone at the neck or wrists; visible seam, double edge or colour break; a pasted, cut-out or collage look; inconsistent lighting between head and body; plastic, waxy or airbrushed skin; high camera angle, foreshortened or shortened legs; busy background; invented text or logos on the garments.`;
 }
 
 /* las imágenes viajan en el mismo orden en que el encargo las nombra */

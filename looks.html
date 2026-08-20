@@ -1399,7 +1399,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
       return SLOTS.map(function(S){
         var i=puesto[S.id]; if(i===undefined) return null;
         var f=IT[i];
-        return {rot:S.id, nombre:f[0], url:im(f[2]), foto:f[2]};
+        return {rot:S.id, cat:CAT[f[4]], nombre:f[0], url:im(f[2]), foto:f[2]};
       }).filter(Boolean);
     }
 
@@ -1452,8 +1452,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
 
       Promise.all(pz.map(function(p){
         return achicar(p.url,768,.84).then(function(d){
-          return {rot:p.rot, nombre:p.nombre, mime:'image/jpeg', data:sinCabecera(d)};
-        }).catch(function(){ return {rot:p.rot, nombre:p.nombre, falla:true}; });
+          return {rot:p.rot, cat:p.cat, nombre:p.nombre, mime:'image/jpeg', data:sinCabecera(d)};
+        }).catch(function(){ return {rot:p.rot, cat:p.cat, nombre:p.nombre, falla:true}; });
       })).then(function(prendas){
         var caidas=prendas.filter(function(p){return p.falla;});
         if(caidas.length===prendas.length) throw new Error('No pude leer ninguna foto de prenda');
