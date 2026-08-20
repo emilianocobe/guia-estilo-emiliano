@@ -8,3 +8,7 @@ desktop.ini
 .DS_Store
 # registros de verificación: se regeneran al correr el verificador
 data/verificacion-*.json
+
+# cache de wrangler: no va al repo
+worker/.wrangler/
+.wrangler/
