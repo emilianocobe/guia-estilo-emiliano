@@ -858,7 +858,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
   var EST=[["Bright Spring", "Primavera brillante", "cálida"], ["True Spring", "Primavera cálida", "cálida"], ["Light Spring", "Primavera luminosa", "cálida"], ["Light Summer", "Verano luminoso", "fría"], ["True Summer", "Verano frío", "fría"], ["Soft Summer", "Verano suave", "fría"], ["Soft Autumn", "Otoño suave", "cálida"], ["True Autumn", "Otoño cálido", "cálida"], ["Dark Autumn", "Otoño profundo", "cálida"], ["Dark Winter", "Invierno profundo", "fría"], ["True Winter", "Invierno frío", "fría"], ["Bright Winter", "Invierno brillante", "fría"]];
   var tocados={},nTocados=0;
 
-  function grupoRadio(items,alSeleccionar){
+  function grupoRadio(items,alSeleccionar,sinHover){
     function sel(i,foco){
       items.forEach(function(el,k){
         var on=k===i;
@@ -870,7 +870,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
     }
     items.forEach(function(el,i){
       el.addEventListener('click',function(){sel(i,false);});
-      el.addEventListener('mouseenter',function(){sel(i,false);});
+      if(!sinHover) el.addEventListener('mouseenter',function(){sel(i,false);});
       el.addEventListener('keydown',function(ev){
         var k=ev.key,n=null;
         if(k==='ArrowRight'||k==='ArrowDown')n=(i+1)%items.length;
@@ -1185,7 +1185,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
       if(!e.target.closest('.desple')) cerrarD(false);
     });
 
-    grupoRadio([].slice.call(document.querySelectorAll('.perch button')),function(i){cat=i;pintar(true);});
+    grupoRadio([].slice.call(document.querySelectorAll('.perch button')),function(i){cat=i;pintar(true);},true);
     [['[data-b]','b'],['[data-n]','n'],['[data-o]','o']].forEach(function(par){
       var bs=[].slice.call(document.querySelectorAll('.tamiz '+par[0]));
       bs.forEach(function(b){
