@@ -545,6 +545,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
 .vestidor{border:1px solid var(--g25);border-radius:2px;padding:clamp(16px,2.6vw,26px);margin-top:16px}
 .vestidor .cab{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;margin-bottom:14px}
 .vestidor .cab h3{font-weight:600;font-size:19px;flex:1}
+.vestidor .cab .v-datos{color:var(--tinta)}
+.vestidor .cab .v-datos b{font-size:15px;color:var(--ultramar)}
+.vestidor .cab .gasto{color:var(--g75);font-weight:600}
 .pro-g{display:grid;grid-template-columns:minmax(180px,260px) 1fr;gap:clamp(16px,2.4vw,26px);align-items:start}
 @media (max-width:700px){.pro-g{grid-template-columns:1fr}}
 .suelta{position:relative;border:1px dashed var(--g25);border-radius:2px;aspect-ratio:3/4;display:grid;
@@ -1327,7 +1330,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
     /* — el probador: tu foto y las prendas del look — */
     var VESTIDOR='';   /* la dirección del Worker, cuando esté publicado */
     var FOTO='mc-foto-emiliano';
-    var miFoto=null, generando=false;
+    var miFoto=null, generando=false, quedanHoy=null;
 
     var qs=function(i){return document.getElementById(i);};
     var pSuelta=qs('pro-suelta'), pArch=qs('pro-archivo'), pIr=qs('pro-ir'), pEst=qs('pro-estado'),
@@ -1413,6 +1416,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
                       .map(function(S){return S.n.toLowerCase();});
       var razon='';
       if(!VESTIDOR) razon='El probador todavía no está enchufado.';
+      else if(quedanHoy===0) razon='Se acabaron las generaciones de hoy. El contador vuelve a cero a las 00 UTC.';
       else if(!miFoto) razon='Falta tu foto.';
       else if(faltan.length) razon='Falta '+faltan.join(', ')+' en la percha.';
       pIr.disabled=!!razon || generando;
@@ -1421,10 +1425,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
     }
     window.__revisarProbador=revisar;
 
+    function pintarCupo(c){
+      if(typeof c.quedan!=='number') return;
+      quedanHoy=c.quedan;
+      var g=c.tope===1?'generación':'generaciones';
+      pCupo.innerHTML='<b>'+c.quedan+'</b> de '+c.tope+' '+g+' hoy'+
+        (typeof c.gastado==='number' ? ' <span class="gasto">· US$'+c.gastado.toFixed(2)+' de US$'+c.bolsillo+'</span>' : '');
+      revisar();
+    }
     function verCupo(){
       if(!VESTIDOR) return;
       fetch(VESTIDOR+'/cupo').then(function(r){return r.json();}).then(function(c){
-        if(typeof c.quedan==='number') pCupo.textContent='Te quedan '+c.quedan+' de '+c.tope+' pruebas hoy';
+        pintarCupo(c);
       }).catch(function(){});
     }
 
@@ -1453,12 +1465,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
           })
         }).then(function(r){ return r.json().then(function(j){ return {r:r,j:j,caidas:caidas}; }); });
       }).then(function(o){
-        if(!o.r.ok) throw new Error(o.j.error||('el vestidor contestó '+o.r.status));
+        if(!o.r.ok){ pintarCupo(o.j); throw new Error(o.j.error||('el vestidor contestó '+o.r.status)); }
         pImg.src='data:'+(o.j.mime||'image/jpeg')+';base64,'+o.j.imagen;
         pBajar.href=pImg.src;
         pSal.hidden=false;
         decir(o.caidas.length ? ('Listo, sin '+o.caidas.map(function(c){return c.rot;}).join(' ni ')) : 'Listo');
-        if(typeof o.j.quedan==='number') pCupo.textContent='Te quedan '+o.j.quedan+' de '+o.j.tope+' pruebas hoy';
+        pintarCupo(o.j);
         listo();
         pSal.scrollIntoView({block:'nearest',behavior:'smooth'});
       }).catch(function(e){ decir(enCastellano(e),true); listo(); });

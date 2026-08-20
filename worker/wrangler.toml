@@ -3,14 +3,17 @@ main = "vestidor.js"
 compatibility_date = "2026-08-20"
 
 [vars]
-# Sólo estos orígenes reciben respuesta. Dejalo vacío y contesta a cualquiera.
+# Solo estos origenes reciben respuesta. Dejalo vacio y contesta a cualquiera.
 ORIGENES = "https://emilianocobe.github.io,http://localhost:8123"
-# Cuántas pruebas puede hacer un mismo visitante por día.
-TOPE_DIARIO = "10"
-# Techo del sitio entero por día, para que nadie te vacíe la cuenta.
-TECHO_DIARIO = "60"
 
-# El contador de pruebas. Creá el namespace y pegá su id acá:
+# El freno de mano de tu factura: cuanto podes gastar por dia, en dolares.
+TECHO_USD_DIARIO = "1"
+# Lo que cuesta cada imagen en Google. A 2K son US$0,134; a 4K, US$0,24.
+COSTO_IMAGEN_USD = "0.134"
+# Cuantas generaciones puede hacer un mismo visitante por dia.
+TOPE_DIARIO = "7"
+
+# El contador. Crea el namespace y pega su id aca:
 #   npx wrangler kv namespace create CUPOS
 [[kv_namespaces]]
 binding = "CUPOS"

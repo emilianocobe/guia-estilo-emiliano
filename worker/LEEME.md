@@ -1,10 +1,10 @@
 # El vestidor
 
-Guarda la clave de Google, pone el tope diario y le habla a Nano Banana Pro
+Guarda la clave de Google, cuida la factura y le habla a Nano Banana Pro
 (`gemini-3-pro-image`). El sitio nunca ve la clave: manda las fotos, recibe la imagen.
 
-Corre en el plan gratuito de Cloudflare. Cada prueba te cuesta unos **US$0,13**
-en la cuenta de Google, no en la de Cloudflare.
+Corre en el plan gratuito de Cloudflare. Lo que se gasta se gasta en la cuenta
+de Google, y tiene un techo diario en dólares.
 
 ---
 
@@ -49,28 +49,34 @@ Te devuelve una dirección tipo
 
 ---
 
-## Los diales
+## El techo de la factura
 
-Están en `wrangler.toml` y se cambian sin tocar código:
+El freno está puesto en **US$1 por día**, y el Worker lo traduce a generaciones
+solo: divide el presupuesto por lo que cuesta cada imagen.
 
 | dial | qué hace | por defecto |
 |---|---|---|
+| `TECHO_USD_DIARIO` | Cuánto podés gastar por día, en dólares. | 1 |
+| `COSTO_IMAGEN_USD` | Lo que Google cobra por imagen. A 2K son 0.134; a 4K, 0.24. | 0.134 |
+| `TOPE_DIARIO` | Generaciones por visitante por día. | 7 |
 | `ORIGENES` | Qué sitios pueden pedirle. Vacío = cualquiera. | el sitio publicado y `localhost:8123` |
-| `TOPE_DIARIO` | Pruebas por visitante por día. | 10 |
-| `TECHO_DIARIO` | Pruebas del sitio entero por día. Es el freno de mano de tu factura. | 60 |
 
-Con el techo en 60, el peor día posible te cuesta unos **US$8**.
+Con US$1 y el modelo en 2K, salen **7 generaciones por día**. Si algún día
+subís a 4K, cambiás `COSTO_IMAGEN_USD` a `0.24` y el Worker recalcula solo:
+pasan a ser 4. El presupuesto no se toca.
 
-Después de cambiarlos: `npx wrangler deploy`.
+Después de cambiar cualquier dial: `npx wrangler deploy`.
+
+El contador se reinicia a las **00 UTC**, no a la medianoche argentina.
 
 ---
 
 ## Qué contesta
 
-**`GET /cupo`** — cuántas pruebas te quedan hoy.
+**`GET /cupo`**
 
 ```json
-{ "usadas": 2, "tope": 10, "quedan": 8 }
+{ "quedan": 5, "tope": 7, "usadas": 2, "gastado": 0.27, "bolsillo": 1, "costo": 0.134 }
 ```
 
 **`POST /vestir`**
@@ -84,10 +90,32 @@ Después de cambiarlos: `npx wrangler deploy`.
 }
 ```
 
-Devuelve `{ "imagen": "<base64>", "mime": "image/jpeg", "quedan": 7 }`, o un
-`error` en castellano con el código que corresponda: `429` si se acabó el cupo,
-`502` si Google falló o no devolvió imagen, `403` si el pedido viene de un
-origen que no está en la lista.
+`rot` puede ser `capa`, `arriba`, `pantalon`, `calzado` o `foco`. El Worker las
+ordena del cuerpo hacia afuera antes de mandarlas, así los números de imagen del
+encargo coinciden con el orden real de las capas.
+
+Devuelve `{ "imagen": "<base64>", "mime": "image/jpeg", "quedan": 4, ... }`, o un
+`error` en castellano: `429` si se acabó el cupo o el presupuesto, `502` si Google
+falló o no devolvió imagen, `403` si el pedido viene de un origen que no está en
+la lista.
+
+---
+
+## El encargo
+
+El texto del prompt está en `vestidor.js` y es el que escribiste vos, palabra por
+palabra. Lo único que se arma en el momento son tres partes, porque dependen de
+qué casilleros llenaste en la percha:
+
+- **cuántas imágenes van** — "Five reference images" o las que sean;
+- **la lista de trabajos** — qué es cada imagen;
+- **el orden de capas** — la frase de `THE TASK`.
+
+Tu versión original describía cuatro prendas y no incluía pantalón. Como el
+armador tiene un casillero de pantalón, esa frase ahora sale de la percha: si
+armás capa + arriba + pantalón + calzado, dice cinco imágenes y ubica cada prenda
+donde corresponde. El candado de inventario cuenta las prendas reales, así que
+sigue prohibiendo cualquier quinta prenda inventada.
 
 ---
 
