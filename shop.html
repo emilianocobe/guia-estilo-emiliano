@@ -456,9 +456,16 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
 .perch button{display:flex;align-items:center;gap:9px;background:var(--papel);border:1px solid var(--g25);
   border-radius:2px;padding:10px 13px;cursor:pointer;min-height:44px;color:var(--g75);
   font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
-.perch button[aria-checked="true"]{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+.perch button::before{content:'';flex:none;width:9px;height:9px;border-radius:50%;
+  border:1.5px solid var(--g25);background:transparent;transition:none}
+.perch button:hover{border-color:var(--ultramar);color:var(--ultramar)}
+.perch button:hover::before{border-color:var(--ultramar)}
+.perch button[aria-checked="true"],.perch button[aria-checked="true"]:hover{
+  background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+.perch button[aria-checked="true"]::before{background:var(--menta);border-color:var(--menta)}
 .perch .n{font-variant-numeric:tabular-nums;color:var(--ultramar)}
-.perch button[aria-checked="true"] .n{color:var(--menta)}
+.perch button:hover .n{color:var(--ultramar)}
+.perch button[aria-checked="true"] .n,.perch button[aria-checked="true"]:hover .n{color:var(--menta)}
 .tamiz{display:flex;flex-wrap:wrap;gap:16px;align-items:center;padding:12px 0 4px;border-top:1px solid var(--g06)}
 .tamiz .juego{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
 .tamiz .rot{font-family:var(--display);font-weight:600;font-size:9.5px;letter-spacing:.22em;
@@ -466,6 +473,33 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
 .tamiz button{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
   background:var(--papel);border:1px solid var(--g25);border-radius:2px;padding:9px 10px;min-height:44px;min-width:44px;cursor:pointer;color:var(--g75)}
 .tamiz button[aria-pressed="true"]{border-color:var(--tinta);color:var(--tinta);background:var(--g06)}
+/* — el cuarto tamiz: la tienda — */
+.tamiz.seguida{border-top:none;padding-top:0}
+.desple{position:relative}
+.tamiz .desple-b{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:600;font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;background:var(--papel);border:1px solid var(--g25);
+  border-radius:2px;padding:9px 11px;min-height:44px;min-width:210px;cursor:pointer;color:var(--tinta)}
+.tamiz .desple-b:hover{border-color:var(--ultramar);color:var(--ultramar)}
+.tamiz .desple-b[aria-expanded="true"]{border-color:var(--tinta);color:var(--tinta)}
+.tamiz .desple-b .n{font-variant-numeric:tabular-nums;color:var(--ultramar)}
+.tamiz .desple-b .flecha{margin-left:auto;flex:none;width:7px;height:7px;
+  border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+  transform:translateY(-2px) rotate(45deg)}
+.tamiz .desple-b[aria-expanded="true"] .flecha{transform:translateY(1px) rotate(225deg)}
+.desple-p{display:none;position:absolute;top:calc(100% + 5px);left:0;z-index:60;min-width:100%;white-space:nowrap;
+  max-height:min(340px,58vh);overflow-y:auto;background:var(--papel);border:1px solid var(--tinta);
+  border-radius:2px;list-style:none;margin:0;padding:4px;box-shadow:0 8px 26px rgba(32,32,32,.15)}
+.desple-p[data-abierto]{display:block}
+.desple-p li{display:flex;align-items:center;gap:14px;font-family:var(--display);font-weight:600;font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;padding:0 10px;min-height:44px;cursor:pointer;
+  color:var(--tinta);border-radius:2px}
+.desple-p li.foco{background:var(--g06);color:var(--tinta)}
+.desple-p li[aria-selected="true"]{background:var(--tinta);color:var(--papel)}
+.desple-p li .n{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--ultramar)}
+.desple-p li[aria-selected="true"] .n{color:var(--menta)}
+.desple-p .raya{height:1px;background:var(--g06);margin:4px 6px;padding:0;min-height:0;pointer-events:none}
+@media (hover:hover){.desple-p li:hover{background:var(--g06);color:var(--tinta)}
+  .desple-p li[aria-selected="true"]:hover{background:var(--tinta);color:var(--papel)}}
 #mi-placard b{font-size:13px}
 #mi-placard a{color:var(--ultramar)}
 .cuenta{font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
@@ -602,6 +636,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
     <div class="juego" role="group" aria-label="Bloque del cuerpo"><span class="rot">Bloque</span><button type="button" data-b="" aria-pressed="true">Todos</button><button type="button" data-b="0" aria-pressed="false">B1</button><button type="button" data-b="1" aria-pressed="false">B2</button><button type="button" data-b="2" aria-pressed="false">B3</button><button type="button" data-b="3" aria-pressed="false">B4</button></div>
     <div class="juego" role="group" aria-label="Nivel de intensidad"><span class="rot">Nivel</span><button type="button" data-n="" aria-pressed="true">Todos</button><button type="button" data-n="0" aria-pressed="false">Base</button><button type="button" data-n="1" aria-pressed="false">Puente</button><button type="button" data-n="2" aria-pressed="false">Expresión</button></div>
     <div class="juego" role="group" aria-label="Orden de la lista"><span class="rot">Orden</span><button type="button" data-o="c" aria-pressed="true">Elegidas primero</button><button type="button" data-o="asc" aria-pressed="false">Precio ↑</button><button type="button" data-o="desc" aria-pressed="false">Precio ↓</button></div>
+  </div>
+  <div class="tamiz seguida">
+    <div class="juego">
+      <span class="rot" id="tienda-rot">Tienda</span>
+      <div class="desple">
+        <button type="button" class="desple-b" id="tienda-b" aria-haspopup="listbox"
+          aria-expanded="false" aria-labelledby="tienda-rot tienda-b"><span id="tienda-txt">Todas</span>
+          <span class="flecha" aria-hidden="true"></span></button>
+        <ul class="desple-p" id="tienda-p" role="listbox" aria-labelledby="tienda-rot" tabindex="-1"></ul>
+      </div>
+    </div>
   </div>
   <p class="cuenta" id="pc-cuenta" role="status" aria-live="polite"></p>
   <p class="cuenta" id="mi-placard" style="color:var(--ultramar);margin-top:-6px"></p>
@@ -989,12 +1034,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
     var grid=document.getElementById('pc-grid'), cuenta=document.getElementById('pc-cuenta'),
         mas=document.getElementById('pc-mas');
     if(!grid) return;
-    var cat=0, blo='', niv='', ord='c', tope=24;
+    var cat=0, blo='', niv='', ord='c', tie='', tope=24;
     var pesos=function(n){return '$ '+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');};
     var img=function(v){return (typeof v==='string')?v:(PC.pref[v[0]]+v[1]);};
     function filtrar(){
       var l=PC.items.filter(function(f){
-        return f[4]===cat && (blo===''||f[5]===+blo) && (niv===''||f[6]===+niv);
+        return f[4]===cat && (blo===''||f[5]===+blo) && (niv===''||f[6]===+niv) && (tie===''||f[11]===tie);
       });
       if(ord==='asc') l=l.slice().sort(function(a,b){return (a[3]||1e9)-(b[3]||1e9);});
       else if(ord==='desc') l=l.slice().sort(function(a,b){return (b[3]||0)-(a[3]||0);});
@@ -1033,7 +1078,19 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
       });
       return art;
     }
+    function tiendasVivas(){
+      var m={};
+      PC.items.forEach(function(f){
+        if(f[4]!==cat) return;
+        if(blo!=='' && f[5]!==+blo) return;
+        if(niv!=='' && f[6]!==+niv) return;
+        m[f[11]]=(m[f[11]]||0)+1;
+      });
+      return Object.keys(m).sort(function(x,y){return m[y]-m[x] || x.localeCompare(y,'es');})
+        .map(function(k){return [k,m[k]];});
+    }
     function pintar(reinicio){
+      if(reinicio) sincronizarTiendas();
       var l=filtrar();
       if(reinicio){grid.innerHTML=''; tope=24;}
       var hasta=Math.min(tope,l.length);
@@ -1054,6 +1111,80 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
         ? 'Tu placard · <b>'+n+'</b> '+(n===1?'prenda':'prendas')+' <a href="looks.html#placard">verlo y armar ↗</a>'
         : 'Tu placard está vacío · el <b>+</b> de cada ficha guarda lo que ya tenés';
     }
+
+    /* — el desplegable de tienda — */
+    var dBoton=document.getElementById('tienda-b'), dPanel=document.getElementById('tienda-p'),
+        dTexto=document.getElementById('tienda-txt'), dVivas=[], dFoco=-1;
+
+    function sincronizarTiendas(){
+      dVivas=tiendasVivas();
+      var hay=dVivas.some(function(t){return t[0]===tie;});
+      if(tie!=='' && !hay) tie='';
+      var total=dVivas.reduce(function(s,t){return s+t[1];},0);
+      dTexto.innerHTML = tie===''
+        ? 'Todas <span class="n">'+total+'</span>'
+        : tie.toUpperCase()+' <span class="n">'+(dVivas.filter(function(t){return t[0]===tie;})[0]||[0,0])[1]+'</span>';
+      dPanel.innerHTML='';
+      var fila=function(valor,rot,n){
+        var li=document.createElement('li');
+        li.setAttribute('role','option');
+        li.setAttribute('aria-selected', tie===valor?'true':'false');
+        li.dataset.v=valor;
+        li.innerHTML='<span>'+rot+'</span><span class="n">'+n+'</span>';
+        li.addEventListener('click',function(){elegirTienda(valor);});
+        dPanel.appendChild(li);
+        return li;
+      };
+      fila('','Todas',total);
+      var raya=document.createElement('li'); raya.className='raya'; raya.setAttribute('aria-hidden','true');
+      dPanel.appendChild(raya);
+      dVivas.forEach(function(t){fila(t[0],t[0],t[1]);});
+    }
+    function opciones(){return [].slice.call(dPanel.querySelectorAll('li:not(.raya)'));}
+    function abrirD(){
+      dPanel.setAttribute('data-abierto',''); dBoton.setAttribute('aria-expanded','true');
+      var o=opciones(); dFoco=Math.max(0,o.map(function(x){return x.dataset.v;}).indexOf(tie));
+      marcarFoco();
+      var f=o[dFoco]; if(f) f.scrollIntoView({block:'nearest'});
+      dPanel.focus();
+    }
+    function cerrarD(devolver){
+      dPanel.removeAttribute('data-abierto'); dBoton.setAttribute('aria-expanded','false');
+      dFoco=-1; if(devolver) dBoton.focus();
+    }
+    function marcarFoco(){
+      var o=opciones();
+      o.forEach(function(x,i){x.classList.toggle('foco',i===dFoco);});
+      if(o[dFoco]){ if(!o[dFoco].id) o[dFoco].id='t-op-'+dFoco; dPanel.setAttribute('aria-activedescendant',o[dFoco].id); }
+    }
+    function moverFoco(paso){
+      var o=opciones(); if(!o.length) return;
+      dFoco=(dFoco+paso+o.length)%o.length; marcarFoco(); o[dFoco].scrollIntoView({block:'nearest'});
+    }
+    function elegirTienda(v){ tie=v; cerrarD(true); pintar(true); }
+
+    dBoton.addEventListener('click',function(){
+      if(dPanel.hasAttribute('data-abierto')) cerrarD(false); else abrirD();
+    });
+    dBoton.addEventListener('keydown',function(e){
+      if(e.key==='ArrowDown'||e.key==='ArrowUp'||e.key==='Enter'||e.key===' '){
+        e.preventDefault(); if(!dPanel.hasAttribute('data-abierto')) abrirD();
+      } else if(e.key==='Escape') cerrarD(false);
+    });
+    dPanel.addEventListener('keydown',function(e){
+      if(e.key==='ArrowDown'){e.preventDefault();moverFoco(1);}
+      else if(e.key==='ArrowUp'){e.preventDefault();moverFoco(-1);}
+      else if(e.key==='Home'){e.preventDefault();dFoco=0;marcarFoco();}
+      else if(e.key==='End'){e.preventDefault();dFoco=opciones().length-1;marcarFoco();}
+      else if(e.key==='Enter'||e.key===' '){e.preventDefault();var o=opciones()[dFoco]; if(o) elegirTienda(o.dataset.v);}
+      else if(e.key==='Escape'){e.preventDefault();cerrarD(true);}
+      else if(e.key==='Tab') cerrarD(false);
+    });
+    document.addEventListener('click',function(e){
+      if(!dPanel.hasAttribute('data-abierto')) return;
+      if(!e.target.closest('.desple')) cerrarD(false);
+    });
+
     grupoRadio([].slice.call(document.querySelectorAll('.perch button')),function(i){cat=i;pintar(true);});
     [['[data-b]','b'],['[data-n]','n'],['[data-o]','o']].forEach(function(par){
       var bs=[].slice.call(document.querySelectorAll('.tamiz '+par[0]));
