@@ -150,3 +150,45 @@ curl https://vestidor-emiliano.TU-USUARIO.workers.dev/cupo
 ```
 
 Si contesta el JSON del cupo, el Worker está vivo y la lista de orígenes te deja pasar.
+
+---
+
+## La facturación de Google: dos billeteras, no una
+
+Esto costó una hora de confusión, así que queda escrito.
+
+La cuenta de Google Cloud tiene **dos saldos separados**, y la consola los muestra
+como si fueran lo mismo:
+
+| billetera | para qué | cómo se paga |
+|---|---|---|
+| **Pospago** | servicios de Google Cloud | te facturan lo consumido |
+| **Prepago** | **la API de Gemini** | crédito comprado por adelantado |
+
+El vestidor usa **la de prepago**. Por eso podés ver *"Cuenta pagada"* en Cloud y
+al mismo tiempo recibir `Your prepayment credits are depleted` de la API: las dos
+cosas son ciertas.
+
+El crédito se carga en
+`console.cloud.google.com/billing/<ID>/payment`, panel derecho *Prepago: AI Studio*
+→ **Comprar créditos**.
+
+Dos cosas de la letra chica: los créditos **vencen al año** y **no son
+reembolsables**. Y la **recarga automática conviene dejarla desactivada** — el
+techo de un dólar por día vive en este Worker, pero una recarga automática haría
+que el gasto pueda seguir sin que lo decidas.
+
+### Los tres errores, en orden
+
+Al montarlo aparecen de a uno y cada uno significa otra cosa:
+
+| mensaje | qué falta |
+|---|---|
+| `al Worker le falta la clave` | el secreto no está, o su versión no se promovió a producción |
+| `free_tier_requests, limit: 0` | el proyecto no está vinculado a una cuenta de facturación |
+| `prepayment credits are depleted` | falta cargar crédito prepago |
+| `Unable to process input image` | **ya está todo bien**: llegó a Google y procesó |
+
+Cuidado con el segundo: agregar el secreto desde el panel crea una **versión
+nueva que no se despliega sola**. Hay que promoverla en *Deployments → ⋯ →
+Promote version*.
