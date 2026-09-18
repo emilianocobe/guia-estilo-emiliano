@@ -585,6 +585,50 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
 .pro-acciones{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .pro-guardar{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--g75);cursor:pointer}
 .pro-guardar input{width:17px;height:17px;accent-color:var(--ultramar);cursor:pointer}
+/* — la pregunta de intención y el registro de outfits — */
+.ir-percha{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ultramar);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+.intencion{margin-top:clamp(18px,3vw,28px);padding:clamp(14px,2.4vw,22px);border:1px solid var(--g25);border-radius:2px}
+.int-p{font-size:clamp(19px,2.4vw,24px);font-weight:500;margin:6px 0 14px}
+.int-op{display:flex;flex-wrap:wrap;gap:8px}
+.int-op button{display:flex;align-items:center;gap:10px;background:var(--papel);border:1px solid var(--g25);border-radius:2px;
+  padding:10px 14px;min-height:44px;cursor:pointer;color:var(--g75);font-size:13.5px}
+.int-op button span{font-size:15px;color:var(--g50)}
+.int-op button:hover{border-color:var(--ultramar);color:var(--ultramar)}
+.int-op button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
+.int-op button[aria-pressed="true"] span{color:var(--menta)}
+.reg-f{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px 18px;margin-top:clamp(20px,3vw,30px);
+  padding:clamp(16px,2.6vw,26px);border:1px solid var(--g25);border-radius:2px;align-items:end}
+.reg-f label,.reg-f legend{display:flex;flex-direction:column;gap:6px;font-family:var(--display);font-weight:600;font-size:9.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--g75)}
+.reg-f input[type=date],.reg-f input[type=text],.reg-f select{font:inherit;font-family:var(--body,inherit);font-size:14px;letter-spacing:0;
+  text-transform:none;color:var(--tinta);background:var(--papel);border:1px solid var(--g25);border-radius:2px;padding:10px;min-height:44px}
+.reg-f fieldset{border:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.reg-f fieldset legend{width:100%;margin-bottom:6px}
+.reg-f fieldset label{flex-direction:row;align-items:center;gap:0;letter-spacing:.1em}
+.reg-f fieldset input{position:absolute;opacity:0;width:1px;height:1px}
+.reg-f fieldset span{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0 10px;
+  border:1px solid var(--g25);border-radius:2px;cursor:pointer;color:var(--g75)}
+.reg-f fieldset input:checked+span{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
+.reg-f fieldset input:focus-visible+span{outline:2px solid var(--ultramar);outline-offset:2px}
+.reg-nota{grid-column:1/-1}
+.reg-ok{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:var(--tinta);
+  color:var(--papel);border:1px solid var(--tinta);border-radius:2px;padding:12px 18px;min-height:48px;cursor:pointer;justify-self:start}
+.reg-ok:hover{background:var(--ultramar);border-color:var(--ultramar)}
+.reg-lee{margin-top:22px}
+.reg-lee p{font-size:15px;line-height:1.5;margin:6px 0}
+.reg-barras{display:grid;gap:8px;margin:12px 0 4px;max-width:520px}
+.reg-barra{display:grid;grid-template-columns:90px 1fr 40px;align-items:center;gap:10px;font-size:12.5px}
+.reg-barra i{display:block;height:8px;background:var(--g06);border-radius:2px;overflow:hidden}
+.reg-barra i b{display:block;height:100%;background:var(--ultramar)}
+.reg-barra em{font-style:normal;font-variant-numeric:tabular-nums;color:var(--g75)}
+.reg-lista{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.reg-lista li{display:grid;grid-template-columns:auto 1fr auto;gap:4px 14px;align-items:center;border-top:1px solid var(--g06);padding-top:9px}
+.reg-lista .f{font-family:var(--display);font-weight:600;font-size:10px;letter-spacing:.12em;color:var(--g75);font-variant-numeric:tabular-nums}
+.reg-lista .t{font-size:14px}
+.reg-lista .t small{display:block;color:var(--g75);font-size:12.5px}
+.reg-lista button{border:1px solid var(--g25);background:var(--papel);border-radius:2px;min-width:44px;min-height:44px;cursor:pointer;color:var(--g75)}
+.reg-lista button:hover{border-color:var(--tinta);color:var(--tinta)}
 @media (prefers-reduced-motion:reduce){
   .vis .riel,.vis .cel,.vis .aguja{animation:none!important;transform:none}
   .aguja{transition:none}
@@ -677,24 +721,25 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
     </div>
     <div>
       <h1 class="display xl">Tus<br>seis <span class="ac">looks</span></h1>
-      <p class="lead" style="margin-top:26px;max-width:46ch">Uno por cada contexto de tu semana, <strong>armado con prendas de tu shop</strong>. No son ideas: son piezas concretas, en tu talle, que podés comprar hoy.</p>
+      <p class="lead" style="margin-top:26px;max-width:48ch">Uno por cada contexto de tu semana, <strong>armado con prendas de tu shop</strong>: piezas reales, en tu talle. No son uniformes para repetir — son tu sistema funcionando. Más abajo está la percha para que armes los tuyos.</p>
+      <p style="margin-top:18px"><a class="ir-percha" href="#armador">Armá el tuyo ↓</a></p>
       <p class="v-datos" style="margin-top:22px" data-scramble>6 looks · 28 piezas · tu talle</p>
     </div>
   </div>
 </header>
 
 <div class="mq" aria-hidden="true"><span>
-  基 BASE · 橋 PUENTE · 表現 EXPRESIÓN PLENA · UN FOCO A LA VEZ · EL TIRO NO NEGOCIA · CADERA ALTA · CERCA DE LA CARA &nbsp;·&nbsp;
-  基 BASE · 橋 PUENTE · 表現 EXPRESIÓN PLENA · UN FOCO A LA VEZ · EL TIRO NO NEGOCIA · CADERA ALTA · CERCA DE LA CARA &nbsp;·&nbsp;
+  基 BASE · 橋 PUENTE · 表現 EXPRESIÓN PLENA · UN FOCO A LA VEZ · EL TIRO SE QUEDA ARRIBA · CADERA ALTA · CERCA DE LA CARA &nbsp;·&nbsp;
+  基 BASE · 橋 PUENTE · 表現 EXPRESIÓN PLENA · UN FOCO A LA VEZ · EL TIRO SE QUEDA ARRIBA · CADERA ALTA · CERCA DE LA CARA &nbsp;·&nbsp;
 </span></div>
 
 <main class="wrap">
   <p class="v-datos rev">Cómo leerlos</p>
   <p class="lead rev d1" style="margin-top:14px;max-width:64ch">Cada look cierra en cuatro cosas a la vez: <strong>concepto</strong> —qué está diciendo—, <strong>color</strong> —todo sale de tu invierno profundo—, <strong>forma</strong> —el tiro y el largo que te corresponden— e <strong>intención</strong> —cuánto de vos se ve, según quién mira.</p>
 
-<section class="look obs" id="look-aula"><div class="look-cab"><div><p class="look-num">Look 01 / 06</p><h2 class="rev">El aula</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">基</span><span>base</span><span>Aula universitaria</span></div></div><div><p class="tesis rev d1">Azul marino, blanco y negro. Nada compite: la autoridad la sostiene el corte y vos no pensás en la ropa en toda la clase.</p><p class="nota rev d2">El hombro estructurado del Gregory corrige tu hombro suave, y el blanco frío pegado a la cara es el que más te favorece. Cero focos de atención — acá el foco sos vos hablando.</p><p class="cierre rev d2"><span>5 piezas</span><span>El look completo · <b>$ 965.270</b></span></p></div></div><div class="prod-grid rev d3" data-look="aula"></div></section>
+<section class="look obs" id="look-aula"><div class="look-cab"><div><p class="look-num">Look 01 / 06</p><h2 class="rev">El aula</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">基</span><span>base</span><span>Aula universitaria</span></div></div><div><p class="tesis rev d1">Azul marino, blanco y negro. Nada compite: la autoridad la sostiene el corte y vos no pensás en la ropa en toda la clase.</p><p class="nota rev d2">El hombro estructurado del Gregory le suma una línea firme a tu hombro suave —más presencia frente al aula—, y el blanco frío pegado a la cara es el que más te favorece. Cero focos de atención — acá el foco sos vos hablando.</p><p class="cierre rev d2"><span>5 piezas</span><span>El look completo · <b>$ 965.270</b></span></p></div></div><div class="prod-grid rev d3" data-look="aula"></div></section>
 <section class="look obs" id="look-cliente"><div class="look-cab"><div><p class="look-num">Look 02 / 06</p><h2 class="rev">La reunión</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">基</span><span>base</span><span>Reunión con cliente</span></div></div><div><p class="tesis rev d1">El ambo entero en gris rayado, camisa negra, y un solo punto de color abajo. Te separás del resto sin encender ninguna alarma.</p><p class="nota rev d2">Saco y pantalón son el mismo Cádiz: cuando el gris se repite exacto, el ojo lee una sola pieza y la silueta se estira. El único foco está lejos de la cara, en el bordó del mocasín.</p><p class="cierre rev d2"><span>5 piezas</span><span>El look completo · <b>$ 914.170</b></span></p></div></div><div class="prod-grid rev d3" data-look="cliente"></div></section>
-<section class="look obs" id="look-agencia"><div class="look-cab"><div><p class="look-num">Look 03 / 06</p><h2 class="rev">El laboratorio</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">橋</span><span>puente</span><span>Agencia, día interno</span></div></div><div><p class="tesis rev d1">Petróleo sobre azul, con el tejido a rayas como único quiebre. Tu city pop en el lugar donde más libertad tenés.</p><p class="nota rev d2">El wide leg entra recién acá, y funciona porque el buzo termina en la cadera alta y deja la cintura a la vista: el volumen va por la pierna, nunca por la cadera caída.</p><p class="cierre rev d2"><span>5 piezas</span><span>El look completo · <b>$ 637.790</b></span></p></div></div><div class="prod-grid rev d3" data-look="agencia"></div></section>
+<section class="look obs" id="look-agencia"><div class="look-cab"><div><p class="look-num">Look 03 / 06</p><h2 class="rev">El laboratorio</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">橋</span><span>puente</span><span>Agencia, día interno</span></div></div><div><p class="tesis rev d1">Petróleo sobre azul, con el tejido a rayas como único quiebre. Tu city pop en el lugar donde más libertad tenés.</p><p class="nota rev d2">El wide leg entra recién acá, y funciona porque el buzo termina en la cadera alta y deja la cintura a la vista: el volumen va por la pierna y la cintura queda a la vista.</p><p class="cierre rev d2"><span>5 piezas</span><span>El look completo · <b>$ 637.790</b></span></p></div></div><div class="prod-grid rev d3" data-look="agencia"></div></section>
 <section class="look obs" id="look-evento"><div class="look-cab"><div><p class="look-num">Look 04 / 06</p><h2 class="rev">El evento</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">橋</span><span>puente</span><span>Evento del rubro</span></div></div><div><p class="tesis rev d1">Negro sobre negro, con volumen japonés. En una sala llena de gente de tu rubro, lo que se recuerda es la silueta.</p><p class="nota rev d2">Tres piezas de Panni Margot que dialogan entre sí: el blazer oversize, la remera y el pantalón. No hay color que resolver — el gesto es la forma.</p><p class="cierre rev d2"><span>5 piezas</span><span>El look completo · <b>$ 802.600</b></span></p></div></div><div class="prod-grid rev d3" data-look="evento"></div></section>
 <section class="look obs" id="look-noche"><div class="look-cab"><div><p class="look-num">Look 05 / 06</p><h2 class="rev">La noche</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">表現</span><span>expresión</span><span>Noche · social</span></div></div><div><p class="tesis rev d1">Cuero cruzado, estampa en blanco y negro y sastrería oscura. Tu registro completo, sin traducción para nadie.</p><p class="nota rev d2">La estampa puede ir pegada a la cara porque es fría: blanco y negro, sin una gota de cálido. El perfecto cruzado suma el hombro que el resto del look no trae, y el charol del Gambino cierra la nota brillante.</p><p class="cierre rev d2"><span>4 piezas</span><span>El look completo · <b>$ 834.100</b></span></p></div></div><div class="prod-grid rev d3" data-look="noche"></div></section>
 <section class="look obs" id="look-libre"><div class="look-cab"><div><p class="look-num">Look 06 / 06</p><h2 class="rev">El día libre</h2><div class="marco-ctx rev d1"><span class="niv" lang="ja">橋</span><span>puente</span><span>Día libre</span></div></div><div><p class="tesis rev d1">Verde bosque y denim negro. Bajo riesgo, mucha información: el mejor día para estrenar.</p><p class="nota rev d2">La boina hace foco por forma y no por color, así el bordado del tejido se lee solo. Denim recto, no wide: acá el volumen no hace falta.</p><p class="cierre rev d2"><span>4 piezas</span><span>El look completo · <b>$ 499.100</b></span></p></div></div><div class="prod-grid rev d3" data-look="libre"></div></section>
@@ -705,8 +750,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
   <p class="v-datos rev" data-scramble>Armá el tuyo</p>
   <h2 class="display rev" style="font-size:clamp(28px,4.4vw,52px);margin:10px 0 14px">Cinco lugares,<br>uno por <span class="subrayado">vez</span></h2>
   <p class="rev d1" style="max-width:60ch">Cada lugar abre un cajón con los candidatos de esa categoría. Lo que ya tenés aparece primero y con sello, y abajo la lectura te dice si el conjunto se sostiene.</p>
+  <div class="intencion rev d1" role="group" aria-labelledby="int-p">
+    <p class="v-datos">Antes de abrir el placard</p>
+    <p class="int-p" id="int-p">¿Cuánto de vos querés que se vea hoy?</p>
+    <div class="int-op">
+      <button type="button" data-i="0" aria-pressed="false"><span lang="ja">基</span>Lo justo: que hable el corte</button>
+      <button type="button" data-i="1" aria-pressed="false"><span lang="ja">橋</span>Un gesto reconocible</button>
+      <button type="button" data-i="2" aria-pressed="false"><span lang="ja">表現</span>Todo tu universo</button>
+    </div>
+  </div>
   <div class="percha-g rev d2" style="margin-top:clamp(20px,3vw,32px)" id="percha"></div>
   <div class="lectura-c rev d2" id="lectura"></div>
+  <p class="rev d2" style="margin-top:12px"><a class="ir-percha" href="#registro" data-reg-percha>¿Lo usaste? Anotalo en tu registro ↓</a></p>
 
   <div class="vestidor rev d2" id="vestidor">
     <div class="cab">
@@ -736,6 +791,44 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
       <p class="pro-nota" style="margin-top:11px">Es un dibujo del modelo, no una prueba de calce: te muestra la idea del conjunto, no si el talle te va. Lo que dice si el look se sostiene es la lectura de acá arriba.</p>
     </div>
   </div>
+</section>
+
+<section class="wrap obs" id="registro">
+  <p class="v-datos rev" data-scramble>Tu registro</p>
+  <h2 class="display rev" style="font-size:clamp(28px,4.4vw,52px);margin:10px 0 14px">Lo que usaste,<br>y cómo te <span class="subrayado">sentiste</span></h2>
+  <p class="rev d1" style="max-width:62ch">Es el ejercicio que empezaste con Majo: anotar cada look con la ocasión, quién te miraba y qué tan cómodo estuviste. Con varios registros aparece algo que ningún análisis puede decirte de antemano: en qué contextos te sentís cómodo mostrando más de tu lado dramático, y en cuáles todavía no.</p>
+
+  <form class="reg-f rev d2" id="reg-form" autocomplete="off">
+    <label>Cuándo<input type="date" name="fecha" required></label>
+    <label>Qué te pusiste
+      <select name="look" required>
+        <option value="" disabled selected>Elegí un look</option>
+        <option value="aula" data-n="0" data-c="Aula universitaria">El aula · Aula universitaria</option><option value="cliente" data-n="0" data-c="Reunión con cliente">La reunión · Reunión con cliente</option><option value="agencia" data-n="1" data-c="Agencia, día interno">El laboratorio · Agencia, día interno</option><option value="evento" data-n="1" data-c="Evento del rubro">El evento · Evento del rubro</option><option value="noche" data-n="2" data-c="Noche · social">La noche · Noche · social</option><option value="libre" data-n="1" data-c="Día libre">El día libre · Día libre</option>
+        <option value="percha" data-c="">Lo que armé en la percha</option>
+        <option value="otro" data-c="">Otro</option>
+      </select></label>
+    <label>Dónde
+      <select name="contexto" required><option>Aula universitaria</option><option>Reunión con cliente</option><option>Agencia, día interno</option><option>Evento del rubro</option><option>Noche · social</option><option>Día libre</option><option>Otro</option></select></label>
+    <label>Quién te miraba<input type="text" name="audiencia" placeholder="alumnos, clientes, amigos…" maxlength="60"></label>
+    <fieldset class="reg-niv"><legend>Cuánto se vio</legend>
+      <label><input type="radio" name="nivel" value="0" required><span>Base</span></label>
+      <label><input type="radio" name="nivel" value="1"><span>Puente</span></label>
+      <label><input type="radio" name="nivel" value="2"><span>Expresión</span></label>
+    </fieldset>
+    <fieldset class="reg-com"><legend>Qué tan cómodo estuviste</legend>
+      <label><input type="radio" name="comodidad" value="1" required><span>1</span></label>
+      <label><input type="radio" name="comodidad" value="2"><span>2</span></label>
+      <label><input type="radio" name="comodidad" value="3"><span>3</span></label>
+      <label><input type="radio" name="comodidad" value="4"><span>4</span></label>
+      <label><input type="radio" name="comodidad" value="5"><span>5</span></label>
+    </fieldset>
+    <label class="reg-nota">Algo para acordarte<input type="text" name="nota" placeholder="qué funcionó, qué no, qué cambiarías" maxlength="140"></label>
+    <button type="submit" class="reg-ok">Anotar</button>
+  </form>
+
+  <div class="reg-lee rev d2" id="reg-lee" aria-live="polite"></div>
+  <ol class="reg-lista" id="reg-lista"></ol>
+  <p class="mut" style="font-size:13px;margin-top:14px">Tu registro vive en este navegador: no viaja a ningún servidor.</p>
 </section>
 
 <section class="wrap obs" id="placard">
@@ -1096,7 +1189,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
   }
 
   /* — la proporción — */
-  var FAM=[["Neutros fríos", 10, "Tu marco. Son los colores de las prendas de inversión: sastrería, abrigos, cuero.", "Cerca de la cara, sin riesgo."], ["Azules", 9, "Tu segundo neutro: el rango entero te sirve, del celeste frío al azul noche.", "Cerca de la cara — camisas y tejidos."], ["Verdes y petróleos", 9, "Frío profundo. Petróleo y esmeralda son de los que mejor te quedan pegados al rostro.", "Cerca de la cara — donde tu paleta paga más."], ["Rojos y vinos", 7, "Máximo contraste sobre negro. Un solo foco por look y alcanza.", "Foco de atención: bufanda, media, un tejido."], ["Violetas y magentas", 17, "El bloque más grande de los seis: tu lado dramático ya vive en tu propio color.", "De la cara a los pies, según cuánto quieras mostrar."], ["Amarillos y el único marrón", 4, "Los únicos cálidos que tu invierno tolera — los tonos de otoño de tu diagnóstico.", "Acento, nunca base. Y lejos de la cara si dudás."]];
+  var FAM=[["Neutros fríos", 10, "Tu marco. Son los colores de las prendas de inversión: sastrería, abrigos, cuero.", "Cerca de la cara, sin riesgo."], ["Azules", 9, "Tu segundo neutro: el rango entero te sirve, del celeste frío al azul noche.", "Cerca de la cara — camisas y tejidos."], ["Verdes y petróleos", 9, "Frío profundo. Petróleo y esmeralda son de los que mejor te quedan pegados al rostro.", "Cerca de la cara — donde tu paleta paga más."], ["Rojos y vinos", 7, "Máximo contraste sobre negro. Un solo foco por look y alcanza.", "Foco de atención: bufanda, media, un tejido."], ["Violetas y magentas", 17, "El bloque más grande de los seis: tu lado dramático ya vive en tu propio color.", "De la cara a los pies, según cuánto quieras mostrar."], ["Amarillos y el único marrón", 4, "Los únicos cálidos que dialogan con tu invierno — los tonos de otoño de tu diagnóstico.", "Mejor como acento que como base, y lejos de la cara si dudás."]];
   var chips=[].slice.call(document.querySelectorAll('.chip-f'));
   var celdas=[].slice.call(document.querySelectorAll('.cel'));
   var propLec=document.getElementById('prop-lec');
@@ -1122,7 +1215,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
 
   /* — las fichas de cada look, iguales a las del shop — */
   (function(){
-    var LK={"pref":["https://acdn-us.mitiendanube.com/stores/219/431/products/","https://acdn-us.mitiendanube.com/stores/007/091/524/products/","https://acdn-us.mitiendanube.com/stores/004/814/798/products/","https://acdn-us.mitiendanube.com/stores/003/024/577/products/","https://acdn-us.mitiendanube.com/stores/188/770/products/","https://acdn-us.mitiendanube.com/stores/002/222/533/products/","https://acdn-us.mitiendanube.com/stores/113/599/products/","https://acdn-us.mitiendanube.com/stores/005/292/364/products/","https://acdn-us.mitiendanube.com/stores/007/164/758/products/","https://cdn.shopify.com/s/files/1/0555/2537/6301/files/","https://acdn-us.mitiendanube.com/stores/001/574/296/products/","https://acdn-us.mitiendanube.com/stores/002/295/658/products/","https://acdn-us.mitiendanube.com/stores/001/343/707/products/","https://terribleenfant.com/wp-content/uploads/2021/09/","https://terribleenfant.com/wp-content/uploads/2025/02/","https://terribleenfant.com/wp-content/uploads/2024/05/","https://terribleenfant.com/wp-content/uploads/2024/06/","img/prendas/"],"looks":[{"id":"aula","n":"El aula","ctx":"Aula universitaria","niv":"base","k":"基","tesis":"Azul marino, blanco y negro. Nada compite: la autoridad la sostiene el corte y vos no pensás en la ropa en toda la clase.","nota":"El hombro estructurado del Gregory corrige tu hombro suave, y el blanco frío pegado a la cara es el que más te favorece. Cero focos de atención — acá el foco sos vos hablando.","total":965270,"piezas":[["SACO GREGORY - AZUL MARINO","https://www.garzongarcia.com.ar/productos/saco-gregory",[1,"saco_gregory_76_3-6a3915d9e040312bdc17673789802417-1024-1024.jpg"],358490,"L: 2 u.","Garçon García",0],["CAMISA BARI - BLANCO","https://www.garzongarcia.com.ar/productos/camisa-bariGARCON",[1,"camisa-bari-5a8afaa4cde55a58e117671222555413-1024-1024.jpg"],175890,"L: 3 u.","Garçon García",0],["PANTALON JEREY - AZUL MARINO","https://www.garzongarcia.com.ar/productos/pantalon-jerey",[1,"pantalon_jerey_12-331d785ec3b8e415db17672082008964-1024-1024.jpg"],196790,"44: 2 u. Ficha: 'corte ancho en piernas'.","Garçon García",0],["Zapatos Eminent - Negro","https://mmartinez.com.ar/productos/zapatos-eminent-negro-9m2bk",[10,"eminent-at-negro-01-53c80dd0d20db5d03417689208878548-640-0.webp"],224100,"42: 10 u. · 43: 6 u.","MMartinez",0],["Medias basicas negro","https://www.limaydenim.com/productos/medias-negras",[8,"limay_feb_25_1647-31b52256861bbea04917733426912374-1024-1024.webp"],10000,"T. único: 116 u.","Limay Denim",0]]},{"id":"cliente","n":"La reunión","ctx":"Reunión con cliente","niv":"base","k":"基","tesis":"El ambo entero en gris rayado, camisa negra, y un solo punto de color abajo. Te separás del resto sin encender ninguna alarma.","nota":"Saco y pantalón son el mismo Cádiz: cuando el gris se repite exacto, el ojo lee una sola pieza y la silueta se estira. El único foco está lejos de la cara, en el bordó del mocasín.","total":914170,"piezas":[["SACO CADIZ - GRIS","https://www.garzongarcia.com.ar/productos/SACO-CADIZ",[1,"ambo4-1d065b848582b86dd317749711118444-1024-1024.jpg"],318890,"L: 1 u.","Garçon García",0],["CAMISA CHLOE NEGRO - NEGRO","https://www.garzongarcia.com.ar/productos/camisa-chloe-negro-l6kcv",[1,"camisa-chloe-negra-ce19bdbae0bc7cccd917847436012101-1024-1024.jpg"],163790,"L: 1 u.","Garçon García",0],["PANTALON CADIZ - GRIS","https://www.garzongarcia.com.ar/productos/PANTALON-CADIZ",[1,"ambo-0058c50a3cbde1612217749713785940-1024-1024.jpg"],175890,"44: 1 u. La ficha no publica el tiro; corte sa","Garçon García",0],["Mocasines Timeless - Claro Oscuro Bordeaux","https://mmartinez.com.ar/productos/mocasines-timeless-claro-oscuro-bordeaux-upzwr",[10,"timeless-co-bordo-01-b0a7981870339338f817689207487355-640-0.webp"],233100,"42: 31 u. · 43: 14 u.","MMartinez",0],["TERRIBLE MEDIA – NEGRO","https://terribleenfant.com/producto/terrible-media-negro",[17,"MEDIA-NEGRA.jpg"],22500,"talle único apto 38 al 46 — cubre 42 y 43","Terrible Enfant",0]]},{"id":"agencia","n":"El laboratorio","ctx":"Agencia, día interno","niv":"puente","k":"橋","tesis":"Petróleo sobre azul, con el tejido a rayas como único quiebre. Tu city pop en el lugar donde más libertad tenés.","nota":"El wide leg entra recién acá, y funciona porque el buzo termina en la cadera alta y deja la cintura a la vista: el volumen va por la pierna, nunca por la cadera caída.","total":637790,"piezas":[["Buzo Boxy Script Petróleo Stripe","https://www.viejascul.com.ar/productos/buzo-boxy-script-petroleo-stripe-hq86f",[3,"vsbbf-2677-script-petroleo-strip-18ff325c8cac80df0917809413636781-640-0.webp"],109000,"3: 10 u.","Vieja Scul",0],["CAMISA CHLOE CELESTE - CELESTE","https://www.garzongarcia.com.ar/productos/camisa-chloe-celeste-11a3t",[1,"camisa-chloe-celeste-51a6a2433da89589af17847438159383-1024-1024.jpg"],163790,"L: 3 u.","Garçon García",0],["Jean wide azul","https://www.limaydenim.com/productos/wide-azul",[8,"limay_feb_26_2181-8e79d1a6c6799ad3e417847478503178-1024-1024.webp"],135000,"44: 5 u.","Limay Denim",0],["Beatle Negro","https://pannimargot.com/productos/beatle-negro",[2,"photoroom_20250202_173848-98ddd860639821e3ef17404291923368-640-0.webp"],220000,"42 · 43","Panni Margot",0],["Medias desagujado negras","https://www.limaydenim.com/productos/medias-desagujado-negras",[8,"limay_26-b5ede490bfb312740a17803404478362-1024-1024.webp"],10000,"35: 35 u.","Limay Denim",0]]},{"id":"evento","n":"El evento","ctx":"Evento del rubro","niv":"puente","k":"橋","tesis":"Negro sobre negro, con volumen japonés. En una sala llena de gente de tu rubro, lo que se recuerda es la silueta.","nota":"Tres piezas de Panni Margot que dialogan entre sí: el blazer oversize, la remera y el pantalón. No hay color que resolver — el gesto es la forma.","total":802600,"piezas":[["BLAZER OVERSIZE BERUBBETO","https://pannimargot.com/productos/blazer-oversize-berubbeto",[2,"blazer-oversize-berubbeto-6a673cccf49866038817193406816535-640-0.webp"],283900,"1: 11 u.","Panni Margot",0],["MANUK.TSHIRT/BLACK004","https://pannimargot.com/productos/manuk-tshirt-004",[2,"manuk-tshirt_black004-34378ee9beef7df28517187447239789-640-0.webp"],72900,"T. único: 4 u.","Panni Margot",0],["PANTALÓN TORIHAZUSHI","https://pannimargot.com/productos/pantalon-torihazushi",[2,"pantalon-torihazushi-4-7c3ef7105dbf7e143d17187382934779-640-0.webp"],179900,"3: 5 u.","Panni Margot",0],["Borcego Negro","https://pannimargot.com/productos/borcego-negro",[2,"photoroom_20250202_174323-5137ef93039e53fbf717404293195490-640-0.webp"],220000,"42 · 43","Panni Margot",0],["ROGO BELT","https://pannimargot.com/productos/rogo-belt",[2,"rogo-belt-2-94bb45468ec745baf017183854650863-640-0.webp"],45900,"2: 2 u.","Panni Margot",0]]},{"id":"noche","n":"La noche","ctx":"Noche · social","niv":"expresion","k":"表現","tesis":"Cuero cruzado, estampa en blanco y negro y sastrería oscura. Tu registro completo, sin traducción para nadie.","nota":"La estampa puede ir pegada a la cara porque es fría: blanco y negro, sin una gota de cálido. El perfecto cruzado suma el hombro que el resto del look no trae, y el charol del Gambino cierra la nota brillante.","total":834100,"piezas":[["Cruzada Black & Niquel","https://www.taurocuer.com/productos/cruzada-black-niquel",[12,"0001-89-37a08e3236d300478b17162355878828-640-0.webp"],370000,"T. L: 1 u.","Tauro Cuer",0],["Camisa Abel Manga Larga","https://guiltyberlin.ar/productos/camisa-abel-manga-larga",[5,"796c9e6e-4cc1-4e63-8164-19fe8c91383a1-5ee87562aaf81f014016705416452663-640-0.webp"],82000,"T. L: 2 u.","Guilty Berlin",0],["Sastre Black (T.44) — sastrero negro","https://www.stylevintage.com.ar/productos/sastre-black-t-44-4cmkt",[7,"img_6775-2ead3378bfa4fb260717781797581045-640-0.webp"],26250,"T. único: 1 u.","Style Vintage",0],["Gambino Negro","https://terribleenfant.com/producto/gambino-negro",[17,"GAMBINO-NUEVO-2.jpg"],355850,"42 · 43","Terrible Enfant",0]]},{"id":"libre","n":"El día libre","ctx":"Día libre","niv":"puente","k":"橋","tesis":"Verde bosque y denim negro. Bajo riesgo, mucha información: el mejor día para estrenar.","nota":"La boina hace foco por forma y no por color, así el bordado del tejido se lee solo. Denim recto, no wide: acá el volumen no hace falta.","total":499100,"piezas":[["Sweater tejido bordado Guilty - Forest","https://guiltyberlin.ar/productos/sweater-tejido-bordado-guilty-forest-120e3",[5,"facetune_02-08-2026-15-28-31-4ac8efd5194584acaa17857010610967-640-0.webp"],99000,"1: 8 u.","Guilty Berlin",0],["Jean recto negro gastado","https://www.limaydenim.com/productos/recto-negro-gastado",[8,"limay_abril_26_1547-fb4dd489a2a40ff1b417810234352408-1024-1024.webp"],125000,"44: 6 u.","Limay Denim",0],["Borcegos Chukka - Rodeo Negro","https://mmartinez.com.ar/productos/borcegos-chukka-rodeo-negro-1n4gp",[10,"chukka-rodeo-negro-01-1-355c1fab1995ef036717730668580936-640-0.webp"],251100,"42: 9 u. · 43: 5 u.","MMartinez",0],["Boina Rebelion Negra","https://fiera.ar/productos/boina-rebelion-negra-w1l44",[11,"cd683282-5aae-4cbc-8697-7041482bf9b6-f8cd656b5494d625b217700625913653-1024-1024.webp"],24000,"4: 4 u.","Fiera",0]]}]};
+    var LK={"pref":["https://acdn-us.mitiendanube.com/stores/219/431/products/","https://acdn-us.mitiendanube.com/stores/007/091/524/products/","https://acdn-us.mitiendanube.com/stores/004/814/798/products/","https://acdn-us.mitiendanube.com/stores/003/024/577/products/","https://acdn-us.mitiendanube.com/stores/188/770/products/","https://acdn-us.mitiendanube.com/stores/002/222/533/products/","https://acdn-us.mitiendanube.com/stores/113/599/products/","https://acdn-us.mitiendanube.com/stores/005/292/364/products/","https://acdn-us.mitiendanube.com/stores/007/164/758/products/","https://cdn.shopify.com/s/files/1/0555/2537/6301/files/","https://acdn-us.mitiendanube.com/stores/001/574/296/products/","https://acdn-us.mitiendanube.com/stores/002/295/658/products/","https://acdn-us.mitiendanube.com/stores/001/343/707/products/","https://terribleenfant.com/wp-content/uploads/2021/09/","https://terribleenfant.com/wp-content/uploads/2025/02/","https://terribleenfant.com/wp-content/uploads/2024/05/","https://terribleenfant.com/wp-content/uploads/2024/06/","img/prendas/"],"looks":[{"id":"aula","n":"El aula","ctx":"Aula universitaria","niv":"base","k":"基","tesis":"Azul marino, blanco y negro. Nada compite: la autoridad la sostiene el corte y vos no pensás en la ropa en toda la clase.","nota":"El hombro estructurado del Gregory le suma una línea firme a tu hombro suave —más presencia frente al aula—, y el blanco frío pegado a la cara es el que más te favorece. Cero focos de atención — acá el foco sos vos hablando.","total":965270,"piezas":[["SACO GREGORY - AZUL MARINO","https://www.garzongarcia.com.ar/productos/saco-gregory",[1,"saco_gregory_76_3-6a3915d9e040312bdc17673789802417-1024-1024.jpg"],358490,"L: 2 u.","Garçon García",0],["CAMISA BARI - BLANCO","https://www.garzongarcia.com.ar/productos/camisa-bariGARCON",[1,"camisa-bari-5a8afaa4cde55a58e117671222555413-1024-1024.jpg"],175890,"L: 3 u.","Garçon García",0],["PANTALON JEREY - AZUL MARINO","https://www.garzongarcia.com.ar/productos/pantalon-jerey",[1,"pantalon_jerey_12-331d785ec3b8e415db17672082008964-1024-1024.jpg"],196790,"44: 2 u. Ficha: 'corte ancho en piernas'.","Garçon García",0],["Zapatos Eminent - Negro","https://mmartinez.com.ar/productos/zapatos-eminent-negro-9m2bk",[10,"eminent-at-negro-01-53c80dd0d20db5d03417689208878548-640-0.webp"],224100,"42: 10 u. · 43: 6 u.","MMartinez",0],["Medias basicas negro","https://www.limaydenim.com/productos/medias-negras",[8,"limay_feb_25_1647-31b52256861bbea04917733426912374-1024-1024.webp"],10000,"T. único: 116 u.","Limay Denim",0]]},{"id":"cliente","n":"La reunión","ctx":"Reunión con cliente","niv":"base","k":"基","tesis":"El ambo entero en gris rayado, camisa negra, y un solo punto de color abajo. Te separás del resto sin encender ninguna alarma.","nota":"Saco y pantalón son el mismo Cádiz: cuando el gris se repite exacto, el ojo lee una sola pieza y la silueta se estira. El único foco está lejos de la cara, en el bordó del mocasín.","total":914170,"piezas":[["SACO CADIZ - GRIS","https://www.garzongarcia.com.ar/productos/SACO-CADIZ",[1,"ambo4-1d065b848582b86dd317749711118444-1024-1024.jpg"],318890,"L: 1 u.","Garçon García",0],["CAMISA CHLOE NEGRO - NEGRO","https://www.garzongarcia.com.ar/productos/camisa-chloe-negro-l6kcv",[1,"camisa-chloe-negra-ce19bdbae0bc7cccd917847436012101-1024-1024.jpg"],163790,"L: 1 u.","Garçon García",0],["PANTALON CADIZ - GRIS","https://www.garzongarcia.com.ar/productos/PANTALON-CADIZ",[1,"ambo-0058c50a3cbde1612217749713785940-1024-1024.jpg"],175890,"44: 1 u. La ficha no publica el tiro; corte sa","Garçon García",0],["Mocasines Timeless - Claro Oscuro Bordeaux","https://mmartinez.com.ar/productos/mocasines-timeless-claro-oscuro-bordeaux-upzwr",[10,"timeless-co-bordo-01-b0a7981870339338f817689207487355-640-0.webp"],233100,"42: 31 u. · 43: 14 u.","MMartinez",0],["TERRIBLE MEDIA – NEGRO","https://terribleenfant.com/producto/terrible-media-negro",[17,"MEDIA-NEGRA.jpg"],22500,"talle único apto 38 al 46 — cubre 42 y 43","Terrible Enfant",0]]},{"id":"agencia","n":"El laboratorio","ctx":"Agencia, día interno","niv":"puente","k":"橋","tesis":"Petróleo sobre azul, con el tejido a rayas como único quiebre. Tu city pop en el lugar donde más libertad tenés.","nota":"El wide leg entra recién acá, y funciona porque el buzo termina en la cadera alta y deja la cintura a la vista: el volumen va por la pierna y la cintura queda a la vista.","total":637790,"piezas":[["Buzo Boxy Script Petróleo Stripe","https://www.viejascul.com.ar/productos/buzo-boxy-script-petroleo-stripe-hq86f",[3,"vsbbf-2677-script-petroleo-strip-18ff325c8cac80df0917809413636781-640-0.webp"],109000,"3: 10 u.","Vieja Scul",0],["CAMISA CHLOE CELESTE - CELESTE","https://www.garzongarcia.com.ar/productos/camisa-chloe-celeste-11a3t",[1,"camisa-chloe-celeste-51a6a2433da89589af17847438159383-1024-1024.jpg"],163790,"L: 3 u.","Garçon García",0],["Jean wide azul","https://www.limaydenim.com/productos/wide-azul",[8,"limay_feb_26_2181-8e79d1a6c6799ad3e417847478503178-1024-1024.webp"],135000,"44: 5 u.","Limay Denim",0],["Beatle Negro","https://pannimargot.com/productos/beatle-negro",[2,"photoroom_20250202_173848-98ddd860639821e3ef17404291923368-640-0.webp"],220000,"42 · 43","Panni Margot",0],["Medias desagujado negras","https://www.limaydenim.com/productos/medias-desagujado-negras",[8,"limay_26-b5ede490bfb312740a17803404478362-1024-1024.webp"],10000,"35: 35 u.","Limay Denim",0]]},{"id":"evento","n":"El evento","ctx":"Evento del rubro","niv":"puente","k":"橋","tesis":"Negro sobre negro, con volumen japonés. En una sala llena de gente de tu rubro, lo que se recuerda es la silueta.","nota":"Tres piezas de Panni Margot que dialogan entre sí: el blazer oversize, la remera y el pantalón. No hay color que resolver — el gesto es la forma.","total":802600,"piezas":[["BLAZER OVERSIZE BERUBBETO","https://pannimargot.com/productos/blazer-oversize-berubbeto",[2,"blazer-oversize-berubbeto-6a673cccf49866038817193406816535-640-0.webp"],283900,"1: 11 u.","Panni Margot",0],["MANUK.TSHIRT/BLACK004","https://pannimargot.com/productos/manuk-tshirt-004",[2,"manuk-tshirt_black004-34378ee9beef7df28517187447239789-640-0.webp"],72900,"T. único: 4 u.","Panni Margot",0],["PANTALÓN TORIHAZUSHI","https://pannimargot.com/productos/pantalon-torihazushi",[2,"pantalon-torihazushi-4-7c3ef7105dbf7e143d17187382934779-640-0.webp"],179900,"3: 5 u.","Panni Margot",0],["Borcego Negro","https://pannimargot.com/productos/borcego-negro",[2,"photoroom_20250202_174323-5137ef93039e53fbf717404293195490-640-0.webp"],220000,"42 · 43","Panni Margot",0],["ROGO BELT","https://pannimargot.com/productos/rogo-belt",[2,"rogo-belt-2-94bb45468ec745baf017183854650863-640-0.webp"],45900,"2: 2 u.","Panni Margot",0]]},{"id":"noche","n":"La noche","ctx":"Noche · social","niv":"expresion","k":"表現","tesis":"Cuero cruzado, estampa en blanco y negro y sastrería oscura. Tu registro completo, sin traducción para nadie.","nota":"La estampa puede ir pegada a la cara porque es fría: blanco y negro, sin una gota de cálido. El perfecto cruzado suma el hombro que el resto del look no trae, y el charol del Gambino cierra la nota brillante.","total":834100,"piezas":[["Cruzada Black & Niquel","https://www.taurocuer.com/productos/cruzada-black-niquel",[12,"0001-89-37a08e3236d300478b17162355878828-640-0.webp"],370000,"T. L: 1 u.","Tauro Cuer",0],["Camisa Abel Manga Larga","https://guiltyberlin.ar/productos/camisa-abel-manga-larga",[5,"796c9e6e-4cc1-4e63-8164-19fe8c91383a1-5ee87562aaf81f014016705416452663-640-0.webp"],82000,"T. L: 2 u.","Guilty Berlin",0],["Sastre Black (T.44) — sastrero negro","https://www.stylevintage.com.ar/productos/sastre-black-t-44-4cmkt",[7,"img_6775-2ead3378bfa4fb260717781797581045-640-0.webp"],26250,"T. único: 1 u.","Style Vintage",0],["Gambino Negro","https://terribleenfant.com/producto/gambino-negro",[17,"GAMBINO-NUEVO-2.jpg"],355850,"42 · 43","Terrible Enfant",0]]},{"id":"libre","n":"El día libre","ctx":"Día libre","niv":"puente","k":"橋","tesis":"Verde bosque y denim negro. Bajo riesgo, mucha información: el mejor día para estrenar.","nota":"La boina hace foco por forma y no por color, así el bordado del tejido se lee solo. Denim recto, no wide: acá el volumen no hace falta.","total":499100,"piezas":[["Sweater tejido bordado Guilty - Forest","https://guiltyberlin.ar/productos/sweater-tejido-bordado-guilty-forest-120e3",[5,"facetune_02-08-2026-15-28-31-4ac8efd5194584acaa17857010610967-640-0.webp"],99000,"1: 8 u.","Guilty Berlin",0],["Jean recto negro gastado","https://www.limaydenim.com/productos/recto-negro-gastado",[8,"limay_abril_26_1547-fb4dd489a2a40ff1b417810234352408-1024-1024.webp"],125000,"44: 6 u.","Limay Denim",0],["Borcegos Chukka - Rodeo Negro","https://mmartinez.com.ar/productos/borcegos-chukka-rodeo-negro-1n4gp",[10,"chukka-rodeo-negro-01-1-355c1fab1995ef036717730668580936-640-0.webp"],251100,"42: 9 u. · 43: 5 u.","MMartinez",0],["Boina Rebelion Negra","https://fiera.ar/productos/boina-rebelion-negra-w1l44",[11,"cd683282-5aae-4cbc-8697-7041482bf9b6-f8cd656b5494d625b217700625913653-1024-1024.webp"],24000,"4: 4 u.","Fiera",0]]}]};
     var img=function(v){return (typeof v==='string')?v:(LK.pref[v[0]]+v[1]);};
     var pesos=function(n){return '$ '+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');};
     LK.looks.forEach(function(L){
@@ -1174,7 +1267,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
      {id:'calzado',  n:'Calzado',  cats:['calzado'],                 opt:false},
      {id:'foco',     n:'Foco',     cats:['accesorio'],               opt:true}
     ];
-    var puesto={};
+    var puesto={}, intencion=null;
     var im=function(v){return (typeof v==='string')?v:(AR.pref[v[0]]+v[1]);};
     var pe=function(n){return '$ '+String(n||0).replace(/\B(?=(\d{3})+(?!\d))/g,'.');};
     var esc=function(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');};
@@ -1270,17 +1363,25 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
       var R=[];
       var faltan=SLOTS.filter(function(S){return !S.opt && puesto[S.id]===undefined;}).map(function(S){return S.n.toLowerCase();});
       R.push({ok:!faltan.length, t: faltan.length
-        ? '<b>Falta '+faltan.join(', ')+'.</b> Un look se lee completo o no se lee.'
+        ? '<b>Falta '+faltan.join(', ')+'.</b> Todavía no hay un look entero para leer.'
         : '<b>Completo.</b> Arriba, pantalón y calzado, los tres puestos.'});
       var niv=fs.map(function(f){return f[6];});
       var hayBase=niv.indexOf(0)>=0, hayExpr=niv.indexOf(2)>=0;
       var cu=[0,1,2].map(function(n){return niv.filter(function(x){return x===n;}).length;});
       R.push({ok:!(hayBase&&hayExpr), t:(hayBase&&hayExpr)
-        ? '<b>Mezclás base y expresión plena.</b> Elegí un registro: o la sostenés sobria, o la soltás entera.'
+        ? '<b>Mezclás base y expresión plena.</b> El conjunto dice dos cosas a la vez: si es a propósito, que se note; si no, quedate con una.'
         : '<b>Registro '+NIVN[cu.indexOf(Math.max.apply(null,cu))]+'.</b> Todas las piezas hablan el mismo idioma.'});
+      if(intencion!==null){
+        var pred=cu.indexOf(Math.max.apply(null,cu));
+        R.push({ok:pred===intencion, t: pred===intencion
+          ? '<b>Dice lo que querías.</b> Pediste '+NIVN[intencion]+' y la percha habla en '+NIVN[pred]+'.'
+          : (pred>intencion
+            ? '<b>Dice más de lo que pediste.</b> Querías '+NIVN[intencion]+' y la percha habla en '+NIVN[pred]+'.'
+            : '<b>Dice menos de lo que pediste.</b> Querías '+NIVN[intencion]+' y la percha se queda en '+NIVN[pred]+'.')});
+      }
       var focos=niv.filter(function(x){return x===2;}).length;
       R.push({ok:focos<=1, t: focos>1
-        ? '<b>'+focos+' piezas compiten por la mirada.</b> Un solo foco por look: dejá una y bajá el resto.'
+        ? '<b>'+focos+' piezas compiten por la mirada.</b> El ojo no sabe dónde parar; con una sola al frente, las otras la sostienen.'
         : (focos===1?'<b>Un solo foco.</b> El resto lo sostiene.':'<b>Sin foco.</b> Sobrio a propósito, o le falta un gesto.')});
       var ms={}; fs.forEach(function(f){ms[f[9]]=1;});
       var nm=Object.keys(ms).length;
@@ -1326,6 +1427,21 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
     function repintar(){pintarPercha();pintarLectura();pintarPlacard();
       if(window.__revisarProbador) window.__revisarProbador();}
     window.__repintarPlacard=repintar;
+    window.__perchaActual=function(){
+      var ks=Object.keys(puesto); if(!ks.length) return null;
+      var fs=ks.map(function(k){return IT[puesto[k]];});
+      var cu=[0,1,2].map(function(n){return fs.filter(function(f){return f[6]===n;}).length;});
+      return {piezas:fs.map(function(f){return f[0];}), nivel:cu.indexOf(Math.max.apply(null,cu))};
+    };
+    [].forEach.call(document.querySelectorAll('.int-op button'),function(b,_,todos){
+      b.addEventListener('click',function(){
+        var v=+b.getAttribute('data-i'), ya=intencion===v;
+        intencion= ya ? null : v;
+        [].forEach.call(document.querySelectorAll('.int-op button'),function(x){
+          x.setAttribute('aria-pressed', (!ya && x===b)?'true':'false');});
+        pintarLectura();
+      });
+    });
 
     /* — el probador: tu foto y las prendas del look — */
     var VESTIDOR='https://vestidor-emiliano.hola-158.workers.dev';   /* la dirección del Worker, cuando esté publicado */
@@ -1491,6 +1607,75 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ultramar);outline-o
         b.setAttribute('aria-pressed','true'); cajonFiltro=b.getAttribute('data-f'); pintarCajon();});
     });
     repintar();
+  })();
+
+  /* — el registro de outfits: ocasión, audiencia, comodidad — */
+  (function(){
+    var K='mc-registro-emiliano', reg=[];
+    try{reg=JSON.parse(localStorage.getItem(K)||'[]')}catch(e){}
+    var f=document.getElementById('reg-form'); if(!f) return;
+    var NV=['base','puente','expresión'], lista=document.getElementById('reg-lista'), lee=document.getElementById('reg-lee');
+    var esc=function(t){return String(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');};
+    function hoy(){var d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,10);}
+    function guardar(){try{localStorage.setItem(K,JSON.stringify(reg))}catch(e){}}
+    function marcar(nombre,valor){var r=f.querySelector('input[name='+nombre+'][value="'+valor+'"]'); if(r) r.checked=true;}
+    f.fecha.value=hoy();
+    f.look.addEventListener('change',function(){
+      var o=f.look.selectedOptions[0];
+      if(o.getAttribute('data-n')!==null) marcar('nivel',o.getAttribute('data-n'));
+      if(o.getAttribute('data-c')) f.contexto.value=o.getAttribute('data-c');
+      if(f.look.value==='percha' && window.__perchaActual){var p=window.__perchaActual(); if(p) marcar('nivel',p.nivel);}
+    });
+    [].forEach.call(document.querySelectorAll('[data-reg-percha]'),function(a){
+      a.addEventListener('click',function(){ f.look.value='percha'; f.look.dispatchEvent(new Event('change')); });
+    });
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var o=f.look.selectedOptions[0], p=(f.look.value==='percha'&&window.__perchaActual)?window.__perchaActual():null;
+      reg.unshift({fecha:f.fecha.value, look:o.textContent.split(' · ')[0], piezas:p?p.piezas:null,
+        contexto:f.contexto.value, audiencia:f.audiencia.value.trim(),
+        nivel:+f.querySelector('input[name=nivel]:checked').value,
+        comodidad:+f.querySelector('input[name=comodidad]:checked').value, nota:f.nota.value.trim()});
+      guardar(); pintar();
+      f.reset(); f.fecha.value=hoy();
+    });
+    function prom(a){return a.reduce(function(s,x){return s+x.comodidad;},0)/a.length;}
+    var coma=function(n){return n.toFixed(1).replace('.',',');};
+    function pintar(){
+      lista.innerHTML='';
+      reg.forEach(function(r,i){
+        var li=document.createElement('li');
+        li.innerHTML='<span class="f">'+esc(r.fecha.split('-').reverse().join('/'))+'</span>'
+          +'<span class="t">'+esc(r.look)+' · '+esc(r.contexto)+' · '+NV[r.nivel]+' · comodidad '+r.comodidad+'/5'
+          +'<small>'+(r.audiencia?'Te miraban: '+esc(r.audiencia):'')+(r.audiencia&&r.nota?' · ':'')+esc(r.nota)
+          +(r.piezas?(r.audiencia||r.nota?' · ':'')+esc(r.piezas.join(', ')):'')+'</small></span>'
+          +'<button type="button" aria-label="Borrar este registro">×</button>';
+        li.querySelector('button').addEventListener('click',function(){reg.splice(i,1);guardar();pintar();});
+        lista.appendChild(li);
+      });
+      if(!reg.length){lee.innerHTML='<p class="mut">Todavía no anotaste nada. El primero puede ser el de hoy.</p>';return;}
+      var porNivel=[0,1,2].map(function(n){return reg.filter(function(r){return r.nivel===n;});});
+      var barras='<div class="reg-barras">'+porNivel.map(function(a,n){
+        return '<div class="reg-barra"><span>'+NV[n]+'</span><i><b style="width:'+(a.length?prom(a)/5*100:0)+'%"></b></i><em>'
+          +(a.length?coma(prom(a)):'—')+'</em></div>';}).join('')+'</div>';
+      var frases=[], ctxs={};
+      reg.forEach(function(r){(ctxs[r.contexto]=ctxs[r.contexto]||[]).push(r);});
+      Object.keys(ctxs).forEach(function(c){
+        var rs=ctxs[c], niv={};
+        rs.forEach(function(r){(niv[r.nivel]=niv[r.nivel]||[]).push(r);});
+        var ks=Object.keys(niv).map(Number).sort(function(a,b){return prom(niv[b])-prom(niv[a]);});
+        if(ks.length>1 && prom(niv[ks[0]])>prom(niv[ks[ks.length-1]])){
+          frases.push('En <b>'+esc(c)+'</b> estuviste más cómodo en '+NV[ks[0]]+' ('+coma(prom(niv[ks[0]]))+') que en '
+            +NV[ks[ks.length-1]]+' ('+coma(prom(niv[ks[ks.length-1]]))+').');
+        } else if(rs.length>1){
+          frases.push('En <b>'+esc(c)+'</b>, '+rs.length+' registros en '+ks.map(function(k){return NV[k];}).join(' y ')+': comodidad '+coma(prom(rs))+'.');
+        }
+      });
+      lee.innerHTML='<p class="v-datos">Tu comodidad según cuánto se vio · '+reg.length+(reg.length===1?' registro':' registros')+'</p>'
+        +barras+(frases.length?frases.map(function(t){return '<p>'+t+'</p>';}).join('')
+          :'<p class="mut">Con un par de registros más en el mismo contexto aparecen las comparaciones.</p>');
+    }
+    pintar();
   })();
 </script>
 </body>
